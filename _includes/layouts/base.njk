@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="{% if subtitle %}{{ subtitle }}{% else %}Learn how to become a great Product Manager.{% endif %}">
+		<title>{{ subtitle + '-' if subtitle}} bdickason.com</title>
+  </head>
+
+  <body>
+    {{ content | safe }}
+  </body>
+</html>
