@@ -1,6 +1,7 @@
 ---
-subtitle: Example of awesome post!
+title: Example of awesome post!
 layout: layouts/base.njk
+tags: post
 ---
 
 # HMMMMMMmmmmm

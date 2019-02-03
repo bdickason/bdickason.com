@@ -3,11 +3,34 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="{% if subtitle %}{{ subtitle }}{% else %}Learn how to become a great Product Manager.{% endif %}">
+		<meta name="description" content="{% if subtitle %}{{ subtitle }}{% else %}Become a great Product Manager.{% endif %}">
+		<meta name="page" content="{{ page.url }}">
 		<title>{{ subtitle + '-' if subtitle}} bdickason.com</title>
+
+		{%- set css %}
+		{% include 'css/index.css' %}
+		{% include 'css/mailchimp.css' %}
+		{% endset %}
+
+		<style>{{ css | cssmin | safe }}</style>
+
+
   </head>
 
   <body>
-    {{ content | safe }}
+    <main class="elv-layout{% if layoutClass %} {{ layoutClass }}{% endif %}">{{ content | safe }}</main>
   </body>
+
+
+			{%- set js %}
+			{% include 'js/mailchimp.js' %}
+			{% endset %}
+
+			<script type="text/javascript">{{js | safe}}</script>
+
+			{# mailchimp scriptz #}
+			<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/d6bf3b0fb3bd91a2f877351d6/7dfc34bb726e0ced8c283059a.js");</script>
+
+			{# momently scriptz #}
+			<script src="//s3-us-west-2.amazonaws.com/momently-static/loader/Xi8hRgAqAQ4_momently.js" name="momently-script"></script>
 </html>
