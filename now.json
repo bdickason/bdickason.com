@@ -3,14 +3,12 @@
 	"name": "static",
   "alias": "bdickason.com",
 	"builds": [
-		{
-      "src": "_site/**/*.html", "use": "@now/html-minifier"
-    }
+		{ "src": "_site/**/*.html", "use": "@now/html-minifier" },
+    { "src": "static/*", "use": "@now/static"}
   ],
   "routes": [
-    {
-      "src": "^/(.*)", "dest": "_site/$1"
-    }
+    { "src": "^/static/(.*)", "dest": "static/$1"},
+    { "src": "^/(.*)", "dest": "_site/$1" }
   ],
   "github": {
    "enabled": false

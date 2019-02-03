@@ -199,6 +199,14 @@ li li {
 	padding-bottom: .1em;
 }
 
+li a[href] {
+	color: #8000ff;
+}
+
+li a[href]:hover {
+	color: #ff0080;
+}
+
 .list-bare {
 	list-style: none;
 	padding: 0;
@@ -320,4 +328,8 @@ strong:hover {
 
 a strong:hover {
 	text-decoration: underline white;
+}
+
+.lowercase {
+	text-transform: none;
 }

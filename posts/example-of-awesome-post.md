@@ -1,9 +1,8 @@
 ---
 title: Example of awesome post!
-layout: layouts/base.njk
-tags: post
+layout: layouts/post.njk
 ---
 
 # HMMMMMMmmmmm
 
-Let's see what happens here O_O
+Soon to be an awesome post 😲

@@ -62,6 +62,7 @@
 	color: #fff;
 	text-shadow: 0 0 2px rgba(0,0,0,.9);
   cursor: pointer;
+  border: 1px;
 }
 
 #mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {border:2px solid #ff0080;}
