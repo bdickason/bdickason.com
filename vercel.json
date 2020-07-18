@@ -1,6 +1,5 @@
 {
   "version": 2,
-	"name": "static",
   "alias": "bdickason.com",
 	"builds": [
 		{ "src": "_site/**/*.html", "use": "@now/html-minifier" },

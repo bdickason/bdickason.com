@@ -1,0 +1,31 @@
+{
+  "name": "bdickason.com",
+  "version": "0.0.1",
+  "description": "Static site for my personal stuff",
+  "scripts": {
+    "deploy": "vercel",
+    "build": "eleventy"
+  },
+  "engines": {
+    "node": ">=4.4.0"
+  },
+  "author": "bdickason",
+  "contributors": [
+    {
+      "name": "bdickason",
+      "email": "dickason@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bdickason/bdickason.com.git"
+  },
+  "dependencies": {
+    "clean-css": "^4.2.3"
+  },
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "vercel": "^19.1.2"
+  }
+}
