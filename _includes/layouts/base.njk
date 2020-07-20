@@ -20,11 +20,8 @@
   </head>
 
   <body>
-    <main class="elv-layout{% if layoutClass %} {{ layoutClass }}{% endif %}">
-			<h2><a href="/" class="elv-hero"><strong>bdickason.com</strong></a></h2>
-			{{ content | safe }}
-		</main>
-		{% include 'components/footer.njk' %}
+	{{ content | safe }}
+	{% include 'components/footer.njk' %}
   </body>
 
 
