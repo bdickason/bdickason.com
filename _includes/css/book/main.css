@@ -1524,6 +1524,22 @@
 .home-content-left label i {
   padding-right: 6px;
 } 
+
+.home-content-left .response {
+  position: absolute;
+  border-radius: 0.5rem;
+  color: white;
+  width: 100%;
+}
+
+#mce-error-response {
+  background: red;
+}
+
+#mce-success-response {
+  background: #39b54a;
+}
+
  
  .home-content-left .button.stroke {
    color: #ffffff !important;
