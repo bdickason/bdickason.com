@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>The Dawless ebook - Learn how to make Music without a computer</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+   ================================================== -->
+    {%- set css %}
+		{% include 'css/book/base.css' %}
+		{% include 'css/book/vendor.css' %}
+        {% include 'css/book/main.css' %}
+	{% endset %}
+
+		<style>{{ css | cssmin | safe }}</style>
+
+    <!-- script
+   ================================================== -->
+   	{%- set js %}
+        {% include 'js/book/modernizr.js' %}
+    {% endset %}
+	
+    <script type="text/javascript">{{js | safe}}</script>
+    
+ 
+    <!-- favicons
+	================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+    {% include 'components/book/header.njk' %}
+    {% include 'components/book/about.njk' %}
+    {% include 'components/book/pricing.njk' %}
+    {% include 'components/book/testimonials.njk' %}
+    {% include 'components/book/download.njk' %}
+    {% include 'components/book/footer.njk' %}
+
+
+    <div id="preloader"> 
+    	<div id="loader"></div>
+    </div>  
+
+    {{ content | safe }}
+
+</body>
+
+</html>
