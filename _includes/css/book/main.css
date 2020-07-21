@@ -780,8 +780,8 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  background-color: #39b54a;
-  border-color: #39b54a;
+  background-color: #7600EF;
+  border-color: #7600EF;
   color: #FFFFFF;
 }
 
@@ -795,8 +795,8 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-  background: #309a3f;
-  border-color: #309a3f;
+  background: #A93FFF;
+  border-color: #A93FFF;
 }
 
 button.full-width,
@@ -1472,7 +1472,11 @@ h1.intro-header::before {
   letter-spacing: -.05rem;
   line-height: 1.269;
   color: #ffffff;
-  margin-bottom: 9rem;
+  /* margin-bottom: 9rem; */
+}
+
+.home-content-left p.lead {
+  color: #ffffff;
 }
 
 .home-content-left .button.stroke {
@@ -1493,6 +1497,75 @@ h1.intro-header::before {
 .home-content-left .button.stroke:focus {
   background-color: white !important;
   color: #000000 !important;
+}
+
+.home-content-left .subscribe-form {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.home-content-left  #mc-form {
+  width: 100%;
+}
+
+.home-content-left  #mc-form input[type="email"] {
+  width: 98%;
+  height: 5.4rem;
+  padding: 1.2rem 100px 1.2rem 60px;
+  background: url(../images/email-icon.png) 20px center no-repeat,rgba(255,255,255,1);
+  background-size: 24px 16px, auto;
+  margin-bottom: 1.8rem;
+  color: black;
+
+}
+
+.home-content-left  #mc-form input[type="email"]:focus {
+  color: black;
+  font-family: "montserrat-regular", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.home-content-left  #mc-form input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 .5rem .5rem 0;
+  padding: 0 15px;
+}
+
+.home-content-left  #mc-form label {
+  color: black;
+  font-family: "montserrat-regular", sans-serif;
+  font-size: 1.3rem;
+  padding: 0 2rem;
+}
+
+.home-content-left  #mc-form label i {
+  padding-right: 6px;
+}
+
+.home-content-left  #mc-form ::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.home-content-left  #mc-form :-moz-placeholder {
+  color: rgba(0, 0, 0, 0.8);
+  /* Firefox 18- */
+}
+
+.home-content-left  #mc-form ::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.8);
+  /* Firefox 19+ */
+}
+
+.home-content-left  #mc-form :-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.home-content-left  #mc-form .placeholder {
+  color: rgba(0, 0, 0, 0.8); !important;
 }
 
 .home-image-right {
@@ -1817,6 +1890,18 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 .about-features .feature .icon {
   margin-bottom: 1.5rem;
   display: inline-block;
+}
+
+.about-features h3 {
+  text-align: center;
+}
+
+.about-features img {
+  width: 7.4rem;
+  height: 7.4rem;
+  margin: 0 auto 1.2rem auto;
+  display: block;
+  border-radius: 50%;
 }
 
 .about-features .feature .icon i {
