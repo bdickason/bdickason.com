@@ -1936,8 +1936,10 @@
    clear: both;
  }
  
- .about-how-content::before,
- .about-how-content::after {
+
+ /* .about-how-content::before,
+ .about-how-content::after { */
+  .about-how-content::before {  /* Fix to ignore the second line in a list */
    content: "";
    display: block;
    width: 1px;
@@ -2518,7 +2520,7 @@
  
  #download {
    background: #7600EF;
-   color: #b2fabc;
+   color: #C3ACFF;
    padding-top: 12rem;
    padding-bottom: 12rem;
    text-align: center;
@@ -2529,7 +2531,7 @@
  }
  
  #download h1::before {
-   background-color: #2a9038;
+   background-color: #7600EF;
    left: 50%;
    -webkit-transform: translateX(-50%);
    -ms-transform: translateX(-50%);
@@ -2537,7 +2539,7 @@
  }
  
  #download .lead {
-   color: #b2fabc;
+   color: #C3ACFF;
    margin-top: 4.8rem;
  }
  
