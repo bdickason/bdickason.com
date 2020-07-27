@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="183px" height="100px" viewBox="0 0 183 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hardware</title>
+    <defs>
+        <filter x="5.4%" y="6.7%" width="89.1%" height="93.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hardware">
+            <rect id="Rectangle" stroke="#9000FF" stroke-width="3" fill="#C3ACFF" x="1.74556829" y="2.25443171" width="179" height="96" rx="8"></rect>
+            <g id="Sin-Wav" transform="translate(18.245568, 16.754432)">
+                <rect id="Rectangle" fill="#9000FF" x="0" y="0" width="65" height="34" rx="8"></rect>
+                <path d="M5.94428748,12.0725005 C8.66897695,12.0725005 10.5523095,13.8697483 11.5942852,17.464244 C12.8335216,21.2030817 14.667951,23.0725005 17.0975735,23.0725005 C19.5271959,23.0725005 21.3762401,21.2030817 22.644706,17.464244 C23.542209,13.8697483 25.3724227,12.0725005 28.1353469,12.0725005 C30.8982712,12.0725005 32.638267,13.8697483 33.3553344,17.464244 C33.8891947,21.2030817 35.7060837,23.0725005 38.8060013,23.0725005 C41.905919,23.0725005 43.8058084,21.2030817 44.5056693,17.464244 C45.7057767,13.8697483 47.5369903,12.0725005 49.9993101,12.0725005 C52.4616299,12.0725005 54.2756668,13.9058338 55.4414207,17.5725005 C56.9678646,21.2391672 58.4961113,23.0725005 60.0261609,23.0725005" id="Path" stroke="#CDFF88" stroke-width="3"></path>
+            </g>
+            <g id="Sequencer" transform="translate(94.245568, 16.754432)">
+                <rect id="Rectangle-Copy" stroke="#9000FF" stroke-width="4" fill="#9000FF" x="2" y="2" width="70" height="63" rx="8"></rect>
+                <rect id="Rectangle-Copy-18" fill="#CDFF88" x="8" y="47" width="11" height="12" rx="5.5"></rect>
+                <rect id="Rectangle-Copy-17" fill="#C3ACFF" x="24" y="47" width="11" height="12" rx="5.5"></rect>
+                <rect id="Rectangle-Copy-16" fill="#CDFF88" x="40" y="47" width="11" height="12" rx="5.5"></rect>
+                <rect id="Rectangle-Copy-15" fill="#C3ACFF" x="56" y="47" width="11" height="12" rx="5.5"></rect>
+                <rect id="Rectangle-Copy-22" fill="#C3ACFF" x="8" y="27" width="11" height="12" rx="5.5"></rect>
+                <rect id="Rectangle-Copy-21" fill="#CDFF88" x="24" y="27" width="11" height="12" rx="5.5"></rect>
+                <rect id="Rectangle-Copy-20" fill="#C3ACFF" x="40" y="27" width="11" height="12" rx="5.5"></rect>
+                <rect id="Rectangle-Copy-19" fill="#CDFF88" x="56" y="27" width="11" height="12" rx="5.5"></rect>
+                <rect id="Rectangle-Copy-26" fill="#C3ACFF" x="8" y="7" width="11" height="12" rx="5.5"></rect>
+                <rect id="Rectangle-Copy-25" fill="#C3ACFF" x="24" y="7" width="11" height="12" rx="5.5"></rect>
+                <rect id="Rectangle-Copy-24" fill="#C3ACFF" x="40" y="7" width="11" height="12" rx="5.5"></rect>
+                <rect id="Rectangle-Copy-23" fill="#CDFF88" x="56" y="7" width="11" height="12" rx="5.5"></rect>
+            </g>
+            <g id="Play-Pause-Record" transform="translate(27.491137, 64.508863)">
+                <path d="M6.83205029,3.24807544 L12.9635332,12.4452998 C13.2698857,12.9048285 13.1457118,13.5256978 12.6861831,13.8320503 C12.5219156,13.941562 12.3289079,14 12.1314829,14 L-0.131482908,14 C-0.683767658,14 -1.13148291,13.5522847 -1.13148291,13 C-1.13148291,12.802575 -1.07304488,12.6095673 -0.963533203,12.4452998 L5.16794971,3.24807544 C5.47430216,2.78854675 6.09517151,2.66437288 6.5547002,2.97072534 C6.66455248,3.0439602 6.75881544,3.13822315 6.83205029,3.24807544 Z" id="Triangle" fill="#9000FF" filter="url(#filter-1)" transform="translate(6.000000, 8.000000) rotate(-270.000000) translate(-6.000000, -8.000000) "></path>
+                <circle id="Oval" fill="#CDFF88" cx="43" cy="8" r="7"></circle>
+                <g id="Group" transform="translate(20.000000, 1.000000)" fill="#9000FF">
+                    <rect id="Rectangle" x="0.754431711" y="0.245568289" width="3" height="14" rx="1.5"></rect>
+                    <rect id="Rectangle-Copy-3" x="4.75443171" y="0.245568289" width="3" height="14" rx="1.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
