@@ -2522,7 +2522,7 @@
    background: #7600EF;
    color: #C3ACFF;
    padding-top: 12rem;
-   padding-bottom: 12rem;
+   padding-bottom: 2rem;
    text-align: center;
  }
  
@@ -2550,6 +2550,23 @@
  
  #download .row {
    max-width: 800px;
+ }
+
+ #download input[type=email] {
+   display: inline;
+   padding: 1.4rem 10rem;
+   height: 5.5rem;
+ }
+
+ #download input[type=submit] {
+   background-color: #ccff00;
+   color: black;
+   border-radius: 5px;
+   border-style: none;
+ }
+
+ #download input[type=submit]:hover{
+   background-color: #CDFF88;
  }
  
  
