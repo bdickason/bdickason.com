@@ -1883,10 +1883,14 @@
    padding-bottom: 3.6rem;
    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
  }
+
+ .about-features {
+  border-bottom: 1px solid rgba(0,0,0,.07);
+ }
  
  .about-features .features-list {
    padding-top: 5.4rem;
- }
+}
  
  .about-features .feature {
    margin-bottom: 1.8rem;
@@ -1908,6 +1912,10 @@
    color: #151515;
    margin-bottom: 3rem;
  }
+
+ .about-me {
+  padding-top: 3.6rem;
+}
  
  .about-how {
    padding-top: 7.2rem;
@@ -1992,6 +2000,11 @@
  
  .about-bottom-image img {
    vertical-align: bottom;
+ }
+
+ .about-intro #author {
+   border-radius: 10px;
+  max-width: 75%;
  }
  
  
