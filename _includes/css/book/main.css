@@ -156,7 +156,7 @@
    margin: 0;
  }
  
- p.lead {
+ .lead {
    font-family: "muli-light", sans-serif;
    font-size: 2.1rem;
    line-height: 1.857;
@@ -2544,7 +2544,7 @@
  }
  
  #download .lead {
-   color: #C3ACFF;
+   color: white;
    margin-top: 4.8rem;
  }
  
