@@ -56,10 +56,20 @@
 
 <body id="top">
     {% include 'components/book/header.njk' %}
-    {% include 'components/book/about.njk' %}
+
+    <!-- about
+    ================================================== -->
+    <section id="about">
+        {% include 'components/book/about/about-the-book.njk' %}
+        {% include 'components/book/about/features.njk' %}
+        {% include 'components/book/about/toc.njk' %}
+        {% include 'components/book/about/dawless-in-action.njk' %}
+    </section> <!-- end about -->  
+
     {# {% include 'components/book/pricing.njk' %} #}
     {# {% include 'components/book/testimonials.njk' %} #}
-    {% include 'components/book/download.njk' %}
+    
+    {% include 'components/book/who-is-this-for.njk' %}
     {% include 'components/book/footer.njk' %}
 
 
