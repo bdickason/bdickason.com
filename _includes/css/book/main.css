@@ -20,6 +20,7 @@
  *  13. testimonials
  *  14. download
  *  15. footer styles
+ *  16. purchase
  *
  * =================================================================== */
 
@@ -2903,5 +2904,10 @@
    }
  }
  
+
+ /* 16 - Purchase Page */
+ .purchase #author {
+    max-width: 35%;
+ }
  
  /*# sourceMappingURL=main.css.map */
