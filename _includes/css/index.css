@@ -20,7 +20,7 @@ img {
 a,
 a:visited,
 a[href] {
-	color: #222;
+	color: #6000D6;
 }
 a[href].naked {
 	text-decoration: none;
@@ -193,7 +193,7 @@ ul {
 	padding: 0 1em;
 }
 li {
-	font-size: x-large;
+	/* font-size: x-large; */
 	padding: .25em 0;
 }
 li ul {
@@ -323,7 +323,7 @@ footer.elv-layout {
 
 /* Highlighting for bold stuffs */
 
-strong:hover {
+a strong:hover {
 	position: relative;
 	background-image: linear-gradient(238deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff0080);
 	background-size: 1200% 1200%;
@@ -338,4 +338,24 @@ a strong:hover {
 
 .lowercase {
 	text-transform: none;
+}
+
+.highlight {
+	background-color: #FF00DB;
+	font-size: larger;
+	color: #fff;
+	padding: .1em .3em;
+}
+
+/* Used for a list of posts */
+.posts {
+	font-size: x-large;
+}
+
+#spotify {
+	content: url("/static/spotify.png");
+	width: 1.1em;
+	height: 1.1em;
+	vertical-align: middle;
+	border: 0;
 }
