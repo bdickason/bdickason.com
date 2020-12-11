@@ -213,6 +213,10 @@ li a[href]:hover {
 	color: #ff0080;
 }
 
+li p {
+	margin-block: 0em;	/* Fix spacing on home screen list of posts */
+}
+
 .list-bare {
 	list-style: none;
 	padding: 0;
