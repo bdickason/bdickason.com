@@ -5,12 +5,13 @@ layout: layouts/post.njk
 
 # Write Things Down
 
-The trends:
+More and more important discussions are happening via chat. I've noticed this trend over the last few years, likely coinciding with companies adopting Slack. 
 
-1. Workplace communication is moving online. 
-2. Online communication is moving to chat. 
-3. **As a result, Information is lost.**
-
+Chat is great for quick and timely resolutions but terrible for...
+* Any information that someone might need in the future.
+* Discovery by people who aren't in the thread at the time.
+* Having a threaded conversation on a topic
+* Sharing to other interested parties
 
 These are real examples from friends:
 * You join a new team, you want to ramp up and get context on the past two years. You are told: *"Welome, scroll up and read chat history until 2018."* 😩
@@ -33,7 +34,7 @@ You can solve these shortcomings by writing things down and generating an artifa
 
 There is a cost to writing, but the benefits to your team are huge. You'll see better collaboration, fewer re-opened decisions, and an overall decrease in meetings/chat volume.
 
-There's a reason that industry experts such as [Paul Graham](http://www.paulgraham.com/articles.html) or [Andrew Chen](https://andrewchen.co/) have been able to grow large audiences with their writing. It lives on beyond any conversation, e-mail thread, or presentation/pitch.
+There's a reason that people such as [Paul Graham](http://www.paulgraham.com/articles.html) or [Andrew Chen](https://andrewchen.co/) have been able to grow large audiences with their writing. It lives on beyond any conversation, e-mail thread, or presentation/pitch.
 
 You can have the same effect on your team/company.
 

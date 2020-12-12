@@ -16,6 +16,8 @@
 
 		<style>{{ css | cssmin | safe }}</style>
 
+		<script async defer data-domain="bdickason.com" src="https://plausible.io/js/plausible.js"></script>
+		<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 
   </head>
 
@@ -35,7 +37,4 @@
 
 			{# mailchimp scriptz #}
 			<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/d6bf3b0fb3bd91a2f877351d6/7dfc34bb726e0ced8c283059a.js");</script>
-
-			{# momently scriptz #}
-			<script src="//s3-us-west-2.amazonaws.com/momently-static/loader/Xi8hRgAqAQ4_momently.js" name="momently-script"></script>
 </html>
