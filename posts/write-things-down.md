@@ -16,7 +16,7 @@ Chat is great for quick and timely resolutions but terrible for...
 These are real examples from friends:
 * You join a new team, you want to ramp up and get context on the past two years. You are told: *"Welome, scroll up and read chat history until 2018."* 😩
 * You're trying to understand why an important decision was made. You are told: *"I think we talked about that around the first week of January."* 🧐
-* You find out about an important discussion from a coworker. *"Oh that happened in this meeting, we forgot to add you. Sorry!"* 😤
+* You find out about an important discussion from a coworker. *"Oh that happened in this meeting but we forgot to add you. Sorry!"* 😤
 
 **Chat/Meetings are great for ephemeral topics but fails at building institutional knowledge. Meetings share the same problem.**
 
@@ -38,7 +38,8 @@ There's a reason that people such as [Paul Graham](http://www.paulgraham.com/art
 
 You can have the same effect on your team/company.
 
-The steps to implement this are simple:
+The steps to implement this are simple quite simple. The challenge is building a habit.
+
 1. Start writing (Now!)
 2. Organize your notes (e.g. Google Drive or something similar)
 3. Start linking to your notes/folders
