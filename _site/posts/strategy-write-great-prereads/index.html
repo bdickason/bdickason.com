@@ -83,7 +83,8 @@
 <!--End mc_embed_signup-->
 <!-- Add event to mailing list submission -->
 <script type="text/javascript">
-let registerForm = document.getElementById('mc-embedded-subscribe-form');
+// Track referrer so we know where signups come from
+
 registerForm.addEventListener('submit', function(e) {
   e.preventDefault();
   setTimeout(submitForm, 1000);
