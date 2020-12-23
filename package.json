@@ -26,7 +26,7 @@
   },
   "license": "GPL-3.0",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "vercel": "^19.1.2"
+    "@11ty/eleventy": "^0.11.1",
+    "vercel": "^21.0.1"
   }
 }
