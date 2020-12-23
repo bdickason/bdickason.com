@@ -20,13 +20,10 @@ img {
 a,
 a:visited,
 a[href] {
-	/* padding:  */
-	color: #f09;
-	background-color: #dff024;
-	padding: 4px 6px;
+	color: #6000D6;
 }
 a[href]:hover {
-	color: #6000D6;
+	color: #f09;
 }
 a[href].naked {
 	text-decoration: none;
@@ -213,12 +210,11 @@ li li {
 
 li a[href] {
 	padding: 2px 10px 5px 10px;
-	color: #f09;
-	background-color: #dff024
+	color: #8000ff;
 }
 
 li a[href]:hover {
-	color: #8000ff;
+	color: #f09;
 }
 
 li p {
@@ -303,9 +299,7 @@ footer.elv-layout {
 	text-align: center;
 	font-weight: 700;
 	text-transform: uppercase;
-	border-radius: 1.5em;
 	text-decoration: none;
-	box-shadow: 0 8px 6px -6px #000;
 	margin: 1.5em 0 0;
 }
 .btn-primary:hover {
@@ -335,14 +329,14 @@ footer.elv-layout {
 
 /* Highlighting for bold stuffs */
 
-a strong:hover {
+/* a strong:hover {
 	position: relative;
 	background-image: linear-gradient(238deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff0080);
 	background-size: 1200% 1200%;
 	background-position: 0 80%;
 	color: #fff;
 	text-shadow: 0 0 2px rgba(0,0,0,.9);
-}
+} */
 
 a strong:hover {
 	text-decoration: underline white;
@@ -384,14 +378,10 @@ header {
 
 header a, header a:visited, header a[href] {
 	opacity: 40%;
-	color: #6000D6;
-	background-color: white;
 }
 
 header a:hover, header a:visited:hover, header a[href]:hover {
 	opacity: 100%;
-	/* color: #dff024; */
-	/* background-color: #6000D6; */
 }
 
 /* About Page -> Profile Photo */
