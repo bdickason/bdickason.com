@@ -1,7 +1,7 @@
 ## Posts
 
 <div class="posts">
-{% for post in collections.post %}
+{% for post in collections.post reversed %}
 * [{{ post.data.title }}]({{ post.url }})
 {% endfor %}
 </div>

@@ -1,5 +1,6 @@
 ---
 title: Strategy 101&#58; Unpack your assumptions
+date: 2020-11-19
 layout: layouts/post.njk
 ---
 

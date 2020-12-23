@@ -1,5 +1,6 @@
 ---
 title: Write Things Down
+date: 2020-12-02
 layout: layouts/post.njk
 ---
 
