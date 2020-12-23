@@ -40,7 +40,9 @@ hr {
 }
 p {
 	max-width: 42em;
-	line-height: 1.5;
+	font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 2rem;
 }
 
 .nowrap {
@@ -198,6 +200,9 @@ ul {
 li {
 	/* font-size: x-large; */
 	padding: .25em 0;
+	font-size: 1.2rem;
+    /* margin-bottom: 2rem; */
+    line-height: 2rem;
 }
 li ul {
 	margin: .5em 0;
@@ -206,6 +211,7 @@ li ul {
 li li {
 	padding-top: .1em;
 	padding-bottom: .1em;
+	
 }
 
 li a[href] {
