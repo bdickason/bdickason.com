@@ -20,6 +20,12 @@ img {
 a,
 a:visited,
 a[href] {
+	/* padding:  */
+	color: #f09;
+	background-color: #dff024;
+	padding: 4px 6px;
+}
+a[href]:hover {
 	color: #6000D6;
 }
 a[href].naked {
@@ -206,11 +212,13 @@ li li {
 }
 
 li a[href] {
-	color: #8000ff;
+	padding: 2px 10px 5px 10px;
+	color: #f09;
+	background-color: #dff024
 }
 
 li a[href]:hover {
-	color: #ff0080;
+	color: #8000ff;
 }
 
 li p {
@@ -345,7 +353,7 @@ a strong:hover {
 }
 
 .highlight {
-	background-color: #FF00DB;
+	background-color: #f09;
 	font-size: larger;
 	color: #fff;
 	padding: .1em .3em;
@@ -374,12 +382,16 @@ header {
 	/* opacity: 40%; */
 }
 
-header a{
+header a, header a:visited, header a[href] {
 	opacity: 40%;
+	color: #6000D6;
+	background-color: white;
 }
 
-header a:hover {
+header a:hover, header a:visited:hover, header a[href]:hover {
 	opacity: 100%;
+	/* color: #dff024; */
+	/* background-color: #6000D6; */
 }
 
 /* About Page -> Profile Photo */
@@ -389,3 +401,12 @@ header a:hover {
 	max-width: 50%;
 	margin: 10px auto;
 }
+
+
+/* Colors
+Neon Pink - #f09
+Neon Yellow - #dff024
+Purple - #6000D6
+Grey - #a8a8a8
+Black - black
+*/
