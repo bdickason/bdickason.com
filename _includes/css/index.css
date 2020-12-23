@@ -381,3 +381,11 @@ header a{
 header a:hover {
 	opacity: 100%;
 }
+
+/* About Page -> Profile Photo */
+.bio {
+	display: block;
+	border-radius: 10px;
+	max-width: 50%;
+	margin: 10px auto;
+}
