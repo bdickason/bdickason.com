@@ -103,11 +103,9 @@ if(signupForm.addEventListener) {
         function submitForm() {
           if (!formSubmitted) {
             formSubmitted = true;
-            console.log('got here')
             //registerForm.submit();
           }
         }
-      
         plausible('signup', {callback: submitForm});
       })    
 }
