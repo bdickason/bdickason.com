@@ -16,6 +16,7 @@ if(signupForm.addEventListener) {
             //registerForm.submit();
           }
         }
+        console.log('Signup successful');
         plausible('signup', {callback: submitForm});
       })    
 }
