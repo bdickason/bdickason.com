@@ -14,7 +14,7 @@ I started this site to share the knowledge I've gained in 15 years spent PM'ing.
 
 My current clients tell me that I can quickly cut through their ambiguous questions and bring a structured framework and advice that blends head and heart.
 
-If you're interested in a free consultation, visit [my coaching page](http://bdickason.com/coaching).
+If you're interested in a free consultation, visit [my coaching page](https://bdickason.com/coaching).
 
 ## My PM Archetype
 Strengths: Strategy, Vision, Alignment
