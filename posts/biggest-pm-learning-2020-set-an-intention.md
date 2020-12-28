@@ -34,6 +34,8 @@ As I discussed this with more people and started to have a better idea of what I
 
 **By sharing my intention with my coworkers, I unknowingly started to make progress against it without even trying!**
 
+<img src="/static/posts/biggest-pm-learning-2020-set-an-intention/point-break.jpg" width="100%">
+
 ## Step Three: Write down the problems
 
 As I went through this process with my coworkers and other people in my life, clear trends started to emerge:
