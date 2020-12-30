@@ -6,7 +6,7 @@ window.onload = (event) => {
 
   /* Override form submit to track submissions */
   const signupForm = document.querySelector(".formkit-form");
-  console.log(signupForm)
+
   if(signupForm.addEventListener) {
       signupForm.addEventListener('submit', function(e) {
           e.preventDefault();
@@ -19,7 +19,6 @@ window.onload = (event) => {
               //registerForm.submit();
             }
           }
-          console.log('Signup successful');
           gtag('event', 'signup', {
             'event_category': 'bdickason.com',
             'event_label': 'signup',
