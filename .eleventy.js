@@ -7,4 +7,12 @@ module.exports = function(eleventyConfig) {
 
   // copy static files to /static so images render locally
   eleventyConfig.addPassthroughCopy("static");
+
+  // Handle date formatting
+  const pluginDate = require('eleventy-plugin-date');
+  eleventyConfig.addPlugin(pluginDate, {
+    formats: {
+      readableDate: { year: "numeric", month: "short", day: "numeric" }
+    }
+  });
 };

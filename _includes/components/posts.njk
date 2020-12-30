@@ -2,6 +2,6 @@
 
 <div class="posts">
 {% for post in collections.post reversed %}
-* [{{ post.data.title }}]({{ post.url }})
+* [{{ post.data.title }}]({{ post.url }}) <span class="date">{{ post.date | readableDate }}</span>
 {% endfor %}
 </div>

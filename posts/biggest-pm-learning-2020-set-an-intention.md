@@ -3,7 +3,6 @@ title: Set an intention for the year (and tell everyone)
 date: 2020-12-27
 layout: layouts/post.njk
 ---
-
 # Set an intention for next year (and tell everyone)
 
 In 2019, I spent a ton of time doing work that I wasn’t passionate about (or great at). It seemed like each project I worked on would be coupled with hours of extra meetings, busywork, and other things that seemed to take time away from working on what drives me: vision and strategy. Here’s a detailed breakdown of a huge change I made to change that.
@@ -92,6 +91,7 @@ Across everything I did during the year, this process made the biggest impact in
 {% include components/mailinglist.njk %}
 
 Related Topics: #productivity
+<p class="date">Post last updated: {{ date | readableDate }}</date>
 
 * * *
 
