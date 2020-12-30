@@ -161,6 +161,9 @@ h2 {
 	margin: 1em 0 .25em;
 	line-height: 1.1;
 }
+h2#posts {
+	margin-top: 0px;
+}
 h3 {
 	font-size: 1.666666666667em; /* 30px /18 */
 	margin-bottom: .5em;
