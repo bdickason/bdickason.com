@@ -396,6 +396,11 @@ header a:hover, header a:visited:hover, header a[href]:hover {
 	margin: 10px auto;
 }
 
+/* Coaching Page -> Smaller Profile Photo */
+.small.bio {
+	max-width: 20%;
+}
+
 
 /* Colors
 Neon Pink - #f09
