@@ -1,30 +1,29 @@
-// const referrerForm = document.getElementById("referrer");
-// referrerForm.value = document.referrer
-
 // Wait for embedded script to be loaded
 window.onload = (event) => {
 
   /* Override form submit to track submissions */
-  const signupForm = document.querySelector(".formkit-form");
+  const coachingForm = document.querySelector(".typeform-share");
 
-  if(signupForm && signupForm.addEventListener) {
-      signupForm.addEventListener('submit', function(e) {
+
+  if(coachingForm && coachingForm.addEventListener) {
+      coachingForm.addEventListener('click', function(e) {
           e.preventDefault();
           setTimeout(submitForm, 1000);
           var formSubmitted = false;
-        
+
           function submitForm() {
             if (!formSubmitted) {
               formSubmitted = true;
               //registerForm.submit();
             }
           }
-          gtag('event', 'signup', {
+          gtag('event', 'coaching', {
             'event_category': 'bdickason.com',
-            'event_label': 'signup',
+            'event_label': 'coaching',
             'value': window.location.pathname
           });  // Fire google analytics event
-          plausible('signup', {callback: submitForm});  // Fire plausible event
-        })    
+          plausible('coaching', {callback: submitForm});  // Fire plausible event
+
+      })    
   }
 }
