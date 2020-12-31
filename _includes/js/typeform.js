@@ -19,8 +19,7 @@ window.onload = (event) => {
           }
           gtag('event', 'coaching', {
             'event_category': 'bdickason.com',
-            'event_label': 'coaching',
-            'value': window.location.pathname
+            'event_label': window.location.pathname
           });  // Fire google analytics event
           plausible('coaching', {callback: submitForm});  // Fire plausible event
 

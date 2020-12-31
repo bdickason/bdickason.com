@@ -21,8 +21,7 @@ window.onload = (event) => {
           }
           gtag('event', 'signup', {
             'event_category': 'bdickason.com',
-            'event_label': 'signup',
-            'value': window.location.pathname
+            'event_label': window.location.pathname
           });  // Fire google analytics event
           plausible('signup', {callback: submitForm});  // Fire plausible event
         })    

@@ -1,6 +1,7 @@
 ---
 title: Strategy 101&#58; Unpack your assumptions
 date: 2020-11-19
+description: "Take each of your declarative statements and start listing them out (call this your ‘FAQ'). Write down each one independently. We’ll call these statements ’conclusions.’"
 layout: layouts/post.njk
 ---
 
@@ -48,6 +49,8 @@ If you do this right, the actual pitch will be a discussion focused not on ‘wh
 
 
 {% include components/mailinglist.njk %}
+
+{% include components/date.njk %}
 
 * * *
 

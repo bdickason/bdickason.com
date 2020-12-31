@@ -1,6 +1,7 @@
 ---
 title: Write Things Down
 date: 2020-12-02
+description: "Chat is great for quick and timely resolutions but terrible for any information that someone might need in the future."
 layout: layouts/post.njk
 ---
 
@@ -56,6 +57,9 @@ Related Topics: #productivity, #async
 
 
 {% include components/mailinglist.njk %}
+
+{% include components/date.njk %}
+
 
 * * *
 

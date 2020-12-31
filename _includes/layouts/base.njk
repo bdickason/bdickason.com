@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="{% if subtitle %}{{ subtitle }}{% else %}Become a great Product Manager.{% endif %}">
+		<meta name="description" content="{% if description %}{{ description }}{% else %}Become a great Product Manager.{% endif %}">
 		<meta name="page" content="{{ page.url }}">
 		<link rel="icon" href="/static/favicon.ico">
 
-		<title>{{ subtitle + '-' if subtitle}} bdickason.com</title>
+		<title>{{ title + '-' if title}} bdickason.com</title>
 
 		{%- set css %}
 		{% include 'css/index.css' %}

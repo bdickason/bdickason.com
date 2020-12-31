@@ -1,6 +1,7 @@
 ---
 title: Coaching
 layout: layouts/page.njk
+description: "I coach mid and senior PM's to give them tools to increase their scope and make more impact."
 ---
 
 <img class="small bio" src="/static/book/author.jpg">

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Become a great Product Manager">
+		<meta name="description" content="From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between. Simple improvements you can make to improve your day-to-day PM life.">
 		<meta name="page" content="/">
 		<link rel="icon" href="/static/favicon.ico">
 
@@ -92,8 +92,7 @@ window.onload = (event) => {
           }
           gtag('event', 'signup', {
             'event_category': 'bdickason.com',
-            'event_label': 'signup',
-            'value': window.location.pathname
+            'event_label': window.location.pathname
           });  // Fire google analytics event
           plausible('signup', {callback: submitForm});  // Fire plausible event
         })    
@@ -121,8 +120,7 @@ window.onload = (event) => {
           }
           gtag('event', 'coaching', {
             'event_category': 'bdickason.com',
-            'event_label': 'coaching',
-            'value': window.location.pathname
+            'event_label': window.location.pathname
           });  // Fire google analytics event
           plausible('coaching', {callback: submitForm});  // Fire plausible event
 
