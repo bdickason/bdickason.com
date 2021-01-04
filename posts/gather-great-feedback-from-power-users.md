@@ -101,6 +101,8 @@ Here are some things I’ve tried over the year that led to very positive result
 3. **Run community events.** My most successful council began with an in-person event where we flew the group out to meet in person (pre-COVID-19, obviously) and arranged an entire day where they felt like celebrities. They got to have breakfast and meet the team in the morning, hear talks from team members during the day, and try a very early version of future features in the afternoon. They went home with swag and everyone left feeling like they were a part of our product team. It was a blast and those users continued to give great feedback (and tell their friends) for quite some time.
 4. **Be available.** I was constantly surprised how sometimes our council members would light up when we responded to their ideas. Showing up and responding makes a huge difference. You’ll also find some odd cases such as one of our council members who enjoyed talking on the phone for an hour (and was clearly very lonely). Sometimes, you are more than just a PM collecting feature requests to your council.
 
+*"If anything, people should read the 'How to get your council to love you' section twice. The UX of someone who gives feedback is a critical flywheel. Make them feel heard. Tell them what they inspired, thank them when you push it live."* -[@michaelmuse](https://twitter.com/michaelmuse/status/1346115464985010177)
+
 [Here’s a great thread from an early eBay Voices member](http://www.vendio.com/mesg/read.html?num=2&thread=306630) on why they participated despite no special treatment early on.
 
 ## This sounds way too good to be true...
