@@ -8,6 +8,7 @@ body {
 }
 img {
 	border: 0;
+	width: 100%;
 }
 a,
 a:visited,
@@ -207,7 +208,7 @@ li li {
 }
 
 li a[href] {
-	padding: 2px 10px 5px 10px;
+	padding: 2px;
 	color: #8000ff;
 }
 
