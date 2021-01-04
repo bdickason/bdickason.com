@@ -1,7 +1,7 @@
 ---
 title: How to gather great feedback from your power users
 date: 2021-01-04
-description: ""
+description: "Use Customer Advisory Councils to get high quality from your most passionate users."
 layout: layouts/post.njk
 ---
 # How to gather great feedback from your power users
