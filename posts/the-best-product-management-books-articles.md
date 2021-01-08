@@ -1,6 +1,6 @@
 ---
 title: The Best Product Management books, articles, and videos
-date: 2021-01-07
+date: 2021-01-08
 description: "The resources that changed the way I look at Product Management over the past 15 years."
 layout: layouts/post.njk
 ---
