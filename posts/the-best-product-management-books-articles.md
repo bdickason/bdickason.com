@@ -124,6 +124,9 @@ Keep scrolling for the full list of books [and articles](#articles) 👇
 * **Albert Wenger** ([Blog](https://continuations.com/), [Twitter](https://twitter.com/albertwenger))
     * [Kaizen for Software Developers](https://continuations.com/post/37634462048/continuous-improvement-revisited-bonus) - A series (linked in first paragraph) on how to solve optimization problems by applying lean manufacturing theory.
 
+<img src="/static/posts/the-best-product-management-books-articles/hacker-books.png">
+<p align="center"><em><a href="https://www.youtube.com/watch?v=4U9MI0u2VIE" target="_new">Even l33t hax0rs read books on computers.</a></em></p>
+
 **What are the books, videos, or articles that changed the way you look at Product Management? I’d love to hear about them! [@bdickason](http://twitter.com/bdickason)**
 
 <strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
