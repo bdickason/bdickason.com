@@ -120,6 +120,7 @@ window.onload = (event) => {
             'event_category': 'bdickason.com',
             'event_label': window.location.pathname
           });  // Fire google analytics event
+          
           plausible('signup', {callback: submitForm});  // Fire plausible event
         })    
   }
