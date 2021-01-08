@@ -22,7 +22,7 @@ I’ve kept mental notes of the resources that changed the way I look at Product
 ## Top 5 Posts/Articles:
 
 1. [Be a Great Product Leader](https://adamnash.blog/2011/12/16/be-a-great-product-leader/) ([video](https://www.youtube.com/watch?v=24F8WlyMR00)) - Great product leaders define what game we’re playing and how we keep score.
-2. [The Next Feature Fallacy](https://andrewchen.co/the-next-feature-fallacy-the-fallacy-that-the-next-new-feature-will-suddenly-make-people-use-your-product/) - The next new feature probably won't make people start using your product.
+2. [The Next Feature Fallacy](https://andrewchen.co/the-next-feature-fallacy-the-fallacy-that-the-next-new-feature-will-suddenly-make-people-use-your-product/) - Building another feature probably won't make people start using your product.
 3. [The Hardest Lessons for Startups to Learn](http://www.paulgraham.com/startuplessons.html) - A set of guiding principles for startups or 0→1 products.
 4. [Steve Jobs Introducing the iPhone](https://www.youtube.com/watch?v=MnrJzXM7a6o) - One of the best product pitches I’ve seen. Simply ‘Phone + iPod + Browser.’
 5. [The Interface of a Cheeseburger](https://ia.net/topics/the-interface-of-a-cheeseburger) - A usability breakdown of one of the most user friendly products around.
@@ -81,7 +81,7 @@ Keep scrolling for the full list of books [and articles](#articles) 👇
     * [The Next Feature Fallacy: The fallacy that the a new feature will suddenly make people use your product](https://andrewchen.co/the-next-feature-fallacy-the-fallacy-that-the-next-new-feature-will-suddenly-make-people-use-your-product/). - New features do not magically achieve product/market fit. Often removing a feature is better than adding one.
     * [The 20 best marketplace essays](https://andrewchen.co/marketplace-startups-best-essays/). - A laundry list of great articles on two sided marketplaces.
 * **Shreyas Doshi** ([Twitter](https://twitter.com/shreyas/))
-    * [Why do smart product teams often build products with little or no impact](https://twitter.com/shreyas/status/1282169204699873281) - Common pitfalls that PM’s often fall into that stops them from being successful. **(***I am guilty of many of these)*
+    * [Why do smart product teams often build products with little or no impact](https://twitter.com/shreyas/status/1282169204699873281) - Common pitfalls that PM’s often fall into that stops them from being successful. *(I am guilty of many of these)*
 * **Jason Fried** ([Blog](https://signalvnoise.com/popular), [Twitter](https://twitter.com/jasonfried?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor))
     * Post: [Status meetings are the scourge](https://m.signalvnoise.com/status-meetings-are-the-scourge/) - Shift your standups from sync to async and give everyone time back.
     * Book: [Getting Real](https://www.amazon.com/gp/product/0578012812/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0578012812&linkCode=as2&tag=bdickason-20&linkId=f39e0c81ce63f7ad552f6a6e668bdcf2) (2006) - An (at the time) controversial take: Don’t raise VC money, grow organically, build simple tools to make it easier to get your job done.
@@ -90,7 +90,7 @@ Keep scrolling for the full list of books [and articles](#articles) 👇
 * **Paul Graham** ([Blog](http://www.paulgraham.com/articles.html), [Twitter](https://twitter.com/paulg))
     * [The Hardest Lessons for Startups to Learn](http://www.paulgraham.com/startuplessons.html) - A set of guiding principles for startups or 0→1 products.
     * [What business can learn from open source](http://www.paulgraham.com/opensource.html) - Open source produces an incredible amount of value with little financial incentive. Here’s why it works.
-    * [Maker’s Schedule, Management Schedule](http://www.paulgraham.com/makersschedule.html) - Time needed for deep/creative thinking requires large blocks in your calendar (but managers are incentivized to flood calendars with meetings).
+    * [Maker’s Schedule, Manager's Schedule](http://www.paulgraham.com/makersschedule.html) - Time needed for deep/creative thinking requires large blocks in your calendar (but managers are incentivized to flood calendars with meetings).
 * **Ben Horowitz** ([Blog](https://twitter.com/bhorowitz), [Twitter](https://a16z.com/author/ben-horowitz/))
     * [Good Product Manager, Great Product Manager](https://a16z.com/2012/06/15/good-product-managerbad-product-manager/) - A set of qualities that some of the world’s best PM’s exhibit (or don’t exhibit).
 * **Steve Jobs**
@@ -105,7 +105,7 @@ Keep scrolling for the full list of books [and articles](#articles) 👇
     * [Marissa Meyer on Google Search Results](https://adamnash.blog/2006/11/10/insights-on-design-marissa-mayer-google-search-results/) - How to balance testing/experiments and research.
 * **Jakob Nielsen** ([Blog](https://www.nngroup.com/articles/), [Twitter](https://twitter.com/NNgroup))
     * [Why you only need to test with 5 users](https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/) - How to run an effective, lightweight user research session
-    * [How people read on the web](https://www.nngroup.com/articles/how-people-read-online/) - Eye tracking data across a variety of websites highlights how people scan (not read).
+    * [How people read online](https://www.nngroup.com/articles/how-people-read-online/) - Eye tracking data across a variety of websites highlights how people scan (not read).
 * **Adam Penenberg** ([Blog](http://penenberg.com/), [Twitter](https://twitter.com/Penenberg))
     * Book: [Viral Loop](https://www.amazon.com/gp/product/1401323499/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1401323499&linkCode=as2&tag=bdickason-20&linkId=b57eae3e564539fc2b19ac1c41ffe789) (2009) - Case studies of how to build and measure virality in your products with a ton of real world examples (e.g. Hot or Not).
 * **Lenny Rachitsky** ([Newsletter](https://www.lennyrachitsky.com/), [Twitter](https://twitter.com/lennysan))
@@ -124,7 +124,7 @@ Keep scrolling for the full list of books [and articles](#articles) 👇
 * **Albert Wenger** ([Blog](https://continuations.com/), [Twitter](https://twitter.com/albertwenger))
     * [Kaizen for Software Developers](https://continuations.com/post/37634462048/continuous-improvement-revisited-bonus) - A series (linked in first paragraph) on how to solve optimization problems by applying lean manufacturing theory.
 
-**Are there books, videos, or articles that changed the way you look at Product Management? I’d love to hear about them! [@bdickason](http://twitter.com/bdickason)**
+**What are the books, videos, or articles that changed the way you look at Product Management? I’d love to hear about them! [@bdickason](http://twitter.com/bdickason)**
 
 <strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
 
