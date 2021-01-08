@@ -1,7 +1,7 @@
 ---
 title: The Best Product Management books, articles, and videos
 date: 2021-01-07
-description: "The best resources that shaped me into the PM I am today"
+description: "The resources that changed the way I look at Product Management over the past 15 years."
 layout: layouts/post.njk
 ---
 
@@ -68,14 +68,14 @@ Keep scrolling for the full list of books [and articles](#articles) 👇
     * Book: [The Long Tail](https://www.amazon.com/gp/product/1401309666/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1401309666&linkCode=as2&tag=bdickason-20&linkId=47dcce1fe01ad1e39c812af258e2c304) (2008) - The internet enables [long tail distribution](https://en.wikipedia.org/wiki/Long_tail) (e.g. Youtube videos with <10k views) and Chris explains how this affects the products we build.
     * [The Long Tail](https://www.wired.com/2004/10/tail/) - A shorter article containing the core concepts from his book.
 * **Jeff Atwood** ([Blog](https://blog.codinghorror.com/), [Twitter](https://twitter.com/codinghorror))
-    * [Rubber Duck Problem Solving](https://blog.codinghorror.com/rubber-duck-problem-solving/) - Talking through your problem out loud often gets you to clarity and sometimes solves your problem (and how Stack Overflow was built with this in mind).
+    * [Rubber Duck Problem Solving](https://blog.codinghorror.com/rubber-duck-problem-solving/) - Talking through your problem out loud often gets you to clarity (Jeff built Stack Overflow with this in mind).
     * [Please Don’t Learn to Code](https://blog.codinghorror.com/please-dont-learn-to-code/) - A take on ‘how much technical knowledge do I need to be a good Product Manager?“
     * [The Rule of Three](https://blog.codinghorror.com/rule-of-three/) - To build a product that will truly grow, you need to convince at least 3 different audiences to use it (this lines up with my experience).
 * **Andrew Bosworth** ([Blog](https://boz.com/), [Twitter](https://twitter.com/boztank))
     * [Strength Dictates Weakness](https://boz.com/articles/strength-weakness) - Your strengths are likely also causing some of your greatest weaknesses.
     * [A Career Cold Start Algorithm](https://boz.com/articles/career-cold-start) - A simple playbook to ramp up as quickly as possible when you join a new team.
 * **Ed Catmull** ([Twitter](https://twitter.com/edcatmull?lang=en))
-    * Book: [Creativity Inc](https://www.amazon.com/gp/product/0812993012/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0812993012&linkCode=as2&tag=bdickason-20&linkId=19b5f6d027f235b833d9de734f955efa)  (2014) - How Pixar creates a culture and process that encourages creativity and rapid, direct (but kind) feedback.
+    * Book: [Creativity Inc](https://www.amazon.com/gp/product/0812993012/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0812993012&linkCode=as2&tag=bdickason-20&linkId=19b5f6d027f235b833d9de734f955efa)  (2014) - How Pixar creates/process that encourages creativity and rapid, direct (but kind) feedback.
 * **Andrew Chen** ([Blog](https://andrewchen.co/), [Twitter](https://twitter.com/andrewchen))
     * [User Retention: Why depending on notification-driven retention sucks](https://andrewchen.co/user-retention-why-depending-on-notification-driven-retention-sucks/) - Without organic retention, you’ll always need to prop your product up with paid traffic or growth tactics.
     * [The Next Feature Fallacy: The fallacy that the a new feature will suddenly make people use your product](https://andrewchen.co/the-next-feature-fallacy-the-fallacy-that-the-next-new-feature-will-suddenly-make-people-use-your-product/). - New features do not magically achieve product/market fit. Often removing a feature is better than adding one.
@@ -83,7 +83,7 @@ Keep scrolling for the full list of books [and articles](#articles) 👇
 * **Shreyas Doshi** ([Twitter](https://twitter.com/shreyas/))
     * [Why do smart product teams often build products with little or no impact](https://twitter.com/shreyas/status/1282169204699873281) - Common pitfalls that PM’s often fall into that stops them from being successful. **(***I am guilty of many of these)*
 * **Jason Fried** ([Blog](https://signalvnoise.com/popular), [Twitter](https://twitter.com/jasonfried?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor))
-    * Post: [Status meetings are the scourge](https://m.signalvnoise.com/status-meetings-are-the-scourge/) - Shift your standups from sync to async and give everone time back.
+    * Post: [Status meetings are the scourge](https://m.signalvnoise.com/status-meetings-are-the-scourge/) - Shift your standups from sync to async and give everyone time back.
     * Book: [Getting Real](https://www.amazon.com/gp/product/0578012812/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0578012812&linkCode=as2&tag=bdickason-20&linkId=f39e0c81ce63f7ad552f6a6e668bdcf2) (2006) - An (at the time) controversial take: Don’t raise VC money, grow organically, build simple tools to make it easier to get your job done.
 * **Naomi Gleit** ([Twitter](https://twitter.com/naomersg?lang=en))
     * [Understand, Identify, Execute](https://www.youtube.com/watch?v=7yUW0G8FhrA&feature=youtu.be) - A framework for running great product teams and especially effective for growth teams. *(Unfortunately I couldn’t find a video of Naomi giving this talk)*
