@@ -1,7 +1,8 @@
 ---
 title: Set an intention for the year (and tell everyone)
 date: 2020-12-27
-description: "Setting an intention for the year and communicating it broadly helped me spend more time doing work that I love."
+description: Setting an intention for the year and communicating it broadly helped me spend more time doing work that I love.
+thumbnail: '/static/posts/biggest-pm-learning-2020-set-an-intention/point-break.jpg'
 layout: layouts/post.njk
 ---
 # Set an intention for next year (and tell everyone)
@@ -34,7 +35,7 @@ As I discussed this with more people and started to have a better idea of what I
 
 **By sharing my intention with my coworkers, I unknowingly started to make progress against it without even trying!**
 
-<img src="/static/posts/biggest-pm-learning-2020-set-an-intention/point-break.jpg">
+<img src="{{ thumbnail }}">
 
 ## Step Three: Write down the problems
 

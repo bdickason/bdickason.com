@@ -3,11 +3,23 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- SEO -->
+		<title>{{ title + ' - ' if title}} bdickason.com</title>
 		<meta name="description" content="{% if description %}{{ description }}{% else %}Become a great Product Manager.{% endif %}">
 		<meta name="page" content="{{ page.url }}">
 		<link rel="icon" href="/static/favicon.ico">
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@bdickason" />
+		<meta name="twitter:title" content="{{ title + ' - ' if title}}" />
+		<meta name="twitter:description" content="{% if description %}{{ description }}{% else %}Become a great Product Manager.{% endif %}" />
+		{% if thumbnail %}<meta name="twitter:image" content="https://bdickason.com{{ thumbnail }}" />{% endif %}
+		
 
-		<title>{{ title + '-' if title}} bdickason.com</title>
+
+		
 
 		{%- set css %}
 		{% include 'css/index.css' %}
@@ -15,6 +27,7 @@
 
 		<style>{{ css | cssmin | safe }}</style>
 
+		<!-- Analytics -->
 		<script async defer data-domain="bdickason.com" src="https://plausible.io/js/plausible.js"></script>
 		<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 
