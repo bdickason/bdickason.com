@@ -1,7 +1,7 @@
 ---
 title: Land your strategy by writing great pre-reads
 date: 2020-12-21
-description: "I’ve found that a crisp, clear document with a compelling narrative is the most effective way to land a pitch.  Writing in a document forces you to focus on the narrative and not the visual elements."
+description: I’ve found that a crisp, clear document with a compelling narrative is the most effective way to land a pitch.  Writing in a document forces you to focus on the narrative and not the visual elements.
 layout: layouts/post.njk
 ---
 

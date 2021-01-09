@@ -1,7 +1,8 @@
 ---
 title: 'Become a great Product Manager'
 name: 'home'
-description: 'From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between. Simple improvements you can make to improve your day-to-day PM life.'
+description: From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between. Simple improvements you can make to improve your day-to-day PM life.
+thumbnail: /static/book/author.jpg
 layout: layouts/base.njk
 ---
 ## Become a great Product Manager

@@ -1,7 +1,7 @@
 ---
 title: Strategy 101&#58; Unpack your assumptions
 date: 2020-11-19
-description: "Take each of your declarative statements and start listing them out (call this your ‘FAQ'). Write down each one independently. We’ll call these statements ’conclusions.’"
+description: Take each of your declarative statements and start listing them out (call this your ‘FAQ'). Write down each one independently. We’ll call these statements ’conclusions.’
 layout: layouts/post.njk
 ---
 

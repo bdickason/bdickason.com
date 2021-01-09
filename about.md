@@ -1,6 +1,8 @@
 ---
 title: About
 layout: layouts/page.njk
+description: I'm a Product Manager from Santa Cruz who loves 🎶 synthwave music and 🏄‍♂️ surfing.
+thumbnail: /static/book/author.jpg
 ---
 
 <img class="bio" src="/static/book/author.jpg">

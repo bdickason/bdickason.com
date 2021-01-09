@@ -1,7 +1,8 @@
 ---
 title: How to gather great feedback from your power users
 date: 2021-01-04
-description: "Use Customer Advisory Councils to get high quality from your most passionate users."
+description: Use Customer Advisory Councils to get high quality from your most passionate users.
+thumbnail: /static/posts/gather-great-feedback-from-power-users/lebowski.png
 layout: layouts/post.njk
 ---
 # How to gather great feedback from your power users
@@ -61,7 +62,7 @@ There are a few options for how you run your council. You can choose between:
 * Structured vs unstructured
 
 
-<img src="/static/posts/gather-great-feedback-from-power-users/lebowski.png">
+<img src="{{ thumbnail }}">
 
 **I’ve found that getting as close to ‘a group of people sitting in the room shooting the shit’ as possible is key.** 
 
