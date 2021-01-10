@@ -12,7 +12,8 @@ module.exports = function(eleventyConfig) {
   const pluginDate = require('eleventy-plugin-date');
   eleventyConfig.addPlugin(pluginDate, {
     formats: {
-      readableDate: { year: "numeric", month: "short", day: "numeric" }
+      readableDate: { year: "numeric", month: "short", day: "numeric" },
+      htmlDate: 'yyyy-MM-dd'
     }
   });
 };
