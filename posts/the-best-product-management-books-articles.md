@@ -130,10 +130,7 @@ Keep scrolling for the full list of books [and articles](#articles) 👇
 
 **What are the books, videos, or articles that changed the way you look at Product Management? I’d love to hear about them! [@bdickason](http://twitter.com/bdickason)**
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
-
-
-{% include components/mailinglist.njk %}
+{% include components/post/post-mailinglist.njk %}
 
 Related Topics: #strategy, #must-read
 {% include components/date.njk %}
