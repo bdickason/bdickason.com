@@ -1,9 +1,8 @@
 // Wait for embedded script to be loaded
-window.onload = (event) => {
+window.addEventListener('load', function(event) {
 
   /* Override form submit to track submissions */
   const coachingForm = document.querySelector(".typeform-share");
-
 
   if(coachingForm && coachingForm.addEventListener) {
       coachingForm.addEventListener('click', function(e) {
@@ -25,4 +24,4 @@ window.onload = (event) => {
 
       })    
   }
-}
+});

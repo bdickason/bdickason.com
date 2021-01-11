@@ -2,7 +2,7 @@
 // referrerForm.value = document.referrer
 
 // Wait for embedded script to be loaded
-window.onload = (event) => {
+window.addEventListener('load', function(event) {
 
   /* Override form submit to track submissions */
   const signupForm = document.querySelector(".formkit-form");
@@ -27,4 +27,4 @@ window.onload = (event) => {
           plausible('signup', {callback: submitForm});  // Fire plausible event
         })    
   }
-}
+})
