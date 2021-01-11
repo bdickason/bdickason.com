@@ -2,7 +2,7 @@
 title: Set an intention for the year (and tell everyone)
 date: 2020-12-27
 description: Setting an intention for the year and communicating it broadly helped me spend more time doing work that I love.
-thumbnail: '/static/posts/biggest-pm-learning-2020-set-an-intention/point-break.jpg'
+thumbnail: /static/posts/biggest-pm-learning-2020-set-an-intention/point-break.jpg
 layout: layouts/post.njk
 ---
 # Set an intention for next year (and tell everyone)

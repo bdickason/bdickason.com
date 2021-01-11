@@ -2,7 +2,7 @@
 title: The Best Product Management books, articles, and videos
 date: 2021-01-08
 description: The resources that changed the way I look at Product Management over the past 15 years.
-thumbnail: /static/posts/the-best-product-management-books-articles/hacker-books.png
+thumbnail: /static/posts/the-best-product-management-books-articles/hacker-books.jpg
 layout: layouts/post.njk
 ---
 

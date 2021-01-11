@@ -2,7 +2,7 @@
 title: How to gather great feedback from your power users
 date: 2021-01-04
 description: Use Customer Advisory Councils to get high quality from your most passionate users.
-thumbnail: /static/posts/gather-great-feedback-from-power-users/lebowski.png
+thumbnail: /static/posts/gather-great-feedback-from-power-users/lebowski.jpg
 layout: layouts/post.njk
 ---
 # How to gather great feedback from your power users
@@ -121,7 +121,7 @@ I’ve seen teams at big and small companies take this approach but there are ma
 The reality is, if you are routinely fixing the top pain points of your power users, you don’t need to learn about the quantity/volume that you’re shipping. People often only want 1-2 things and if you can deliver that (or more), they’re incredibly happy.
 
 
-****Did you set an intention for last year? What was it? What else did you do that helped you spend more time doing work that you love? [@bdickason](http://twitter.com/bdickason)****
+**Did you set an intention for last year? What was it? What else did you do that helped you spend more time doing work that you love? [@bdickason](http://twitter.com/bdickason)**
 
 <strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
 
