@@ -12,9 +12,10 @@
 {% if thumbnail %}<meta name="twitter:image" content="http://{{ site.hostname }}{{ thumbnail }}" />{% endif %}
 
 <!-- Open Graph (FB, LinkedIn) -->
-<meta property='og:title' content="{{ title + ' - ' if title}}" />
-<meta property='og:description' content="{% if description %}{{ description }}{% else %}Become a great Product Manager.{% endif %}" />
-<meta property='og:url' content="https://{{ site.hostname }}{{ page.url }}" />
-<meta property='og:type' content="article" />
+<meta property="og:title" content="{{ title + ' - ' if title}}" />
+<meta property="og:description" content="{% if description %}{{ description }}{% else %}Become a great Product Manager.{% endif %}" />
+<meta property="og:url" content="https://{{ site.hostname }}{{ page.url }}" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="en_US" />
 {% if thumbnail %}<meta property='og:image' content="http://{{ site.hostname }}{{ thumbnail }}" />{% endif %}
 
