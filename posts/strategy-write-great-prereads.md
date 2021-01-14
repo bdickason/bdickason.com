@@ -2,6 +2,7 @@
 title: Land your strategy by writing great pre-reads
 date: 2020-12-21
 description: I’ve found that a crisp, clear document with a compelling narrative is the most effective way to land a pitch.  Writing in a document forces you to focus on the narrative and not the visual elements.
+thumbnail: /static/posts/strategy-write-great-prereads/no-more-slides.png
 layout: layouts/post.njk
 ---
 
@@ -12,6 +13,8 @@ Early in my career, I thought that presentations were the ultimate way to pitch 
 **The best reviews I’ve been in started with a pre-read and jumped right to discussion questions.** Best case scenario, we referred back to a slide or two with data during the discussion.
 
 Over the years, I’ve found that a crisp, clear document with a compelling narrative is the most effective way to land a pitch.  Writing in a document forces you to focus on the narrative and not the visual elements. Your tools are **Bold**, *Italic*, and •Bulleted list (vs. squares, rectangles, and every color under the rainbow).
+
+<img src="{{ thumbnail }}" class="small bio">
 
 #### **My approach to pitches these days:**
 
