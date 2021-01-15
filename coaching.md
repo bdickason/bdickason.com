@@ -25,3 +25,5 @@ I've become a solid PM by learning from generous senior PM's who shared everythi
 * Awesome content that I share with my community from time to time.
 
 
+<script src="https://gumroad.com/js/gumroad.js"></script>
+<center><a class="gumroad-button" href="https://gum.co/nMbqU" target="_blank">Purchase Coaching</a></center>
