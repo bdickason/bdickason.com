@@ -1,0 +1,14 @@
+/* CSS for Course landing pages */
+
+/* Background for the entire page */
+.course.bg {
+    background: #FBF6FF;
+    padding-top: 5em;
+}
+
+/* Main container for course info */
+main.course {
+    background: white;
+    border-radius: 5px;
+    
+}

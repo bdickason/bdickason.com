@@ -2,6 +2,12 @@
 layout: layouts/base.njk
 tags: post
 ---
-        {{ content | safe }}
 
-    
+{% include 'components/nav.njk' %}
+	
+<main class="elv-layout{% if layoutClass %} {{ layoutClass }}{% endif %}">
+	
+    {{ content | safe }}
+
+    {% include 'components/footer.njk' %}
+</main>

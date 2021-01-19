@@ -10,6 +10,7 @@
 	
 		{%- set css %}
 		{% include 'css/index.css' %}
+		{% include 'css/course.css' %}
 		{% endset %}
 		<style>{{ css | cssmin | safe }}</style>
 
@@ -18,11 +19,7 @@
   </head>
 
   <body>
-	  {% include 'components/nav.njk' %}
-	  <main class="elv-layout{% if layoutClass %} {{ layoutClass }}{% endif %}">
-		{{ content | safe }}
-		{% include 'components/footer.njk' %}
-	  </main>
+	 	{{ content | safe }}
   </body>
 
 
