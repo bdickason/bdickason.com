@@ -7,12 +7,12 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@bdickason" />
-<meta name="twitter:title" content="{{ title + ' - ' if title}}" />
+<meta name="twitter:title" content="{{ title }}" />
 <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}Become a great Product Manager.{% endif %}" />
 {% if thumbnail %}<meta name="twitter:image" content="http://{{ site.hostname }}{{ thumbnail }}" />{% endif %}
 
 <!-- Open Graph (FB, LinkedIn) -->
-<meta property="og:title" content="{{ title + ' - ' if title}}" />
+<meta property="og:title" content="{{ title }}" />
 <meta property="og:description" content="{% if description %}{{ description }}{% else %}Become a great Product Manager.{% endif %}" />
 <meta property="og:url" content="https://{{ site.hostname }}{{ page.url }}" />
 <meta property="og:type" content="article" />
