@@ -402,6 +402,15 @@ header a:hover, header a:visited:hover, header a[href]:hover {
 	max-width: 20%;
 }
 
+/* Image Captions (small line of text after images */
+.caption {
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    margin-top: 0;
+    color: grey;
+}
+
 
 /* Colors
 Neon Pink - #f09
