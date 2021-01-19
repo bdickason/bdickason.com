@@ -1,7 +1,7 @@
 ---
 title: About
 layout: layouts/page.njk
-description: I'm a Product Manager from Santa Cruz who loves 🎶 synthwave music and 🏄‍♂️ surfing.
+description: I'm a Product Manager from Santa Cruz who loves synthwave music and surfing.
 thumbnail: /static/book/author.jpg
 ---
 
