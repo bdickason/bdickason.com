@@ -20,7 +20,7 @@ Since then I’ve spent a ton of time thinking about how to help software and ha
 
 ## The differences between software and hardware
 
-A tension exists between software and hardware because of the physics involved. Software is moving bigs, hardware is moving atoms. The time it takes to deploy software can be near-instantaneous whereas hardware has to move around the world at a pace much slower than the speed of light. A hotfix can be rolled back from 1,000 servers with the push of a button, but many hardware systems are still patched with a usb cable and a laptop, a usb drive, or worse. You get the picture. As a result:
+A tension exists between software and hardware because of the physics involved. Software is moving bits, hardware is moving atoms. The time it takes to deploy software can be near-instantaneous whereas hardware has to move around the world at a pace much slower than the speed of light. A hotfix can be rolled back from 1,000 servers with the push of a button, but many hardware systems are still patched with a usb cable and a laptop, a usb drive, or worse. You get the picture. As a result:
 
 **Software teams optimize for iteration speed.** They move quickly, have flexible deadlines, and avoid predicting what goes into each release as much as possible.
 
