@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	    <title>How great hardware and software teams ship - bdickason.com</title>
+
+		<!-- SEO -->
+<meta name="description" content="Software teams want iteration speed and Hardware teams want predictability." />
+<meta name="page" content="/posts/hardware-release-software-release/" />
+<link rel="icon" href="/static/favicon.ico" />
+<link rel="canonical" href="https://bdickason.com/posts/hardware-release-software-release/" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@bdickason" />
+<meta name="twitter:title" content="How great hardware and software teams ship" />
+<meta name="twitter:description" content="Software teams want iteration speed and Hardware teams want predictability." />
+<meta name="twitter:image" content="http://bdickason.com/static/posts/hardware-release-software-release/rob.jpg" />
+
+<!-- Open Graph (FB, LinkedIn) -->
+<meta property="og:title" content="How great hardware and software teams ship" />
+<meta property="og:description" content="Software teams want iteration speed and Hardware teams want predictability." />
+<meta property="og:url" content="https://bdickason.com/posts/hardware-release-software-release/" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="en_US" />
+<meta property='og:image' content="http://bdickason.com/static/posts/hardware-release-software-release/rob.jpg" />
+
+
+		<style>*{box-sizing:border-box}body{font-family:system-ui,sans-serif;margin:0;color:#222}img{border:0;width:100%}a,a:visited,a[href]{color:#6000d6}a[href]:hover{color:#f09}a[href].naked{text-decoration:none}b,strong{font-weight:600}hr{margin:3em 0;border:none;border-top:1px solid #ddd}p{max-width:42em;font-size:1.2rem;margin-bottom:1rem;line-height:2rem}p.date{font-size:small;color:grey;font-style:italic}.nowrap{white-space:nowrap}blockquote{font-family:Georgia,serif;font-size:1.1875em;color:#666;margin:1.5em 0;padding:0 1em;max-width:31.57894736842em;border-left:6px solid #ddd}blockquote+blockquote{margin-top:2em}.avatar,blockquote img{height:1.3em;width:1.3em;display:inline-block;border-radius:50%;vertical-align:text-top;margin-left:2px;margin-right:6px;background-color:#eee}.avatar{vertical-align:middle}ul:not(.list-bare)>li>a>.avatar{width:auto;height:1.111111111111em;vertical-align:top;margin-left:4px;margin-right:4px}.intro{background-image:url(/static/header-test.png)}main{font-size:1.125em}main:not(:empty){padding-bottom:3em;margin-bottom:3em}table{border-collapse:collapse;margin-bottom:2em}table td,table th{text-align:left;border-top:1px solid #eee;border-bottom:1px solid #eee;padding:.4em;font-size:.8125em}table td:first-child,table th:first-child{padding-left:0}table th{border-color:#ddd}h2+table{margin-top:-.625em}@media (min-width:37.5em){table td,table th{padding:.4em .8em;font-size:1em}}h1,h2,h3,h4,h5{font-size:2.666666666667em;margin:0 0 .5em}main .elv-toc+h1{margin-top:1em;line-height:1.1}main .elv-toc+h1,main h1:first-child{border-bottom:2px solid #dff024}@media (min-width:64em){main .elv-toc+h1,main .elv-toc+h2{margin-top:0}}h2{font-size:2.222222222222em;border-bottom:1px solid #dff024;margin:1em 0 .25em;line-height:1.1}h2#posts{margin-top:0}h3{font-size:1.666666666667em;margin-bottom:.5em}h4{font-size:1.444444444444em;margin-bottom:.5em}h5{font-size:1.277777777778em;margin-bottom:.5em}h1 code,h2 code,h3 code,h4 code,h5 code,main h1,main h2,main h3{font-family:inherit;text-transform:none}ul{padding:0 1em}li{font-size:1.2rem;line-height:2rem}li ul{margin:.5em 0;padding-left:1em}li li{padding-top:.1em;padding-bottom:.1em}li a[href]{padding:2px;color:#8000ff}li a[href]:hover{color:#f09}li p{margin-block:0}li .date{font-size:small;color:grey;font-style:italic}.list-bare{list-style:none;padding:0}.list-bare-desc{display:block;font-size:80%;color:#555;margin-bottom:3px}.list-bare-desc:last-child{margin-bottom:6px}.list-bare-desc-avatar{margin-left:29.4px}#quick-start~.language-text{border-top:2px solid #666;border-bottom:2px solid #666}@media (min-width:42em){#quick-start~.language-text{border:2px solid #666}}#quick-start~.language-text,#quick-start~.language-text code{background-color:#fafafa;color:#222}.elv-layout{padding:1rem;margin:0 auto;max-width:42rem;clear:both}footer.elv-layout{margin-bottom:5em}.elv-layout-full{max-width:none}@media (min-width:64em){.elv-layout-toc{margin-left:18rem;max-width:60rem;margin-right:1rem;position:relative}}@media (max-width:37.4375em){.bp-notsm.bp-notsm.bp-notsm.bp-notsm{display:none}}@media (min-width:37.5em){.bp-sm.bp-sm.bp-sm.bp-sm{display:none}}.btn-primary{display:block;border:2px solid;padding:.5em .5em .4em;font-size:1em;text-align:center;font-weight:700;text-transform:uppercase;text-decoration:none;margin:1.5em 0 0}.btn-primary:hover{border-color:transparent;background-color:#222;color:#fff}.btn-primary span{text-transform:none}.btn-primary+span{display:block;text-align:center;margin-top:.25em;font-size:.75em}@media (min-width:20em) and (max-width:40.5625em){.btn-primary{font-size:6.5vw}}@media (min-width:40.625em){.btn-primary{font-size:1.2em}}a strong:hover{text-decoration:underline #fff}.lowercase{text-transform:none}.highlight{background-color:#f09;font-size:larger;color:#fff;padding:.1em .3em}.posts{font-size:x-large}#spotify{content:url(/static/spotify.png);width:1.1em;height:1.1em;vertical-align:middle;border:0}header{padding:3em 5em 0 5em;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;color:#a8a8a8}header a,header a:visited,header a[href]{opacity:40%}header a:hover,header a:visited:hover,header a[href]:hover{opacity:100%}.bio{display:block;border-radius:10px;max-width:50%;margin:10px auto}.small.bio{max-width:20%}.caption{text-align:center;font-style:italic;font-size:smaller;margin-top:0;color:grey}</style>
+
+		<!-- Analytics -->
+		<script async defer data-domain="bdickason.com" src="https://plausible.io/js/plausible.js"></script>
+		<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173523194-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-173523194-1');
+		</script>
+		
+  </head>
+
+  <body>
+	  <header>
+    <div>
+        <strong><a href="/">brad dickason</a></strong><br />
+        <font size="-1">i build the internets</font>
+    </div>
+    <div>
+        <a href="/">home</a> / 
+        <a href="/about/">about</a> / 
+        <a href="/coaching/">coaching</a>
+    </div>
+</header>
+	  <main class="elv-layout">
+		        <h1>How great hardware and software teams ship</h1>
+<p>Hardware wants certainty and predictability (at high quality). Software wants iteration speed and flexibility. I have worked at multiple companies (Shapeways, Oculus) that require tight integration between hardware and software. The release process is where the different approach to shipping comes crashing together (typically at the expense of users).</p>
+<p>I remember walking into my first release planning meeting to talk about making a major update to a factory workflow that involved a new consumer-facing feature that would ship alongside a change in how we process 3D objects in the factory.  I (naively) argued for an hour that we could take the same approach with hardware as we do with software. Surely we could just patch/hotfix any issues we experience in the factory.  I couldn’t understand why we couldn’t just ship regularly (e.g. continuous deployment) to the factory and website simultaneously. It was all software, right? So why was everyone giving me blank stares...</p>
+<p>Finally someone on the ops team spoke up: “We have to move printers, tables, and conveyer belts around the factory. We have to onboard new machines. We have to train people. How do we continously deploy all that?”</p>
+<p><strong><a href="https://emojipedia.org/man-facepalming-medium-light-skin-tone/">🤦🏼‍♂️</a> Hardware is hard.</strong></p>
+<p>Since then I’ve spent a ton of time thinking about how to help software and hardware teams work together. I’ll focus on the release process for this post because it’s typically the most contentious moment between teams.</p>
+<h2>The differences between software and hardware</h2>
+<p>A tension exists between software and hardware because of the physics involved. Software is moving bigs, hardware is moving atoms. The time it takes to deploy software can be near-instantaneous whereas hardware has to move around the world at a pace much slower than the speed of light. A hotfix can be rolled back from 1,000 servers with the push of a button, but many hardware systems are still patched with a usb cable and a laptop, a usb drive, or worse. You get the picture. As a result:</p>
+<p><strong>Software teams optimize for iteration speed.</strong> They move quickly, have flexible deadlines, and avoid predicting what goes into each release as much as possible.</p>
+<p>Software Teams tend to...</p>
+<ul>
+<li>Ship to learn</li>
+<li>Scope releases into tiny chunks</li>
+<li>Patch and rollback regularly</li>
+<li>Support few platforms (e.g. iphone/android or browser)</li>
+<li>Read more: <a href="http://theleanstartup.com/principles">Lean Startup methodology</a></li>
+</ul>
+<p>Software teams consistently try to reduce the time it takes from idea→implement→feedback. Teams typically aim for a cadence of at most a week and often times try to approach ‘continuous deployment’ where they can release every few minutes (or whenever a chunk of code is ready to ship).</p>
+<p><strong>Hardware teams optimize for predictability.</strong> They move slowly, have rigid deadlines (and requirements), and need to know exactly what goes into each release.</p>
+<p>Hardware Teams tend to...</p>
+<ul>
+<li>Have many dependencies (e.g. vendors, manufacturing)</li>
+<li>Plan releases far out in advance (sometimes years)</li>
+<li>Only hotfix if absolutely necessary</li>
+<li>Support many platforms or specific legacy tech</li>
+<li>Read more: <a href="https://continuations.com/tagged/Kaizen">Kaizen for software developers</a></li>
+</ul>
+<p>Hardware teams also want to reduce the time it takes from idea→implement→feedback but they have physical constraints. As such, they tend to gravitate towards fewer releases, often shipping patches every month or every few months.</p>
+<h2>How do we ease the tension?</h2>
+<p>I’ve found three options to help hardware and software teams release software together.  There is no perfect solution, but these seem to be the common permutations:</p>
+<ol>
+<li>Follow software cadence (Hardware suffers)</li>
+<li>Follow hardware cadence (Software suffers)</li>
+<li>Find a compromise that tries to met in the middle (These are complicated)</li>
+</ol>
+<p>I am a strong advocate of the 3rd choice which is to find a compromise. I’ve seen hardware teams ship terribly buggy and problematic releases trying to follow a software model and software teams slow to a crawl trying to adhere to a rigorous hardware planning process.</p>
+<h3>Here’s what actually works</h3>
+<ol>
+<li>Put software on a regular 'release train (e.g. weekly). What’s in the build rolls out the door. If you miss the train, you wait until next week.</li>
+<li>Put hardware on a fixed, predictable cadence (e.g. monthly or quarterly). Plan these releases with the rigor needed for your hardware team.</li>
+<li>Identify dates where the train overlaps the hardware cadence. These are your integration milestones. For these releases, software must plan rigorously and ensure any hardware-centric releases land during this time.</li>
+</ol>
+<img src="/static/posts/hardware-release-software-release/hardware-software-release-cycle.png">
+<p>This model decouples MOST software and hardware releases. 80-90% of the time, the software teams have freedom to move fast and break things (or whatever your preferred slogan is). Hardware teams can plan rigorously and have a predictable schedule. The joint releases act as a contract where the software teams flex a bit to meet the requirements of the hardware teams. Because it only happens every once in a while, the planning overhead for software isn’t too heavy and teams typically don’t mind dealing with it.</p>
+<img src="/static/posts/hardware-release-software-release/rob.jpg" />
+<p class="caption">Nintendo had to deal with hardware/software releases back in the day with ROB.</p>
+<p>I’ve had alot of success running this model. Here are a few traps I see teams fall into when trying to implement it:</p>
+<ol>
+<li><strong>Software teams need to account for hardware process dependencies.</strong> If you are making major changes during the integration milestone, you need to pre-write training material (if people’s jobs or a hardware assembly line are affected), help desk material (if end users will get stuck), or time to burn new builds onto the device before it leaves the factory.</li>
+<li><strong>Plan your branching strategy in advance.</strong> Poor branching strategies make the integration milestone really messy. One especially tricky moment is when you miss the release train right before an integration milestone. You should map out this scenario in advance. Do you just punt on those changes until after the integration milestone? Pick them in? These things should be decided in advance, otherwise you’re in for some long nights.</li>
+<li><strong>Name your milestones.</strong> These could be versions, letters, hurricane names, etc. You’ll often have two teams referring to these regularly and just using dates will get very confusing (especially if a release slips or hardware needs to move the milestone).</li>
+<li><strong>Plan your rollback strategy.</strong> In software, it’s fairly easy to roll back a release. In hardware, you sometimes have releases you can’t rollback, or you have a heavy dependency chain that’s hard to work around. Like branching, you need to plan for rollbacks in advance and have a contingency plan that your oncall can execute for software, firmware rollbacks, or both.</li>
+<li><strong>Anticipate software update/adoption rate</strong> - It’s common in software to wait until a percentage (e.g. 95%) of users have received your latest update to enable everything you’ve shipped in that release. With hardware, the math gets more complicated. Some users might not have devices plugged in or turned on for weeks. Often you need to gate software features on firmware updates (and likely support very old firmware versions). Be thoughtful about versioning and plan your update strategy at the same time you plan the milestone. You might need to punt certain features to the next release if your users are slow to update or invest in autoupdate or backwards compatibility.</li>
+</ol>
+<p>If you want to read more about the intersection between hardware and software, I recommend <a href="https://www.amazon.com/gp/product/1942788290/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1942788290&amp;linkCode=as2&amp;tag=bdickason-20&amp;linkId=c99348f5335fd70e9cfc029582767d75">The Phoenix Project</a> and Albert Wenger’s excellent series on <a href="https://continuations.com/tagged/Kaizen">Kaizen for Developers</a>.</p>
+<p><strong>Do you have advice for working on a hardware/software project? I’d love to hear it: <a href="http://twitter.com/bdickason">@bdickason</a></strong></p>
+<p><strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.</p>
+<script async data-uid="ae4caed740" src="https://bdickason.ck.page/ae4caed740/index.js"></script>
+<p>Soundtrack: <a href="https://www.youtube.com/watch?v=bYZkjb0TS7c">BCee ft. S.P.Y - Is Anybody Out There</a></p>
+<iframe src="https://open.spotify.com/embed/track/05nZTWLZUnWTTaPUAOd9n6" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<p><img id="spotify"> <a href="https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw">See all songs I’ve used on my website.</a></p>
+<p class="date">Post last updated: Jan 21, 2021</date>
+<h2 id="posts">Posts</h2>
+<div class="posts">
+<ul>
+<li>
+<p><a href="/posts/hardware-release-software-release/">How great hardware and software teams ship</a> <span class="date">Jan 21, 2021</span></p>
+</li>
+<li>
+<p><a href="/posts/most-pms-dont-use-their-product/">Most PM's don't use their own product</a> <span class="date">Jan 15, 2021</span></p>
+</li>
+<li>
+<p><a href="/posts/the-best-product-management-books-articles/">The Best Product Management books, articles, and videos</a> <span class="date">Jan 8, 2021</span></p>
+</li>
+<li>
+<p><a href="/posts/gather-great-feedback-from-power-users/">How to gather great feedback from your power users</a> <span class="date">Jan 4, 2021</span></p>
+</li>
+<li>
+<p><a href="/posts/biggest-pm-learning-2020-set-an-intention/">Set an intention for the year (and tell everyone)</a> <span class="date">Dec 27, 2020</span></p>
+</li>
+<li>
+<p><a href="/posts/strategy-write-great-prereads/">Write great pre-reads and land your strategy</a> <span class="date">Dec 21, 2020</span></p>
+</li>
+<li>
+<p><a href="/posts/write-things-down/">Write Things Down</a> <span class="date">Dec 2, 2020</span></p>
+</li>
+<li>
+<p><a href="/posts/strategy-101-unpack-your-assumptions/">Strategy 101: Unpack your assumptions</a> <span class="date">Nov 19, 2020</span></p>
+</li>
+</ul>
+</div>
+
+    
+		<footer class="elv-layout">
+  &nbsp;
+</footer>
+
+	  </main>
+  </body>
+
+			<script type="text/javascript">
+			// const referrerForm = document.getElementById("referrer");
+// referrerForm.value = document.referrer
+
+// Wait for embedded script to be loaded
+window.addEventListener('load', function(event) {
+
+  /* Override form submit to track submissions */
+  const signupForm = document.querySelector(".formkit-form");
+
+  if(signupForm && signupForm.addEventListener) {
+      signupForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          setTimeout(submitForm, 1000);
+          var formSubmitted = false;
+        
+          function submitForm() {
+            if (!formSubmitted) {
+              formSubmitted = true;
+              //registerForm.submit();
+            }
+          }
+          gtag('event', 'signup', {
+            'event_category': 'bdickason.com',
+            'event_label': window.location.pathname
+          });  // Fire google analytics event
+          
+          plausible('signup', {callback: submitForm});  // Fire plausible event
+        })    
+  }
+})
+
+			// Wait for embedded script to be loaded
+window.addEventListener('load', function(event) {
+
+  /* Override form submit to track submissions */
+  const coachingForm = document.querySelector(".typeform-share");
+
+  if(coachingForm && coachingForm.addEventListener) {
+      coachingForm.addEventListener('click', function(e) {
+          e.preventDefault();
+          setTimeout(submitForm, 1000);
+          var formSubmitted = false;
+
+          function submitForm() {
+            if (!formSubmitted) {
+              formSubmitted = true;
+              //registerForm.submit();
+            }
+          }
+          gtag('event', 'coaching', {
+            'event_category': 'bdickason.com',
+            'event_label': window.location.pathname
+          });  // Fire google analytics event
+          plausible('coaching', {callback: submitForm});  // Fire plausible event
+
+      })    
+  }
+});
+			</script>
+
+	
+</html>
