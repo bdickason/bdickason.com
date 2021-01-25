@@ -4,10 +4,12 @@ layoutClass: course
 tags: course
 ---
 <div class="course bg">
+    <div class="course container">
 
-    <main class="elv-layout{% if layoutClass %} {{ layoutClass }}{% endif %}">
+        <main class="elv-layout{% if layoutClass %} {{ layoutClass }}{% endif %}">
 
-    {{ content | safe }}
+        {{ content | safe }}
 
-    </main>
-</container>
+        </main>
+    </div>
+</div>

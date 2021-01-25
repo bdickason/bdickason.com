@@ -2,13 +2,21 @@
 
 /* Background for the entire page */
 .course.bg {
-    background: #FBF6FF;
-    padding-top: 5em;
+    background: #8c00ff;
+    padding-top: 0.5em;
+}
+
+.course.container  {
+    background: white;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    border-radius: 2px;
 }
 
 /* Main container for course info */
 main.course {
     background: white;
     border-radius: 5px;
+    
     
 }
