@@ -411,6 +411,10 @@ header a:hover, header a:visited:hover, header a[href]:hover {
     color: grey;
 }
 
+/* Convertkit shows special content to newsletter subscribers. It doesn't add extra space below. */
+.seva-custom-content {
+    padding-bottom: 1em;
+}
 
 /* Colors
 Neon Pink - #f09
