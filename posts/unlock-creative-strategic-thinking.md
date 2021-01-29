@@ -8,7 +8,7 @@ layout: layouts/post.njk
 
 # How to unlock creative/strategic thinking
 
-**You can’t hold a gun to someone’s head and say “Be Creative.”**
+> **You can’t hold a gun to someone’s head and say “Be Creative.”** -Mike Booth, creator of Left4Dead
 
 The best PM’s don’t come up with creative ideas and strategy all the time. They create space for creative thinking and optimize their process.
 
@@ -29,7 +29,7 @@ Creative thinking takes time. You can’t just flip your brain into creative mod
 Instead, we want to optimize for large, uninterrupted focus blocks. Think of The Matrix. When Keanu is interrupted IRL, everything in his brain falls apart. Your brain works the same way. You have to boot the entire project up in your brain, hold it there, and manipulate it.
 
 <img src="{{ thumbnail }}" />
-<p class="caption">The movie Soul depicts flow as an alternate plane of existence.</p>
+<p class="caption">In the movie Soul, flow is an alternate plane of existence.</p>
 
 **Select days for creative thinking** - If you aren’t intentional, meetings will crowd your time and create sprawl all over your calendar. Select at least two days where you optimize your schedule for creative thinking. This will allow you to remember (and have a rationale) to defend those days. I like to setup my calendar as follows:
 
