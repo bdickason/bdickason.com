@@ -14,5 +14,3 @@ I'm a Product Manager working on Donations at Facebook. Previously, I led produc
 {% include components/mailinglist.njk %}
 
 {% include components/posts.njk %}
-
-{% include components/newsletter-testimonials.njk %}
