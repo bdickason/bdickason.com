@@ -10,6 +10,7 @@
 	
 		{%- set css %}
 		{% include 'css/index.css' %}
+        {% include 'css/share.css' %}
 		{% endset %}
 		<style>{{ css | cssmin | safe }}</style>
 
@@ -22,6 +23,7 @@
 	  <main class="elv-layout{% if layoutClass %} {{ layoutClass }}{% endif %}">
 		{{ content | safe }}
 		{% include 'components/footer.njk' %}
+
 	  </main>
   </body>
 
@@ -29,6 +31,7 @@
 			{%- set js %}
 			{% include 'js/convertkit.js' %}
 			{% include 'js/typeform.js' %}
+            {% include 'js/share.js' %}
             {% include 'js/circle.js' %}
 			{% endset %}
 

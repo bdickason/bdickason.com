@@ -1,0 +1,119 @@
+/* Share dialog / popup */
+.share-background {
+    display: none;
+    background-color: rgba(53, 53, 53, 0.71);
+    transition: background 350ms ease-in-out;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+.share-dialog {
+    background-color: white;
+    width: 255px;
+    height: 415px;
+    margin: 15% auto;
+    z-index: 15;    
+    border-radius: 3px;
+}
+
+.share-dialog p {
+    padding: 10px;
+    padding-bottom: 25px;
+    font-size: x-large;
+}
+.share-dialog p .header {
+    float: left;
+}
+
+.share-dialog p .close {
+    cursor: pointer;
+    float: right;
+}
+
+.share-dialog a{
+    color: white !important;
+    width: 93%;
+}
+
+/* Share Buttons CSS */
+
+.resp-sharing-button__link,
+.resp-sharing-button__icon {
+  display: inline-block
+}
+
+.resp-sharing-button__link {
+  text-decoration: none;
+  color: #fff;
+  margin: 0.5em
+}
+
+.resp-sharing-button {
+  border-radius: 3px;
+  transition: 25ms ease-out;
+  padding: 0.5em 0.75em;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif
+}
+
+.resp-sharing-button__icon svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.4em;
+  vertical-align: top
+}
+
+.resp-sharing-button--small svg {
+  margin: 0;
+  vertical-align: middle
+}
+
+
+/* Solid icons get a fill */
+.resp-sharing-button__icon--solid,
+.resp-sharing-button__icon--solidcircle {
+  fill: black;
+  stroke: none
+}
+
+/* Override for twitter */
+.resp-sharing-button__icon--solid#twitter
+{
+  fill: white;
+  stroke: none
+}
+
+.resp-sharing-button--twitter {
+  background-color: #55acee;
+  fill: white;
+  stroke: none;
+}
+
+.resp-sharing-button--twitter:hover {
+  background-color: #2795e9;
+}
+
+#copylink {
+    background-color:none;
+    cursor: pointer;    /* Workaround as the a doesn't have an href */
+  }
+
+.success {
+    background-color: #39C16C !important;
+    border: 1px solid #39C16C !important;
+}
+  
+.resp-sharing-button--generic {
+    color: black;
+    background-color: none;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.resp-sharing-button--generic:hover {
+    background-color:#f09;
+    color: white;
+    border: 1px solid #f09;
+  }
