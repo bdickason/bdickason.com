@@ -33,7 +33,13 @@ window.addEventListener('load', function(event) {
         }
     }
 
-    // Click close = close window
+    /* Handle Copy Link */
+    const copyLinkButton = document.getElementById('copylink')
+
+    copyLinkButton.onclick = function(e) {
+        copyLink(e.target);
+    }
+
 });
 
 function toggleVisibility(modal) {
@@ -42,4 +48,19 @@ function toggleVisibility(modal) {
     } else {
         modal.style.display = 'none';
     }
+}
+
+function copyLink(container) {
+    /* Create temporary input (copy only supports text inputs) and copy to clipboard */
+    var dummy = document.createElement('input'),
+    text = window.location.href;
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+
+    container.classList.add('success')
+
 }
