@@ -3,6 +3,7 @@
 <meta name="page" content="{{ page.url }}" />
 <link rel="icon" href="/static/favicon.ico" />
 <link rel="canonical" href="https://{{ site.hostname }}{{ page.url }}" />
+{% if noindex %}<meta name="robots" content="noindex, follow" />{% endif %}   {# For internal-only pages #}
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary" />

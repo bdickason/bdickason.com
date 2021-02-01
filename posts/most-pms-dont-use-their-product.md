@@ -1,6 +1,6 @@
 ---
 title: Most PM's don't use their own product
-date: 2021-01-19
+date: 2021-01-15
 description: They dream up a laundry list of features but don't know what their users want.
 thumbnail: /static/posts/pms-dont-use-their-product/eddie-arsenio.jpg
 layout: layouts/post.njk
