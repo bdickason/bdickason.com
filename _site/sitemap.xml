@@ -1,68 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <url>
-    <loc>https://bdickason.com/posts/strategy-101-unpack-your-assumptions/</loc>
-    <lastmod>2020-11-19</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bdickason.com/posts/write-things-down/</loc>
-    <lastmod>2020-12-02</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bdickason.com/posts/strategy-write-great-prereads/</loc>
-    <lastmod>2020-12-21</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bdickason.com/posts/biggest-pm-learning-2020-set-an-intention/</loc>
-    <lastmod>2020-12-27</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bdickason.com/posts/gather-great-feedback-from-power-users/</loc>
-    <lastmod>2021-01-04</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bdickason.com/posts/the-best-product-management-books-articles/</loc>
-    <lastmod>2021-01-08</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bdickason.com/posts/most-pms-dont-use-their-product/</loc>
-    <lastmod>2021-01-15</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bdickason.com/posts/hardware-release-software-release/</loc>
-    <lastmod>2021-01-21</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bdickason.com/coaching/</loc>
-    <lastmod>2021-01-25</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bdickason.com/posts/unlock-creative-strategic-thinking/</loc>
-    <lastmod>2021-01-28</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bdickason.com/about/</loc>
-    <lastmod>2021-02-01</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bdickason.com/feedback/</loc>
-    <lastmod>2021-02-01</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bdickason.com/</loc>
-    <lastmod>2021-02-01</lastmod>
-  </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/strategy-101-unpack-your-assumptions/</loc>
+        <lastmod>2020-11-19</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/write-things-down/</loc>
+        <lastmod>2020-12-02</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/strategy-write-great-prereads/</loc>
+        <lastmod>2020-12-21</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/biggest-pm-learning-2020-set-an-intention/</loc>
+        <lastmod>2020-12-27</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/gather-great-feedback-from-power-users/</loc>
+        <lastmod>2021-01-04</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/the-best-product-management-books-articles/</loc>
+        <lastmod>2021-01-08</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/most-pms-dont-use-their-product/</loc>
+        <lastmod>2021-01-15</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/hardware-release-software-release/</loc>
+        <lastmod>2021-01-21</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/coaching/</loc>
+        <lastmod>2021-01-25</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/unlock-creative-strategic-thinking/</loc>
+        <lastmod>2021-01-28</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/about/</loc>
+        <lastmod>2021-02-01</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/</loc>
+        <lastmod>2021-02-01</lastmod>
+    </url>
 </urlset>

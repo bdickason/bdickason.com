@@ -5,10 +5,12 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for page in collections.all %}
-  {% set mappedUrl %}https://{{ site.hostname }}{{ page.url | url }}{% endset %}
-  <url>
-    <loc>{{ mappedUrl }}</loc>
-    <lastmod>{{ page.date | htmlDate }}</lastmod>
-  </url>
+  {%- if page.data.noindex != true %}
+    {% set mappedUrl %}https://{{ site.hostname }}{{ page.url | url }}{% endset %}
+    <url>
+        <loc>{{ mappedUrl }}</loc>
+        <lastmod>{{ page.date | htmlDate }}</lastmod>
+    </url>
+  {%- endif %}
 {%- endfor %}
 </urlset>
