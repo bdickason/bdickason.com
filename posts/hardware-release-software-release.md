@@ -2,7 +2,7 @@
 title: How great hardware and software teams ship
 date: 2021-01-21
 description: Software teams want iteration speed and Hardware teams want predictability.
-thumbnail: /static/posts/hardware-release-software-release/rob.jpg
+thumbnail: /static/posts/hardware-release-software-release/ROB.jpg
 layout: layouts/post.njk
 ---
 
