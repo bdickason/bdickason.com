@@ -71,7 +71,7 @@
   <div class="share-header">
   </div>
   <div class="share-dialog">
-<p><span class="header">Share this post</span><span class="close">x</span></p>
+<p><span class="header">Share this post</span><span class="close" id="close">x</span></p>
 <!-- Sharingbutton Twitter -->
 <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=http%3A%2F%2Fsharingbuttons.io" target="_blank" rel="noopener" aria-label="Share on Twitter">
 <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
@@ -202,6 +202,7 @@ window.addEventListener('load', function(event) {
     // Modal to display sharing options 
     const shareWindow = document.getElementsByClassName('share-background')[0];
 
+    /* Events that open share window */
     // Listen for sharing button click *
     const shareButton = document.getElementById('share');
     shareButton.onclick = function() {
@@ -210,17 +211,32 @@ window.addEventListener('load', function(event) {
 
     // Check if user was sent from email w/ share permalink 
     if(window.location.hash == '#share') {
-        console.log('got here');
+        // Clear the hash so the page doesn't share on refresh
+        window.location.hash = '';  
+
         // Display sharing popup
         toggleVisibility(shareWindow);
     }
 
-    // Click 'share' (or url) = show sharing hash
-    // Click close = remove sharing hash
+    /* Events that close share window */
+    /* Click the 'x' button */
+    const closeButton = document.getElementById('close');
+    closeButton.onclick = function() {
+        toggleVisibility(shareWindow);
+    }
+
+    /* Click outside the modal */
+    shareWindow.onclick = function(e) {
+        if(e.target.className == 'share-background') {
+            toggleVisibility(shareWindow);
+        }
+    }
+
+    // Click close = close window
 });
 
 function toggleVisibility(modal) {
-    if(modal.style.display = 'none') {
+    if(modal.style.display == 'none' || modal.style.display == '') {
         modal.style.display = 'block';
     } else {
         modal.style.display = 'none';
