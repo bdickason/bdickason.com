@@ -61,7 +61,7 @@ Keep scrolling for the full list of books [and articles](#articles) 👇
 
 
 
-<a name="articles">
+<a name="articles"></a>
 
 ## **The full list**
 
