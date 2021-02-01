@@ -306,7 +306,8 @@ footer.elv-layout {
     color: white !important;
 }
 .btn-primary:hover {
-	background-color: #f09;
+    background-color: #f09;
+    cursor: pointer;    /* workaround when button triggers javascript */
 }
 .btn-primary span {
 	text-transform: none;

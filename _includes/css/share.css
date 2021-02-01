@@ -1,5 +1,6 @@
 /* Share dialog / popup */
 .share-background {
+    display: none;
     background-color: rgba(53, 53, 53, 0.71);
     transition: background 350ms ease-in-out;
     position: fixed;
