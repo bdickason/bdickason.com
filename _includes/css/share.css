@@ -35,6 +35,7 @@
 
 .share-dialog a{
     color: white !important;
+    width: 93%;
 }
 
 /* Share Buttons CSS */
@@ -44,10 +45,6 @@
   display: inline-block
 }
 
-.success {
-    background-color: #39C16C !important;
-}
-
 .resp-sharing-button__link {
   text-decoration: none;
   color: #fff;
@@ -55,7 +52,7 @@
 }
 
 .resp-sharing-button {
-  border-radius: 5px;
+  border-radius: 3px;
   transition: 25ms ease-out;
   padding: 0.5em 0.75em;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif
@@ -73,117 +70,50 @@
   vertical-align: middle
 }
 
-/* Non solid icons get a stroke */
-.resp-sharing-button__icon {
-  stroke: #fff;
-  fill: none
-}
 
 /* Solid icons get a fill */
 .resp-sharing-button__icon--solid,
 .resp-sharing-button__icon--solidcircle {
-  fill: #fff;
+  fill: black;
+  stroke: none
+}
+
+/* Override for twitter */
+.resp-sharing-button__icon--solid#twitter
+{
+  fill: white;
   stroke: none
 }
 
 .resp-sharing-button--twitter {
-  background-color: #55acee
+  background-color: #55acee;
+  fill: white;
+  stroke: none;
 }
 
 .resp-sharing-button--twitter:hover {
-  background-color: #2795e9
+  background-color: #2795e9;
 }
 
-.resp-sharing-button--copylink {
-    background-color:#777;
+#copylink {
+    background-color:none;
     cursor: pointer;    /* Workaround as the a doesn't have an href */
   }
+
+.success {
+    background-color: #39C16C !important;
+    border: 1px solid #39C16C !important;
+}
   
-  .resp-sharing-button--copylink:hover {
-    background-color: #5e5e5e
+.resp-sharing-button--generic {
+    color: black;
+    background-color: none;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.resp-sharing-button--generic:hover {
+    background-color:#f09;
+    color: white;
+    border: 1px solid #f09;
   }
-
-
-.resp-sharing-button--reddit {
-  background-color: #5f99cf
-}
-
-.resp-sharing-button--reddit:hover {
-  background-color: #3a80c1
-}
-
-.resp-sharing-button--linkedin {
-  background-color: #0077b5
-}
-
-.resp-sharing-button--linkedin:hover {
-  background-color: #046293
-}
-
-.resp-sharing-button--email {
-  background-color: #777
-}
-
-.resp-sharing-button--email:hover {
-  background-color: #5e5e5e
-}
-
-.resp-sharing-button--hackernews {
-background-color: #FF6600
-}
-.resp-sharing-button--hackernews:hover, .resp-sharing-button--hackernews:focus {   background-color: #FB6200 }
-
-.resp-sharing-button--twitter {
-  background-color: #55acee;
-  border-color: #55acee;
-}
-
-.resp-sharing-button--twitter:hover,
-.resp-sharing-button--twitter:active {
-  background-color: #2795e9;
-  border-color: #2795e9;
-}
-
-.resp-sharing-button--email {
-  background-color: #777777;
-  border-color: #777777;
-}
-
-.resp-sharing-button--email:hover,
-.resp-sharing-button--email:active {
-  background-color: #5e5e5e;
-  border-color: #5e5e5e;
-}
-
-.resp-sharing-button--linkedin {
-  background-color: #0077b5;
-  border-color: #0077b5;
-}
-
-.resp-sharing-button--linkedin:hover,
-.resp-sharing-button--linkedin:active {
-  background-color: #046293;
-  border-color: #046293;
-}
-
-.resp-sharing-button--reddit {
-  background-color: #5f99cf;
-  border-color: #5f99cf;
-}
-
-.resp-sharing-button--reddit:hover,
-.resp-sharing-button--reddit:active {
-  background-color: #3a80c1;
-  border-color: #3a80c1;
-}
-
-.resp-sharing-button--hackernews {
-  background-color: #FF6600;
-  border-color: #FF6600;
-}
-
-.resp-sharing-button--hackernews:hover
-.resp-sharing-button--hackernews:active {
-  background-color: #FB6200;
-  border-color: #FB6200;
-}
