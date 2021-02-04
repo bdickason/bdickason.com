@@ -5,11 +5,13 @@ description: From Product Vision/Strategy to Goals and Metrics to Roadmaps and e
 thumbnail: /static/book/author.jpg
 layout: layouts/base.njk
 ---
-## Become a great Product Manager
+## Become an effective Product Manager
 
-<strong>Get my newsletter.</strong>  You'll learn simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
+When you join my newsletter, you'll receive simple tactics to improve your day-to-day PM life. Delivered to your inbox every Friday at 9am PT.
 
-I'm a Product Manager working on Donations at Facebook. Previously, I led product teams at Oculus and Shapeways. I'll share these experiences, and more, in my newsletter. Delivered to your inbox every Friday at 9am PT.
+I cover Product Vision/Strategy, Goals and Metrics, Roadmaps, and everything in between.
+
+Benefit from my 15 years of experience as a product manager at Facebook, Oculus, and Shapeways.
 
 {% include components/mailinglist.njk %}
 

@@ -15,7 +15,10 @@ Do you want to reach the next level in your PM career? Are you not sure what to 
 
 With 15 years experience as a PM at startups and big tech companies, I've been lucky to learn from generous senior PM's. Now I'd like to do the same for you.
 
-You'll learn...
+> Understanding my strengths and weaknesses, and asking colleagues to take ownership of certain areas has really helped me laser focus on my core competencies. This showed near immediate results in time saved and mental load decreased.
+<p align="right"><i><a href="https://www.jeffholek.com/" target="_blank">Jeff Holek</a>, Product Manager @ CMIC</i></p>
+
+**You'll learn...**
 * How to identify areas of growth
 * How to harness your strengths to spend more time doing work you love
 * Tools to increase your scope and make more impact
@@ -32,3 +35,7 @@ You'll learn...
 * Private 1:1 channel to share links, notes, and questions.
 * Access to my private PM community with other motivated, ambitious PM's who want to improve.
 * Awesome content that I share with my community from time to time.
+
+## What people say about their experience
+
+> Understanding my strengths and weaknesses, and asking colleagues to take ownership of certain areas has really helped me laser focus on my core competencies. This showed near immediate results in time saved and mental load decreased.
