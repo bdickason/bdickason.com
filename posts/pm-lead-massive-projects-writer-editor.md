@@ -41,6 +41,7 @@ Bonus addition: There’s one additional mode that I employ from time to time. I
 
 **What do you do to get into creative mode? Do you have a system or tips? I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
 
+*Special thanks to Kashi for introducing me to Writer vs. Editor.*
 
 <strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
 
