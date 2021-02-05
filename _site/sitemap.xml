@@ -47,11 +47,6 @@
     </url>
     
     <url>
-        <loc>https://bdickason.com/posts/unlock-creative-strategic-thinking/</loc>
-        <lastmod>2021-01-28</lastmod>
-    </url>
-    
-    <url>
         <loc>https://bdickason.com/about/</loc>
         <lastmod>2021-02-01</lastmod>
     </url>
@@ -59,5 +54,10 @@
     <url>
         <loc>https://bdickason.com/</loc>
         <lastmod>2021-02-01</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/pm-lead-massive-projects-writer-editor/</loc>
+        <lastmod>2021-02-04</lastmod>
     </url>
 </urlset>
