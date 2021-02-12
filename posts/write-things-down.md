@@ -58,6 +58,8 @@ Related Topics: #productivity, #async
 
 {% include components/mailinglist.njk %}
 
+{% include components/share.njk %}
+
 **Soundtrack:** [The Midnight - Prom Night](https://www.youtube.com/watch?v=OeCPQBRpiHA)
 <iframe src="https://open.spotify.com/embed/track/5pOuutOhdUKIR9eruBTLD4" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 

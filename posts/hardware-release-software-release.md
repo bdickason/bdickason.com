@@ -89,6 +89,8 @@ If you want to read more about the intersection between hardware and software, I
 
 {% include components/mailinglist.njk %}
 
+{% include components/share.njk %}
+
 Soundtrack: [BCee ft. S.P.Y - Is Anybody Out There](https://www.youtube.com/watch?v=bYZkjb0TS7c)
 <iframe src="https://open.spotify.com/embed/track/05nZTWLZUnWTTaPUAOd9n6" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 

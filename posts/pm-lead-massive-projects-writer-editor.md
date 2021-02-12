@@ -48,6 +48,8 @@ Bonus addition: There’s one additional mode that I employ from time to time. I
 
 {% include components/mailinglist.njk %}
 
+{% include components/share.njk %}
+
 Soundtrack: [We Are Scientists - Nobody Move Nobody Get Hurt](https://www.youtube.com/watch?v=Et9llKBJdEs)
 <iframe src="https://open.spotify.com/embed/track/0iUano4euaiUETVUd1u0cx" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 

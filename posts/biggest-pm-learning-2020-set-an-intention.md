@@ -92,6 +92,8 @@ Across everything I did during the year, this process made the biggest impact in
 
 {% include components/mailinglist.njk %}
 
+{% include components/share.njk %}
+
 Related Topics: #productivity
 
 Soundtrack: [The Midnight - Los Angeles](https://www.youtube.com/watch?v=z_b4tucWzSw)

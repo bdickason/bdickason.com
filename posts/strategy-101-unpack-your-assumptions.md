@@ -50,6 +50,8 @@ If you do this right, the actual pitch will be a discussion focused not on ‘wh
 
 {% include components/mailinglist.njk %}
 
+{% include components/share.njk %}
+
 Soundtrack: [Tangerine Dream - Love on a Real Train (State azure cover)](https://www.youtube.com/watch?v=ZRSNy8DcIDk)
 <iframe src="https://open.spotify.com/embed/track/6ChoCaQSddOrBRock7NpGo" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 

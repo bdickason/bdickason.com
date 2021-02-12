@@ -128,6 +128,8 @@ The reality is, if you are routinely fixing the top pain points of your power us
 
 {% include components/mailinglist.njk %}
 
+{% include components/share.njk %}
+
 Related Topics: #customer-development, #audience, #research
 
 Soundtrack: [September 1987 - Bad Dream Baby](https://www.youtube.com/watch?v=nF8paxAqIRE)

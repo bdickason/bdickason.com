@@ -126,6 +126,8 @@ I am not suggesting that using your product is a **substitute** for talking to y
 
 {% include components/mailinglist.njk %}
 
+{% include components/share.njk %}
+
 Related Topics: #customer-development, #dogfooding
 
 Soundtrack: [Anderson Paak ft. Kendrick Lamar - Tints](https://www.youtube.com/watch?v=u749Hi0gDVM)

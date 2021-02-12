@@ -132,6 +132,8 @@ Keep scrolling for the full list of books [and articles](#articles) 👇
 
 {% include components/post/post-mailinglist.njk %}
 
+{% include components/share.njk %}
+
 Related Topics: #strategy, #must-read
 
 

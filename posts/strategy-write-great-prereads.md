@@ -66,6 +66,8 @@ Related Topics: #alignment, #async, #meetings
 
 {% include components/mailinglist.njk %}
 
+{% include components/share.njk %}
+
 **Soundtrack:** [Timecop 1983 - Falling ft. Josh Daly](https://www.youtube.com/watch?v=Yo-Dci2Y9BE)
 <iframe src="https://open.spotify.com/embed/track/57QlMlOMlmBTDu9zmjVIvS" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
