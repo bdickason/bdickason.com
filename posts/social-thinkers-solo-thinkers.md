@@ -1,5 +1,5 @@
 ---
-title: Social Thinker vs. Solo Thinker
+title: Social Thinkers vs. Solo Thinkers
 date: 2021-02-11
 description: 
 thumbnail: /static/posts/social-thinker-solo-thinker/good_will_hunting.jpg
