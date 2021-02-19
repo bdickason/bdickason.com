@@ -1,12 +1,12 @@
 ---
-title: Social Thinkers vs. Solo Thinkers
+title: Social thinkers vs. Solo thinkers
 date: 2021-02-11
 description: 
 thumbnail: /static/posts/social-thinker-solo-thinker/good_will_hunting.jpg
 layout: layouts/post.njk
 ---
 
-# Social Thinkers vs. Solo Thinkers
+# Social thinkers vs. Solo thinkers
 
 Some days I don’t get any work done.
 
