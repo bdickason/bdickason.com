@@ -55,7 +55,7 @@ Imagine what your product would feel like if everything happened in real time.
 * Speed during Checkout - Every second of page load time kills conversion rates. A 1 second delay [reduces conversion rate by 7%](https://neilpatel.com/blog/loading-time/).
 * Framerate in Virtual Reality - The early days of Virtual Reality caused intense nausea akin to motion sickness [when framerates dropped below 60fps](https://link.medium.com/QyheLe9rbeb).
 * Design Tools - Users are consistently frustrated when Sketch or Figma are slow. [Designers have high APM](https://quizlet.com/blog/everything-i-know-about-design) (actions per minute) and a small slowdown can occur 5-10 times per minute.
-* The core interaction of your proudct - Your product exists to save people time or help them solve a problem. Introducing friction or delay during the most important flow of your product will drive people crazy. Notion has developed a reputation for being a sluggish product:
+* The core interaction of your product - Your product exists to save people time or help them solve a problem. Introducing friction or delay during the most important flow of your product will drive people crazy. Notion has developed a reputation for being a sluggish product:
 
 <img src="/static/posts/speed-is-the-killer-feature/reddit-notion.png">
 
@@ -70,7 +70,7 @@ If you can’t speed up a specific action, you can often fake it. Perceived spee
 
 Here are some examples of products that fake being fast:
 
-* Facebook’s app pioneered loading images that look like actual content. The structure and UI of the page loads but the content does not. As a result, you can still use the product and prepare to take actions, even if the content hasn’t loaed.
+* Facebook’s app pioneered loading images that look like actual content. The structure and UI of the page loads but the content does not. As a result, you can still use the product and prepare to take actions, even if the content hasn’t loaded.
 * Games have a rule to never block the input thread. You can slow down the visuals but the controls should always feel responsive so the user feels in control.
 * Robinhood has you swipe up to trade, but runs your transaction in the background and notifies you via email when your trade is complete.
 
