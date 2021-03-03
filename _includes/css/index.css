@@ -83,12 +83,6 @@ ul:not(.list-bare) > li > a > .avatar {
 	margin-right: 4px;
 }
 
-/* Intro */
-
-.intro {
-	background-image: url('/static/header-test.png')
-}
-
 /* Main */
 main {
 	font-size: 1.125em; /* 18px /16 */
