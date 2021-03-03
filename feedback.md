@@ -2,11 +2,11 @@
 title: Feedback
 layout: layouts/page.njk
 description: Feedback is a gift. Thanks for sharing thoughtful feedback with me :)
-thumbnail: /static/book/author.jpg
+thumbnail: /static/me.jpg
 noindex: true
 ---
 
-<img class="small bio" src="/static/book/author.jpg">
+<img class="small bio" src="/static/me.jpg">
 
 # Level up my coaching :)
 
