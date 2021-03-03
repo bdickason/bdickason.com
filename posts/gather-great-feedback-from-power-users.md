@@ -135,7 +135,7 @@ Related Topics: #customer-development, #audience, #research
 Soundtrack: [September 1987 - Bad Dream Baby](https://www.youtube.com/watch?v=nF8paxAqIRE)
 <iframe src="https://open.spotify.com/embed/track/5GQyYSGz8bymILpekzEy7L" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-<img id="spotify"> [See all songs I’ve used on my website.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
+<img id="spotify"> [See all songs featured on my site.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
 
 {% include components/date.njk %}
 

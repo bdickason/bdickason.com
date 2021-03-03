@@ -140,7 +140,7 @@ Related Topics: #strategy, #must-read
 Soundtrack: [Miami Horror - Don't Be On With Her](https://www.youtube.com/watch?v=T5hDNa3qzZ4)
 <iframe src="https://open.spotify.com/embed/track/2JjiLIpePFcVrjVAEmLDHq" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-<img id="spotify"> [See all songs I’ve used on my website.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
+<img id="spotify"> [See all songs featured on my site.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
 
 {% include components/date.njk %}
 

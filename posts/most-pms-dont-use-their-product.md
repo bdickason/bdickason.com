@@ -133,7 +133,7 @@ Related Topics: #customer-development, #dogfooding
 Soundtrack: [Anderson Paak ft. Kendrick Lamar - Tints](https://www.youtube.com/watch?v=u749Hi0gDVM)
 <iframe src="https://open.spotify.com/embed/track/1gnwGVoG7V08vMX3hyr90x" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-<img id="spotify"> [See all songs I’ve used on my website.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
+<img id="spotify"> [See all songs featured on my site.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
 
 {% include components/date.njk %}
 

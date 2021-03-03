@@ -65,7 +65,7 @@ Conversation is a distraction to a solo thinker. They need isolation and concent
 Soundtrack: [Wolf Club - Summer Lights](https://www.youtube.com/watch?v=TS5J_cjzKvI)
 <iframe src="https://open.spotify.com/embed/track/7tTGgoVgrVpt9L3n6aRsm3" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-<img id="spotify"> [See all songs I’ve used on my website.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
+<img id="spotify"> [See all songs featured on my site.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
 
 {% include components/date.njk %}
 

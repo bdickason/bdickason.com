@@ -71,7 +71,7 @@ Related Topics: #alignment, #async, #meetings
 **Soundtrack:** [Timecop 1983 - Falling ft. Josh Daly](https://www.youtube.com/watch?v=Yo-Dci2Y9BE)
 <iframe src="https://open.spotify.com/embed/track/57QlMlOMlmBTDu9zmjVIvS" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-<img id="spotify"> [See all songs I’ve used on my website.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
+<img id="spotify"> [See all songs featured on my site.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
 
 {% include components/date.njk %}
 {% include components/posts.njk %}

@@ -103,7 +103,7 @@ This is what we're forcing on people when we ship laggy software. We're making t
 Soundtrack: [Mega Ran & Futurecop! - Slow Down](https://www.youtube.com/watch?v=MviNwNKYLN4)
 <iframe src="https://open.spotify.com/embed/track/66pA2iHZCGkHW8MRjIXiYJ" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-<img id="spotify"> [See all songs I’ve used on my website.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
+<img id="spotify"> [See all songs featured on my site.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
 
 {% include components/date.njk %}
 
