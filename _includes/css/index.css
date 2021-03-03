@@ -350,11 +350,11 @@ a strong:hover {
 
 
 header {
-	padding: 3em 5em 0em 5em;
+	padding: 4% 6% 0% 6%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: center;
+	/* align-items: center; */
 	color: #a8a8a8;
 	/* opacity: 40%; */
 }
