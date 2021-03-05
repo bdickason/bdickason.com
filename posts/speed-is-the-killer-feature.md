@@ -1,7 +1,7 @@
 ---
 title: Speed is the killer feature
 date: 2021-02-25
-description: 
+description: Teams consistently overlook speed. Instead, they add more features (which ironically make things slower). Products bloat over time and performance goes downhill.
 thumbnail: /static/posts/speed-is-the-killer-feature/speed-keanu-sandra.png
 layout: layouts/post.njk
 ---
