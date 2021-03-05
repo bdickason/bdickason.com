@@ -5,7 +5,7 @@ description: From Product Vision/Strategy to Goals and Metrics to Roadmaps and e
 thumbnail: /static/me.jpg
 layout: layouts/base.njk
 ---
-## Become an effective Product Manager
+## Build Great Products
 
 When you join my newsletter, you'll receive simple tactics to improve your day-to-day PM life. Delivered to your inbox every Friday at 6am PT.
 
