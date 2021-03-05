@@ -1,5 +1,5 @@
 ---
-title: 'Become a great Product Manager'
+title: 'Build Great Products'
 name: 'home'
 description: From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between. Simple improvements you can make to improve your day-to-day PM life.
 thumbnail: /static/me.jpg
