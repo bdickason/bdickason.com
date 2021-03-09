@@ -1,7 +1,7 @@
 ---
-title: Take Charge of your Promotion
+title: Take charge of your promotion
 date: 2021-03-05
-description: Don't sit back and wait for a promotion. Gather high quality feedback and increase your iteration speed to dramatically increase the likelihood you get promoted.
+description: Don't sit back and wait for a promotion. High quality feedback at a faster rate will increase the likelihood you get promoted.
 thumbnail: /static/posts/take-charge-promotion/wyld-stallyns.jpg
 layout: layouts/post.njk
 ---
