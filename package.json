@@ -1,6 +1,6 @@
 {
   "name": "bdickason.com",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Static site for my personal stuff",
   "scripts": {
     "deploy": "npx vercel",
