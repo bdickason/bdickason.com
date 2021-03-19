@@ -1,6 +1,6 @@
 ---
 title: Do one thing well
-date: 2021-03-11
+date: 2021-03-12
 description: Teams add so many features that the product fails at the job we hired it for. People don't want more features. They want the product to get the job done and get out of their way.
 thumbnail: /static/posts/do-one-thing-well/swiss-army-knife.jpg
 layout: layouts/post.njk
