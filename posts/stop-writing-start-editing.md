@@ -2,7 +2,7 @@
 title: Stop Writing and start Editing
 date: 2021-02-04
 description: Top silicon valley PM's don't work longer hours or 'hustle more.' They delegate work to others and review it regularly. They are editors, not writers.
-thumbnail: /static/posts/pm-lead-massive-projects-writer-editor/stand-by-me.jpg
+thumbnail: /static/posts/stop-writing-start-editing/stand-by-me.jpg
 layout: layouts/post.njk
 ---
 
@@ -37,7 +37,7 @@ You can do the same.
 
 Bonus addition: There’s one additional mode that I employ from time to time. I’ll call it ‘the janitor.’ The janitor plugs every hole on a team, from taking notes to pulling SQL queries to QA’ing releases. This mode is useful when you have an understaffed team or want to deeply understand a problem space.
 
-**What do you do to get into creative mode? Do you have a system or tips? I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
+**Have you successfully transitioned from writer to editor? I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
 
 *Special thanks to Kashi for introducing me to Writer vs. Editor.*
 
