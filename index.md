@@ -7,7 +7,7 @@ layout: layouts/base.njk
 ---
 ## Build Great Products
 
-When you join my newsletter, you'll receive simple tactics to improve your day-to-day PM life. Delivered to your inbox every Friday at 6am PT.
+When you join my newsletter, you'll learn the strategies employed by the best product managers in Silicon Valley. Delivered to your inbox every Friday at 6am PT.
 
 I cover Product Vision/Strategy, Goals and Metrics, Roadmaps, and everything in between.
 
