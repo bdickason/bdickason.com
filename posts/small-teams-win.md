@@ -1,7 +1,7 @@
 ---
 title: Small teams win
 date: 2021-04-02
-description: "Big tems are like slow ships: they are incredibly slow to turn. Small teams are like speedboats: They can turn on a dime. Keep your team as small as possible."
+description: "Big teams are like slow ships: they are incredibly slow to turn. Small teams are like speedboats: They can turn on a dime. Keep your team as small as possible."
 thumbnail: /static/posts/small-teams-win/the-a-team.jpg
 layout: layouts/post.njk
 ---
