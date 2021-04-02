@@ -24,6 +24,8 @@ It doesn't try to help you edit your videos or images. It doesn't try to convinc
 
 **Dropbox does one thing and it does it well.**
 
+*Note: [@gem_ray](https://twitter.com/gem_ray) and [@vschwid](https://twitter.com/vschwid) pointed out that dropbox DID one thing well for the first few years and now has become a bloated product. It's hard to stay small.*
+
 ## The alternative: do many things poorly
 
 We live in a world of complicated products. News websites pop up ads and autoplay videos, Google has [at least four messaging apps](https://www.androidauthority.com/google-messaging-apps-867843/), and [our refrigerators can play Doom](https://www.polygon.com/2020/10/13/21514933/doom-eternal-refrigerator-door-samsung-smart-refrigerator-xbox-game-pass-richard-mallard).
