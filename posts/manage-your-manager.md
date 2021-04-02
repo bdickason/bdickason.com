@@ -147,11 +147,6 @@ I recommend a bi-weekly cadence because your progress doesn't change dramaticall
 
 {% include components/share.njk %}
 
-Soundtrack: [Electric Youth - We Are The Youth](https://www.youtube.com/watch?v=frW3in1OWxc)
-<iframe src="https://open.spotify.com/embed/track/00EO2ea5Wqgv2GSzS57tDh" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
-<img id="spotify"> [See all songs featured on my site.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
-
 {% include components/date.njk %}
 
 {% include components/posts.njk %}

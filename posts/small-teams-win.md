@@ -48,7 +48,7 @@ When you're a small scrappy team, you can fly under the radar.  You don't have $
 
 Contrast that with large investments. The amount of scrutiny from board members or leadership is intense and **big teams are constantly under pressure to outperform expectations.**
 
-Look at Color Labs, who famously raised $41m (https://collapsed.co/startups/color-labs) to build a photo sharing app. They hired 38 people before shipping a product. They never found product market fit. With large investment comes high stakes.
+Look at Color Labs, who [famously raised $41m](https://collapsed.co/startups/color-labs) to build a photo sharing app. They hired 38 people before shipping a product. They never found product market fit. With large investment comes high stakes.
 
 ## Small teams aren't afraid to think small
 

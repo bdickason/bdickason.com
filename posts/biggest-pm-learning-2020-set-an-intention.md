@@ -94,13 +94,6 @@ Across everything I did during the year, this process made the biggest impact in
 
 {% include components/share.njk %}
 
-Related Topics: #productivity
-
-Soundtrack: [The Midnight - Los Angeles](https://www.youtube.com/watch?v=z_b4tucWzSw)
-<iframe src="https://open.spotify.com/embed/track/4loXMor75kKVBB03ygwDlh" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
-<img id="spotify"> [See all songs featured on my website.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
-
 {% include components/date.njk %}
 
 {% include components/posts.njk %}
