@@ -4,7 +4,7 @@
   "description": "Static site for my personal stuff",
   "scripts": {
     "deploy": "npx vercel",
-    "watch": "npx @11ty/eleventy --serve",
+    "watch": "npx vercel dev",
     "build": "npx @11ty/eleventy",
     "clean": "rm -rf ./_site",
     "optimizeposts": "/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ./static/posts",

@@ -1,14 +1,24 @@
 {
     "redirects": [
       { "source": "/coaching", "destination": "/about" },
+      { "source": "/coaching/", "destination": "/about" },
       { "source": "/posts/hardware-release-software-release", "destination": "/posts/how-to-ship-hardware-and-software" },
+      { "source": "/posts/hardware-release-software-release/", "destination": "/posts/how-to-ship-hardware-and-software" },
       { "source": "/posts/strategy-101-unpack-your-assumptions", "destination": "/posts/lead-strategic-discussions" },
+      { "source": "/posts/strategy-101-unpack-your-assumptions/", "destination": "/posts/lead-strategic-discussions" },
+      { "source": "/posts/write-things-down/", "destination": "/posts/less-chat-more-writing" },
       { "source": "/posts/write-things-down", "destination": "/posts/less-chat-more-writing" },
+      { "source": "/posts/unlock-creative-strategic-thinking/", "destination": "/posts/make-time-for-strategic-thinking" },
       { "source": "/posts/unlock-creative-strategic-thinking", "destination": "/posts/make-time-for-strategic-thinking" },
+      { "source": "/posts/biggest-pm-learning-2020-set-an-intention/", "destination": "/posts/spend-time-doing-work-you-love" },
       { "source": "/posts/biggest-pm-learning-2020-set-an-intention", "destination": "/posts/spend-time-doing-work-you-love" },
+      { "source": "/posts/strategy-write-great-prereads/", "destination": "/posts/stop-wasting-time-on-strategy-decks" },
       { "source": "/posts/strategy-write-great-prereads", "destination": "/posts/stop-wasting-time-on-strategy-decks" },
+      { "source": "/posts/pm-lead-massive-projects-writer-editor/", "destination": "/posts/stop-writing-start-editing" },
       { "source": "/posts/pm-lead-massive-projects-writer-editor", "destination": "/posts/stop-writing-start-editing" },
+      { "source": "/posts/the-best-product-management-books-articles/", "destination": "/posts/the-best-product-books-posts" },
       { "source": "/posts/the-best-product-management-books-articles", "destination": "/posts/the-best-product-books-posts" },
+      { "source": "/posts/most-pms-dont-use-their-product/", "destination": "/posts/use-your-damn-product" },
       { "source": "/posts/most-pms-dont-use-their-product", "destination": "/posts/use-your-damn-product" }
     ]
 }
