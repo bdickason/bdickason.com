@@ -7,8 +7,6 @@ layout: layouts/post.njk
 
 # Strategy 101: Unpack your assumptions
 
-Related Topics: #strategy, #product-brief, #alignment
-
 Have you ever walked into a room, confidently **delivered your pitch and** **noticed a series of blank stares?** Maybe you were saying something as straight forward as “We should target X audience with Y product to solve Z problem” and were met with puzzled looks. What seems incredibly obvious and intuitive to you is lost to the rest of the room. You’ve spent months thinking about this strategy and boiled it down to the the utmost clarity, yet people are still confused. 
 
 Another common scenario is that you craft a beautiful and well thought through strategy doc and send it out to colleagues (or leadership) for feedback and hear crickets. **There is no disagreement, there is no agreement, only silence**. Are they aligned? Do they agree and are just waiting for you to make it happen? Unlikely.

@@ -51,8 +51,6 @@ The steps to implement this are simple quite simple. The challenge is building a
 
 Have you been successful in getting your team to write more? Do you have tips for what worked? I’d love to hear from you. Share your thoughts via twitter: [@bdickason](http://twitter.com/bdickason)
 
-Related Topics: #productivity, #async
-
 <strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
 
 
