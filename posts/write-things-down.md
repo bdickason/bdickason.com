@@ -60,11 +60,6 @@ Related Topics: #productivity, #async
 
 {% include components/share.njk %}
 
-**Soundtrack:** [The Midnight - Prom Night](https://www.youtube.com/watch?v=OeCPQBRpiHA)
-<iframe src="https://open.spotify.com/embed/track/5pOuutOhdUKIR9eruBTLD4" width="600" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
-<img id="spotify"> [See all songs featured on my site.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
-
 {% include components/date.njk %}
 
 {% include components/posts.njk %}

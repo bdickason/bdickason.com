@@ -105,11 +105,6 @@ If you need more tips on navigating your promotion, Deb Liu wrote a post on the 
 
 {% include components/share.njk %}
 
-Soundtrack: [College - The Energy Story](https://www.youtube.com/watch?v=f1cONoRIa6Y)
-<iframe src="https://open.spotify.com/embed/track/2AYWQMI8f2zUXV3EG4vZYH" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
-<img id="spotify"> [See all songs featured on my site.](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=NAShg2i5TzetT69GKQ9Irw)
-
 {% include components/date.njk %}
 
 {% include components/posts.njk %}
