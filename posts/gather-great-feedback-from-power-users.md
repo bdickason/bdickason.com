@@ -1,11 +1,11 @@
 ---
-title: How to gather great feedback from your power users
+title: Gather great feedback from your power users
 date: 2021-01-04
-description: Use Customer Advisory Councils to get high quality from your most passionate users.
+description: Your power users are a goldmine of ideas for features to add and things to remove. Use Customer Advisory Councils to get high quality from your most passionate users.
 thumbnail: /static/posts/gather-great-feedback-from-power-users/lebowski.jpg
 layout: layouts/post.njk
 ---
-# How to gather great feedback from your power users
+# Gather great feedback from your power users
 
 On almost every product I’ve worked on, we’ve relied on a core group of active users to steer the development via great feedback and feature ideas. At Shapeways, **most of our highly successful features came directly from our community.** People who love your product are heavily invested in making it better. They will put in the time if you give them the space to do so and take their feedback seriously.
 
