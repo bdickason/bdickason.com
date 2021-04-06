@@ -14,9 +14,7 @@ I'm a Product Manager from Santa Cruz who loves 🎶 [synthwave](https://open.sp
 
 I started this site to share the knowledge I've gained in 15 years spent PM'ing. I've founded startups, worked at tech companies large and small, and even worked as a professional gamer and DJ along the way.
 
-My current clients tell me that I can quickly cut through their ambiguous questions and bring a structured framework and advice that blends head and heart.
-
-If you're interested in a free consultation, visit [my coaching page](https://bdickason.com/coaching).
+My readers tell me that I can quickly cut through their ambiguous questions and bring a structured framework and advice that blends head and heart.
 
 ## My PM Archetype
 Strengths: Strategy, Vision, Alignment
@@ -37,5 +35,3 @@ Weaknesses: Execution
 Want to learn more? <strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
 
 {% include components/mailinglist.njk %}
-
-{% include components/homepage/testimonials.njk %}
