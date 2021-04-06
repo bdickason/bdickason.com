@@ -91,7 +91,7 @@ Throughout the week, jot down notes about your topic. These could be words that 
 
 I take notes using [Things](https://culturedcode.com/things/) on my phone or desktop. You might choose an app or pen and paper. The important part is that you write them down and remember them when the time comes. 
 
-<img src="/static/posts/unlock-creative-strategic-thinking/post-outline.png" />
+<img src="/static/posts/make-time-for-strategic-thinking/post-outline.png" />
 <p class="caption">Here’s an example of my starting point for this post.</p>
 
 **You don’t have to start at the beginning** - My best strategy work happens when I start in the middle. Creative thinking is unstructured by nature and you want to let your creative faucet flow. Trying to force yourself to follow a structure will only cause you to get stuck on a specific section. *“Start writing wherever you can start.* *Start writing wherever you feel comfortable”* ([Daily Writing Tips](https://www.dailywritingtips.com/break-writers-block-dont-begin-at-the-beginning/)).

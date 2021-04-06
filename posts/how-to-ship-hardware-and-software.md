@@ -2,7 +2,7 @@
 title: How to ship hardware and software
 date: 2021-01-21
 description: Software teams want iteration speed and Hardware teams want predictability.
-thumbnail: /static/posts/how-to-ship-hardware-and-software/ROB.jpg
+thumbnail: /static/posts/how-to-ship-hardware-and-software/rob.jpg
 layout: layouts/post.njk
 ---
 
@@ -65,7 +65,7 @@ I am a strong advocate of the 3rd choice which is to find a compromise. I’ve s
 3. Identify dates where the train overlaps the hardware cadence. These are your integration milestones. For these releases, software must plan rigorously and ensure any hardware-centric releases land during this time. 
 
 
-<img src="/static/posts/hardware-release-software-release/hardware-software-release-cycle.png">
+<img src="/static/posts/how-to-ship-hardware-and-software/hardware-software-release-cycle.png">
 
 This model decouples MOST software and hardware releases. 80-90% of the time, the software teams have freedom to move fast and break things (or whatever your preferred slogan is). Hardware teams can plan rigorously and have a predictable schedule. The joint releases act as a contract where the software teams flex a bit to meet the requirements of the hardware teams. Because it only happens every once in a while, the planning overhead for software isn’t too heavy and teams typically don’t mind dealing with it.
 
