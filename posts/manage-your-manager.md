@@ -86,7 +86,7 @@ Decisions are the highest leverage opportunity for your manager. They aren't as 
 
 **Pre-flighting allows you to discuss the decision in a safe space without the pressure of group dynamics during the actual review.**
 
-Before an important meeting, make sure you've sent any documents or decks you plan to review to your manager. I'll call these pre-reads (See also: [How to write great pre-reads](https://bdickason.com/posts/strategy-write-great-prereads/)) In addition, highlight any areas you disagree with and any specific asks you have of your manager during the review.
+Before an important meeting, make sure you've sent any documents or decks you plan to review to your manager. I'll call these pre-reads (See also: [How to write great pre-reads](/posts/stop-wasting-time-on-strategy-decks)) In addition, highlight any areas you disagree with and any specific asks you have of your manager during the review.
 
 For example, you might give them a heads up that you're going to be pushy with a specific team member who is underperforming. Maybe you're proposing to kill a project that they care about and you want to know their stance. Maybe you want them to ask a certain question or help you convince a stubborn teammate of something.
 
@@ -131,7 +131,7 @@ A great format is:
 	* Actual vs. Projected goal.
 	* Status (on track, at risk, on fire)
 
-Your progress report should be less than one page and should take less than 15 minutes to assemble each week. I like to ask my tech lead and designer to help me fill it out so my role is more of [editor (vs writer)](https://bdickason.com/posts/pm-lead-massive-projects-writer-editor/).
+Your progress report should be less than one page and should take less than 15 minutes to assemble each week. I like to ask my tech lead and designer to help me fill it out so my role is more of [editor (vs writer)](/posts/stop-writing-start-editing).
 
 I recommend a bi-weekly cadence because your progress doesn't change dramatically from week to week. Every other week should be frequent enough to give an update but infrequent enough to not require a ton of work from the team.
 
