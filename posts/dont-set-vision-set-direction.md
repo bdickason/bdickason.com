@@ -42,7 +42,7 @@ Your crew is starting to get excited. They know where we're headed and they know
 > The Gates Foundation's [goal](https://www.who.int/malaria/news/2018/interview-bill-gates/en/#:~:text=In%202007%2C%20the%20Bill%20%26%20Melinda,Malaria%20is%20a%20horrific%20disease.)
 > <br /><br />Reach a day when no human being has malaria and no mosquito on earth is carrying it.
 
-Congratulations, you've set a direction! Your crewmates have a clear idea of where you're headed, how to get there, and what success looks like. Now you just have to execute (ha!)
+**Congratulations, you've set a direction!** Your crewmates have a clear idea of where you're headed, how to get there, and what success looks like. Now you just have to execute (ha!)
 
 These three components sound obvious but I'm always surprised how few teams actually have these answers clarified, written down, and socialized so that every leaf node (employee) can remember and act on them. It takes time and energy but it's worth it because clarity flows downstream.
 
