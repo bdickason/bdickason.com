@@ -40,6 +40,25 @@ window.addEventListener('load', function(event) {
         copyLink(e.target);
     }
 
+    /* Share Button Tracking */
+    const shareButtons = document.getElementsByClassName("resp-sharing-button__link")
+    for(let i = 0; i < shareButtons.length; i++) {
+        shareButtons[i].onclick = function (e) {
+            console.log(e.target.dataset.destination)
+             // Fire google analytics event
+            gtag('event', 'share', {
+                'event_category': 'bdickason.com',
+                'event_label': e.target.dataset.destination
+              }); 
+
+            // Fire plausible event
+            plausible('share', {
+                props: {
+                    destination: e.target.dataset.destination
+                }
+            }); 
+        };
+    }
 });
 
 function toggleVisibility(modal) {
@@ -49,6 +68,7 @@ function toggleVisibility(modal) {
         modal.style.display = 'none';
     }
 }
+
 
 function copyLink(container) {
     /* Create temporary input (copy only supports text inputs) and copy to clipboard */
