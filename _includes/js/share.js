@@ -44,7 +44,6 @@ window.addEventListener('load', function(event) {
     const shareButtons = document.getElementsByClassName("resp-sharing-button__link")
     for(let i = 0; i < shareButtons.length; i++) {
         shareButtons[i].onclick = function (e) {
-            console.log(e.target.dataset.destination)
              // Fire google analytics event
             gtag('event', 'share', {
                 'event_category': 'bdickason.com',
