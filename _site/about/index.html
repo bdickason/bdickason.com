@@ -201,11 +201,10 @@ window.addEventListener('load', function(event) {
         }
 
         /* Share Button Tracking */
-        const shareButtons = document.getElementsByClassName("resp-sharing-button__link")
-
+        const shareButtons = document.getElementsByClassName("share-buttons")
         if(shareButtons) {
-            for(let i = 0; i < shareButtons.length; i++) {
-                shareButtons[i].onclick = function (e) {
+            shareButtons.onclick = function (e) {
+                if(e.target.dataset.destination) {
                     // Fire google analytics event
                     gtag('event', 'share', {
                         'event_category': 'bdickason.com',
@@ -218,7 +217,7 @@ window.addEventListener('load', function(event) {
                             destination: e.target.dataset.destination
                         }
                     }); 
-                };
+                }
             }
         }
     }
