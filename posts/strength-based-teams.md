@@ -1,7 +1,7 @@
 ---
 title: Strength-Based Teams
 date: 2021-04-09
-description: "Focus on your strengths, find teammates to compliment your weaknesses. "
+description: "Focus on your strengths, find teammates to complement your weaknesses. "
 thumbnail: /static/posts/strength-based-teams/captain-planet.gif
 layout: layouts/post.njk
 ---
@@ -22,7 +22,7 @@ So how do I plan to improve at execution? I don't.
 
 I've accepted that execution is my weakness. My team has my back.
 
-**Surround yourself with people who compliment your weaknesses so you can focus on your strengths.**
+**Surround yourself with people who complement your weaknesses so you can focus on your strengths.**
 
 ## Strengths
 
@@ -65,15 +65,15 @@ This creates an opportunity to find solutions together.
 
 ## Building a strengths-based team
 
-Surround yourself with teammates who compliment your weaknesses. 
+Surround yourself with teammates who complement your weaknesses. 
 
 <img src="{{ thumbnail }}" />
 
-Imagine a soccer team taking their star striker and telling them "we need you to work on your weaknesses. Play Goalie this season instead." That coach would be fired immediately. Your star striker should do what they do best, striking. Pair them with a great defensive team and a great goalie to compliment the striker's weakness.
+Imagine a soccer team taking their star striker and telling them "we need you to work on your weaknesses. Play Goalie this season instead." That coach would be fired immediately. Your star striker should do what they do best, striking. Pair them with a great defensive team and a great goalie to complement the striker's weakness.
 
 If you're weak at strategy, find a strategic Eng or Design counterpart. If you're weak on data, find a strong analytical co-founder.
 
-Design your team based on each others' strengths. Great teams have a variety of different strengths that compliment each other to cover weaknesses.
+Design your team based on each others' strengths. Great teams have a variety of different strengths that complement each other to cover weaknesses.
 
 <blockquote><em>"You can’t, of course, overcome the weaknesses with which each of us is abundantly endowed. But you can make them irrelevant." -Peter Drucker</em></blockquote>
 
