@@ -1,7 +1,7 @@
 ---
 title: Strength-Based Teams
 date: 2021-04-09
-description: "Focus on your strengths, find teammates to complement your weaknesses. "
+description: "Focus on your strengths, find teammates to complement your weaknesses. Don't be afraid to openly discuss your strengths and weaknesses with your team. Build a strengths-based team by assembling people who have varied strengths and weaknesses."
 thumbnail: /static/posts/strength-based-teams/captain-planet.gif
 layout: layouts/post.njk
 ---

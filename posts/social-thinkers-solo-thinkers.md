@@ -1,7 +1,7 @@
 ---
 title: Social thinkers vs. Solo thinkers
 date: 2021-02-11
-description: 
+description: "Social Thinkers solve problems by conversing. Finding the right collaborator unlocks tremendous productivity. Solo Thinkers solve problems by thinking deeply. Uninterrupted alone time unlocks tremendous productivity."
 thumbnail: /static/posts/social-thinker-solo-thinker/good_will_hunting.jpg
 layout: layouts/post.njk
 ---

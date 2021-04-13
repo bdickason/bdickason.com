@@ -1,7 +1,7 @@
 ---
 title: Don't set vision, set direction.
 date: 2021-03-19
-description: 
+description: "There are three things a team needs to be successful: 1. **Vision:** Where are we headed? 2. **Strategy:** How do we get there? 3. **Goal:** How do we know we've arrived? Great leaders answer these questions at a high level and let their teams fill in the details."
 thumbnail: /static/posts/dont-set-vision-set-direction/boat-spinning.gif
 layout: layouts/post.njk
 ---
