@@ -37,4 +37,13 @@ You just need to put in the time.
 
 **Have you obsessed over tools? Do you spend more time researching than doing? Let me know: [@bdickason](http://twitter.com/bdickason)**
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
+<strong>Get my newsletter.</strong>  It features simple improvements you can make to build great products. Learn the strategies employed by the best Product Managers in Silicon Valley.
+
+
+{% include components/mailinglist.njk %}
+
+{% include components/share.njk %}
+
+{% include components/date.njk %}
+
+{% include components/posts.njk %}
