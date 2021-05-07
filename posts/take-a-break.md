@@ -8,9 +8,9 @@ layout: layouts/post.njk
 
 # Take a break
 
-You are constantly busy. You are constantly working or launching a side project or polishing a hobby.
+You are constantly busy. You are working or launching a side project or polishing a hobby.
 
-Your brain and bodiy weren't designed to run at 100% uptime.
+Your brain and body weren't designed to run at 100% uptime.
 
 The number one piece of advice I give people is to <strong>work less</strong>. 
 
