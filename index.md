@@ -1,16 +1,18 @@
 ---
 title: Home
 name: home
-description: "A library of ideas on intuition, creativity, and designing a life that feels aligned."
+description: "Stop overthinking, listen to your intuition, and tap into your creativity."
 layout: layouts/base.njk
 ---
 
-[Your one-sentence intro: what you write about. For example: "I write about trusting your intuition, escaping overthinking, and reconnecting with creativity."]
+Hi I'm Brad. I help people stop overthinking, listen to their intuition, and tap into their creativity.
 
-**[Start Here](/start-here/)** — if you're new, this page orients you to the ideas on this site.
+The world pushes us to analyze and optimize everything. I believe there's a different way. One where you can balance using your brain and your heart. Where you can express yourself creatively. Where you can live with purpose.
+
+I created this site to share the ideas that have shaped me and helped me live a fulfilling life.
+
+{% include 'components/latest-video.njk' %}
 
 {% include 'components/posts.njk' %}
 
-[Optional: a small newsletter signup or link here, if you want to keep it subtle.]
-
-{% include 'components/mailinglist.njk' %}
+{% include 'components/newsletter-cta.njk' %}

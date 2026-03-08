@@ -95,10 +95,6 @@ I spent years trying to address my weaknesses. I studied, took courses, and led 
 
 **Do you spend most of your time on your strengths or your weaknesses? How much time do you spend doing work you love? I'd love to help: [@bdickason](http://twitter.com/bdickason)**
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to build great products. Learn the strategies employed by the best Product Managers in Silicon Valley.
-
-{% include 'components/mailinglist.njk' %}
-
 {% include 'components/share.njk' %}
 
 {% include 'components/date.njk' %}

@@ -5,6 +5,8 @@ tags: post
 <article class="elv-layout">
   <h1>{{ title }}</h1>
 
+  {% include 'components/date.njk' %}
+
   <div class="video-embed">
     <iframe
       width="560"
@@ -25,7 +27,7 @@ tags: post
 
   {% if transcript %}
   <div class="video-transcript">
-    <h2>Transcript & notes</h2>
+    <h2>Notes</h2>
     {{ transcript | safe }}
   </div>
   {% endif %}
@@ -33,9 +35,8 @@ tags: post
   {{ content | safe }}
 
   <p class="video-cta">
-    <a href="https://www.youtube.com/@bdickason" target="_blank" rel="noopener">More on YouTube</a> — subscribe for new videos.
+    If you liked this video, subscribe to my YouTube channel: <a href="https://www.youtube.com/@bdickason" target="_blank" rel="noopener">@bdickason</a>.
   </p>
 
-  {% include 'components/date.njk' %}
   {% include 'components/posts.njk' %}
 </article>

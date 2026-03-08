@@ -93,11 +93,6 @@ This is what we're forcing on people when we ship laggy software. We're making t
 
 **Do you struggle to prioritize speed for your product? I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
-
-
-{% include 'components/mailinglist.njk' %}
-
 {% include 'components/share.njk' %}
 
 {% include 'components/date.njk' %}

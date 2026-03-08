@@ -41,11 +41,6 @@ Bonus addition: There’s one additional mode that I employ from time to time. I
 
 *Special thanks to Kashi for introducing me to Writer vs. Editor.*
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
-
-
-{% include 'components/mailinglist.njk' %}
-
 {% include 'components/share.njk' %}
 
 {% include 'components/date.njk' %}

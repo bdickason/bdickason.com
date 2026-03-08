@@ -84,11 +84,6 @@ If you want to read more about the intersection between hardware and software, I
 
 **Do you have advice for working on a hardware/software project? I’d love to hear it: [@bdickason](http://twitter.com/bdickason)**
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
-
-
-{% include 'components/mailinglist.njk' %}
-
 {% include 'components/share.njk' %}
 
 {% include 'components/date.njk' %}

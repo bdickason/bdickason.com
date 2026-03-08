@@ -1,0 +1,17 @@
+{% set latest = collections.videoPosts[0] %}
+{% if latest %}
+<section class="latest-video" aria-labelledby="latest-video-heading">
+  <h2 id="latest-video-heading">Latest video</h2>
+  <div class="video-embed">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/{{ latest.data.videoId }}{% if latest.data.startAt %}?start={{ latest.data.startAt }}{% endif %}"
+      title="{{ latest.data.title }}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</section>
+{% endif %}

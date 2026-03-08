@@ -65,10 +65,6 @@ Give me a small team of senior folks that know how to work together and I'll bui
 
 **Have you been burned working on a large team? Do you have other examples of amazing small teams? Let me know: [@bdickason](http://twitter.com/bdickason)**
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to build great products. Learn the strategies employed by the best Product Managers in Silicon Valley.
-
-{% include 'components/mailinglist.njk' %}
-
 {% include 'components/share.njk' %}
 
 {% include 'components/date.njk' %}

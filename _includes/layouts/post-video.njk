@@ -3,10 +3,6 @@ layout: layouts/base.njk
 tags: post
 ---
 <article class="elv-layout post post-video">
-	{% if hero %}
-		{% include 'components/post/hero.njk' %}
-	{% endif %}
-
 	<h1>{{ title }}</h1>
 	{% include 'components/date.njk' %}
 
@@ -40,7 +36,7 @@ tags: post
 
 	{% if transcript %}
 	<div class="video-transcript">
-		<h2>Transcript & notes</h2>
+		<h2>Notes</h2>
 		<div class="transcript-body">
 			{{ transcript | safe }}
 		</div>
@@ -48,9 +44,8 @@ tags: post
 	{% endif %}
 
 	<p class="video-cta">
-		<a href="https://www.youtube.com/@bdickason" target="_blank" rel="noopener">More on YouTube</a> — subscribe for new videos.
+		If you liked this video, subscribe to my YouTube channel: <a href="https://www.youtube.com/@braddickason" target="_blank" rel="noopener">@braddickason</a>.
 	</p>
 
-	{% include 'components/date.njk' %}
 	{% include 'components/posts.njk' %}
 </article>

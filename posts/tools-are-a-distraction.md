@@ -94,11 +94,6 @@ Scarcity is incredibly powerful. It can drive desire and demand for your product
 
 **Which products use scarcity well? Let me know: [@bdickason](http://twitter.com/bdickason)**
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to build great products. Learn the strategies employed by the best Product Managers in Silicon Valley.
-
-
-{% include 'components/mailinglist.njk' %}
-
 {% include 'components/share.njk' %}
 
 {% include 'components/date.njk' %}

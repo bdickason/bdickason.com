@@ -53,11 +53,6 @@ You'll know your direction is working when you see others using it as an effecti
 
 **Does your team struggle with direction? Have you tried to implement a vision and failed? I'd love to help: [@bdickason](http://twitter.com/bdickason)**
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
-
-
-{% include 'components/mailinglist.njk' %}
-
 {% include 'components/share.njk' %}
 
 {% include 'components/date.njk' %}

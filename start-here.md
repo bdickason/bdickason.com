@@ -23,3 +23,5 @@ description: "A short introduction to the ideas on this site and who it's for."
 ---
 
 [At the very bottom: a short line and link to [Work With Me](/work-with-me/) for people who want deeper help.]
+
+{% include 'components/newsletter-cta.njk' %}

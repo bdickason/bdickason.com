@@ -81,11 +81,6 @@ Minimize the amount of pain in your product. Assume that people want to fail rep
 
 **Have you used a product that makes it expensive to fail? I'd love to hear about it:  [@bdickason](http://twitter.com/bdickason)**
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to build great products. Learn the strategies employed by the best Product Managers in Silicon Valley.
-
-
-{% include 'components/mailinglist.njk' %}
-
 {% include 'components/share.njk' %}
 
 {% include 'components/date.njk' %}

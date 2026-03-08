@@ -87,11 +87,6 @@ Across everything I did during the year, this process made the biggest impact in
 
 **Did you set an intention for last year? What was it? What else did you do that helped you spend more time doing work that you love? [@bdickason](http://twitter.com/bdickason)**
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
-
-
-{% include 'components/mailinglist.njk' %}
-
 {% include 'components/share.njk' %}
 
 {% include 'components/date.njk' %}
