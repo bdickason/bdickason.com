@@ -4,7 +4,8 @@
   "description": "Static site for my personal stuff",
   "scripts": {
     "deploy": "npx vercel",
-    "watch": "NODE_OPTIONS='--no-deprecation' npx vercel dev",
+    "watch": "npm run validate && NODE_OPTIONS='--no-deprecation' npx vercel dev",
+    "validate": "node scripts/validate.mjs",
     "build": "npx @11ty/eleventy",
     "clean": "rm -rf ./_site",
     "optimizeposts": "/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ./static/posts",
@@ -30,6 +31,7 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "gray-matter": "^4.0.3",
     "vercel": "^28.18.5"
   }
 }
