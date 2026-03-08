@@ -1,7 +1,9 @@
 {
     "redirects": [
-      { "source": "/coaching", "destination": "/about" },
-      { "source": "/coaching/", "destination": "/about" },
+      { "source": "/feedback", "destination": "/" },
+      { "source": "/feedback/", "destination": "/" },
+      { "source": "/coaching", "destination": "/work-with-me/" },
+      { "source": "/coaching/", "destination": "/work-with-me/" },
       { "source": "/posts/hardware-release-software-release", "destination": "/posts/how-to-ship-hardware-and-software" },
       { "source": "/posts/hardware-release-software-release/", "destination": "/posts/how-to-ship-hardware-and-software" },
       { "source": "/posts/strategy-101-unpack-your-assumptions", "destination": "/posts/lead-strategic-discussions" },

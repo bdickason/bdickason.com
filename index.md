@@ -1,18 +1,16 @@
 ---
-title: 'Build Great Products'
-name: 'home'
-description: "From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between. Simple improvements you can make to improve your day-to-day PM life."
-thumbnail: /static/me.jpg
+title: Home
+name: home
+description: "A library of ideas on intuition, creativity, and designing a life that feels aligned."
 layout: layouts/base.njk
 ---
-## Build Great Products
 
-When you join my newsletter, you'll learn the strategies employed by the best product managers in Silicon Valley. Delivered to your inbox every Friday at 6am PT.
+[Your one-sentence intro: what you write about. For example: "I write about trusting your intuition, escaping overthinking, and reconnecting with creativity."]
 
-I cover Product Vision/Strategy, Goals and Metrics, Roadmaps, and everything in between.
+**[Start Here](/start-here/)** — if you're new, this page orients you to the ideas on this site.
 
-Benefit from my 15 years of experience as a product manager at Facebook, Oculus, and Shapeways.
+{% include 'components/posts.njk' %}
 
-{% include components/mailinglist.njk %}
+[Optional: a small newsletter signup or link here, if you want to keep it subtle.]
 
-{% include components/posts.njk %}
+{% include 'components/mailinglist.njk' %}

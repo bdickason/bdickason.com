@@ -46,10 +46,10 @@ If you do this right, the actual pitch will be a discussion focused not on ‘wh
 <strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
 
 
-{% include components/mailinglist.njk %}
+{% include 'components/mailinglist.njk' %}
 
-{% include components/share.njk %}
+{% include 'components/share.njk' %}
 
-{% include components/date.njk %}
+{% include 'components/date.njk' %}
 
-{% include components/posts.njk %}
+{% include 'components/posts.njk' %}

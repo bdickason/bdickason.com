@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+tags: post
+---
+<article class="elv-layout post post-inspiration">
+	<h1>{{ title }}</h1>
+	{% include 'components/date.njk' %}
+
+	{% if blocks %}
+		{% for block in blocks %}
+		<div class="inspiration-block{% if block.fullBleed %} inspiration-block--full-bleed{% endif %}">
+			<div class="inspiration-block__image">
+				<img src="{{ block.image }}" alt="{{ block.alt | default('') }}" loading="lazy" />
+			</div>
+			<div class="reflection">
+				<p>{{ block.reflection }}</p>
+			</div>
+		</div>
+		{% endfor %}
+	{% endif %}
+
+	{{ content | safe }}
+
+	<p class="post-footer"><a href="/work-with-me/">Work With Me</a></p>
+	{% include 'components/date.njk' %}
+	{% include 'components/posts.njk' %}
+</article>

@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+tags: post
+---
+<article class="elv-layout">
+  <h1>{{ title }}</h1>
+
+  <div class="video-embed">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/{{ videoId }}"
+      title="{{ title }}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  {% if summary %}
+  <div class="video-summary">
+    {{ summary }}
+  </div>
+  {% endif %}
+
+  {% if transcript %}
+  <div class="video-transcript">
+    <h2>Transcript & notes</h2>
+    {{ transcript | safe }}
+  </div>
+  {% endif %}
+
+  {{ content | safe }}
+
+  <p class="video-cta">
+    <a href="https://www.youtube.com/@bdickason" target="_blank" rel="noopener">More on YouTube</a> — subscribe for new videos.
+  </p>
+
+  {% include 'components/date.njk' %}
+  {% include 'components/posts.njk' %}
+</article>
