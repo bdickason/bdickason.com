@@ -32,20 +32,17 @@ tags: post
 	</ul>
 	{% endif %}
 
-	{{ content | safe }}
-
-	{% if transcript %}
+	{% if content %}
 	<div class="video-transcript">
-		<h2>Notes</h2>
+		<h2>Transcript</h2>
 		<div class="transcript-body">
-			{{ transcript | safe }}
+			{{ content | safe }}
 		</div>
 	</div>
 	{% endif %}
 
-	<p class="video-cta">
-		If you liked this video, subscribe to my YouTube channel: <a href="https://www.youtube.com/@braddickason" target="_blank" rel="noopener">@braddickason</a>.
-	</p>
+	
+	{% include 'components/newsletter-cta.njk' %}
 
 	{% include 'components/posts.njk' %}
 </article>

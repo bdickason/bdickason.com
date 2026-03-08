@@ -438,7 +438,18 @@ header a:hover, header a:visited:hover, header a[href]:hover {
 	aspect-ratio: 16 / 9;
 	vertical-align: top;
 }
-.video-summary { margin: 1.5em 0; }
+.video-summary {
+	margin: 1.5em 0;
+	font-size: 1.2rem;
+	line-height: 2rem;
+	max-width: 42em;
+}
+.video-summary p {
+	margin-bottom: 1rem;
+}
+.video-summary p:last-child {
+	margin-bottom: 0;
+}
 .video-transcript { margin: 2em 0; }
 .video-transcript h2 { margin-top: 1.5em; }
 .video-cta { margin-top: 2em; }
@@ -722,7 +733,6 @@ blockquote.pull-quote a:hover {
 	font-size: 1rem;
 	border-radius: 3px;
 	width: 100%;
-	max-width: 20rem;
 	box-sizing: border-box;
 }
 .color-block--purple .newsletter-cta__form button,
@@ -749,12 +759,11 @@ blockquote.pull-quote a:hover {
 	display: flex !important;
 	flex-wrap: nowrap;
 	align-items: center;
-	gap: 0.5rem;
+	gap: 0.25rem;
 }
 .color-block--purple .newsletter-cta__form .formkit-field {
 	flex: 1 1 auto !important;
 	min-width: 0;
-	max-width: 20rem;
 	margin: 0 !important;
 }
 .color-block--purple .newsletter-cta__form .formkit-input {

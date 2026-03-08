@@ -5,9 +5,9 @@ description: "Stop overthinking, listen to your intuition, and tap into your cre
 layout: layouts/base.njk
 ---
 
-Hi I'm Brad. I help people stop overthinking, listen to their intuition, and tap into their creativity.
+Hi I'm Brad. explore creativity, intuition, and what happens when we stop overthinking life.
 
-The world pushes us to analyze and optimize everything. I believe there's a different way. One where you can balance using your brain and your heart. Where you can express yourself creatively. Where you can live with purpose.
+I used to think I had to analyze and optimize everything. But there's a different way. One where I balance using my brain and your heart. Where I can express myself creatively. Where I can live with purpose.
 
 I created this site to share the ideas that have shaped me and helped me live a fulfilling life.
 
