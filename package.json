@@ -12,7 +12,7 @@
     "optimizeall": "/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ./static"
   },
   "engines": {
-    "node": "22.x"
+    "node": ">=22"
   },
   "author": "bdickason",
   "contributors": [
