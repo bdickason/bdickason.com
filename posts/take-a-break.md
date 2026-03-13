@@ -20,8 +20,5 @@ I'm on vacation with my family in Palm Springs. See you all next week 😎
 
 <img src="{{ thumbnail }}" />
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

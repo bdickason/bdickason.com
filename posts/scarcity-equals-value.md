@@ -37,8 +37,5 @@ You just need to put in the time.
 
 **Have you obsessed over tools? Do you spend more time researching than doing? Let me know: [@bdickason](http://twitter.com/bdickason)**
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

@@ -41,8 +41,5 @@ Bonus addition: There’s one additional mode that I employ from time to time. I
 
 *Special thanks to Kashi for introducing me to Writer vs. Editor.*
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

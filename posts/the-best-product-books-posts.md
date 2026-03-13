@@ -130,8 +130,5 @@ Keep scrolling for the full list of books [and articles](#articles) 👇
 
 **What are the books, videos, or articles that changed the way you look at Product Management? I’d love to hear about them! [@bdickason](http://twitter.com/bdickason)**
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

@@ -56,8 +56,5 @@ Conversation is a distraction to a solo thinker. They need isolation and concent
 **Are you a solo thinker or a social thinker? What are your secrets to doing your best work? Let me know [@bdickason](http://twitter.com/bdickason) on twitter.**
 
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

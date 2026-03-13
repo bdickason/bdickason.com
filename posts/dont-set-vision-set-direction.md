@@ -53,8 +53,5 @@ You'll know your direction is working when you see others using it as an effecti
 
 **Does your team struggle with direction? Have you tried to implement a vision and failed? I'd love to help: [@bdickason](http://twitter.com/bdickason)**
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

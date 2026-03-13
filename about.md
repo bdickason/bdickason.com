@@ -1,6 +1,6 @@
 ---
 title: About
-layout: layouts/page.njk
+layout: layouts/page-with-newsletter.njk
 description: "I'm a Product Manager from Santa Cruz who loves synthwave music and surfing. I write a weekly newsletter on how to build great products."
 thumbnail: /static/me.jpg
 ---
@@ -9,18 +9,32 @@ thumbnail: /static/me.jpg
 
 # Hi, I'm Brad!
 
-I'm a Product Manager from Santa Cruz who loves 🎶 [synthwave](https://open.spotify.com/playlist/1sjamnHIeKEKqkYVwFtXo9?si=fKVR4sAQQpilJ8v0hRf7Ug) music 
- and 🏄‍♂️ [surfing](https://www.youtube.com/watch?v=LCua3mzcLcg).
+For the past ten years I've been slowly unwinding how I exist. 
 
-I started this site to share the knowledge I've gained in 15 years spent PM'ing. I've founded startups, worked at tech companies large and small, and even worked as a professional gamer and DJ along the way.
+I learned early on that thinking was the way to move through the world. I excelled in school, got a great tech job, and played a ton of video games. From the outside, everything seemed perfect but inside, I was falling apart.
 
-My readers tell me that I can quickly cut through their ambiguous questions and bring a structured framework and advice that blends head and heart.
+I was out of touch with my body. I was always in my head. I developed an auto immune disease. I went through a divorce.
 
-## My PM Archetype
-Strengths: Strategy, Vision, Alignment
-Weaknesses: Execution
+Life was overwhelming and I lost myself.
 
-## Notable Jobs
+Since then, I've made some drastic life changes. I saw a therapist who helped me get in touch with my body and feelings. I slowed down and started surfing which cleared my mind and forced me to be fully present. I went to move concerts. I started DJing again.
+
+I felt. I created.
+
+My physical health improved. My mental and emotional wellbeing skyrocketed.
+
+I met someone new. We had kids. I felt more like myself than ever.
+
+In 2025, I quit my job and moved my family to Bali. I want to explore a slower pace of life where I can feel more and think less. I want to bet on myself.
+
+You're meeting me in the middle of this new journey. I'm not sure where it will take me but I'm slowing down and savoring every minute of it. All the lows and the highs.
+
+Think of this site as my journal where I share thoughts and videos of what I've learned and felt. What inspires me. What drives me. Things I wish someone told me when I was in my 20's.
+
+I also do some coaching from time to time. Hit me up if you would like to [work with me](/work-with-me).
+
+## Past Jobs
+* Meta Reality Labs - PM for Games across AR Glasses
 * Facebook Social Impact - PM for Charitable Giving/Donations
 * Facebook Social VR - PM for Facebook Spaces, Horizon World Building tools
 * Oculus - PM for Oculus Developer Platform, parts of Samsung Gear VR
@@ -31,7 +45,3 @@ Weaknesses: Execution
 * Wat? Gaming - Professional Gamer (Quake 3, Halo, Call of Duty)
 
 [See my LinkedIn profile](https://www.linkedin.com/in/braddickason/) for more details
-
-Want to learn more? <strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
-
-{% include 'components/mailinglist.njk' %}

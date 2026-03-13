@@ -94,8 +94,5 @@ Scarcity is incredibly powerful. It can drive desire and demand for your product
 
 **Which products use scarcity well? Let me know: [@bdickason](http://twitter.com/bdickason)**
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

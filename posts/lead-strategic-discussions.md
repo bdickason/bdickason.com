@@ -43,8 +43,5 @@ If you do this right, the actual pitch will be a discussion focused not on ‘wh
 
 **Have you tried this approach before? Do you have tips for what worked for you? I’d love to hear from you. Share your thoughts via twitter: [@bdickason](http://twitter.com/bdickason)**
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

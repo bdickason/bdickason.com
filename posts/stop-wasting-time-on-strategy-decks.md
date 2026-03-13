@@ -60,8 +60,5 @@ Here are some general rules I try to follow for my pre-reads:
 
 Are you struggling to land your strategy or having challenging product reviews? Do you have tips for what worked? I’d love to hear from you. Share your thoughts via twitter: [@bdickason](http://twitter.com/bdickason)
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

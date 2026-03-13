@@ -1,3 +1,4 @@
+const path = require("path");
 const CleanCSS = require("clean-css");
 
 module.exports = function (eleventyConfig) {
@@ -32,4 +33,9 @@ module.exports = function (eleventyConfig) {
 // Use Nunjucks for .md content so {% include %} in posts works (Eleventy 3 uses config export)
 module.exports.config = {
   markdownTemplateEngine: "njk",
+  dir: {
+    input: ".",
+    includes: path.join(__dirname, "_includes"),
+    output: "_site",
+  },
 };

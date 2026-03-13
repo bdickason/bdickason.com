@@ -140,8 +140,5 @@ I recommend a bi-weekly cadence because your progress doesn't change dramaticall
 
 **Was this helpful? Are there other tools or processes you use when working with your manager? I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

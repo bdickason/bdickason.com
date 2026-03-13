@@ -268,11 +268,10 @@ footer.elv-layout {
 	margin-bottom: 5em;
 }
 
-/* Site footer: subtle white bar, black text */
+/* Site footer: transparent (no bar) */
 .site-footer {
-	background: #fff;
+	background: 0 0;
 	color: #222;
-	border-top: 1px solid #eee;
 	margin-top: 2em;
 	padding-top: 1.25rem;
 	padding-bottom: 1.25rem;
@@ -351,6 +350,25 @@ footer.elv-layout {
 	text-align: center;
 	margin-top: .25em;
 	font-size: .75em;
+}
+
+.btn-book-call {
+	display: inline-block;
+	padding: .5em 2em .4em;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 3px;
+	margin: 1.5em 0 0;
+	background: #6000D6;
+	color: white !important;
+}
+.btn-book-call:hover {
+	background-color: #f09;
+	color: #fff !important;
+	cursor: pointer;
+}
+.btn-book-call-wrap {
+	text-align: center;
 }
 
 /* Highlighting for bold stuffs */
@@ -874,6 +892,12 @@ Black - black
 		background-color: #1a1a1a;
 		color: #e0e0e0;
 	}
+	header,
+	header a,
+	header a:visited,
+	header a[href] {
+		opacity: 1;
+	}
 	a,
 	a:visited,
 	a[href] {
@@ -950,9 +974,8 @@ Black - black
 		color: #e0e0e0;
 	}
 	.site-footer {
-		background: #2a2a2a;
+		background: 0 0;
 		color: #e0e0e0;
-		border-top-color: #444;
 	}
 	.site-footer__inner {
 		color: #e0e0e0;

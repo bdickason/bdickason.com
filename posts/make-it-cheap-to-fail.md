@@ -81,8 +81,5 @@ Minimize the amount of pain in your product. Assume that people want to fail rep
 
 **Have you used a product that makes it expensive to fail? I'd love to hear about it:  [@bdickason](http://twitter.com/bdickason)**
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

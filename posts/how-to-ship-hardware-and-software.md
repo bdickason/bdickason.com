@@ -84,8 +84,5 @@ If you want to read more about the intersection between hardware and software, I
 
 **Do you have advice for working on a hardware/software project? I’d love to hear it: [@bdickason](http://twitter.com/bdickason)**
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

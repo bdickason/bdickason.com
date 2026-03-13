@@ -93,8 +93,5 @@ This is what we're forcing on people when we ship laggy software. We're making t
 
 **Do you struggle to prioritize speed for your product? I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

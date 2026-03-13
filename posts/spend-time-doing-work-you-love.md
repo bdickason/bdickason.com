@@ -87,8 +87,5 @@ Across everything I did during the year, this process made the biggest impact in
 
 **Did you set an intention for last year? What was it? What else did you do that helped you spend more time doing work that you love? [@bdickason](http://twitter.com/bdickason)**
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

@@ -75,8 +75,5 @@ Aspire to the simplicity of Super Mario Bros. There's a reason it remains the be
 
 **Do you feel like you're constantly adding features? I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

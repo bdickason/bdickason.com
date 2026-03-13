@@ -98,8 +98,5 @@ If you need more tips on navigating your promotion, Deb Liu wrote a post on the 
 
 **Do you have an interesting promotion story? Are you working towards one right now? Hit reply and let me know! I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}

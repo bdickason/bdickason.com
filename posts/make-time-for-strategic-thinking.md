@@ -116,8 +116,5 @@ Chances are you’re a collaborative thinker (vs. solo thinker). **You need to f
 *Special thanks to [Jeff Holek](https://www.jeffholek.com/) for helping me think through this.*
 
 
-{% include 'components/share.njk' %}
 
-{% include 'components/date.njk' %}
 
-{% include 'components/posts.njk' %}
