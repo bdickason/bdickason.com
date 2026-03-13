@@ -63,3 +63,6 @@ typings/
 .next
 
 .vercel
+
+# Cursor scratch / temporary planning docs (do not commit or build)
+.cursor/scratch/
