@@ -3,10 +3,11 @@ title: Make it cheap to fail
 date: 2021-04-30
 description: "Humans learn by failing. But failure can be expensive. The best products let you fail fast without long wait times or increased costs. They make it cheap to fail."
 thumbnail: /static/posts/make-it-cheap-to-fail/groundhog-day.jpg
-layout: layouts/post.njk
+hero: /static/posts/make-it-cheap-to-fail/groundhog-day.jpg
+heroAlt: Make it cheap to fail
+layout: layouts/post-blog.njk
 ---
 
-# Make it cheap to fail
 
 Humans learn by failing. From an early age, you learn that pain means 'stop doing that.' If you touch a hot stove, your hand burns. If you fall off the bed, your head hurts. It's not fun, but it's effective.
 
@@ -79,7 +80,7 @@ Minimize the amount of pain in your product. Assume that people want to fail rep
 
 *My wife missed the turn once when picking me up and was fuming by the time she made it back to campus 😤*
 
-**Have you used a product that makes it expensive to fail? I'd love to hear about it:  [@bdickason](http://twitter.com/bdickason)**
+**Have you used a product that makes it expensive to fail?**
 
 
 

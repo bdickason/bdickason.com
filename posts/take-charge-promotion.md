@@ -3,10 +3,11 @@ title: Take charge of your promotion
 date: 2021-03-05
 description: Don't sit back and wait for a promotion. High quality feedback at a faster rate will increase the likelihood you get promoted.
 thumbnail: /static/posts/take-charge-promotion/wyld-stallyns.jpg
-layout: layouts/post.njk
+hero: /static/posts/take-charge-promotion/wyld-stallyns.jpg
+heroAlt: Take charge
+layout: layouts/post-blog.njk
 ---
 
-# Take charge of your promotion
 
 **Do you believe that if you do a good job and write a great performance review, you will be promoted?**
 
@@ -96,7 +97,7 @@ I hope you're feeling empowered and ready to take charge of your promotion. Reme
 
 If you need more tips on navigating your promotion, Deb Liu wrote a post on the topic that elaborates on [navigating career conversations](https://debliu.substack.com/p/choose-your-own-adventure).
 
-**Do you have an interesting promotion story? Are you working towards one right now? Hit reply and let me know! I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
+**Do you have an interesting promotion story? Are you working towards one right now?**
 
 
 

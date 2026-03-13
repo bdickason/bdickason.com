@@ -3,16 +3,16 @@ title: Don't set vision, set direction.
 date: 2021-03-19
 description: "There are three things a team needs to be successful: 1. **Vision:** Where are we headed? 2. **Strategy:** How do we get there? 3. **Goal:** How do we know we've arrived? Great leaders answer these questions at a high level and let their teams fill in the details."
 thumbnail: /static/posts/dont-set-vision-set-direction/boat-spinning.gif
-layout: layouts/post.njk
+hero: /static/posts/dont-set-vision-set-direction/boat-spinning.gif
+heroAlt: Boat spinning
+layout: layouts/post-blog.njk
 ---
-
-# Don't set a vision, set direction
 
 Bad leaders think that a catchy mission and vision statement are enough to guide their organization. They hire expensive branding agencies and prepare fancy presentations with lofty phrases like 'maximize our synergies.' Then they're puzzled when employees feel lost and ask questions like, "What is our strategy?" or "Who are we building for?"
 
 These leaders failed to provide enough information for employees to operate autonomously.
 
-<center><img src="{{ thumbnail }}" style="width: 300px;"/></center>
+<img src="{{ thumbnail }}" alt="Boat spinning" />
 
 There are three things a team needs to be successful:
 1. **Vision:** Where are we headed?
@@ -33,7 +33,7 @@ Our crew now has a sense of where we're headed but they have no idea how to get 
 > Tesla's famous "[Secret Master Plan (Just Between You and Me)](https://www.tesla.com/blog/secret-tesla-motors-master-plan-just-between-you-and-me)"
 > 1. Build sports car
 > 2. Use that money to build an affordable car
-> 3. Use that money to build an even more affordable car</blockquote>
+> 3. Use that money to build an even more affordable car
 
 Your crew is starting to get excited. They know where we're headed and they know how we'll get there. They probably even have ideas about how they can contribute. But they are still confused about the destination.
 
@@ -51,7 +51,7 @@ You'll know your direction is working when you see others using it as an effecti
 *Note: You may find that in this process, you start writing the vision and get stuck. Don't be afraid to jump to the Strategy or Goal section and flesh that out, then come back. Each section is interconnected. It's ok to start in the middle.*
 
 
-**Does your team struggle with direction? Have you tried to implement a vision and failed? I'd love to help: [@bdickason](http://twitter.com/bdickason)**
+**Does your team struggle with direction? Have you tried to implement a vision and failed?**
 
 
 

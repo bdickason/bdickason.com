@@ -1,0 +1,20 @@
+---
+description: When editing posts or layouts, use layout-schema and run validation
+alwaysApply: true
+---
+
+# Posts and layouts
+
+**When editing post frontmatter or adding a new post:**
+
+- Check **`scripts/layout-schema.mjs`** for the required and optional frontmatter for the chosen layout. Each layout (e.g. `layouts/post-blog.njk`, `layouts/post-video.njk`) has a different contract.
+- Ensure the post has `layout` set and all required fields for that layout. Use `tags: post` so it appears in post collections.
+- For `layouts/post-inspiration.njk`, each item in `blocks` must have `image` and `reflection`. For `hero`, use a path starting with `/static/`.
+
+**When adding a new layout or changing required/optional fields:**
+
+- Update **`scripts/layout-schema.mjs`** so validation stays in sync. Add the layout key and its `required` and `optional` arrays.
+
+**After content or layout changes:**
+
+- Run **`npm run validate`** to catch frontmatter and template issues. Fix any errors before considering the task done (see also the "fix build before finish" rule).

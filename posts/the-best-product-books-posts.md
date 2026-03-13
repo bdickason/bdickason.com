@@ -3,10 +3,11 @@ title: The 5 best Product books and posts
 date: 2021-01-08
 description: I've curated videos, posts, and books that describe how to build great products. These resources that changed the way I look at Product Management over the past 15 years. 
 thumbnail: /static/posts/the-best-product-books-posts/hacker-books.jpg
-layout: layouts/post.njk
+hero: /static/posts/the-best-product-books-posts/hacker-books.jpg
+heroAlt: Books and posts
+layout: layouts/post-blog.njk
 ---
 
-# The 5 best Product books and posts
 
 I’ve kept mental notes of the resources that changed the way I build products over the past 15 years. Typically after reading, I would share one of these with every PM I know and not stop talking about them for weeks. This week I went back and tracked down all of them and wrote a one line review. 
 
@@ -128,7 +129,7 @@ Keep scrolling for the full list of books [and articles](#articles) 👇
 <img src="{{ thumbnail }}">
 <div class="caption"><a href="https://www.youtube.com/watch?v=4U9MI0u2VIE" target="_new">Even l33t hax0rs read books on computers.</a></div>
 
-**What are the books, videos, or articles that changed the way you look at Product Management? I’d love to hear about them! [@bdickason](http://twitter.com/bdickason)**
+**What are the books, videos, or articles that changed the way you look at Product Management?**
 
 
 

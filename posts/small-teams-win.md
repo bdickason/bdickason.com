@@ -3,10 +3,11 @@ title: Small teams win
 date: 2021-04-02
 description: "Big teams are like slow ships: they are incredibly slow to turn. Small teams are like speedboats: They can turn on a dime. Keep your team as small as possible."
 thumbnail: /static/posts/small-teams-win/the-a-team.jpg
-layout: layouts/post.njk
+hero: /static/posts/small-teams-win/the-a-team.jpg
+heroAlt: Small teams
+layout: layouts/post-blog.njk
 ---
 
-# Small teams win
 
 One of the biggest mistakes of my career was adding more engineers to a project. I was working on a rocket ship, an incredibly successful product that had a phenomenal launch and was on an upward trajectory. Good press, good metrics, and most importantly, our users loved it. We wanted to do more so we added 8 engineers to the team. I worked all night drafting roadmaps, building strategies, and figuring out how to make use of our new army of engineers. I told myself, “this was going to be the next silicon valley success story.”
 
@@ -63,7 +64,7 @@ Teams don't fail because they didn't move fast enough, they fail because they co
 
 Give me a small team of senior folks that know how to work together and I'll build an amazing product. We'll cut scope, we'll find workarounds, and we'll work together as a group. Give me a huge team and we'll ship something but it will take a long time to get there (and probably won't be great).
 
-**Have you been burned working on a large team? Do you have other examples of amazing small teams? Let me know: [@bdickason](http://twitter.com/bdickason)**
+**Have you been burned working on a large team? Do you have other examples of amazing small teams?**
 
 
 

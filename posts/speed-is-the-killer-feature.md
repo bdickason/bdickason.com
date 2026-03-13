@@ -3,10 +3,11 @@ title: Speed is the killer feature
 date: 2021-02-25
 description: Teams consistently overlook speed. Instead, they add more features (which ironically make things slower). Products bloat over time and performance goes downhill.
 thumbnail: /static/posts/speed-is-the-killer-feature/speed-keanu-sandra.png
-layout: layouts/post.njk
+hero: /static/posts/speed-is-the-killer-feature/speed-keanu-sandra.png
+heroAlt: Speed
+layout: layouts/post-blog.njk
 ---
 
-# Speed is the killer feature
 
 Do you remember your first time using a modern smartphone? A vibrant screen that responded instantly when you tapped replaced cramped keyboards. You could sign your name, drag and drop apps around the screen, and even spin the giant Price is Right wheel to set your alarm. In 2007, this felt like a the future. There's a reason it was called 'the Jesus phone.'
 
@@ -91,7 +92,7 @@ Imagine making breakfast with a 1 second latency added to every action you take.
 This is what we're forcing on people when we ship laggy software. We're making them spend their time waiting for us.
 
 
-**Do you struggle to prioritize speed for your product? I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
+**Do you struggle to prioritize speed for your product?**
 
 
 

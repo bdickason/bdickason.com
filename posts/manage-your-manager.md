@@ -3,10 +3,11 @@ title: How to manage your manager
 date: 2021-02-19
 description: "A great relationship between a manager and their direct report is based on trust. Create a system of regular updates so you're always aligned with your manager. This will prevent surprises and help set you up for successful performance reviews and promotions."
 thumbnail: /static/posts/manage-your-manager/bobs.jpg
-layout: layouts/post.njk
+hero: /static/posts/manage-your-manager/bobs.jpg
+heroAlt: Manage your manager
+layout: layouts/post-blog.njk
 ---
 
-# How to manage your manager
 
 Early in my career, I loved going on pitches with my CEO. We would meet with powerful media companies like the New York Times and I always kept a new mockup or screenshot in my back pocket. I LOVED wow'ing everyone with the latest designs or features. Everyone always ooh'd and aah'd. 
 
@@ -138,7 +139,7 @@ I recommend a bi-weekly cadence because your progress doesn't change dramaticall
 *Note: Not all projects need progress reports. For example, projects that don't ship publicly like a vision or strategy don't need a progress report unless you need feedback on revisions. The more complex the deliverable is, the more likely you need a progress report.*
 
 
-**Was this helpful? Are there other tools or processes you use when working with your manager? I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
+**Was this helpful? Are there other tools or processes you use when working with your manager?**
 
 
 

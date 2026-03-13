@@ -21,8 +21,7 @@ module.exports = function (eleventyConfig) {
   // copy static files to /static so images render locally
   eleventyConfig.addPassthroughCopy("static");
 
-  // Do not build anything under .cursor (e.g. scratch/ planning docs)
-  eleventyConfig.ignores.add(".cursor/**");
+  // .cursor/** is ignored via .eleventyignore (Eleventy 3 no longer exposes config.ignores)
 
   // Video posts (have videoId, not draft), newest first — for homepage "latest video"
   eleventyConfig.addCollection("videoPosts", function (collectionApi) {

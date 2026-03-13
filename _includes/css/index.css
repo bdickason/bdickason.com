@@ -38,9 +38,13 @@ p {
     line-height: 2rem;
 }
 p.date {
-	font-size:small;
-	color: grey;
-	font-style: italic;
+	font-size: 0.8125rem;
+	font-style: normal;
+	color: #888;
+	opacity: 0.85;
+	line-height: 1.2;
+	margin-top: -0.25rem;
+	margin-bottom: 0.75rem;
 }
 
 .nowrap {
@@ -352,6 +356,12 @@ footer.elv-layout {
 	font-size: .75em;
 }
 
+/* Vertical spacing so Share button isn’t squished between post and newsletter */
+.share-cta {
+	margin-top: 1.5em;
+	margin-bottom: 2em;
+}
+
 .btn-book-call {
 	display: inline-block;
 	padding: .5em 2em .4em;
@@ -619,6 +629,13 @@ blockquote.pull-quote a:hover {
 	margin-top: 0.5em;
 	margin-bottom: 0.75em;
 	padding: 0 1rem;
+}
+
+/* Preserve small bio image in post-blog (e.g. strategy decks) */
+.post-blog img.small.bio {
+	width: auto;
+	max-width: 20%;
+	margin: 1em auto;
 }
 
 /* Inspiration post: image + reflection blocks */

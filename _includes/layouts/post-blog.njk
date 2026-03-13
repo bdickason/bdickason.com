@@ -3,10 +3,6 @@ layout: layouts/base.njk
 tags: post
 ---
 <article class="elv-layout post post-blog">
-	{% if hero %}
-		{% include 'components/post/hero.njk' %}
-	{% endif %}
-
 	<h1>{{ title }}</h1>
 	{% if subtitle %}
 		<p class="post-subtitle">{{ subtitle }}</p>

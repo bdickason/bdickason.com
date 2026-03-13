@@ -1,1 +1,1 @@
-<p class="date">Post last updated: {{ date | readableDate }}</p>
+<p class="date">{{ date | readableDate }}{% if updated %} · Updated {{ updated | readableDate }}{% endif %}</p>

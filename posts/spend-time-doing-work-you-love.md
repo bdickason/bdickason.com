@@ -3,7 +3,9 @@ title: How to spend more time doing work you love
 date: 2020-12-27
 description: Setting an intention for the year and communicating it broadly helped me spend more time doing work that I love.
 thumbnail: /static/posts/spend-time-doing-work-you-love/point-break.jpg
-layout: layouts/post.njk
+hero: /static/posts/spend-time-doing-work-you-love/point-break.jpg
+heroAlt: Work you love
+layout: layouts/post-blog.njk
 ---
 # How to spend more time doing work you love
 
@@ -85,7 +87,7 @@ Consistency is key because it will force you to prioritize these solutions to lo
 
 Across everything I did during the year, this process made the biggest impact in my quality of life at work. I hope you found this explanation valuable.
 
-**Did you set an intention for last year? What was it? What else did you do that helped you spend more time doing work that you love? [@bdickason](http://twitter.com/bdickason)**
+**Did you set an intention for last year? What was it? What else did you do that helped you spend more time doing work that you love?**
 
 
 

@@ -3,10 +3,11 @@ title: How to ship hardware and software
 date: 2021-01-21
 description: "Software teams want iteration speed and Hardware teams want predictability. Let each team run at their own cadence but create integration points (e.g. once per month) where they line up. This lets software run fast but forces it to have some predictability."
 thumbnail: /static/posts/how-to-ship-hardware-and-software/rob.jpg
-layout: layouts/post.njk
+hero: /static/posts/how-to-ship-hardware-and-software/rob.jpg
+heroAlt: Hardware and software
+layout: layouts/post-blog.njk
 ---
 
-# How to ship hardware and software
 
 Hardware wants certainty and predictability (at high quality). Software wants iteration speed and flexibility. I have worked at multiple companies (Shapeways, Oculus) that require tight integration between hardware and software. The release process is where the different approach to shipping comes crashing together (typically at the expense of users). 
 
@@ -82,7 +83,7 @@ I’ve had alot of success running this model. Here are a few traps I see teams 
 
 If you want to read more about the intersection between hardware and software, I recommend [The Phoenix Project](https://www.amazon.com/gp/product/1942788290/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1942788290&linkCode=as2&tag=bdickason-20&linkId=c99348f5335fd70e9cfc029582767d75) and Albert Wenger’s excellent series on [Kaizen for Developers](https://continuations.com/tagged/Kaizen). 
 
-**Do you have advice for working on a hardware/software project? I’d love to hear it: [@bdickason](http://twitter.com/bdickason)**
+**Do you have advice for working on a hardware/software project?**
 
 
 
