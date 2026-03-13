@@ -551,10 +551,10 @@ blockquote.pull-quote {
 	line-height: 1.35;
 	color: #fff;
 	background: #6000D6;
-	margin: 1.75em -15%;
+	margin: 1.5em -15% 1.75em;
 	width: 130%;
 	max-width: calc(42rem * 1.3);
-	padding: 1.25em 4rem;
+	padding: 0.1em 4rem 1.25em;
 	border: none;
 	border-left: none;
 	box-sizing: border-box;
@@ -563,7 +563,7 @@ blockquote.pull-quote {
 blockquote.pull-quote p {
 	color: #fff;
 	max-width: none;
-	font-size: 1rem;
+	font-size: 2rem;
 	line-height: inherit;
 	margin-bottom: 0;
 }

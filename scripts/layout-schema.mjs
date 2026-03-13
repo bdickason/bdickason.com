@@ -5,10 +5,6 @@
 
 /** @type {Record<string, { required: string[], optional?: string[] }>} */
 const layoutSchema = {
-  'layouts/post.njk': {
-    required: ['title', 'date'],
-    optional: ['description', 'draft', 'hero', 'heroAlt', 'subtitle', 'tags', 'thumbnail', 'updated'],
-  },
   'layouts/post-blog.njk': {
     required: ['title', 'date'],
     optional: ['description', 'draft', 'hero', 'heroAlt', 'subtitle', 'tags', 'thumbnail', 'updated'],

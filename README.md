@@ -23,8 +23,7 @@ Required frontmatter depends on the layout. **Full schema: `scripts/layout-schem
 
 | Layout | Required | Optional (examples) |
 |--------|----------|---------------------|
-| `layouts/post.njk` | `title`, `date` | `description`, `draft`, `hero`, `subtitle`, `tags`, `thumbnail`, `updated` |
-| `layouts/post-blog.njk` | `title`, `date` | same as above |
+| `layouts/post-blog.njk` | `title`, `date` | `description`, `draft`, `hero`, `subtitle`, `tags`, `thumbnail`, `updated` |
 | `layouts/post-video.njk` | `title`, `date`, `videoId` | `summary`, `keyIdeas`, `thumbnail`, `transcript`, etc. |
 | `layouts/post-inspiration.njk` | `title`, `date`, `blocks` | `description`, `draft`, `tags`, `thumbnail` |
 
