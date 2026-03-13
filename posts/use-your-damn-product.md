@@ -3,10 +3,10 @@ title: Use your damn product
 date: 2021-01-15
 description: "People dream up a laundry list of features but don't know what their users want. Use your product as an actual customer. Spend time going through your onboarding flows repeatedly, actively use your platform as a creator. You'll uncover a host of usability issues and things that don't make sense."
 thumbnail: /static/posts/use-your-damn-product/eddie-arsenio.jpg
-layout: layouts/post.njk
+hero: /static/posts/use-your-damn-product/eddie-arsenio.jpg
+heroAlt: Eddie and Arsenio
+layout: layouts/post-blog.njk
 ---
-
-# Use your damn product
 
 Most people dream up improvements and a laundry list of features that they think their customers want. But most of them don’t actually use their product.
 
@@ -27,7 +27,7 @@ Most Product Managers don’t take the time to use their product. I don’t mean
 [Fred Benenson](http://fredbenenson.com/2012/07/23/kickstarter-fulfillment-and-product-development-a-story-of-dogfood-and-data-validation/) of Kickstarter tried to use his own product to raise money for a t-shirt. Seems simple, right? Doing so uncovered a host of pain points and improvements to the product that had gone unnoticed by the team:
 
 
-> *“Getting one of those details right — backer addresses — made me realize we needed a better way to ensure we were delivering valid backer mailing addresses to project creators at the most crucial part of their project: reward fulfillment.“* -[Fred Benenson, Kickstarter](http://fredbenenson.com/2012/07/23/kickstarter-fulfillment-and-product-development-a-story-of-dogfood-and-data-validation/)
+<blockquote class="pull-quote"><p><em>"Getting one of those details right — backer addresses — made me realize we needed a better way to ensure we were delivering valid backer mailing addresses to project creators at the most crucial part of their project: reward fulfillment."</em> -<a href="http://fredbenenson.com/2012/07/23/kickstarter-fulfillment-and-product-development-a-story-of-dogfood-and-data-validation/">Fred Benenson, Kickstarter</a></p></blockquote>
 
 These pain points typically lie in the depths of your product. The screens that only serious users access. Not the surface-level shiny stuff.
 
@@ -55,7 +55,7 @@ But they wouldn’t try to be a successful baker.
 There is a TON of work that goes into using your product and by just casually browsing your site, you are likely missing 90% of it. **Going through the process as a real user will not only allow you to develop DEEP empathy for your customers, but it will help you pinpoint specific problems with your experience**:
 
 
-> “Once I shipped my shirts, I wrote up an internal email to Kickstarter staff detailing my fulfillment process. That email became the kernel for a number of discussions about how we could better improve the data processing creators face when delivering their rewards to backers.“ -[Fred Benenson, Kickstarter](http://fredbenenson.com/2012/07/23/kickstarter-fulfillment-and-product-development-a-story-of-dogfood-and-data-validation/)
+<blockquote class="pull-quote"><p>"Once I shipped my shirts, I wrote up an internal email to Kickstarter staff detailing my fulfillment process. That email became the kernel for a number of discussions about how we could better improve the data processing creators face when delivering their rewards to backers." -<a href="http://fredbenenson.com/2012/07/23/kickstarter-fulfillment-and-product-development-a-story-of-dogfood-and-data-validation/">Fred Benenson, Kickstarter</a></p></blockquote>
 
 
 
@@ -80,7 +80,7 @@ If you need to sell something, try designing mugs or other printed merchandise. 
 Gary Chou [teaches a course at SVA](https://postindustrialdesign.school/year-5/#for-a-post-industrial-world) and [has built an entire business](https://orbital.nyc/1k/) on the premise that everyone should be able to make $1,000 on the internet. He helps people go through this exact process because it’s incredibly hard.
 
 
-> “The hard thing is there’s a real possibility that you will never get there, or that no one will care, or that it will never work.” -[Gary Chou, Orbital NYC](https://postindustrialdesign.school/year-5/#for-a-post-industrial-world)
+<blockquote class="pull-quote"><p>"The hard thing is there's a real possibility that you will never get there, or that no one will care, or that it will never work." -<a href="https://postindustrialdesign.school/year-5/#for-a-post-industrial-world">Gary Chou, Orbital NYC</a></p></blockquote>
 
 
 That is the reality your users face every day. Embrace it, and you will uncover a ton of useful insights about how people use your product.
@@ -119,15 +119,7 @@ Chances are, your customers get really excited here too!
 I am not suggesting that using your product is a **substitute** for talking to your customers, but rather an additional, high signal data source that will both help you identify and fix problems and **have a better understanding of your customer’s feedback when you do talk to them**. I’ll publish more notes in the future detailing other great ways to learn about your customers.
 
 
-**Have you tried using your product like a serious user before? How did it go? Any success stories or colossal fails? I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
-
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
+**Have you tried using your product like a serious user before? How did it go? Any success stories or colossal fails?**
 
 
-{% include components/mailinglist.njk %}
 
-{% include components/share.njk %}
-
-{% include components/date.njk %}
-
-{% include components/posts.njk %}

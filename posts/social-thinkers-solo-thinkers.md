@@ -3,10 +3,10 @@ title: Social thinkers vs. Solo thinkers
 date: 2021-02-11
 description: "Social Thinkers solve problems by conversing. Finding the right collaborator unlocks tremendous productivity. Solo Thinkers solve problems by thinking deeply. Uninterrupted alone time unlocks tremendous productivity."
 thumbnail: /static/posts/social-thinker-solo-thinker/good_will_hunting.jpg
-layout: layouts/post.njk
+hero: /static/posts/social-thinker-solo-thinker/good_will_hunting.jpg
+heroAlt: Good Will Hunting
+layout: layouts/post-blog.njk
 ---
-
-# Social thinkers vs. Solo thinkers
 
 Some days I don’t get any work done.
 
@@ -19,7 +19,7 @@ One especially unproductive day, I called a friend. I wanted to rant about how m
 After years of struggling with writer’s block, I realized: **I’m a social thinker.**
 
 
-> A good friend will surprise you by helping you say things you’ve known but could never find the words to express. [-David Perell](https://twitter.com/david_perell/status/1277484415715663872)
+<blockquote class="pull-quote"><p>A good friend will surprise you by helping you say things you've known but could never find the words to express. <a href="https://twitter.com/david_perell/status/1277484415715663872">-David Perell</a></p></blockquote>
 
 
 Social Thinkers solve problems by conversing. Like a game of tennis, they bounce ideas back and forth to shape them and twist them. Each volley leads to new insights and sparks of creativity.
@@ -31,7 +31,7 @@ Alone time is a social thinker’s krpyonite. They need conversation and collabo
 
 One of my most memorable 1-on-1’s with a former manager started with him ranting, *“I don’t understand why everyone wants to sit in a conference room and sing kumbaya together. Give me a quiet room, a laptop, and some alone time and I’ll get to the answer ten times faster.”* **This is a classic solo thinker.** 
 
-<p align="center"><img src="{{ thumbnail }}" style="width: 50%" /></p>
+<img src="{{ thumbnail }}" alt="Good Will Hunting" />
 <p class="caption">Will sneaks in late at night and solves proofs by himself.</p>
 
 
@@ -53,15 +53,8 @@ Conversation is a distraction to a solo thinker. They need isolation and concent
 * Silence all distractions so your train of thought isn’t disrupted
 * Find comfortable spaces that promote flow.
 
-**Are you a solo thinker or a social thinker? What are your secrets to doing your best work? Let me know [@bdickason](http://twitter.com/bdickason) on twitter.**
+**Are you a solo thinker or a social thinker? What are your secrets to doing your best work?**
 
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
 
-{% include components/mailinglist.njk %}
 
-{% include components/share.njk %}
-
-{% include components/date.njk %}
-
-{% include components/posts.njk %}

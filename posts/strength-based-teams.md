@@ -3,10 +3,10 @@ title: Strength-Based Teams
 date: 2021-04-09
 description: "Focus on your strengths, find teammates to complement your weaknesses. Don't be afraid to openly discuss your strengths and weaknesses with your team. Build a strengths-based team by assembling people who have varied strengths and weaknesses."
 thumbnail: /static/posts/strength-based-teams/captain-planet.gif
-layout: layouts/post.njk
+hero: /static/posts/strength-based-teams/captain-planet.gif
+heroAlt: Captain Planet
+layout: layouts/post-blog.njk
 ---
-
-# Strengths-based Teams
 
 I have an embarrassing secret to share. I hate execution.
 
@@ -75,7 +75,7 @@ If you're weak at strategy, find a strategic Eng or Design counterpart. If you'r
 
 Design your team based on each others' strengths. Great teams have a variety of different strengths that complement each other to cover weaknesses.
 
-<blockquote><em>"You can’t, of course, overcome the weaknesses with which each of us is abundantly endowed. But you can make them irrelevant." -Peter Drucker</em></blockquote>
+<blockquote class="pull-quote"><p><em>"You can't, of course, overcome the weaknesses with which each of us is abundantly endowed. But you can make them irrelevant."</em> -Peter Drucker</p></blockquote>
 
 **Assemble the right team and your weaknesses will be irrelevant.**
 
@@ -85,7 +85,7 @@ In a team where everyone shares the same strength, they all also share the same 
 
 A strength-based team has multiple strengths that overlap with each others weaknesses. They can cover more ground and trust each other to focus on areas of strength.
 
-<img src="/static/posts/strength-based-teams/types-of-teams.png" width="600px">
+<img src="/static/posts/strength-based-teams/types-of-teams.png" alt="Types of teams" />
 
 I spent years trying to address my weaknesses. I studied, took courses, and led projects that were execution/data heavy. Each time, I learned alot, but I struggled and burned out.
 
@@ -93,14 +93,7 @@ I spent years trying to address my weaknesses. I studied, took courses, and led 
 
 *Special thanks to [Kumar Iyer](https://twitter.com/iyeronic) for helping me find my strengths and [Scott Stern](https://twitter.com/GetTeknikal) for introducing me to Peter Drucker.*
 
-**Do you spend most of your time on your strengths or your weaknesses? How much time do you spend doing work you love? I'd love to help: [@bdickason](http://twitter.com/bdickason)**
+**Do you spend most of your time on your strengths or your weaknesses? How much time do you spend doing work you love?**
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to build great products. Learn the strategies employed by the best Product Managers in Silicon Valley.
 
-{% include components/mailinglist.njk %}
 
-{% include components/share.njk %}
-
-{% include components/date.njk %}
-
-{% include components/posts.njk %}

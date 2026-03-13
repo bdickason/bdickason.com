@@ -3,10 +3,10 @@ title: How to spend more time doing work you love
 date: 2020-12-27
 description: Setting an intention for the year and communicating it broadly helped me spend more time doing work that I love.
 thumbnail: /static/posts/spend-time-doing-work-you-love/point-break.jpg
-layout: layouts/post.njk
+hero: /static/posts/spend-time-doing-work-you-love/point-break.jpg
+heroAlt: Work you love
+layout: layouts/post-blog.njk
 ---
-# How to spend more time doing work you love
-
 In 2019, I spent a ton of time doing work that I wasn’t passionate about (or great at). It seemed like each project I worked on would be coupled with hours of extra meetings, busywork, and other things that seemed to take time away from working on what drives me: vision and strategy. Here’s a detailed breakdown of a huge change I made to change that.
 
 In my last newsletter, I shared my biggest takeaways from 2020. Despite tons of unknowns (e.g. pandemic, etc), there was one thing that made an enormous positive impact in my work: **Setting an intention for the year and communicating it broadly helped me spend more time doing work that I love.** I thought it would be helpful to go deeper on this topic and share my process so you can do the same. This process made the biggest difference to my overall happiness and productivity at work this year:
@@ -85,15 +85,7 @@ Consistency is key because it will force you to prioritize these solutions to lo
 
 Across everything I did during the year, this process made the biggest impact in my quality of life at work. I hope you found this explanation valuable.
 
-**Did you set an intention for last year? What was it? What else did you do that helped you spend more time doing work that you love? [@bdickason](http://twitter.com/bdickason)**
-
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
+**Did you set an intention for last year? What was it? What else did you do that helped you spend more time doing work that you love?**
 
 
-{% include components/mailinglist.njk %}
 
-{% include components/share.njk %}
-
-{% include components/date.njk %}
-
-{% include components/posts.njk %}

@@ -3,10 +3,10 @@ title: Do one thing well
 date: 2021-03-12
 description: Teams add so many features that the product fails at the job we hired it for. People don't want more features. They want the product to get the job done and get out of their way.
 thumbnail: /static/posts/do-one-thing-well/swiss-army-knife.jpg
-layout: layouts/post.njk
+hero: /static/posts/do-one-thing-well/swiss-army-knife.jpg
+heroAlt: Swiss army knife
+layout: layouts/post-blog.njk
 ---
-
-# Do one thing well
 
 Do you remember your first time using Dropbox? Files instantly sync across your devices and to the cloud. You can move files around just like a normal folder. Dropbox is so simple that you often forget it's running.
 
@@ -44,7 +44,7 @@ Adding more features makes people stop using your product. Each new feature is *
 
 Software wasn't complicated in the beginning. One of the founding principles of Unix (which powers OSX) was that individual programs should do one thing (and only one thing) well. Each program serves a single purpose. Copy (cp), Move (mv), and Delete (rm) are individual tiny programs.
 
-> *"We used to sit around in the Unix Room saying, 'What can we throw out? Why is there this option?'"* [Wikipedia: The Unix Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well)</blockquote>
+<blockquote class="pull-quote"><p><em>"We used to sit around in the Unix Room saying, 'What can we throw out? Why is there this option?'"</em> <a href="https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well">Wikipedia: The Unix Philosophy</a></p></blockquote>
 
 The benefits of doing one thing well:
 * Users can describe your product in a single sentence: "Dropbox makes my files available everywhere."
@@ -73,15 +73,7 @@ Your entire focus should be making it easier and faster to do the job people hir
 
 Aspire to the simplicity of Super Mario Bros. There's a reason it remains the best selling video game franchise of all time. The controls are so simple that anyone could pick them up and start playing: Move, Run, Jump.
 
-**Do you feel like you're constantly adding features? I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
-
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
+**Do you feel like you're constantly adding features?**
 
 
-{% include components/mailinglist.njk %}
 
-{% include components/share.njk %}
-
-{% include components/date.njk %}
-
-{% include components/posts.njk %}

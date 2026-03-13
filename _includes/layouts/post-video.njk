@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+tags: post
+---
+<article class="elv-layout post post-video">
+	<h1>{{ title }}</h1>
+	{% include 'components/date.njk' %}
+
+	<div class="video-embed">
+		<iframe
+			width="560"
+			height="315"
+			src="https://www.youtube.com/embed/{{ videoId }}"
+			title="{{ title }}"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen
+		></iframe>
+	</div>
+
+	{% if summary %}
+	<div class="video-summary">
+		{{ summary | safe }}
+	</div>
+	{% endif %}
+
+	{% if keyIdeas and keyIdeas.length %}
+	<ul class="key-ideas">
+		{% for idea in keyIdeas %}
+		<li>{{ idea }}</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+
+	{% if content %}
+	<div class="video-transcript">
+		<h2>Transcript</h2>
+		<div class="transcript-body">
+			{{ content | safe }}
+		</div>
+	</div>
+	{% endif %}
+
+	
+	{% include 'components/newsletter-cta.njk' %}
+
+	{% include 'components/posts.njk' %}
+</article>

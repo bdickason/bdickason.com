@@ -117,3 +117,16 @@
     color: white;
     border: 1px solid #f09;
   }
+
+@media (prefers-color-scheme: dark) {
+  .share-dialog {
+    background-color: #2a2a2a;
+  }
+  .share-dialog p {
+    color: #e0e0e0;
+  }
+  .resp-sharing-button--generic {
+    color: #e0e0e0;
+    border-color: #666;
+  }
+}

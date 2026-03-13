@@ -3,10 +3,10 @@ title: Stop Writing and start Editing
 date: 2021-02-04
 description: Top silicon valley PM's don't work longer hours or 'hustle more.' They delegate work to others and review it regularly. They are editors, not writers.
 thumbnail: /static/posts/stop-writing-start-editing/stand-by-me.jpg
-layout: layouts/post.njk
+hero: /static/posts/stop-writing-start-editing/stand-by-me.jpg
+heroAlt: Stand by Me
+layout: layouts/post-blog.njk
 ---
-
-# Stop Writing and start Editing
 
 How do top silicon valley PM's lead massive projects?
 
@@ -27,7 +27,7 @@ You can do the same.
 **Editors review work on a regular cadence.** They set a schedule (typically weekly) to go over all work leading up to a milestone. This ensures that work is on track and prevents a ‘grand reveal’ just before a milestone.
 
 **Editors hold writers to high standards**. They ask questions and critique until the work is as good as their own. Ideally it’s even better. 
-> *“Good editors are not ‘permissive’; they do not let their colleagues do ‘their thing’; they make sure that everybody does the ‘[product’s] thing.’”* -Peter Drucker
+<blockquote class="pull-quote"><p><em>"Good editors are not 'permissive'; they do not let their colleagues do 'their thing'; they make sure that everybody does the '[product's] thing.'"</em> -Peter Drucker</p></blockquote>
 
 **Editors take over writing if the work isn’t converging.** They monitor progress and give feedback if projects are behind. They will take control if work isn’t coming in on time or at quality. They only do this as a last resort (as it jeopardizes autonomy/trust).
 
@@ -37,17 +37,9 @@ You can do the same.
 
 Bonus addition: There’s one additional mode that I employ from time to time. I’ll call it ‘the janitor.’ The janitor plugs every hole on a team, from taking notes to pulling SQL queries to QA’ing releases. This mode is useful when you have an understaffed team or want to deeply understand a problem space.
 
-**Have you successfully transitioned from writer to editor? I'd love to hear more: [@bdickason](http://twitter.com/bdickason)**
+**Have you successfully transitioned from writer to editor?**
 
 *Special thanks to Kashi for introducing me to Writer vs. Editor.*
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
 
 
-{% include components/mailinglist.njk %}
-
-{% include components/share.njk %}
-
-{% include components/date.njk %}
-
-{% include components/posts.njk %}

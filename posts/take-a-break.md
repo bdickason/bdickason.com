@@ -1,12 +1,14 @@
 ---
 title: Take a break
 date: 2021-05-07
+updated: 2026-03-13
 description: "We are constantly busy. We are constantly working. Our brains and bodies need a break."
 thumbnail: /static/posts/take-a-break/weekend-at-bernies.jpg
-layout: layouts/post.njk
+hero: /static/posts/take-a-break/weekend-at-bernies.jpg
+heroAlt: Take a break
+layout: layouts/post-blog.njk
 ---
 
-# Take a break
 
 You are constantly busy. You are working or launching a side project or polishing a hobby.
 
@@ -18,15 +20,9 @@ There will always be more work. There won't always be more time.
 
 I'm on vacation with my family in Palm Springs. See you all next week 😎
 
+*Note: After writing this post, I took a 4 year hiatus. I didn't know it, but I really needed a major life change. I'm excited to be writing again and making videos to share what I learned during that time.*
+
 <img src="{{ thumbnail }}" />
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to build great products. Learn the strategies employed by the best Product Managers in Silicon Valley.
 
 
-{% include components/mailinglist.njk %}
-
-{% include components/share.njk %}
-
-{% include components/date.njk %}
-
-{% include components/posts.njk %}

@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-	    <title>{{ title + ' - ' if title}}bdickason.com</title>
+	    <title>{% if title and title != 'Home' %}{{ title }} | {% endif %}Brad Dickason - Exploring Creativity and Feeling.</title>
 
 		{% include 'components/head/seo.njk' %}
 	

@@ -42,18 +42,13 @@
     </url>
     
     <url>
-        <loc>https://bdickason.com/posts/make-time-for-strategic-thinking/</loc>
+        <loc>https://bdickason.com/posts/example-blog/</loc>
         <lastmod>2021-01-28</lastmod>
     </url>
     
     <url>
-        <loc>https://bdickason.com/about/</loc>
-        <lastmod>2021-02-01</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://bdickason.com/</loc>
-        <lastmod>2021-02-01</lastmod>
+        <loc>https://bdickason.com/posts/make-time-for-strategic-thinking/</loc>
+        <lastmod>2021-01-28</lastmod>
     </url>
     
     <url>
@@ -102,12 +97,12 @@
     </url>
     
     <url>
-        <loc>https://bdickason.com/posts/scarcity-equals-value/</loc>
+        <loc>https://bdickason.com/posts/tools-are-a-distraction/</loc>
         <lastmod>2021-04-16</lastmod>
     </url>
     
     <url>
-        <loc>https://bdickason.com/posts/tools-are-a-distraction/</loc>
+        <loc>https://bdickason.com/posts/scarcity-equals-value/</loc>
         <lastmod>2021-04-23</lastmod>
     </url>
     
@@ -119,5 +114,45 @@
     <url>
         <loc>https://bdickason.com/posts/take-a-break/</loc>
         <lastmod>2021-05-07</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/example-video/</loc>
+        <lastmod>2025-01-01</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/example-inspiration/</loc>
+        <lastmod>2025-03-01</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/stop-thinking-start-feeling/</loc>
+        <lastmod>2026-02-22</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/about/</loc>
+        <lastmod>2026-03-13</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/ideas/</loc>
+        <lastmod>2026-03-13</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/</loc>
+        <lastmod>2026-03-13</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/start-here/</loc>
+        <lastmod>2026-03-13</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/work-with-me/</loc>
+        <lastmod>2026-03-13</lastmod>
     </url>
 </urlset>

@@ -1,0 +1,17 @@
+---
+description: Do not create temporary or planning docs in project root or buildable paths
+alwaysApply: true
+---
+
+# Temporary and planning files
+
+**Do not** create temporary files, planning documents, or scratch docs (e.g. analysis docs, recovery plans, session notes) in the project root or in any directory that Eleventy builds from (e.g. `./`, `posts/`). They can be accidentally committed and will be rendered into `_site/`.
+
+**Do** place them in **`.cursor/scratch/`** (or another path listed in `.gitignore` and excluded from Eleventy). That folder is ignored by git and by the build, so it will not be committed or published.
+
+Examples of files that belong in `.cursor/scratch/`:
+- DELETED-CHANGES-ANALYSIS.md and similar recovery/planning docs
+- One-off notes or drafts used only for a session
+- Any markdown or text file created to work through a plan with the user
+
+If you create a new temporary or planning document, create it under `.cursor/scratch/` and tell the user where it is.

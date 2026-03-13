@@ -3,10 +3,11 @@ title: Stop wasting time on strategy decks
 date: 2020-12-21
 description: I’ve found that a crisp, clear document with a compelling narrative is the most effective way to land a pitch.  Writing in a document forces you to focus on the narrative and not the visual elements.
 thumbnail: /static/posts/stop-wasting-time-on-strategy-decks/no-more-slides.png
-layout: layouts/post.njk
+hero: /static/posts/stop-wasting-time-on-strategy-decks/no-more-slides.png
+heroAlt: Strategy decks
+layout: layouts/post-blog.njk
 ---
 
-# Stop wasting time on strategy decks
 
 Early in my career, I thought that presentations were the ultimate way to pitch product strategy. I would spend hours painstakingly refining slide after slide to be crystal clear, truly reflect my thinking, have a slick theme, and maybe include a witty animated gif here or there. At least 50% of that time was wasted. I spent so much time deciding on a theme, worrying about layout, and aligning text. Even when I took a barebones approach and stuck to a default layout with bulleted lists and images, **I rarely ever ended up walking through the deck.**
 
@@ -58,14 +59,7 @@ Here are some general rules I try to follow for my pre-reads:
 
 
 
-Are you struggling to land your strategy or having challenging product reviews? Do you have tips for what worked? I’d love to hear from you. Share your thoughts via twitter: [@bdickason](http://twitter.com/bdickason)
+Are you struggling to land your strategy or having challenging product reviews? Do you have tips for what worked?
 
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
 
-{% include components/mailinglist.njk %}
 
-{% include components/share.njk %}
-
-{% include components/date.njk %}
-
-{% include components/posts.njk %}

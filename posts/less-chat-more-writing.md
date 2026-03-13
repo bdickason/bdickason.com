@@ -2,10 +2,11 @@
 title: Less chat more writing
 date: 2020-12-02
 description: "Chat is great for quick and timely resolutions but terrible for any information that someone might need in the future."
-layout: layouts/post.njk
+hero: /static/posts/less-chat-more-writing/hero.jpg
+heroAlt: Less chat
+layout: layouts/post-blog.njk
 ---
 
-# Less chat more writing
 
 **Chat is great for ephemeral topics but fail at building institutional knowledge. Meetings share the same problem.**
 
@@ -50,15 +51,7 @@ The steps to implement this are simple quite simple. The challenge is building a
 
 **Note: I'm following this same process for this post :) My first step was to start writing my thoughts down.**
 
-Have you been successful in getting your team to write more? Do you have tips for what worked? I’d love to hear from you. Share your thoughts via twitter: [@bdickason](http://twitter.com/bdickason)
-
-<strong>Get my newsletter.</strong>  It features simple improvements you can make to improve your day-to-day PM life. From Product Vision/Strategy to Goals and Metrics to Roadmaps and everything in between.
+Have you been successful in getting your team to write more? Do you have tips for what worked?
 
 
-{% include components/mailinglist.njk %}
 
-{% include components/share.njk %}
-
-{% include components/date.njk %}
-
-{% include components/posts.njk %}

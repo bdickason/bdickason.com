@@ -4,14 +4,15 @@
   "description": "Static site for my personal stuff",
   "scripts": {
     "deploy": "npx vercel",
-    "watch": "npx vercel dev",
+    "watch": "npm run validate && NODE_OPTIONS='--no-deprecation' npx vercel dev",
+    "validate": "node scripts/validate.mjs",
     "build": "npx @11ty/eleventy",
     "clean": "rm -rf ./_site",
     "optimizeposts": "/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ./static/posts",
     "optimizeall": "/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ./static"
   },
   "engines": {
-    "node": ">=4.4.0"
+    "node": ">=22"
   },
   "author": "bdickason",
   "contributors": [
@@ -29,8 +30,8 @@
   },
   "license": "GPL-3.0",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "eleventy-plugin-date": "^1.0.0",
-    "vercel": "^21.1.0"
+    "@11ty/eleventy": "^3.0.0",
+    "gray-matter": "^4.0.3",
+    "vercel": "^28.18.5"
   }
 }
