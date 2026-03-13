@@ -1,22 +1,22 @@
 <!-- SEO -->
 <meta name="description" content="{% if description %}{{ description }}{% else %}Become a great Product Manager.{% endif %}" />
 <meta name="page" content="{{ page.url }}" />
-<link rel="icon" href="/static/favicon.ico" />
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
 <link rel="canonical" href="https://{{ site.hostname }}{{ page.url }}" />
 {% if noindex %}<meta name="robots" content="noindex, follow" />{% endif %}   {# For internal-only pages #}
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@bdickason" />
-<meta name="twitter:title" content="{% if title %}{{ title }} | Brad Dickason - Exploring Creativity and Feeling.{% else %}Brad Dickason - Exploring Creativity and Feeling.{% endif %}" />
+<meta name="twitter:title" content="{% if title and title != 'Home' %}{{ title }} | {% endif %}Brad Dickason - Exploring Creativity and Feeling." />
 <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}Become a great Product Manager.{% endif %}" />
-{% if thumbnail %}<meta name="twitter:image" content="http://{{ site.hostname }}{{ thumbnail }}" />{% endif %}
+{% if thumbnail %}<meta name="twitter:image" content="https://{{ site.hostname }}{{ thumbnail }}" />{% endif %}
 
 <!-- Open Graph (FB, LinkedIn) -->
-<meta property="og:title" content="{% if title %}{{ title }} | Brad Dickason - Exploring Creativity and Feeling.{% else %}Brad Dickason - Exploring Creativity and Feeling.{% endif %}" />
+<meta property="og:title" content="{% if title and title != 'Home' %}{{ title }} | {% endif %}Brad Dickason - Exploring Creativity and Feeling." />
 <meta property="og:description" content="{% if description %}{{ description }}{% else %}Become a great Product Manager.{% endif %}" />
 <meta property="og:url" content="https://{{ site.hostname }}{{ page.url }}" />
 <meta property="og:type" content="article" />
 <meta property="og:locale" content="en_US" />
-{% if thumbnail %}<meta property='og:image' content="http://{{ site.hostname }}{{ thumbnail }}" />{% endif %}
+{% if thumbnail %}<meta property='og:image' content="https://{{ site.hostname }}{{ thumbnail }}" />{% endif %}
 

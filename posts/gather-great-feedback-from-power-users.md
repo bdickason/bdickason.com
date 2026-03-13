@@ -7,8 +7,6 @@ hero: /static/posts/gather-great-feedback-from-power-users/lebowski.jpg
 heroAlt: Power users
 layout: layouts/post-blog.njk
 ---
-# Gather great feedback from your power users
-
 On almost every product I’ve worked on, we’ve relied on a core group of active users to steer the development via great feedback and feature ideas. At Shapeways, **most of our highly successful features came directly from our community.** People who love your product are heavily invested in making it better. They will put in the time if you give them the space to do so and take their feedback seriously.
 
 In this post I’ll share how teams have recruited, setup, and ran customer advisory councils (also called a customer advisory boards) that brought us a regular drip feed of high quality feedback. I’ll also share the mistakes we made along the way.

@@ -1,7 +1,5 @@
 {
     "redirects": [
-      { "source": "/feedback", "destination": "/" },
-      { "source": "/feedback/", "destination": "/" },
       { "source": "/coaching", "destination": "/work-with-me/" },
       { "source": "/coaching/", "destination": "/work-with-me/" },
       { "source": "/posts/hardware-release-software-release", "destination": "/posts/how-to-ship-hardware-and-software" },

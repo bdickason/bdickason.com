@@ -1,7 +1,7 @@
 ---
 title: About
 layout: layouts/page-with-newsletter.njk
-description: "I'm a Product Manager from Santa Cruz who loves synthwave music and surfing. I write a weekly newsletter on how to build great products."
+description: "I left a long career in tech to explore feeling and creativity."
 thumbnail: /static/me.jpg
 permalink: /about/
 ---
@@ -32,7 +32,7 @@ You're meeting me in the middle of this new journey. I'm not sure where it will 
 
 Think of this site as my journal where I share thoughts and videos of what I've learned and felt. What inspires me. What drives me. Things I wish someone told me when I was in my 20's.
 
-I also do some coaching from time to time. Hit me up if you would like to [work with me](/work-with-me).
+I also do some coaching from time to time. Hit me up if you would like to [work with me](/work-with-me/).
 
 ## Past Jobs
 * Meta Reality Labs - PM for Games across AR Glasses

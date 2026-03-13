@@ -1,7 +1,8 @@
-const path = require("path");
 const CleanCSS = require("clean-css");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.setQuietMode(true);
+
   eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });
@@ -37,7 +38,7 @@ module.exports.config = {
   markdownTemplateEngine: "njk",
   dir: {
     input: ".",
-    includes: path.join(__dirname, "_includes"),
+    includes: "_includes",
     output: "_site",
   },
 };
