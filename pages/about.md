@@ -3,6 +3,7 @@ title: About
 layout: layouts/page-with-newsletter.njk
 description: "I'm a Product Manager from Santa Cruz who loves synthwave music and surfing. I write a weekly newsletter on how to build great products."
 thumbnail: /static/me.jpg
+permalink: /about/
 ---
 
 <img class="bio" src="/static/me.jpg">

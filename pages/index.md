@@ -3,6 +3,7 @@ title: Home
 name: home
 description: "Stop overthinking, listen to your intuition, and tap into your creativity."
 layout: layouts/home.njk
+permalink: /
 ---
 
 Hi I'm Brad. I'm interested in creativity, intuition, and what happens when we stop overthinking life.

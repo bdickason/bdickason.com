@@ -2,6 +2,7 @@
 title: Start Here
 layout: layouts/page-with-newsletter.njk
 description: "A short introduction to the ideas on this site and who it's for."
+permalink: /start-here/
 ---
 
 # Start Here

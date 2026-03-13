@@ -2,6 +2,7 @@
 title: Work With Me
 layout: layouts/page.njk
 description: "1:1 coaching for tech people who want to stress less and enjoy their jobs more."
+permalink: /work-with-me/
 ---
 
 I started coaching people in my spare time at Meta. I loved helping people get out of their own way and find better balance between work and life. Over time, I spent equal time coaching and building. I even won PM Mentor of the year in 2020 and 2024!
