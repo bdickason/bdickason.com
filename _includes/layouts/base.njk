@@ -10,7 +10,6 @@
 	
 		{%- set css %}
 		{% include 'css/index.css' %}
-        {% include 'css/share.css' %}
 		{% endset %}
 		<style>{{ css | cssmin | safe }}</style>
 
@@ -31,7 +30,6 @@
 			{%- set js %}
 			{% include 'js/convertkit.js' %}
 			{% include 'js/typeform.js' %}
-            {% include 'js/share.js' %}
 			{% endset %}
 
 			<script type="text/javascript">{{js | safe}}</script>
