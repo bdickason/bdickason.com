@@ -17,8 +17,33 @@ function escapeHtmlText(value) {
     .replace(/>/g, "&gt;");
 }
 
+/** Spotify track iframe (Share → Embed). Track id from open.spotify.com/track/{id} */
+function spotifyTrackEmbedHtml(trackId, title) {
+  const tid = escapeHtmlAttr(trackId);
+  const titleAttr =
+    title != null && String(title).length > 0 ? ` title="${escapeHtmlAttr(title)}"` : "";
+  return `<div class="spotify-embed">
+\t<iframe
+\t\tdata-testid="embed-iframe"
+\t\tstyle="border-radius:12px"
+\t\tsrc="https://open.spotify.com/embed/track/${tid}?utm_source=generator"
+\t\twidth="100%"
+\t\theight="152"
+\t\tframeborder="0"
+\t\tallowfullscreen=""
+\t\tallow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+\t\tloading="lazy"${titleAttr}
+\t></iframe>
+</div>`;
+}
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
+
+  /**
+   * Nunjucks global: {{ spotifyTrackEmbed("TRACK_ID", "Accessible title") }} in Markdown / templates (no import).
+   */
+  eleventyConfig.addNunjucksGlobal("spotifyTrackEmbed", spotifyTrackEmbedHtml);
 
   /**
    * Two images side by side with one shared caption (blog / video transcript).

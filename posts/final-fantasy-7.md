@@ -8,7 +8,6 @@ tags: [post, games-that-moved-me]
 ---
 
 {% from 'components/youtube-embed.njk' import youtubeEmbed %}
-{% from 'components/spotify-embed.njk' import spotifyTrackEmbed %}
 
 *This post is part of the [Games that Moved Me](/series/games-that-moved-me/) series where I break down how classic video games felt when they were released.*
 

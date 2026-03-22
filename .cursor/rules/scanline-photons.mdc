@@ -1,0 +1,27 @@
+---
+description: CRT scanline photon sweep — CSS keyframes, scanline-photons.js, 5px grid sync
+globs:
+  - _includes/css/index.css
+  - _includes/js/scanline-photons.js
+  - _includes/layouts/base.njk
+---
+
+# CRT scanline photon
+
+**Where it lives**
+
+- **Markup:** `_includes/layouts/base.njk` — `#crt-scanline-photons` (first child of `body`, `aria-hidden="true"`).
+- **Styles:** `_includes/css/index.css` — `#crt-scanline-photons`, `.crt-photon`, `@keyframes crt-photon-ltr` / `crt-photon-rtl`. Uses the same radial **mask** as `body::before` so the sweep respects the vignette.
+- **Behavior:** `_includes/js/scanline-photons.js` — random delay between bursts, one photon per burst, random row and L/R direction. Skips entirely when **`prefers-reduced-motion: reduce`**; CSS also hides `#crt-scanline-photons` in that case.
+
+**Keep in sync**
+
+- **`GRID_PX` (5)** in JS must match the **scanline repeat period** in `body::before`’s `repeating-linear-gradient` (currently **5px** per band cycle). If you change the gradient stripe height, update `GRID_PX` so photons sit on visible lines.
+
+**Tuning**
+
+- **Speed:** `--crt-photon-duration` on `#crt-scanline-photons .crt-photon` (not duplicated in JS).
+- **Brightness / glow:** `.crt-photon` `background` and `box-shadow`; keyframe opacity plateaus (`0.88` in the `9%` / `91%` steps).
+- **How often:** `MIN_GAP_MS` / `MAX_GAP_MS` in `scanline-photons.js`.
+
+**User-facing docs:** `README.md` section “CRT scanline photon”.

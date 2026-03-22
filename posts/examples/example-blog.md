@@ -74,6 +74,12 @@ Creative thinking takes time. You can't just flip your brain into creative mode 
 
 {% imagePair "/static/posts/make-time-for-strategic-thinking/soul.jpg", "/static/posts/make-time-for-strategic-thinking/post-outline.png", "Example: two assets compared under a single caption.", "Still from Soul", "Outline sketch" %}
 
+### Spotify track embed
+
+<p class="format-example-label"><code>{% raw %}{{ spotifyTrackEmbed("TRACK_ID", "Accessible title") }}{% endraw %}</code> — registered in <code>.eleventy.js</code> as a Nunjucks global (no import). Track id from <code>open.spotify.com/track/{id}</code> (see <a href="/posts/final-fantasy-7/">Final Fantasy 7</a>).</p>
+
+{{ spotifyTrackEmbed("3NRDLYyqIXja0UElvdzjkB", "Porter Robinson — Language") }}
+
 ### More copy (Markdown)
 
 <p class="format-example-label">Ordinary paragraphs again — mix with any of the patterns above.</p>

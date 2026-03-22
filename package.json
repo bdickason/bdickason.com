@@ -10,7 +10,7 @@
     "new:blog": "node scripts/new-post.mjs blog",
     "new:inspiration": "node scripts/new-post.mjs inspiration",
     "validate": "node scripts/validate.mjs",
-    "build": "npx @11ty/eleventy",
+    "build": "npm run validate && NODE_OPTIONS='--no-deprecation' npx @11ty/eleventy",
     "clean": "rm -rf ./_site",
     "optimizeposts": "/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ./static/posts",
     "optimizeall": "/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ./static"

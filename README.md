@@ -9,7 +9,8 @@ Static site (Eleventy 3 + Nunjucks). Deploy with Vercel.
 - **`scripts/`** — `validate.mjs` (templates + post frontmatter), `layout-schema.mjs` (layout → required/optional frontmatter; single source of truth).
 - **`static/`** — Static assets; copied to `_site/static`. Post images often under `static/posts/<slug>/`. Reference in content as `/static/...`.
 - **`_data/site.js`** — Global data (e.g. `hostname`) for templates.
-- **`.cursor/rules/`** — Cursor rules (temp files, build-before-finish, YouTube handle, posts/layouts).
+- **`AGENTS.md`** — Short onboarding for AI agents (commands, paths, rules).
+- **`.cursor/rules/`** — Cursor rules (temp files, build-before-finish, YouTube handle, posts/layouts, neon headings, scanline photon).
 
 ### Neon headings (`main h1` / `main h2`)
 
@@ -17,13 +18,19 @@ Pink neon frame, tube text, and sparks are implemented in **`_includes/css/index
 
 **Tuning:** Change animation timing on **`main h1, main h2`** via the `--neon-*` custom properties (frame, per-group flicker, ember duration/delays). Spark timing in JS follows computed **`--neon-ember-duration`** from that rule—no duplicate constant to keep in sync. If you change ember **keyframes** timing (percentage windows), keep crack and fall aligned with each other.
 
+### CRT scanline photon
+
+A single glowing pixel sweeps across a random horizontal band on a timer. Implemented in **`_includes/css/index.css`** (`#crt-scanline-photons`, `crt-photon-*` keyframes), **`_includes/js/scanline-photons.js`**, and the **`#crt-scanline-photons`** div in **`_includes/layouts/base.njk`**.
+
+**Tuning:** `--crt-photon-duration` and `.crt-photon` colors/shadows in CSS; `MIN_GAP_MS` / `MAX_GAP_MS` in JS. If you change the **`body::before`** scanline stripe height, update **`GRID_PX`** in the script to match the repeat period (see **`.cursor/rules/scanline-photons.mdc`**).
+
 ## Scripts
 
 - **`npm run dev`** — Runs validation then starts Eleventy’s local server (`--serve`). Fastest for day-to-day editing.
 - **`npm run preview`** (optional) — Runs validation then **Vercel dev**. Use to verify `vercel.json` redirects or other Vercel behavior locally; day-to-day editing uses **`npm run dev`** only.
 - **`npm run new:video`** / **`npm run new:blog`** / **`npm run new:inspiration`** — Scaffolds a new post under `posts/` (defaults to `draft: true`; pass `--nodraft` to set `draft: false`). Example: `npm run new:video -- --title "My episode" --videoid dQw4w9WgXcQ`
 - **`npm run validate`** — Validates Nunjucks templates and frontmatter for `posts/` and `pages/`. Run after content or layout changes.
-- **`npm run build`** — Build the site. Fix any build failures before finishing a task.
+- **`npm run build`** — Runs `validate`, then builds the site to `_site/`. Fix any failures before finishing a task.
 
 ## Layout contract (posts)
 

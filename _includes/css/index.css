@@ -619,6 +619,12 @@ main h2 {
 	animation-fill-mode: both;
 }
 
+/* Article title is the first h1 in post layouts; keep neon spacing for h1/h2 in the body */
+.post-blog > h1:first-child,
+.post-video > h1:first-child {
+	margin-top: 0;
+}
+
 /* JS wraps copy into .neon-tube spans; group 0 = steady, 1–3 = independent flicker */
 main h1 .neon-tube,
 main h2 .neon-tube {
@@ -772,6 +778,9 @@ main h2::after {
 	main h2::after {
 		animation: none !important;
 		opacity: 0 !important;
+	}
+	#crt-scanline-photons {
+		display: none !important;
 	}
 }
 
@@ -1678,6 +1687,102 @@ body::before {
 			rgba(14, 6, 34, 0.28) 5px
 		),
 		linear-gradient(180deg, rgba(35, 18, 58, 0.1), rgba(12, 6, 28, 0.16));
+}
+
+/*
+ * CRT scanline photon — see scanline-photons.js. Tuning: --crt-photon-duration, .crt-photon colors.
+ * Y positions use GRID_PX in JS; keep in sync with body::before scanline repeat (5px bands).
+ */
+#crt-scanline-photons {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+	overflow: hidden;
+	pointer-events: none;
+	mask-image: radial-gradient(
+		ellipse 115% 105% at 50% 44%,
+		#fff 0%,
+		#fff 22%,
+		rgba(255, 255, 255, 0.72) 48%,
+		rgba(255, 255, 255, 0.22) 76%,
+		rgba(255, 255, 255, 0.05) 100%
+	);
+	-webkit-mask-image: radial-gradient(
+		ellipse 115% 105% at 50% 44%,
+		#fff 0%,
+		#fff 22%,
+		rgba(255, 255, 255, 0.72) 48%,
+		rgba(255, 255, 255, 0.22) 76%,
+		rgba(255, 255, 255, 0.05) 100%
+	);
+	mask-size: 100% 100%;
+	-webkit-mask-size: 100% 100%;
+	mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
+}
+
+#crt-scanline-photons .crt-photon {
+	/* sweep speed (not set in JS) */
+	--crt-photon-duration: 0.958s;
+	position: absolute;
+	left: 0;
+	width: 5px;
+	height: 3px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	background: rgba(200, 182, 248, 0.78);
+	box-shadow:
+		0 0 4px 1px rgba(190, 165, 255, 0.65),
+		0 0 12px 3px rgba(195, 120, 235, 0.38),
+		0 0 20px 5px rgba(255, 95, 175, 0.2);
+	animation-duration: var(--crt-photon-duration);
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	will-change: transform, opacity;
+}
+
+#crt-scanline-photons .crt-photon--ltr {
+	animation-name: crt-photon-ltr;
+}
+
+#crt-scanline-photons .crt-photon--rtl {
+	animation-name: crt-photon-rtl;
+}
+
+@keyframes crt-photon-ltr {
+	0% {
+		transform: translateX(-12px);
+		opacity: 0;
+	}
+	9% {
+		opacity: 0.88;
+	}
+	91% {
+		opacity: 0.88;
+	}
+	100% {
+		transform: translateX(calc(100vw + 12px));
+		opacity: 0;
+	}
+}
+
+@keyframes crt-photon-rtl {
+	0% {
+		transform: translateX(calc(100vw + 12px));
+		opacity: 0;
+	}
+	9% {
+		opacity: 0.88;
+	}
+	91% {
+		opacity: 0.88;
+	}
+	100% {
+		transform: translateX(-12px);
+		opacity: 0;
+	}
 }
 
 body > header,

@@ -3,38 +3,31 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-	    <title>{% if title and title != 'Home' %}{{ title }} | {% endif %}Brad Dickason - Exploring Creativity and Feeling.</title>
+
+		<title>{% if title and title != 'Home' %}{{ title }} | {% endif %}Brad Dickason - Exploring Creativity and Feeling.</title>
 
 		{% include 'components/head/seo.njk' %}
-	
+
 		{%- set css %}
 		{% include 'css/index.css' %}
 		{% endset %}
 		<style>{{ css | cssmin | safe }}</style>
 
-		{% include 'components/head/analytics.njk' %}
-		
-  </head>
+	</head>
 
-  <body>
-	  {% include 'components/nav.njk' %}
-	  <main class="elv-layout{% if layoutClass %} {{ layoutClass }}{% endif %}">
-		{{ content | safe }}
-		{% include 'components/footer.njk' %}
+	<body>
+		<div id="crt-scanline-photons" aria-hidden="true"></div>
+		{% include 'components/nav.njk' %}
+		<main class="elv-layout{% if layoutClass %} {{ layoutClass }}{% endif %}">
+			{{ content | safe }}
+			{% include 'components/footer.njk' %}
+		</main>
 
-	  </main>
-  </body>
-
-
-			{%- set js %}
-			{% include 'js/convertkit.js' %}
-			{% include 'js/typeform.js' %}
-			{% include 'js/neon-headings.js' %}
-			{% endset %}
-
-			<script type="text/javascript">{{js | safe}}</script>
-
-
-	
+		{%- set js %}
+		{% include 'js/convertkit.js' %}
+		{% include 'js/neon-headings.js' %}
+		{% include 'js/scanline-photons.js' %}
+		{% endset %}
+		<script type="text/javascript">{{ js | safe }}</script>
+	</body>
 </html>
