@@ -1,0 +1,17 @@
+{# Spotify track embed (Share → Embed). Pass the track id from open.spotify.com/track/{id} #}
+{% macro spotifyTrackEmbed(trackId, title) %}
+<div class="spotify-embed">
+	<iframe
+		data-testid="embed-iframe"
+		style="border-radius:12px"
+		src="https://open.spotify.com/embed/track/{{ trackId }}?utm_source=generator"
+		width="100%"
+		height="152"
+		frameborder="0"
+		allowfullscreen=""
+		allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+		loading="lazy"
+		{% if title %}title="{{ title | e }}"{% endif %}
+	></iframe>
+</div>
+{% endmacro %}

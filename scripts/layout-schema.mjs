@@ -30,7 +30,7 @@ const layoutSchema = {
   },
   'layouts/page.njk': {
     required: [],
-    optional: ['title', 'description', 'layout', 'thumbnail', 'noindex'],
+    optional: ['title', 'description', 'layout', 'thumbnail', 'noindex', 'templateClass', 'layoutClass'],
   },
   'layouts/page-with-newsletter.njk': {
     required: [],
