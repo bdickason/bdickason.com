@@ -87,7 +87,7 @@ Imagine making breakfast with a 1 second latency added to every action you take.
 
 **Here's a real life experiment where 0.5-3s of latency was added to everyone's action via a VR headset:**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_fNp37zFn9Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_fNp37zFn9Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
 
 This is what we're forcing on people when we ship laggy software. We're making them spend their time waiting for us.
 

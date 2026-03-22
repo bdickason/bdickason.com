@@ -31,7 +31,6 @@ function spotifyTrackEmbedHtml(trackId, title) {
 \t\twidth="100%"
 \t\theight="152"
 \t\tframeborder="0"
-\t\tallowfullscreen=""
 \t\tallow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 \t\tloading="lazy"${titleAttr}
 \t></iframe>

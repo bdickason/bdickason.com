@@ -5,8 +5,7 @@
 		src="https://www.youtube-nocookie.com/embed/{{ videoId }}{% if startAt %}?start={{ startAt }}{% endif %}"
 		title="{{ title | e }}"
 		loading="lazy"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-		allowfullscreen
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
 	></iframe>
 </div>
 {% endmacro %}

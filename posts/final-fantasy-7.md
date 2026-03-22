@@ -26,7 +26,7 @@ It's moody and atmospheric. It feels intimate (the flower girl walking down the 
 
 At this point I had played a ton of cinematic PC games ([Wing Commander III](https://www.youtube.com/watch?v=CycfVSXmDy0), [Full Throttle](https://www.youtube.com/watch?v=R0caHaL8l0w)) but none of them managed to capture the feeling of being placed in a movie.
 
-<img src="/static/posts/final-fantasy-7/ff7-title.avif">
+<img src="/static/posts/final-fantasy-7/ff7-box-art.jpg" alt="Final Fantasy VII North American box art" />
 
 Final Fantasy 7 changed that. It was one of the first console games that felt truly cinematic. The story was deep, the environments were immersive, the backgrounds and fmv cutscenes felt unreal, the characters felt realistic and flawed, the soundtrack was iconic and varied.. I could go on and on.
 
