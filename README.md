@@ -11,6 +11,12 @@ Static site (Eleventy 3 + Nunjucks). Deploy with Vercel.
 - **`_data/site.js`** — Global data (e.g. `hostname`) for templates.
 - **`.cursor/rules/`** — Cursor rules (temp files, build-before-finish, YouTube handle, posts/layouts).
 
+### Neon headings (`main h1` / `main h2`)
+
+Pink neon frame, tube text, and sparks are implemented in **`_includes/css/index.css`** (search for `neon-frame-edges`, `neon-flicker`, `neon-ember`) and **`_includes/js/neon-headings.js`**. The script wraps plain-text headings into `.neon-tube` spans for grouped flicker and randomizes spark placement each ember cycle.
+
+**Tuning:** Change animation timing on **`main h1, main h2`** via the `--neon-*` custom properties (frame, per-group flicker, ember duration/delays). Spark timing in JS follows computed **`--neon-ember-duration`** from that rule—no duplicate constant to keep in sync. If you change ember **keyframes** timing (percentage windows), keep crack and fall aligned with each other.
+
 ## Scripts
 
 - **`npm run dev`** — Runs validation then starts Eleventy’s local server (`--serve`). Fastest for day-to-day editing.

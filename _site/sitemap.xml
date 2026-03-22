@@ -127,11 +127,6 @@
     </url>
     
     <url>
-        <loc>https://bdickason.com/posts/final-fantasy-7/</loc>
-        <lastmod>2025-03-22</lastmod>
-    </url>
-    
-    <url>
         <loc>https://bdickason.com/posts/stop-thinking-start-feeling/</loc>
         <lastmod>2026-02-22</lastmod>
     </url>
@@ -164,6 +159,11 @@
     <url>
         <loc>https://bdickason.com/</loc>
         <lastmod>2026-03-14</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/final-fantasy-7/</loc>
+        <lastmod>2026-03-22</lastmod>
     </url>
     
     <url>

@@ -148,14 +148,6 @@ main .elv-toc + h1 {
 	margin-top: 1em;
 	line-height: 1.1;
 }
-main h1:first-child,
-main .elv-toc + h1 {
-	border-bottom: 2px solid #dff024;
-}
-.post-blog h1,
-.post-video h1 {
-	border-bottom: 2px solid #dff024;
-}
 @media (min-width: 64em) { /* 1024px */
 	main .elv-toc + h1,
 	main .elv-toc + h2 {
@@ -165,9 +157,15 @@ main .elv-toc + h1 {
 }
 h2 {
 	font-size: 2.222222222222em; /* 40px /18 */
-	border-bottom: 1px solid #dff024;
 	margin: 1em 0 .25em;
 	line-height: 1.1;
+}
+/* Neon headings: ~30% larger type vs default h1/h2 (bright core + thick pink tube via shadows) */
+main h1 {
+	font-size: 3.466666666667em; /* 1.3× base h1 */
+}
+main h2 {
+	font-size: 2.888888888889em; /* 1.3× base h2 */
 }
 h2#posts {
 	margin-top: 0px;
@@ -194,6 +192,587 @@ h4 code,
 h5 code {
 	font-family: inherit;
 	text-transform: none;
+}
+
+/*
+ * Pink neon (title-card style): matching double-frame + glass tube letters.
+ * — Timing: edit custom properties on `main h1, main h2` (`--neon-frame-duration`, `--neon-flicker-*`,
+ *   `--neon-ember-duration`). `neon-headings.js` reads `--neon-ember-duration` for spark anchor resync.
+ * — Frame flicker: per-edge box-shadow (same choreography, magenta/pink hues).
+ * — Tube flicker: per-span groups (neon-headings.js: 4 chunks, group 0 steady).
+ * — Sparks: crack + fall on ::before/::after; position `--neon-spark-x` / `--neon-spark-y` (set by JS).
+ */
+@keyframes neon-frame-edges {
+	0%,
+	100% {
+		border-color: rgba(255, 75, 175, 0.95);
+		box-shadow:
+			0 -2px 0 0 rgba(255, 85, 180, 0.95),
+			0 -4px 0 0 rgba(255, 130, 200, 0.35),
+			0 2px 0 0 rgba(255, 85, 180, 0.95),
+			0 4px 0 0 rgba(255, 130, 200, 0.35),
+			-2px 0 0 0 rgba(255, 85, 180, 0.95),
+			-4px 0 0 0 rgba(255, 130, 200, 0.35),
+			2px 0 0 0 rgba(255, 85, 180, 0.95),
+			4px 0 0 0 rgba(255, 130, 200, 0.35),
+			0 0 18px rgba(255, 55, 155, 0.48),
+			0 0 32px rgba(210, 35, 130, 0.22),
+			inset 0 0 14px rgba(0, 0, 0, 0.38);
+	}
+	4% {
+		border-color: rgba(255, 75, 175, 0.35);
+		box-shadow:
+			0 -2px 0 0 rgba(255, 85, 180, 0.25),
+			0 -4px 0 0 rgba(255, 130, 200, 0.1),
+			0 2px 0 0 rgba(255, 85, 180, 0.95),
+			0 4px 0 0 rgba(255, 130, 200, 0.35),
+			-2px 0 0 0 rgba(255, 85, 180, 0.95),
+			-4px 0 0 0 rgba(255, 130, 200, 0.35),
+			2px 0 0 0 rgba(255, 85, 180, 0.95),
+			4px 0 0 0 rgba(255, 130, 200, 0.35),
+			0 0 18px rgba(255, 55, 155, 0.48),
+			0 0 32px rgba(210, 35, 130, 0.22),
+			inset 0 0 14px rgba(0, 0, 0, 0.38);
+	}
+	5%,
+	62% {
+		border-color: rgba(255, 75, 175, 0.95);
+		box-shadow:
+			0 -2px 0 0 rgba(255, 85, 180, 0.95),
+			0 -4px 0 0 rgba(255, 130, 200, 0.35),
+			0 2px 0 0 rgba(255, 85, 180, 0.95),
+			0 4px 0 0 rgba(255, 130, 200, 0.35),
+			-2px 0 0 0 rgba(255, 85, 180, 0.95),
+			-4px 0 0 0 rgba(255, 130, 200, 0.35),
+			2px 0 0 0 rgba(255, 85, 180, 0.95),
+			4px 0 0 0 rgba(255, 130, 200, 0.35),
+			0 0 18px rgba(255, 55, 155, 0.48),
+			0 0 32px rgba(210, 35, 130, 0.22),
+			inset 0 0 14px rgba(0, 0, 0, 0.38);
+	}
+	63% {
+		border-color: rgba(255, 75, 175, 0.4);
+		box-shadow:
+			0 -2px 0 0 rgba(255, 85, 180, 0.95),
+			0 -4px 0 0 rgba(255, 130, 200, 0.35),
+			0 2px 0 0 rgba(255, 85, 180, 0.95),
+			0 4px 0 0 rgba(255, 130, 200, 0.35),
+			-2px 0 0 0 rgba(255, 85, 180, 0.2),
+			-4px 0 0 0 rgba(255, 130, 200, 0.08),
+			2px 0 0 0 rgba(255, 85, 180, 0.2),
+			4px 0 0 0 rgba(255, 130, 200, 0.08),
+			0 0 18px rgba(255, 55, 155, 0.48),
+			0 0 32px rgba(210, 35, 130, 0.22),
+			inset 0 0 14px rgba(0, 0, 0, 0.38);
+	}
+	64%,
+	78% {
+		border-color: rgba(255, 75, 175, 0.95);
+		box-shadow:
+			0 -2px 0 0 rgba(255, 85, 180, 0.95),
+			0 -4px 0 0 rgba(255, 130, 200, 0.35),
+			0 2px 0 0 rgba(255, 85, 180, 0.95),
+			0 4px 0 0 rgba(255, 130, 200, 0.35),
+			-2px 0 0 0 rgba(255, 85, 180, 0.95),
+			-4px 0 0 0 rgba(255, 130, 200, 0.35),
+			2px 0 0 0 rgba(255, 85, 180, 0.95),
+			4px 0 0 0 rgba(255, 130, 200, 0.35),
+			0 0 18px rgba(255, 55, 155, 0.48),
+			0 0 32px rgba(210, 35, 130, 0.22),
+			inset 0 0 14px rgba(0, 0, 0, 0.38);
+	}
+	79% {
+		border-color: rgba(255, 75, 175, 0.95);
+		box-shadow:
+			0 -2px 0 0 rgba(255, 85, 180, 0.95),
+			0 -4px 0 0 rgba(255, 130, 200, 0.35),
+			0 2px 0 0 rgba(255, 85, 180, 0.25),
+			0 4px 0 0 rgba(255, 130, 200, 0.1),
+			-2px 0 0 0 rgba(255, 85, 180, 0.95),
+			-4px 0 0 0 rgba(255, 130, 200, 0.35),
+			2px 0 0 0 rgba(255, 85, 180, 0.95),
+			4px 0 0 0 rgba(255, 130, 200, 0.35),
+			0 0 18px rgba(255, 55, 155, 0.48),
+			0 0 32px rgba(210, 35, 130, 0.22),
+			inset 0 0 14px rgba(0, 0, 0, 0.38);
+	}
+	80%,
+	92% {
+		border-color: rgba(255, 75, 175, 0.95);
+		box-shadow:
+			0 -2px 0 0 rgba(255, 85, 180, 0.95),
+			0 -4px 0 0 rgba(255, 130, 200, 0.35),
+			0 2px 0 0 rgba(255, 85, 180, 0.95),
+			0 4px 0 0 rgba(255, 130, 200, 0.35),
+			-2px 0 0 0 rgba(255, 85, 180, 0.95),
+			-4px 0 0 0 rgba(255, 130, 200, 0.35),
+			2px 0 0 0 rgba(255, 85, 180, 0.95),
+			4px 0 0 0 rgba(255, 130, 200, 0.35),
+			0 0 18px rgba(255, 55, 155, 0.48),
+			0 0 32px rgba(210, 35, 130, 0.22),
+			inset 0 0 14px rgba(0, 0, 0, 0.38);
+	}
+	93% {
+		border-color: rgba(255, 75, 175, 0.5);
+		box-shadow:
+			0 -2px 0 0 rgba(255, 85, 180, 0.95),
+			0 -4px 0 0 rgba(255, 130, 200, 0.35),
+			0 2px 0 0 rgba(255, 85, 180, 0.95),
+			0 4px 0 0 rgba(255, 130, 200, 0.35),
+			-2px 0 0 0 rgba(255, 85, 180, 0.95),
+			-4px 0 0 0 rgba(255, 130, 200, 0.35),
+			2px 0 0 0 rgba(255, 85, 180, 0.95),
+			4px 0 0 0 rgba(255, 130, 200, 0.35),
+			0 0 8px rgba(255, 55, 155, 0.22),
+			0 0 32px rgba(210, 35, 130, 0.22),
+			inset 0 0 14px rgba(0, 0, 0, 0.38);
+	}
+	94% {
+		border-color: rgba(255, 75, 175, 0.95);
+		box-shadow:
+			0 -2px 0 0 rgba(255, 85, 180, 0.95),
+			0 -4px 0 0 rgba(255, 130, 200, 0.35),
+			0 2px 0 0 rgba(255, 85, 180, 0.95),
+			0 4px 0 0 rgba(255, 130, 200, 0.35),
+			-2px 0 0 0 rgba(255, 85, 180, 0.95),
+			-4px 0 0 0 rgba(255, 130, 200, 0.35),
+			2px 0 0 0 rgba(255, 85, 180, 0.95),
+			4px 0 0 0 rgba(255, 130, 200, 0.35),
+			0 0 18px rgba(255, 55, 155, 0.48),
+			0 0 32px rgba(210, 35, 130, 0.22),
+			inset 0 0 14px rgba(0, 0, 0, 0.38);
+	}
+}
+
+/*
+ * Tube lettering (ref: bright gas core, thick colored glass, soft halo) — pink variant.
+ * White fill + wide shadow stack reads as a fat tube; stroke widens the glyph slightly.
+ */
+@keyframes neon-flicker-g1 {
+	0%,
+	100% {
+		text-shadow:
+			0 0 1px #ffffff,
+			0 0 2px #ffffff,
+			0 0 3px #fff8fc,
+			0 0 5px #ffe0f0,
+			0 0 8px #ffb0dc,
+			0 0 12px #ff7ec8,
+			0 0 17px rgba(255, 55, 165, 0.98),
+			0 0 24px rgba(255, 42, 150, 0.94),
+			0 0 32px rgba(235, 28, 130, 0.85),
+			0 0 42px rgba(200, 22, 108, 0.68),
+			0 0 54px rgba(165, 18, 88, 0.48),
+			0 0 70px rgba(125, 12, 68, 0.28);
+	}
+	49%,
+	51% {
+		text-shadow:
+			0 0 1px #ffffff,
+			0 0 2px #ffffff,
+			0 0 3px #fff8fc,
+			0 0 5px #ffe0f0,
+			0 0 8px #ffb0dc,
+			0 0 12px #ff7ec8,
+			0 0 17px rgba(255, 55, 165, 0.98),
+			0 0 24px rgba(255, 42, 150, 0.94),
+			0 0 32px rgba(235, 28, 130, 0.85),
+			0 0 42px rgba(200, 22, 108, 0.68),
+			0 0 54px rgba(165, 18, 88, 0.48),
+			0 0 70px rgba(125, 12, 68, 0.28);
+	}
+	50% {
+		text-shadow:
+			0 0 1px rgba(255, 255, 255, 0.88),
+			0 0 2px rgba(255, 252, 254, 0.75),
+			0 0 3px rgba(255, 235, 248, 0.55),
+			0 0 5px rgba(255, 190, 225, 0.42),
+			0 0 8px rgba(255, 140, 200, 0.36),
+			0 0 12px rgba(255, 95, 175, 0.32),
+			0 0 17px rgba(255, 50, 155, 0.34),
+			0 0 24px rgba(220, 35, 125, 0.26),
+			0 0 32px rgba(185, 25, 100, 0.18);
+	}
+}
+
+@keyframes neon-flicker-g2 {
+	0%,
+	100% {
+		text-shadow:
+			0 0 1px #ffffff,
+			0 0 2px #ffffff,
+			0 0 3px #fff8fc,
+			0 0 5px #ffe0f0,
+			0 0 8px #ffb0dc,
+			0 0 12px #ff7ec8,
+			0 0 17px rgba(255, 55, 165, 0.98),
+			0 0 24px rgba(255, 42, 150, 0.94),
+			0 0 32px rgba(235, 28, 130, 0.85),
+			0 0 42px rgba(200, 22, 108, 0.68),
+			0 0 54px rgba(165, 18, 88, 0.48),
+			0 0 70px rgba(125, 12, 68, 0.28);
+	}
+	71%,
+	73% {
+		text-shadow:
+			0 0 1px #ffffff,
+			0 0 2px #ffffff,
+			0 0 3px #fff8fc,
+			0 0 5px #ffe0f0,
+			0 0 8px #ffb0dc,
+			0 0 12px #ff7ec8,
+			0 0 17px rgba(255, 55, 165, 0.98),
+			0 0 24px rgba(255, 42, 150, 0.94),
+			0 0 32px rgba(235, 28, 130, 0.85),
+			0 0 42px rgba(200, 22, 108, 0.68),
+			0 0 54px rgba(165, 18, 88, 0.48),
+			0 0 70px rgba(125, 12, 68, 0.28);
+	}
+	72% {
+		text-shadow:
+			0 0 1px rgba(255, 255, 255, 0.65),
+			0 0 2px rgba(255, 250, 252, 0.5),
+			0 0 3px rgba(255, 220, 242, 0.38),
+			0 0 5px rgba(255, 165, 215, 0.28),
+			0 0 8px rgba(255, 110, 185, 0.24),
+			0 0 12px rgba(255, 70, 160, 0.2),
+			0 0 17px rgba(255, 45, 145, 0.2),
+			0 0 24px rgba(200, 30, 115, 0.14);
+	}
+}
+
+@keyframes neon-flicker-g3 {
+	0%,
+	100% {
+		text-shadow:
+			0 0 1px #ffffff,
+			0 0 2px #ffffff,
+			0 0 3px #fff8fc,
+			0 0 5px #ffe0f0,
+			0 0 8px #ffb0dc,
+			0 0 12px #ff7ec8,
+			0 0 17px rgba(255, 55, 165, 0.98),
+			0 0 24px rgba(255, 42, 150, 0.94),
+			0 0 32px rgba(235, 28, 130, 0.85),
+			0 0 42px rgba(200, 22, 108, 0.68),
+			0 0 54px rgba(165, 18, 88, 0.48),
+			0 0 70px rgba(125, 12, 68, 0.28);
+	}
+	27%,
+	29% {
+		text-shadow:
+			0 0 1px #ffffff,
+			0 0 2px #ffffff,
+			0 0 3px #fff8fc,
+			0 0 5px #ffe0f0,
+			0 0 8px #ffb0dc,
+			0 0 12px #ff7ec8,
+			0 0 17px rgba(255, 55, 165, 0.98),
+			0 0 24px rgba(255, 42, 150, 0.94),
+			0 0 32px rgba(235, 28, 130, 0.85),
+			0 0 42px rgba(200, 22, 108, 0.68),
+			0 0 54px rgba(165, 18, 88, 0.48),
+			0 0 70px rgba(125, 12, 68, 0.28);
+	}
+	28% {
+		text-shadow:
+			0 0 1px rgba(255, 255, 255, 0.92),
+			0 0 2px rgba(255, 252, 254, 0.78),
+			0 0 3px rgba(255, 228, 244, 0.48),
+			0 0 5px rgba(255, 175, 220, 0.34),
+			0 0 8px rgba(255, 120, 195, 0.28),
+			0 0 12px rgba(255, 80, 170, 0.26),
+			0 0 17px rgba(255, 50, 155, 0.26),
+			0 0 24px rgba(210, 38, 125, 0.18);
+	}
+}
+
+/* Soft tube “crack” — pink/magenta only, no white flash (~25% longer visible vs prior) */
+@keyframes neon-ember-crack {
+	0%,
+	100% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.5);
+	}
+	90.5% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.6);
+	}
+	91.75% {
+		opacity: 0.35;
+		transform: translate(-50%, -50%) scale(0.95);
+	}
+	93% {
+		opacity: 0.5;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	94.25% {
+		opacity: 0.22;
+		transform: translate(-50%, -50%) scale(1.05);
+	}
+	95.5%,
+	96.75% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(1.1);
+	}
+}
+
+/* Pink sparks: no white burst; smooth drift + gravity (~25% longer on-screen than prior) */
+@keyframes neon-ember-fall {
+	0%,
+	100% {
+		opacity: 0;
+		transform: translate(-50%, -50%) translateY(0);
+		box-shadow: none;
+	}
+	91.25% {
+		opacity: 0;
+		transform: translate(-50%, -50%) translateY(0);
+		box-shadow: none;
+	}
+	91.875% {
+		opacity: 0.45;
+		transform: translate(-50%, -50%) translateY(0);
+		box-shadow:
+			0 0 0 1px rgba(255, 140, 200, 0.88),
+			4px 1px 0 0 rgba(255, 95, 175, 0.84),
+			-3px 2px 0 0 rgba(240, 70, 160, 0.8),
+			7px 3px 0 0 rgba(255, 120, 195, 0.78),
+			-5px 4px 0 0 rgba(220, 50, 140, 0.74),
+			2px 6px 0 0 rgba(255, 110, 185, 0.7),
+			0 0 2px 0 rgba(255, 80, 170, 0.22);
+	}
+	93.125% {
+		opacity: 0.75;
+		transform: translate(-50%, -50%) translateY(0);
+		box-shadow:
+			0 0 0 1px rgba(255, 150, 210, 0.85),
+			4px 8px 0 0 rgba(255, 100, 180, 0.82),
+			-3px 9px 0 0 rgba(235, 75, 165, 0.78),
+			7px 10px 0 0 rgba(255, 125, 195, 0.74),
+			-5px 12px 0 0 rgba(215, 55, 145, 0.68),
+			2px 13px 0 0 rgba(250, 105, 185, 0.64),
+			6px 11px 0 0 rgba(240, 85, 175, 0.58);
+	}
+	95% {
+		opacity: 0.55;
+		transform: translate(-50%, -50%) translateY(0);
+		box-shadow:
+			0 0 0 1px rgba(255, 130, 195, 0.52),
+			4px 16px 0 0 rgba(240, 90, 170, 0.58),
+			-3px 18px 0 0 rgba(210, 60, 145, 0.52),
+			7px 20px 0 0 rgba(250, 100, 180, 0.48),
+			-5px 22px 0 0 rgba(195, 45, 130, 0.42),
+			2px 24px 0 0 rgba(235, 85, 165, 0.4),
+			6px 23px 0 0 rgba(225, 70, 155, 0.34);
+	}
+	96.875% {
+		opacity: 0.28;
+		transform: translate(-50%, -50%) translateY(14px);
+		box-shadow:
+			0 0 0 1px rgba(255, 110, 180, 0.28),
+			4px 26px 0 0 rgba(220, 75, 155, 0.38),
+			-3px 28px 0 0 rgba(185, 50, 125, 0.32),
+			7px 30px 0 0 rgba(230, 85, 165, 0.3),
+			-5px 32px 0 0 rgba(165, 40, 110, 0.24),
+			2px 34px 0 0 rgba(210, 70, 150, 0.22);
+	}
+	98.75% {
+		opacity: 0;
+		transform: translate(-50%, -50%) translateY(26px);
+		box-shadow: none;
+	}
+}
+
+main h1,
+main h2 {
+	position: relative;
+	isolation: isolate;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	padding: 0.336em 0.63em 0.385em;
+	margin-top: 1.25em;
+	margin-left: 0;
+	margin-right: 0;
+	line-height: 1.12;
+	font-weight: 700;
+	color: #fff5f9;
+	background: rgba(12, 4, 14, 0.58);
+	border: 3px double rgba(255, 75, 175, 0.95);
+	border-radius: 10px;
+	overflow: visible;
+	text-shadow: none;
+	/* Spark anchor (JS sets random % each ember cycle); fallback top-right */
+	--neon-spark-x: 72%;
+	--neon-spark-y: 18%;
+	/* Tune durations here; `--neon-ember-duration` is read by neon-headings.js for spark resync */
+	--neon-frame-duration: 12.3s;
+	--neon-flicker-g1-duration: 11.5s;
+	--neon-flicker-g2-duration: 13.1s;
+	--neon-flicker-g3-duration: 10.8s;
+	--neon-flicker-g1-delay: 0.15s;
+	--neon-flicker-g2-delay: 1.85s;
+	--neon-flicker-g3-delay: 0.85s;
+	--neon-ember-duration: 13.8s;
+	animation: neon-frame-edges var(--neon-frame-duration) ease-in-out infinite;
+	animation-fill-mode: both;
+}
+
+/* JS wraps copy into .neon-tube spans; group 0 = steady, 1–3 = independent flicker */
+main h1 .neon-tube,
+main h2 .neon-tube {
+	display: inline;
+	color: #ffffff;
+	-webkit-text-stroke: 0.035em rgba(255, 65, 155, 0.82);
+	paint-order: stroke fill;
+}
+
+main h1 .neon-tube--steady,
+main h2 .neon-tube--steady {
+	text-shadow:
+		0 0 1px #ffffff,
+		0 0 2px #ffffff,
+		0 0 3px #fff8fc,
+		0 0 5px #ffe0f0,
+		0 0 8px #ffb0dc,
+		0 0 12px #ff7ec8,
+		0 0 17px rgba(255, 55, 165, 0.98),
+		0 0 24px rgba(255, 42, 150, 0.94),
+		0 0 32px rgba(235, 28, 130, 0.85),
+		0 0 42px rgba(200, 22, 108, 0.68),
+		0 0 54px rgba(165, 18, 88, 0.48),
+		0 0 70px rgba(125, 12, 68, 0.28);
+}
+
+main h1 .neon-tube--g1,
+main h2 .neon-tube--g1 {
+	animation: neon-flicker-g1 var(--neon-flicker-g1-duration) ease-in-out infinite;
+	animation-delay: var(--neon-flicker-g1-delay);
+	animation-fill-mode: both;
+}
+
+main h1 .neon-tube--g2,
+main h2 .neon-tube--g2 {
+	animation: neon-flicker-g2 var(--neon-flicker-g2-duration) ease-in-out infinite;
+	animation-delay: var(--neon-flicker-g2-delay);
+	animation-fill-mode: both;
+}
+
+main h1 .neon-tube--g3,
+main h2 .neon-tube--g3 {
+	animation: neon-flicker-g3 var(--neon-flicker-g3-duration) ease-in-out infinite;
+	animation-delay: var(--neon-flicker-g3-delay);
+	animation-fill-mode: both;
+}
+
+/* No-JS / before script: full heading still gets tube look */
+main h1:not(:has(.neon-tube)),
+main h2:not(:has(.neon-tube)) {
+	color: #ffffff;
+	-webkit-text-stroke: 0.035em rgba(255, 65, 155, 0.82);
+	paint-order: stroke fill;
+	text-shadow:
+		0 0 1px #ffffff,
+		0 0 2px #ffffff,
+		0 0 3px #fff8fc,
+		0 0 5px #ffe0f0,
+		0 0 8px #ffb0dc,
+		0 0 12px #ff7ec8,
+		0 0 17px rgba(255, 55, 165, 0.98),
+		0 0 24px rgba(255, 42, 150, 0.94),
+		0 0 32px rgba(235, 28, 130, 0.85),
+		0 0 42px rgba(200, 22, 108, 0.68),
+		0 0 54px rgba(165, 18, 88, 0.48),
+		0 0 70px rgba(125, 12, 68, 0.28);
+}
+
+main h1::before,
+main h2::before {
+	content: "";
+	position: absolute;
+	left: var(--neon-spark-x, 72%);
+	top: var(--neon-spark-y, 18%);
+	width: 28px;
+	height: 28px;
+	margin: 0;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 3;
+	background: radial-gradient(
+		circle at 45% 42%,
+		rgba(255, 190, 235, 0.5) 0%,
+		rgba(255, 110, 195, 0.34) 38%,
+		rgba(220, 40, 140, 0.14) 58%,
+		transparent 72%
+	);
+	transform: translate(-50%, -50%);
+	animation: neon-ember-crack var(--neon-ember-duration) ease-in-out infinite;
+}
+
+main h1::after,
+main h2::after {
+	content: "";
+	position: absolute;
+	left: var(--neon-spark-x, 72%);
+	top: var(--neon-spark-y, 18%);
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 3;
+	background: transparent;
+	transform: translate(-50%, -50%);
+	animation: neon-ember-fall var(--neon-ember-duration) ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	main h1,
+	main h2 {
+		animation: none;
+		border-color: rgba(255, 75, 175, 0.88);
+		box-shadow:
+			0 -2px 0 0 rgba(255, 85, 180, 0.88),
+			0 2px 0 0 rgba(255, 85, 180, 0.88),
+			-2px 0 0 0 rgba(255, 85, 180, 0.88),
+			2px 0 0 0 rgba(255, 85, 180, 0.88),
+			0 0 16px rgba(255, 55, 155, 0.38);
+	}
+	main h1:not(:has(.neon-tube)),
+	main h2:not(:has(.neon-tube)) {
+		color: #ffffff;
+		-webkit-text-stroke: 0.03em rgba(255, 65, 155, 0.75);
+		paint-order: stroke fill;
+		text-shadow:
+			0 0 1px #ffffff,
+			0 0 3px #fff8fc,
+			0 0 8px #ffb0dc,
+			0 0 16px rgba(255, 55, 165, 0.85),
+			0 0 28px rgba(200, 25, 110, 0.5);
+	}
+	main h1 .neon-tube--steady,
+	main h1 .neon-tube--g1,
+	main h1 .neon-tube--g2,
+	main h1 .neon-tube--g3,
+	main h2 .neon-tube--steady,
+	main h2 .neon-tube--g1,
+	main h2 .neon-tube--g2,
+	main h2 .neon-tube--g3 {
+		animation: none !important;
+		text-shadow:
+			0 0 1px #ffffff,
+			0 0 3px #fff8fc,
+			0 0 8px #ffb0dc,
+			0 0 16px rgba(255, 55, 165, 0.85),
+			0 0 28px rgba(200, 25, 110, 0.5);
+	}
+	main h1::before,
+	main h1::after,
+	main h2::before,
+	main h2::after {
+		animation: none !important;
+		opacity: 0 !important;
+	}
 }
 
 /* Lists */

@@ -1,9 +1,9 @@
 ---
 title: Final Fantasy 7
-date: 2025-03-22
-description: "Final Fantasy VII felt like the true next generation of console games. Its mix of mature, edgy art and story with a memorable soundtrack shocked me as a teenager."
+date: 2026-03-22
+description: "Final Fantasy 7 felt like the true next generation of console games. Its mix of mature, edgy art and story with a memorable soundtrack shocked me as a teenager."
 layout: layouts/post-blog.njk
-draft: true
+draft: false
 tags: [post, games-that-moved-me]
 ---
 
@@ -21,7 +21,7 @@ Instead, my friends and I snuck inside and were huddled by the TV. On the way ho
 We had played all of the North American console releases (Final Fantasy on NES, FF2 and FF3 on SNES) and hadn't read much about the new one. The previous titles had beautiful pixel art and stories and a ton of charm but were not widely known.  I'm sure it was covered in gaming magazines, but I don't remember hearing a huge fuss.
 
 When we popped the disc in and saw the intro, everyone gasped:
-{{ youtubeEmbed("6CORYpK6_W8", "Final Fantasy VII Intro (PSX)") }}
+{{ youtubeEmbed("6CORYpK6_W8", "Final Fantasy 7 Intro (PSX)") }}
 
 It's moody and atmospheric. It feels intimate (the flower girl walking down the street) but also epic and expansive (the Blade Runner-style zoom out across Midgar). The cutscenes blend into gameplay relatively seamlessly (if you can deal with a bit of judder) and the action sequence throws you right into gameplay.
 
@@ -84,17 +84,38 @@ Aerith's theme and Tifa's theme stand out because they have a deeply calming eff
 
 {{ spotifyTrackEmbed("76hjP6yrfypRpf82vhNGnr", "Tifa's Theme") }}
 
-They are slow, calm, relaxed. In the game, they are paired with very peaceful settings: Aerith in a small broken down church. Tifa in a dive bar that she bartends with a clunky pinball machine. There is no action here, just 
+They are slow, calm, relaxed. In the game, they are paired with very peaceful settings:
+* Aerith in a small broken down church. 
+* Tifa in a dive bar that she bartends with a clunky pinball machine. 
+
+There is no action in either scene initially, just friendly conversation and banter.
 
 {% imagePair "/static/posts/final-fantasy-7/ff7-aerith-church.png", "/static/posts/final-fantasy-7/ff7-seventh-heaven.jpeg", "Aerith and Tifa's themes play in warm, calm environments.", "Aerith's church where flowers grow", "Tifa's Seventh Heaven where Avalanche gathers." %}
 
-Something about this soundtrack has stuck with my longer than any game. I still turn the sound on and listen whenever I go back and replay it and it always feels fresh and interesting. I also love Mega Ran's tribute album that samples the soundtrack heavily, [Black Materia](https://open.spotify.com/album/7xvAxrZ2QMT9TC4i63LnzQ).
+Something about this soundtrack has stuck with my longer than any game. I still turn the sound on and listen whenever I go back and replay it and it always feels fresh and interesting. I also love Mega Ran's hip-hop tribute album that samples the soundtrack heavily, [Black Materia](https://open.spotify.com/album/7xvAxrZ2QMT9TC4i63LnzQ).
+
+{{ spotifyTrackEmbed("2XxRTS8ARWxaQVa5dALY2G", "Black Materia: Avalanche") }}
 
 # Story
 
+Final Fantasy 3 US already had a great story. Kafka was a very enviable villain, the characters had clear (albeit predictable) motivations, and the writing improved dramatically over FF2.
 
+But the plot was still pretty straightforward: bad guys try to take over the world, good guys try to stop them, world collapses and needs to be repaired.
 
+The plot of FF7 reads more like an Anime or a movie. Multiple twists, unreliable narration, and villains that manipulate the protagonists without our knowledge. 
 
-In the book [500 Years Later: An Oral History of FF7](https://darrenwall.co/500-years-later), one of the Squaresoft FF7 team members mentions that a senior team member regularly met with a Manga critic to revise the 
-<insert reference from book to creator meeting w/ manga editor>
+<img src="/static/posts/final-fantasy-7/ff7-cloud-subconscious.webp" />
 
+In the book [500 Years Later: An Oral History of FF7](https://darrenwall.co/500-years-later), one of the Squaresoft FF7 team members mentions that a senior team member regularly met with a Manga critic to revise the plot and make it more compelling.
+
+The writing definitely reflects a more mature writing style and a team willing to take more risks. The Aerith/Sepiroth scene (even rendered in blocky low poly art) is heart wrenching. The Cloud / Tifa scenes are painful to watch and come as a total surprise.
+
+The game was and still is the only RPG that has kept me interested in the story from start to finish.
+
+# Conclusion
+
+Final Fantasy 7, at the time, captivated me in a way no story-driven game had. I spent hours finding secrets, talking to friends about the plot twists, and listened to the soundtrack on repeat. I felt fear, sadness, despair. Things typically reserved for movies. 
+
+The bar for what was possible in a game had been raised.
+
+<img src="/static/posts/final-fantasy-7/ff7-cloud-tifa-young.gif" />

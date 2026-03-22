@@ -1,0 +1,23 @@
+---
+description: Neon styling for main h1/h2 — CSS keyframes, custom properties, neon-headings.js
+globs:
+  - _includes/css/index.css
+  - _includes/js/neon-headings.js
+---
+
+# Neon headings
+
+**Where it lives**
+
+- **Styles:** `_includes/css/index.css` — `@keyframes neon-frame-edges`, `neon-flicker-g1`…`g3`, `neon-ember-crack`, `neon-ember-fall`; rules under `main h1, main h2` and `.neon-tube*`.
+- **Behavior:** `_includes/js/neon-headings.js` — splits plain `main h1`/`main h2` text into up to four `.neon-tube` spans (group 0 steady, 1–3 flicker); sets random `--neon-spark-x` / `--neon-spark-y` on an interval derived from computed **`--neon-ember-duration`**.
+
+**When changing timing**
+
+- Prefer editing **`main h1, main h2`** custom properties: `--neon-frame-duration`, `--neon-flicker-g*-duration`, `--neon-flicker-g*-delay`, `--neon-ember-duration`. Avoid duplicating the ember duration in JS.
+- If you change **ember keyframe percentages** (`neon-ember-crack` / `neon-ember-fall`), keep them in sync with each other; the JS interval still follows `--neon-ember-duration` only.
+
+**When changing structure**
+
+- Headings with **child elements** (e.g. links) or existing `.neon-tube` are skipped by the script.
+- User-facing docs: **`README.md`** section “Neon headings”.
