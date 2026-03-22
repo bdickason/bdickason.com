@@ -19,7 +19,7 @@ One especially unproductive day, I called a friend. I wanted to rant about how m
 After years of struggling with writer’s block, I realized: **I’m a social thinker.**
 
 
-<blockquote class="pull-quote"><p>A good friend will surprise you by helping you say things you've known but could never find the words to express. <a href="https://twitter.com/david_perell/status/1277484415715663872">-David Perell</a></p></blockquote>
+> A good friend will surprise you by helping you say things you've known but could never find the words to express. [-David Perell](https://twitter.com/david_perell/status/1277484415715663872)
 
 
 Social Thinkers solve problems by conversing. Like a game of tennis, they bounce ideas back and forth to shape them and twist them. Each volley leads to new insights and sparks of creativity.

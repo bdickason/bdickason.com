@@ -65,13 +65,27 @@ for (const filePath of njkFiles) {
 
 // ----- Post frontmatter checks -----
 
+function findMarkdownFiles(dir) {
+  const out = [];
+  if (!fs.existsSync(dir)) return out;
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const e of entries) {
+    const full = path.join(dir, e.name);
+    if (e.isDirectory() && !e.name.startsWith('.')) {
+      out.push(...findMarkdownFiles(full));
+    } else if (e.isFile() && e.name.endsWith('.md')) {
+      out.push(full);
+    }
+  }
+  return out;
+}
+
 const postsDir = path.join(root, 'posts');
 if (!fs.existsSync(postsDir)) {
   // no posts dir is ok
 } else {
-  const postFiles = fs.readdirSync(postsDir).filter((f) => f.endsWith('.md'));
-  for (const name of postFiles) {
-    const filePath = path.join(postsDir, name);
+  const postFiles = findMarkdownFiles(postsDir);
+  for (const filePath of postFiles) {
     const relativePath = path.relative(root, filePath);
     const raw = fs.readFileSync(filePath, 'utf8');
     let data;

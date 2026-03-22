@@ -9,7 +9,7 @@ alwaysApply: true
 
 - Check **`scripts/layout-schema.mjs`** for the required and optional frontmatter for the chosen layout. Each layout (e.g. `layouts/post-blog.njk`, `layouts/post-video.njk`) has a different contract.
 - Ensure the post has `layout` set and all required fields for that layout. Use `tags: post` so it appears in post collections.
-- For `layouts/post-inspiration.njk`, each item in `blocks` must have `image` and `reflection`. For `hero`, use a path starting with `/static/`.
+- For `layouts/post-inspiration.njk`, each item in `blocks` must have `image` and `reflection` (rendered as a styled `<blockquote>`). For `hero`, use a path starting with `/static/`.
 
 **When adding a new layout or changing required/optional fields:**
 

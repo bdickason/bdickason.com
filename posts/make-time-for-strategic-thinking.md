@@ -44,7 +44,7 @@ If I’m working on a large strategy project, I’ll block off 4+ days per week 
 
 **Batch meetings** - Most days end up looking like swiss cheese - Lots of sproadic meetings with 30m-1hr in between. Squeeze your schedule so that the meetings all line up one after another. Paul Graham calls this ‘manager time’. Manager time is when we review and we discuss vs. when we create. 
 
-<blockquote class="pull-quote"><p><em>"I find one meeting can sometimes affect a whole day. A meeting commonly blows at least half a day, by breaking up a morning or afternoon. But in addition there's sometimes a cascading effect. If I know the afternoon is going to be broken up, I'm slightly less likely to start something ambitious in the morning."</em> (<a href="http://www.paulgraham.com/makersschedule.html">see: Maker's Schedule, Manager's schedule</a>)</p></blockquote>
+> *"I find one meeting can sometimes affect a whole day. A meeting commonly blows at least half a day, by breaking up a morning or afternoon. But in addition there's sometimes a cascading effect. If I know the afternoon is going to be broken up, I'm slightly less likely to start something ambitious in the morning."* ([see: Maker's Schedule, Manager's schedule](http://www.paulgraham.com/makersschedule.html))
 
 Going from meeting to meeting is draining, but those tiny blocks in between are useless and you’ll never make any meaningful creative progress. Batch your meetings so you have large blocks of uninterrupted time for creative thinking.
 
@@ -65,7 +65,7 @@ The right environment can make the difference between a session of fidgeting and
 **Setup the space for creativity** - You want your space to fade away. It should be calming, well lit, and comfortable. Not ‘lay down in bed and fall asleep’ comfortable, but enough that you can zone out from distractions around you and not think about adjusting your position. I like to let outside light in and add a few small touches such as a poster ([here's mine 🤓](https://romero.com/shop/p/armedcoders-rrdwf)) or a special lamp that inspires you. If possible, avoid spaces with other people in them as their movement will distract you.
 
 **Walk or move before you start** - If possible, walk or move before you start. This could be a walk around the block or walking across your house to another room. Movement enables us to think more creatively and problem solve. I knew that Steve Jobs liked walking meetings, but there’s science to back it up:
-<blockquote class="pull-quote"><p><em>"Creative thinking improves while a person is walking and shortly thereafter ... The study found that walking indoors or outdoors similarly boosted creative inspiration. The act of walking itself, and not the environment, was the main factor."</em> (<a href="https://news.stanford.edu/2014/04/24/walking-vs-sitting-042414/">Stanford Graduate School of Education</a>)</p></blockquote>
+> *"Creative thinking improves while a person is walking and shortly thereafter ... The study found that walking indoors or outdoors similarly boosted creative inspiration. The act of walking itself, and not the environment, was the main factor."* ([Stanford Graduate School of Education](https://news.stanford.edu/2014/04/24/walking-vs-sitting-042414/))
 
  I’ve started using walking as a tool to start and end sessions. If I’m stuck, taking a walk (or [riding my surf skate](https://www.youtube.com/watch?v=O6sdWYXB8RQ)) can help unblock me.
 

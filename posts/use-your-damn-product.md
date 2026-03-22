@@ -27,7 +27,7 @@ Most Product Managers don’t take the time to use their product. I don’t mean
 [Fred Benenson](http://fredbenenson.com/2012/07/23/kickstarter-fulfillment-and-product-development-a-story-of-dogfood-and-data-validation/) of Kickstarter tried to use his own product to raise money for a t-shirt. Seems simple, right? Doing so uncovered a host of pain points and improvements to the product that had gone unnoticed by the team:
 
 
-<blockquote class="pull-quote"><p><em>"Getting one of those details right — backer addresses — made me realize we needed a better way to ensure we were delivering valid backer mailing addresses to project creators at the most crucial part of their project: reward fulfillment."</em> -<a href="http://fredbenenson.com/2012/07/23/kickstarter-fulfillment-and-product-development-a-story-of-dogfood-and-data-validation/">Fred Benenson, Kickstarter</a></p></blockquote>
+> *"Getting one of those details right — backer addresses — made me realize we needed a better way to ensure we were delivering valid backer mailing addresses to project creators at the most crucial part of their project: reward fulfillment."* -[Fred Benenson, Kickstarter](http://fredbenenson.com/2012/07/23/kickstarter-fulfillment-and-product-development-a-story-of-dogfood-and-data-validation/)
 
 These pain points typically lie in the depths of your product. The screens that only serious users access. Not the surface-level shiny stuff.
 
@@ -55,7 +55,7 @@ But they wouldn’t try to be a successful baker.
 There is a TON of work that goes into using your product and by just casually browsing your site, you are likely missing 90% of it. **Going through the process as a real user will not only allow you to develop DEEP empathy for your customers, but it will help you pinpoint specific problems with your experience**:
 
 
-<blockquote class="pull-quote"><p>"Once I shipped my shirts, I wrote up an internal email to Kickstarter staff detailing my fulfillment process. That email became the kernel for a number of discussions about how we could better improve the data processing creators face when delivering their rewards to backers." -<a href="http://fredbenenson.com/2012/07/23/kickstarter-fulfillment-and-product-development-a-story-of-dogfood-and-data-validation/">Fred Benenson, Kickstarter</a></p></blockquote>
+> "Once I shipped my shirts, I wrote up an internal email to Kickstarter staff detailing my fulfillment process. That email became the kernel for a number of discussions about how we could better improve the data processing creators face when delivering their rewards to backers." -[Fred Benenson, Kickstarter](http://fredbenenson.com/2012/07/23/kickstarter-fulfillment-and-product-development-a-story-of-dogfood-and-data-validation/)
 
 
 
@@ -80,7 +80,7 @@ If you need to sell something, try designing mugs or other printed merchandise. 
 Gary Chou [teaches a course at SVA](https://postindustrialdesign.school/year-5/#for-a-post-industrial-world) and [has built an entire business](https://orbital.nyc/1k/) on the premise that everyone should be able to make $1,000 on the internet. He helps people go through this exact process because it’s incredibly hard.
 
 
-<blockquote class="pull-quote"><p>"The hard thing is there's a real possibility that you will never get there, or that no one will care, or that it will never work." -<a href="https://postindustrialdesign.school/year-5/#for-a-post-industrial-world">Gary Chou, Orbital NYC</a></p></blockquote>
+> "The hard thing is there's a real possibility that you will never get there, or that no one will care, or that it will never work." -[Gary Chou, Orbital NYC](https://postindustrialdesign.school/year-5/#for-a-post-industrial-world)
 
 
 That is the reality your users face every day. Embrace it, and you will uncover a ton of useful insights about how people use your product.

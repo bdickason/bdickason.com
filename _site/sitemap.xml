@@ -42,7 +42,7 @@
     </url>
     
     <url>
-        <loc>https://bdickason.com/posts/example-blog/</loc>
+        <loc>https://bdickason.com/posts/examples/example-blog/</loc>
         <lastmod>2021-01-28</lastmod>
     </url>
     
@@ -117,13 +117,18 @@
     </url>
     
     <url>
-        <loc>https://bdickason.com/posts/example-video/</loc>
+        <loc>https://bdickason.com/posts/examples/example-video/</loc>
         <lastmod>2025-01-01</lastmod>
     </url>
     
     <url>
-        <loc>https://bdickason.com/posts/example-inspiration/</loc>
+        <loc>https://bdickason.com/posts/examples/example-inspiration/</loc>
         <lastmod>2025-03-01</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/final-fantasy-7/</loc>
+        <lastmod>2025-03-22</lastmod>
     </url>
     
     <url>
@@ -163,6 +168,11 @@
     
     <url>
         <loc>https://bdickason.com/projects/</loc>
+        <lastmod>2026-03-22</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://bdickason.com/posts/examples/</loc>
         <lastmod>2026-03-22</lastmod>
     </url>
 </urlset>

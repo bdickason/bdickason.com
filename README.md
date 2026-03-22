@@ -5,7 +5,7 @@ Static site (Eleventy 3 + Nunjucks). Deploy with Vercel.
 ## Project structure
 
 - **`_includes/`** — Layouts (`layouts/`), components, CSS (`css/`), JS (`js/`). All Nunjucks partials and inlined assets.
-- **`posts/`** — One `.md` per post; frontmatter must match the chosen layout (see layout contract below).
+- **`posts/`** — One `.md` per post (nested folders allowed); frontmatter must match the chosen layout (see layout contract below). Draft **template examples** live under `posts/examples/` with an index at `/posts/examples/`.
 - **`scripts/`** — `validate.mjs` (templates + post frontmatter), `layout-schema.mjs` (layout → required/optional frontmatter; single source of truth).
 - **`static/`** — Static assets; copied to `_site/static`. Post images often under `static/posts/<slug>/`. Reference in content as `/static/...`.
 - **`_data/site.js`** — Global data (e.g. `hostname`) for templates.
@@ -29,7 +29,7 @@ Required frontmatter depends on the layout. **Full schema: `scripts/layout-schem
 | `layouts/post-video.njk` | `title`, `date`, `videoId` | `summary`, `keyIdeas`, `startAt`, `thumbnail`, `transcript`, etc. |
 | `layouts/post-inspiration.njk` | `title`, `date`, `blocks` | `description`, `draft`, `tags`, `thumbnail` |
 
-**Inspiration:** each `blocks[]` item must have `image` and `reflection`. Use `tags: post` so the post appears in collections.
+**Inspiration:** each `blocks[]` item must have `image` and `reflection` (shown as a styled blockquote under the image). Use `tags: post` so the post appears in collections.
 
 ## Validation
 

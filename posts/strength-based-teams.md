@@ -75,7 +75,7 @@ If you're weak at strategy, find a strategic Eng or Design counterpart. If you'r
 
 Design your team based on each others' strengths. Great teams have a variety of different strengths that complement each other to cover weaknesses.
 
-<blockquote class="pull-quote"><p><em>"You can't, of course, overcome the weaknesses with which each of us is abundantly endowed. But you can make them irrelevant."</em> -Peter Drucker</p></blockquote>
+> *"You can't, of course, overcome the weaknesses with which each of us is abundantly endowed. But you can make them irrelevant."* -Peter Drucker
 
 **Assemble the right team and your weaknesses will be irrelevant.**
 

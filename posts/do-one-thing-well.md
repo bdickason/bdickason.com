@@ -44,7 +44,7 @@ Adding more features makes people stop using your product. Each new feature is *
 
 Software wasn't complicated in the beginning. One of the founding principles of Unix (which powers OSX) was that individual programs should do one thing (and only one thing) well. Each program serves a single purpose. Copy (cp), Move (mv), and Delete (rm) are individual tiny programs.
 
-<blockquote class="pull-quote"><p><em>"We used to sit around in the Unix Room saying, 'What can we throw out? Why is there this option?'"</em> <a href="https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well">Wikipedia: The Unix Philosophy</a></p></blockquote>
+> *"We used to sit around in the Unix Room saying, 'What can we throw out? Why is there this option?'"* [Wikipedia: The Unix Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well)
 
 The benefits of doing one thing well:
 * Users can describe your product in a single sentence: "Dropbox makes my files available everywhere."

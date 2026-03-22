@@ -12,9 +12,9 @@ tags: post
 			<div class="inspiration-block__image">
 				<img src="{{ block.image }}" alt="{{ block.alt | default('') }}" loading="lazy" />
 			</div>
-			<div class="reflection">
+			<blockquote>
 				<p>{{ block.reflection }}</p>
-			</div>
+			</blockquote>
 		</div>
 		{% endfor %}
 	{% endif %}

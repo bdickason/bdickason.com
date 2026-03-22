@@ -27,7 +27,7 @@ You can do the same.
 **Editors review work on a regular cadence.** They set a schedule (typically weekly) to go over all work leading up to a milestone. This ensures that work is on track and prevents a ‘grand reveal’ just before a milestone.
 
 **Editors hold writers to high standards**. They ask questions and critique until the work is as good as their own. Ideally it’s even better. 
-<blockquote class="pull-quote"><p><em>"Good editors are not 'permissive'; they do not let their colleagues do 'their thing'; they make sure that everybody does the '[product's] thing.'"</em> -Peter Drucker</p></blockquote>
+> *"Good editors are not 'permissive'; they do not let their colleagues do 'their thing'; they make sure that everybody does the '[product's] thing.'"* -Peter Drucker
 
 **Editors take over writing if the work isn’t converging.** They monitor progress and give feedback if projects are behind. They will take control if work isn’t coming in on time or at quality. They only do this as a last resort (as it jeopardizes autonomy/trust).
 

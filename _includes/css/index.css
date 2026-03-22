@@ -550,9 +550,10 @@ header a:hover, header a:visited:hover, header a[href]:hover {
 	margin-bottom: 0;
 }
 
-/* Pull quote: large typography for emotional insight */
-/* Pull quote: angled block, solid purple, extends ~20% outside column */
-blockquote.pull-quote {
+/* Pull quote: Markdown blockquotes (and plain <blockquote>) in posts; exclude Twitter embeds */
+.post-blog blockquote:not(.twitter-tweet),
+.post-video .transcript-body blockquote:not(.twitter-tweet),
+.post-inspiration .inspiration-block blockquote:not(.twitter-tweet) {
 	font-family: inherit;
 	font-size: 1.65em;
 	line-height: 1.35;
@@ -567,30 +568,49 @@ blockquote.pull-quote {
 	box-sizing: border-box;
 	transform: rotate(-0.75deg);
 }
-blockquote.pull-quote p {
+.post-blog blockquote:not(.twitter-tweet) p,
+.post-video .transcript-body blockquote:not(.twitter-tweet) p,
+.post-inspiration .inspiration-block blockquote:not(.twitter-tweet) p {
 	color: #fff;
 	max-width: none;
 	font-size: 2rem;
 	line-height: inherit;
 	margin-bottom: 0;
 }
-blockquote.pull-quote p:last-child {
+.post-blog blockquote:not(.twitter-tweet) p:last-child,
+.post-video .transcript-body blockquote:not(.twitter-tweet) p:last-child,
+.post-inspiration .inspiration-block blockquote:not(.twitter-tweet) p:last-child {
 	margin-bottom: 0;
 }
-blockquote.pull-quote a,
-blockquote.pull-quote a:visited {
+.post-blog blockquote:not(.twitter-tweet) a,
+.post-blog blockquote:not(.twitter-tweet) a:visited,
+.post-video .transcript-body blockquote:not(.twitter-tweet) a,
+.post-video .transcript-body blockquote:not(.twitter-tweet) a:visited,
+.post-inspiration .inspiration-block blockquote:not(.twitter-tweet) a,
+.post-inspiration .inspiration-block blockquote:not(.twitter-tweet) a:visited {
 	color: #e0d4ff;
 }
-blockquote.pull-quote a:hover {
+.post-blog blockquote:not(.twitter-tweet) a:hover,
+.post-video .transcript-body blockquote:not(.twitter-tweet) a:hover,
+.post-inspiration .inspiration-block blockquote:not(.twitter-tweet) a:hover {
 	color: #fff;
 }
 
-/* Short reflection block */
-.reflection {
-	max-width: 36em;
-	margin: 2em 0;
-	font-style: italic;
+/* Format reference labels (example template posts) */
+.post-blog .format-example-label,
+.post-video .transcript-body .format-example-label,
+.post-inspiration .format-example-label {
+	font-size: 0.8125rem;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
 	color: #555;
+	margin: 1.5em 0 0.5em;
+	max-width: 42em;
+	line-height: 1.45;
+}
+.post-blog .format-example-label code,
+.post-video .transcript-body .format-example-label code,
+.post-inspiration .format-example-label code {
+	font-size: 0.95em;
 }
 
 /* Full-width / section image break (breaks out of .elv-layout) */
@@ -645,7 +665,7 @@ blockquote.pull-quote a:hover {
 	margin: 1em auto;
 }
 
-/* Inspiration post: image + reflection blocks */
+/* Inspiration post: image + pull-quote (YAML field blocks[].reflection) */
 .post-inspiration .inspiration-block {
 	margin-bottom: 3em;
 }
@@ -668,18 +688,21 @@ blockquote.pull-quote a:hover {
 .post-inspiration .inspiration-block--full-bleed .inspiration-block__image {
 	margin-bottom: 0.75em;
 }
-.post-inspiration .inspiration-block--full-bleed .reflection {
-	max-width: 42rem;
+/* Keep pull-quote readable when the image is full-bleed (parent is 100vw) */
+.post-inspiration .inspiration-block--full-bleed blockquote:not(.twitter-tweet) {
 	margin-left: auto;
 	margin-right: auto;
+	width: 100%;
+	max-width: min(calc(42rem * 1.3), calc(100vw - 2rem));
 	padding-left: 1rem;
 	padding-right: 1rem;
+	box-sizing: border-box;
 }
 .post-inspiration .inspiration-block--full-bleed img {
 	width: 100%;
 	object-fit: cover;
 }
-.post-inspiration .inspiration-block .reflection {
+.post-inspiration .inspiration-block blockquote:not(.twitter-tweet) {
 	margin-top: 0;
 }
 
@@ -1029,15 +1052,16 @@ Black - black
 	h2 {
 		border-bottom-color: #dff024;
 	}
-	blockquote.pull-quote {
+	.post-blog blockquote:not(.twitter-tweet),
+	.post-video .transcript-body blockquote:not(.twitter-tweet),
+	.post-inspiration .inspiration-block blockquote:not(.twitter-tweet) {
 		background: #6000D6;
 		color: #fff;
 	}
-	blockquote.pull-quote p {
+	.post-blog blockquote:not(.twitter-tweet) p,
+	.post-video .transcript-body blockquote:not(.twitter-tweet) p,
+	.post-inspiration .inspiration-block blockquote:not(.twitter-tweet) p {
 		color: #fff;
-	}
-	.reflection {
-		color: #a0a0a0;
 	}
 	.key-ideas li::before {
 		color: #a366ff;
