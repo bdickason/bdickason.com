@@ -11,7 +11,18 @@ const layoutSchema = {
   },
   'layouts/post-video.njk': {
     required: ['title', 'date', 'videoId'],
-    optional: ['description', 'draft', 'hero', 'keyIdeas', 'summary', 'tags', 'thumbnail', 'transcript', 'updated'],
+    optional: [
+      'description',
+      'draft',
+      'hero',
+      'keyIdeas',
+      'startAt',
+      'summary',
+      'tags',
+      'thumbnail',
+      'transcript',
+      'updated',
+    ],
   },
   'layouts/post-inspiration.njk': {
     required: ['title', 'date', 'blocks'],
@@ -20,6 +31,18 @@ const layoutSchema = {
   'layouts/page.njk': {
     required: [],
     optional: ['title', 'description', 'layout', 'thumbnail', 'noindex'],
+  },
+  'layouts/projects.njk': {
+    required: ['title', 'projects'],
+    optional: [
+      'description',
+      'layout',
+      'thumbnail',
+      'noindex',
+      'layoutClass',
+      'templateClass',
+      'tags',
+    ],
   },
   'layouts/base.njk': {
     required: [],

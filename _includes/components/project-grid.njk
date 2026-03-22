@@ -1,0 +1,25 @@
+<ul class="project-grid" role="list">
+{% for project in projects %}
+	<li class="project-card">
+		<a class="project-card__link naked" href="{{ project.url }}" rel="noopener noreferrer">
+			<span class="project-card__media">
+				<img
+					class="project-card__thumb"
+					src="{{ project.thumbnail }}"
+					alt="{{ project.alt }}"
+					width="800"
+					height="450"
+					loading="lazy"
+					decoding="async"
+				>
+			</span>
+			<span class="project-card__body">
+				<span class="project-card__title">{{ project.title }}</span>
+				{% if project.description %}
+				<span class="project-card__desc">{{ project.description }}</span>
+				{% endif %}
+			</span>
+		</a>
+	</li>
+{% endfor %}
+</ul>

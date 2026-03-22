@@ -1,0 +1,12 @@
+{# Reusable YouTube embed (privacy-enhanced domain). Use via import + call. #}
+{% macro youtubeEmbed(videoId, title, startAt) %}
+<div class="video-embed">
+	<iframe
+		src="https://www.youtube-nocookie.com/embed/{{ videoId }}{% if startAt %}?start={{ startAt }}{% endif %}"
+		title="{{ title | e }}"
+		loading="lazy"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		allowfullscreen
+	></iframe>
+</div>
+{% endmacro %}

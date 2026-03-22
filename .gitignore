@@ -62,6 +62,9 @@ typings/
 # next.js build output
 .next
 
+# Eleventy output (generated; do not commit)
+_site/
+
 .vercel
 
 # Cursor scratch / temporary planning docs (do not commit or build)

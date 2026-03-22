@@ -4,7 +4,11 @@
   "description": "Static site for my personal stuff",
   "scripts": {
     "deploy": "npx vercel",
-    "watch": "npm run validate && NODE_OPTIONS='--no-deprecation' npx vercel dev",
+    "dev": "npm run validate && NODE_OPTIONS='--no-deprecation' npx @11ty/eleventy --serve",
+    "preview": "npm run validate && NODE_OPTIONS='--no-deprecation' npx vercel dev",
+    "new:video": "node scripts/new-post.mjs video",
+    "new:blog": "node scripts/new-post.mjs blog",
+    "new:inspiration": "node scripts/new-post.mjs inspiration",
     "validate": "node scripts/validate.mjs",
     "build": "npx @11ty/eleventy",
     "clean": "rm -rf ./_site",

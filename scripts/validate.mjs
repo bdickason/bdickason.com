@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Validates Nunjucks templates and post frontmatter.
- * Run via: npm run validate (or automatically at start of npm run watch).
+ * Run via: npm run validate (or automatically at start of npm run dev / npm run preview).
  */
 
 import fs from 'fs';
@@ -105,6 +105,24 @@ if (!fs.existsSync(postsDir)) {
     if (layout === 'layouts/post-video.njk') {
       if (data.videoId !== undefined && String(data.videoId).trim() === '') {
         errors.push(`${relativePath}: "videoId" must be non-empty for layout ${layout}`);
+      }
+      const vid = data.videoId != null ? String(data.videoId).trim() : '';
+      if (vid && !/^[A-Za-z0-9_-]{6,32}$/.test(vid)) {
+        errors.push(
+          `${relativePath}: "videoId" should look like a YouTube id (letters, numbers, _ -; 6–32 chars); got "${vid}"`
+        );
+      }
+      if (data.summary !== undefined && data.summary !== null && typeof data.summary !== 'string') {
+        errors.push(`${relativePath}: "summary" must be a string for layout ${layout}`);
+      }
+      if (data.keyIdeas !== undefined && data.keyIdeas !== null && !Array.isArray(data.keyIdeas)) {
+        errors.push(`${relativePath}: "keyIdeas" must be an array for layout ${layout}`);
+      }
+      if (data.startAt !== undefined && data.startAt !== null && data.startAt !== '') {
+        const n = Number(data.startAt);
+        if (!Number.isInteger(n) || n < 0) {
+          errors.push(`${relativePath}: "startAt" must be a non-negative integer (seconds) for layout ${layout}`);
+        }
       }
     }
 
