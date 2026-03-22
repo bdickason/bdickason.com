@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-labelledby="t3">
-	<title id="t3">Music videos placeholder art</title>
-	<rect fill="#1a1a2a" width="800" height="450"/>
-	<circle cx="400" cy="200" r="90" fill="none" stroke="#f09" stroke-width="6"/>
-	<circle cx="400" cy="200" r="50" fill="#6000D6" opacity="0.6"/>
-	<text x="400" y="340" fill="#dff024" font-size="36" font-family="system-ui,sans-serif" text-anchor="middle" font-weight="600">music &amp; video</text>
-</svg>
