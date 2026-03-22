@@ -290,6 +290,27 @@ footer.elv-layout {
 	font-size: 0.9rem;
 	color: #222;
 }
+.site-footer__social {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+.site-footer__email {
+	display: inline-flex;
+	text-decoration: none;
+	line-height: 0;
+}
+.site-footer__email:hover {
+	opacity: 0.75;
+}
+.site-footer__email-icon {
+	display: block;
+	height: 1.25em;
+	width: auto;
+}
+.site-footer__email-icon--dark {
+	display: none;
+}
 .site-footer__youtube {
 	display: inline-flex;
 	color: #222;
@@ -405,27 +426,12 @@ a strong:hover {
 .posts.list-bare li {
 	margin-bottom: 0.35em;
 }
-.icon-youtube {
-	display: inline-block;
-	vertical-align: 0.15em;
-	margin-right: 0;
-}
 .post-footer a[href*="youtube"] {
 	text-decoration: underline;
 }
 .post-footer a[href*="youtube"]:hover {
 	text-decoration: underline;
 }
-
-#spotify {
-	content: url("/static/spotify.png");
-	width: 1.1em;
-	height: 1.1em;
-	vertical-align: middle;
-	border: 0;
-}
-
-
 
 header {
 	padding: 4% 6% 0% 6%;
@@ -1069,6 +1075,12 @@ Black - black
 	}
 	.site-footer__youtube:hover {
 		color: #e0e0e0;
+	}
+	.site-footer__email-icon--light {
+		display: none;
+	}
+	.site-footer__email-icon--dark {
+		display: block;
 	}
 	.site-footer__youtube-icon {
 		/* icon uses currentColor for main shape; play triangle stays white for contrast */

@@ -2,7 +2,7 @@
 title: Projects
 layout: layouts/projects.njk
 description: "Side projects, experiments, and corners of the internet I'm playing in."
-thumbnail: /static/projects/stormsword.svg
+thumbnail: /static/projects/stormsword.png
 permalink: /projects/
 tags: page
 layoutClass: projects-page
