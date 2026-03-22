@@ -1,7 +1,47 @@
 const CleanCSS = require("clean-css");
 
+function escapeHtmlAttr(value) {
+  if (value == null) return "";
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function escapeHtmlText(value) {
+  if (value == null) return "";
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
+
+  /**
+   * Two images side by side with one shared caption (blog / video transcript).
+   * Usage: {% imagePair "/static/a.jpg", "/static/b.jpg", "Caption", "Alt left", "Alt right" %}
+   * Alts optional (default empty).
+   */
+  eleventyConfig.addShortcode(
+    "imagePair",
+    function (leftSrc, rightSrc, caption, leftAlt, rightAlt) {
+      const l = escapeHtmlAttr(leftSrc);
+      const r = escapeHtmlAttr(rightSrc);
+      const cap = escapeHtmlText(caption);
+      const la = escapeHtmlAttr(leftAlt ?? "");
+      const ra = escapeHtmlAttr(rightAlt ?? "");
+      return `<figure class="image-pair">
+\t<div class="image-pair__grid">
+\t\t<div class="image-pair__cell"><img class="image-pair__img" src="${l}" alt="${la}" loading="lazy" decoding="async" /></div>
+\t\t<div class="image-pair__cell"><img class="image-pair__img" src="${r}" alt="${ra}" loading="lazy" decoding="async" /></div>
+\t</div>
+\t<figcaption class="caption image-pair__caption">${cap}</figcaption>
+</figure>`;
+    }
+  );
 
   eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;

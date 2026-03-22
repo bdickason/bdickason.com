@@ -68,6 +68,12 @@ Creative thinking takes time. You can't just flip your brain into creative mode 
 <p class="caption">An example starting point for a post.</p>
 </figure>
 
+### Two images + one caption (side by side)
+
+<p class="format-example-label"><code>{% raw %}{% imagePair "/static/left.jpg", "/static/right.jpg", "Shared caption", "Alt for left", "Alt for right" %}{% endraw %}</code> — alts optional; on very narrow screens the pair stacks in one column.</p>
+
+{% imagePair "/static/posts/make-time-for-strategic-thinking/soul.jpg", "/static/posts/make-time-for-strategic-thinking/post-outline.png", "Example: two assets compared under a single caption.", "Still from Soul", "Outline sketch" %}
+
 ### More copy (Markdown)
 
 <p class="format-example-label">Ordinary paragraphs again — mix with any of the patterns above.</p>

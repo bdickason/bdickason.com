@@ -13,6 +13,8 @@ tags: [post, games-that-moved-me]
 
 Before it was a hugely popular mainstream series, Final Fantasy flew under the radar as a nerdy RPG. The previous North American titles (FF, FF2, FF3) had beautiful pixel art and stories and a ton of charm but were not widely known.
 
+<img src="/static/posts/final-fantasy-7/ff7-title.avif">
+
 Final Fantasy 7 changed that. It was one of the first console games that felt truly cinematic. The story was deep, the environments were immersive, the backgrounds and fmv cutscenes felt unreal, the characters felt realistic and flawed, the soundtrack was iconic and varied.. I could go on and on.
 
 It was one of those games that just made you drop your jaw over and over again.
@@ -24,13 +26,19 @@ The intro is moody and atmospheric. It feels intimate (the flower girl walking d
 
 At this point I had played a ton of cinematic PC games ([Wing Commander III](https://www.youtube.com/watch?v=CycfVSXmDy0), [Full Throttle](https://www.youtube.com/watch?v=R0caHaL8l0w)) but none of them managed to capture the feeling of being placed in a movie the way that FF7 did. It may be hard to believe given the blocky characters but at the time it was mind blowing.
 
-# Art Style: Beautiful backgrounds and cinematic cut scenes
+# Art Style: Backgrounds and Cut scenes
 
-Final Fantasy has always pushed the boundaries on art. Its box art (typically hand painted by [Yoshitaka Amano](https://www.google.com/search?q=final+fantasy+amano+art&udm=2)) was top notch and stood out on shelves. The town backgrounds and character designs were iconic. But they always felt set in a heavy fantasy world (before the LotR movies made that cool).
+Final Fantasy has always pushed the boundaries on art. Its box art (typically hand painted by [Yoshitaka Amano](https://www.google.com/search?q=final+fantasy+amano+art&udm=2)) was top notch and stood out on shelves:
+ 
+<img src="/static/posts/final-fantasy-7/ff3-amano.webp" />
+<p class="caption">This hand drawn style always drew my eye to Final Fantasy boxes.</p>
 
-<img src="/static/posts/final-fantasy-7/ff3-narshe.png">
+The town backgrounds and character designs were iconic. But they always felt set in a heavy fantasy world *(before the LotR movies made that cool).*
+
+{% imagePair "/static/posts/final-fantasy-7/ff2-airship.png", "/static/posts/final-fantasy-7/ff3-narshe.webp", "Final Fantasy 1-6 was heavily rooted in fantasy", "FFII: Cecil captains the redwings", "FFIII: Narshe Town" %}
 
 Final Fantasy 7 managed to nail an art style that felt modern, edgy, and much more mature. It was more cyberpunk than steampunk. It used hues of neon mixed with dark grungy colors. It was very on trend with late 90's movies like [Blade](https://www.youtube.com/watch?v=kaU2A7KyOu4) or [The Matrix](https://www.youtube.com/watch?v=vKQi3bBA1y8).
+<img src="/static/posts/final-fantasy-7/ff7-sector7.webp">
 
 Final Fantasy 7 made it clear that video games were no longer just for kids and angsty teenagers.
 
