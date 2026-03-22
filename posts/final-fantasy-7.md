@@ -91,7 +91,7 @@ There is no action in either scene initially, just friendly conversation and ban
 
 {% imagePair "/static/posts/final-fantasy-7/ff7-aerith-church.png", "/static/posts/final-fantasy-7/ff7-seventh-heaven.jpeg", "Aerith and Tifa's themes play in warm, calm environments.", "Aerith's church where flowers grow", "Tifa's Seventh Heaven where Avalanche gathers." %}
 
-Something about this soundtrack has stuck with my longer than any game. I still turn the sound on and listen whenever I go back and replay it and it always feels fresh and interesting. I also love Mega Ran's hip-hop tribute album that samples the soundtrack heavily, [Black Materia](https://open.spotify.com/album/7xvAxrZ2QMT9TC4i63LnzQ).
+Something about this soundtrack has stuck with me longer than any game. I still turn the sound on and listen whenever I go back and replay it and it always feels fresh and interesting. I also love Mega Ran's hip-hop tribute album that samples the soundtrack heavily, [Black Materia](https://open.spotify.com/album/7xvAxrZ2QMT9TC4i63LnzQ).
 
 {{ spotifyTrackEmbed("2XxRTS8ARWxaQVa5dALY2G", "Black Materia: Avalanche") }}
 

@@ -1,4 +1,5 @@
 const CleanCSS = require("clean-css");
+const nunjucks = require("nunjucks");
 
 function escapeHtmlAttr(value) {
   if (value == null) return "";
@@ -22,7 +23,7 @@ function spotifyTrackEmbedHtml(trackId, title) {
   const tid = escapeHtmlAttr(trackId);
   const titleAttr =
     title != null && String(title).length > 0 ? ` title="${escapeHtmlAttr(title)}"` : "";
-  return `<div class="spotify-embed">
+  const html = `<div class="spotify-embed">
 \t<iframe
 \t\tdata-testid="embed-iframe"
 \t\tstyle="border-radius:12px"
@@ -35,6 +36,8 @@ function spotifyTrackEmbedHtml(trackId, title) {
 \t\tloading="lazy"${titleAttr}
 \t></iframe>
 </div>`;
+  // Nunjucks escapes {{ ... }} by default; markSafe so the iframe renders as HTML, not escaped text.
+  return nunjucks.runtime.markSafe(html);
 }
 
 module.exports = function (eleventyConfig) {
@@ -42,6 +45,7 @@ module.exports = function (eleventyConfig) {
 
   /**
    * Nunjucks global: {{ spotifyTrackEmbed("TRACK_ID", "Accessible title") }} in Markdown / templates (no import).
+   * Return value is markSafe — do not pass user HTML into trackId/title (IDs are escaped for attributes).
    */
   eleventyConfig.addNunjucksGlobal("spotifyTrackEmbed", spotifyTrackEmbedHtml);
 
