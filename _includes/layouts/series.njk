@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+tags: page
+---
+<article class="elv-layout post post-blog">
+	<h1>{{ title }}</h1>
+	{{ content | safe }}
+
+	<h2 id="posts-in-this-series">Posts in this series</h2>
+	<ul class="posts list-bare">
+		{% set seriesPosts = collections[seriesTag] %}
+		{% for p in seriesPosts | reverse %}
+			{% if not p.data.draft %}
+				<li><a href="{{ p.url }}">{{ p.data.title }}</a> <span class="date">{{ p.date | readableDate }}</span></li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</article>

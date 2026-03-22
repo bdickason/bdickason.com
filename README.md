@@ -16,7 +16,7 @@ Static site (Eleventy 3 + Nunjucks). Deploy with Vercel.
 - **`npm run dev`** — Runs validation then starts Eleventy’s local server (`--serve`). Fastest for day-to-day editing.
 - **`npm run preview`** (optional) — Runs validation then **Vercel dev**. Use to verify `vercel.json` redirects or other Vercel behavior locally; day-to-day editing uses **`npm run dev`** only.
 - **`npm run new:video`** / **`npm run new:blog`** / **`npm run new:inspiration`** — Scaffolds a new post under `posts/` (defaults to `draft: true`; pass `--nodraft` to set `draft: false`). Example: `npm run new:video -- --title "My episode" --videoid dQw4w9WgXcQ`
-- **`npm run validate`** — Validates Nunjucks templates and post frontmatter. Run after content or layout changes.
+- **`npm run validate`** — Validates Nunjucks templates and frontmatter for `posts/` and `pages/`. Run after content or layout changes.
 - **`npm run build`** — Build the site. Fix any build failures before finishing a task.
 
 ## Layout contract (posts)
@@ -28,8 +28,11 @@ Required frontmatter depends on the layout. **Full schema: `scripts/layout-schem
 | `layouts/post-blog.njk` | `title`, `date` | `description`, `draft`, `hero`, `subtitle`, `tags`, `thumbnail`, `updated` |
 | `layouts/post-video.njk` | `title`, `date`, `videoId` | `summary`, `keyIdeas`, `startAt`, `thumbnail`, `transcript`, etc. |
 | `layouts/post-inspiration.njk` | `title`, `date`, `blocks` | `description`, `draft`, `tags`, `thumbnail` |
+| `layouts/series.njk` | `title`, `seriesTag` | `description`, `thumbnail`, `noindex` |
 
 **Inspiration:** each `blocks[]` item must have `image` and `reflection` (shown as a styled blockquote under the image). Use `tags: post` so the post appears in collections.
+
+**Series:** add a slug tag alongside `post`, e.g. `tags: [post, games-that-moved-me]`, and add a page under `pages/series/<slug>.md` with `layout: layouts/series.njk`, `permalink: /series/<slug>/`, and matching `seriesTag`. Link to `/series/<slug>/` from the post body as needed.
 
 ## Validation
 
@@ -37,7 +40,7 @@ Required frontmatter depends on the layout. **Full schema: `scripts/layout-schem
 
 - Nunjucks: balanced `{% %}` and `{{ }}` in `_includes/`.
 - No `<p>` wrapping `{{ ... | safe }}` (invalid HTML); use `<div>` or `<section>` instead.
-- Every post: `layout` set and required frontmatter for that layout present; unknown layouts must be added to `layout-schema.mjs`.
+- Every Markdown file under `posts/` and `pages/`: `layout` set and required frontmatter for that layout present; unknown layouts must be added to `layout-schema.mjs`.
 - `hero` (if set) must start with `/static/`.
 - For `layouts/post-inspiration.njk`, each block has `image` and `reflection`.
 - For `layouts/post-video.njk`, optional `summary` must be a string; optional `keyIdeas` must be an array; optional `startAt` is embed start time in seconds (non-negative integer).

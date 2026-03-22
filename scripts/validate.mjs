@@ -80,12 +80,13 @@ function findMarkdownFiles(dir) {
   return out;
 }
 
-const postsDir = path.join(root, 'posts');
-if (!fs.existsSync(postsDir)) {
-  // no posts dir is ok
-} else {
-  const postFiles = findMarkdownFiles(postsDir);
-  for (const filePath of postFiles) {
+const dirsToValidate = [path.join(root, 'posts'), path.join(root, 'pages')];
+for (const dir of dirsToValidate) {
+  if (!fs.existsSync(dir)) {
+    continue;
+  }
+  const mdFiles = findMarkdownFiles(dir);
+  for (const filePath of mdFiles) {
     const relativePath = path.relative(root, filePath);
     const raw = fs.readFileSync(filePath, 'utf8');
     let data;
@@ -161,6 +162,10 @@ if (!fs.existsSync(postsDir)) {
           }
         }
       }
+    }
+
+    if (layout === 'layouts/series.njk' && data.seriesTag != null && String(data.seriesTag).trim() === '') {
+      errors.push(`${relativePath}: "seriesTag" must be non-empty for layout ${layout}`);
     }
   }
 }

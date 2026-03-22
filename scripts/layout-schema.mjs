@@ -32,6 +32,22 @@ const layoutSchema = {
     required: [],
     optional: ['title', 'description', 'layout', 'thumbnail', 'noindex'],
   },
+  'layouts/page-with-newsletter.njk': {
+    required: [],
+    optional: ['title', 'description', 'layout', 'thumbnail', 'noindex'],
+  },
+  'layouts/ideas.njk': {
+    required: [],
+    optional: ['title', 'description', 'layout', 'thumbnail', 'noindex'],
+  },
+  'layouts/home.njk': {
+    required: [],
+    optional: ['title', 'description', 'layout', 'name', 'thumbnail', 'noindex'],
+  },
+  'layouts/series.njk': {
+    required: ['title', 'seriesTag'],
+    optional: ['description', 'thumbnail', 'noindex'],
+  },
   'layouts/projects.njk': {
     required: ['title', 'projects'],
     optional: [
