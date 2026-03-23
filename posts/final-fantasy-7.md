@@ -9,7 +9,7 @@ tags: [post, games-that-moved-me]
 
 {% from 'components/youtube-embed.njk' import youtubeEmbed %}
 
-*This post is part of the [Games that Moved Me](/series/games-that-moved-me/) series where I break down the video games that touched my heart.*
+*This post is the first of the [Games that Moved Me](/series/games-that-moved-me/) series where I break down the video games that touched my heart.*
 
 The year was 1997. It was a Friday night. My parents were hosting our school's football game afterparty in my back yard. I should have been out trying to look cool, talking to some girls, mingling a bit, acting like a host. You know.. stuff normal kids do.
 
