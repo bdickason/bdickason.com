@@ -625,7 +625,13 @@ main h2 {
 	margin-top: 0;
 }
 
-/* JS wraps copy into .neon-tube spans; group 0 = steady, 1–3 = independent flicker */
+/* JS: .neon-tube-wrap → .neon-tube spans (group 0 steady, 1–3 flicker). Wrap keeps mobile filter off per-chunk. */
+main h1 .neon-tube-wrap,
+main h2 .neon-tube-wrap {
+	display: inline;
+	color: inherit;
+}
+
 main h1 .neon-tube,
 main h2 .neon-tube {
 	display: inline;
@@ -732,6 +738,54 @@ main h2::after {
 	animation: neon-ember-fall var(--neon-ember-duration) ease-in-out infinite;
 }
 
+/*
+ * Phones: iOS Safari often thins or glitches stacked animated text-shadows next to
+ * -webkit-text-stroke (outline-y look). One filter on .neon-tube-wrap (not each .neon-tube)
+ * avoids boxy per-segment glow; lighter stroke + smaller type; faster cadence for sparks.
+ */
+@media (max-width: 37.4375em) {
+	main h1,
+	main h2 {
+		min-width: 0;
+		overflow-wrap: anywhere;
+		word-break: break-word;
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+		/* neon-headings.js reads --neon-ember-duration from computed style */
+		--neon-frame-duration: 8.5s;
+		--neon-flicker-g1-duration: 7.8s;
+		--neon-flicker-g2-duration: 8.9s;
+		--neon-flicker-g3-duration: 7.4s;
+		--neon-flicker-g1-delay: 0.12s;
+		--neon-flicker-g2-delay: 1.2s;
+		--neon-flicker-g3-delay: 0.55s;
+		--neon-ember-duration: 10.2s;
+	}
+	main h1 {
+		font-size: clamp(1.65rem, 4.5vw + 1rem, 2.85rem);
+	}
+	main h2 {
+		font-size: clamp(1.45rem, 3.8vw + 0.9rem, 2.35rem);
+	}
+	main h1 .neon-tube-wrap,
+	main h2 .neon-tube-wrap {
+		display: inline-block;
+		max-width: 100%;
+		vertical-align: baseline;
+		filter: drop-shadow(0 0 4px rgba(255, 110, 195, 0.68))
+			drop-shadow(0 0 12px rgba(255, 50, 155, 0.4))
+			drop-shadow(0 0 24px rgba(195, 28, 118, 0.24));
+	}
+	main h1 .neon-tube,
+	main h2 .neon-tube {
+		-webkit-text-stroke: 0.012em rgba(255, 65, 155, 0.62);
+	}
+	main h1:not(:has(.neon-tube)),
+	main h2:not(:has(.neon-tube)) {
+		-webkit-text-stroke: 0.012em rgba(255, 65, 155, 0.62);
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	main h1,
 	main h2 {
@@ -781,6 +835,10 @@ main h2::after {
 	}
 	#crt-scanline-photons {
 		display: none !important;
+	}
+	main h1 .neon-tube-wrap,
+	main h2 .neon-tube-wrap {
+		filter: none !important;
 	}
 }
 
@@ -873,6 +931,12 @@ footer.elv-layout {
 	padding-top: 1.25rem;
 	padding-bottom: 1.25rem;
 	margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.site-footer__row {
+	width: 100%;
 }
 .site-footer__inner {
 	display: flex;
@@ -882,6 +946,13 @@ footer.elv-layout {
 	margin: 0;
 	font-size: 0.9rem;
 	color: #e0e0e0;
+}
+.site-footer__note {
+	margin: 0;
+	font-size: 0.75rem;
+	line-height: 1.45;
+	color: #999;
+	max-width: 36rem;
 }
 .site-footer__social {
 	display: inline-flex;

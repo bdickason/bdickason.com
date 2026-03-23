@@ -1,0 +1,19 @@
+Content license — Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+========================================================================================
+
+Original writing and media in this repository under:
+
+  posts/
+  pages/
+  static/   (original images and other assets you created for this site)
+
+are licensed under CC BY-NC-SA 4.0.
+
+Human-readable summary: https://creativecommons.org/licenses/by-nc-sa/4.0/
+Full legal text: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+---
+
+Site source code (Eleventy configuration, templates under _includes/, build scripts,
+CSS, JavaScript, and similar) is licensed separately under the GNU General Public
+License v3.0 — see the LICENSE file in this repository.

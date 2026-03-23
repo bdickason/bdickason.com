@@ -1,6 +1,6 @@
 /**
  * Split main h1/h2 text into 4 character groups for neon flicker (group 0 = steady).
- * Skips headings that already have .neon-tube or contain child elements (links, etc.).
+ * Skips headings that already have .neon-tube-wrap / .neon-tube or contain child elements (links, etc.).
  * Randomizes ::before/::after spark position (--neon-spark-x/y) each ember cycle; interval follows
  * computed `--neon-ember-duration` from CSS (see `main h1` in _includes/css/index.css).
  */
@@ -46,18 +46,22 @@
 	}
 
 	function wrapHeading(el) {
+		if (el.querySelector(".neon-tube-wrap")) return;
 		if (el.querySelector(".neon-tube")) return;
 		if (el.children.length > 0) return;
 		var text = el.textContent;
 		if (!text.trim()) return;
 		var parts = splitIntoGroups(text, GROUPS);
 		el.textContent = "";
+		var wrap = document.createElement("span");
+		wrap.className = "neon-tube-wrap";
 		for (var i = 0; i < parts.length; i++) {
 			var span = document.createElement("span");
 			span.className = "neon-tube" + (i === 0 ? " neon-tube--steady" : " neon-tube--flicker neon-tube--g" + i);
 			span.textContent = parts[i];
-			el.appendChild(span);
+			wrap.appendChild(span);
 		}
+		el.appendChild(wrap);
 	}
 
 	function randomSparkAnchor(el) {

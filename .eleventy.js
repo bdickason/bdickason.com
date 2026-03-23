@@ -42,6 +42,11 @@ function spotifyTrackEmbedHtml(trackId, title) {
 module.exports = function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
 
+  /** Same dev server; include LAN IPs in startup log so phones on Wi‑Fi can open http://<local-ip>:8080 */
+  eleventyConfig.setServerOptions({
+    showAllHosts: true,
+  });
+
   /**
    * Nunjucks global: {{ spotifyTrackEmbed("TRACK_ID", "Accessible title") }} in Markdown / templates (no import).
    * Return value is markSafe — do not pass user HTML into trackId/title (IDs are escaped for attributes).

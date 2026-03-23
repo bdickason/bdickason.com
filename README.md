@@ -2,6 +2,13 @@
 
 Static site (Eleventy 3 + Nunjucks). Deploy with Vercel.
 
+## Licensing
+
+- **Site source** (Eleventy config, `_includes/`, `scripts/`, CSS/JS in this repo): [GNU General Public License v3.0](LICENSE).
+- **Content** (writing and media under `posts/`, `pages/`, and original assets in `static/`): [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Summary in [`LICENSE-CONTENT`](LICENSE-CONTENT); [full legal terms](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+
+Feel free to quote, share, and remix with attribution. Please don't republish full posts or videos without permission.
+
 ## Project structure
 
 - **`_includes/`** — Layouts (`layouts/`), components, CSS (`css/`), JS (`js/`). All Nunjucks partials and inlined assets.

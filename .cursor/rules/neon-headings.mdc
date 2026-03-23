@@ -10,7 +10,7 @@ globs:
 **Where it lives**
 
 - **Styles:** `_includes/css/index.css` — `@keyframes neon-frame-edges`, `neon-flicker-g1`…`g3`, `neon-ember-crack`, `neon-ember-fall`; rules under `main h1, main h2` and `.neon-tube*`.
-- **Behavior:** `_includes/js/neon-headings.js` — splits plain `main h1`/`main h2` text into up to four `.neon-tube` spans (group 0 steady, 1–3 flicker); sets random `--neon-spark-x` / `--neon-spark-y` on an interval derived from computed **`--neon-ember-duration`**.
+- **Behavior:** `_includes/js/neon-headings.js` — wraps plain headings in **`.neon-tube-wrap`**, then splits text into up to four `.neon-tube` spans (group 0 steady, 1–3 flicker); sets random `--neon-spark-x` / `--neon-spark-y` on an interval derived from computed **`--neon-ember-duration`**. The outer wrap lets mobile CSS apply a **single** `filter: drop-shadow()` to the whole title (per-tube filters looked boxy on WebKit).
 
 **When changing timing**
 
@@ -19,5 +19,5 @@ globs:
 
 **When changing structure**
 
-- Headings with **child elements** (e.g. links) or existing `.neon-tube` are skipped by the script.
+- Headings with **child elements** (e.g. links) or existing `.neon-tube-wrap` / `.neon-tube` are skipped by the script.
 - User-facing docs: **`README.md`** section “Neon headings”.

@@ -9,7 +9,7 @@ tags: [post, games-that-moved-me]
 
 {% from 'components/youtube-embed.njk' import youtubeEmbed %}
 
-*This post is part of the [Games that Moved Me](/series/games-that-moved-me/) series where I break down how classic video games felt when they were released.*
+*This post is part of the [Games that Moved Me](/series/games-that-moved-me/) series where I break down the video games that touched my heart.*
 
 The year was 1997. It was a Friday night. My parents were hosting our school's football game afterparty in my back yard. I should have been out trying to look cool, talking to some girls, mingling a bit, acting like a host. You know.. stuff normal kids do.
 
@@ -17,7 +17,7 @@ Instead, my friends and I snuck inside and were huddled by the TV. On the way ho
 
 <img src="/static/posts/final-fantasy-7/hackers-around-laptop.webp" />
 
-We had played all of the North American console releases (Final Fantasy on NES, FF2 and FF3 on SNES) and hadn't read much about the new one. The previous titles had beautiful pixel art and stories and a ton of charm but were not widely known.  I'm sure it was covered in gaming magazines, but I don't remember hearing a huge fuss.
+We had played all of the North American console releases (Final Fantasy on NES, FF2 and FF3 on SNES) but hadn't read much about the new one. The previous titles had beautiful pixel art and stories and a ton of charm but were not widely known.  I'm sure it was covered in gaming magazines, but I don't remember hearing a huge fuss.
 
 When we popped the disc in and saw the intro, everyone gasped:
 {{ youtubeEmbed("6CORYpK6_W8", "Final Fantasy 7 Intro (PSX)") }}

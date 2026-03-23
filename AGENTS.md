@@ -17,7 +17,7 @@ Eleventy 3 + Nunjucks. Source of truth is Markdown under `posts/` and `pages/`, 
 | Eleventy config, shortcodes, globals | `.eleventy.js` |
 | Post/page frontmatter contract | `scripts/layout-schema.mjs` |
 | URL redirects | `vercel.json` |
-| Global site data | `_data/site.js` |
+| Global site data | `_data/site.js` (`hostname`, copyright year, `licenseUrl` for `/license/`) |
 | Static assets (referenced as `/static/...`) | `static/` → copied to `_site/static/` |
 
 ## Cursor rules

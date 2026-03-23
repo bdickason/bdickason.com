@@ -4,4 +4,8 @@
  */
 module.exports = {
 	hostname: "bdickason.com",
+	copyrightYear: 2026,
+	licenseUrl: "/license/",
+	repoUrl: "https://github.com/bdickason/bdickason.com",
+	contentLicenseDeedUrl: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
 };
