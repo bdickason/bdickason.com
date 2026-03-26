@@ -18,8 +18,8 @@
 			</header>
 			<div class="debug__row">
 				<label class="debug__label" for="density">Density</label>
-				<input id="density" class="debug__range" type="range" min="0" max="1" step="0.01" value="0.85" />
-				<div class="debug__value" id="densityValue">0.85</div>
+				<input id="density" class="debug__range" type="range" min="0" max="1" step="0.01" value="0.90" />
+				<div class="debug__value" id="densityValue">0.90</div>
 			</div>
 			<div class="debug__row">
 				<label class="debug__label" for="brightness">Brightness</label>
@@ -30,9 +30,31 @@
 					min="0"
 					max="1"
 					step="0.01"
-					value="0.90"
+					value="1.00"
 				/>
-				<div class="debug__value" id="brightnessValue">0.90</div>
+				<div class="debug__value" id="brightnessValue">1.00</div>
+			</div>
+			<div class="debug__row">
+				<label class="debug__label" for="direction">Direction</label>
+				<select id="direction" class="debug__select">
+					<option value="rtl">Right to left</option>
+					<option value="into">Into the starfield</option>
+				</select>
+				<div class="debug__value" id="directionValue">rtl</div>
+			</div>
+			<div class="debug__row">
+				<div class="debug__label">UFO</div>
+				<button id="spawnUfo" type="button" class="debug__button">Spawn UFO</button>
+				<div class="debug__value">temp</div>
+			</div>
+			<div class="debug__row">
+				<label class="debug__label" for="ufoDebug">UFO debug</label>
+				<label class="debug__toggle">
+					<input id="ufoDebug" type="checkbox" />
+					<span class="debug__toggleUi" aria-hidden="true"></span>
+					<span class="debug__toggleText">Overlay</span>
+				</label>
+				<div class="debug__value">temp</div>
 			</div>
 		</section>
 
