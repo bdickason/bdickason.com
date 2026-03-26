@@ -223,8 +223,6 @@ const brightnessInput = document.getElementById("brightness");
 const brightnessValue = document.getElementById("brightnessValue");
 const directionInput = document.getElementById("direction");
 const directionValue = document.getElementById("directionValue");
-const spawnUfoButton = document.getElementById("spawnUfo");
-const ufoDebugInput = document.getElementById("ufoDebug");
 
 // Outrun / synthwave palette (avoid red-leaning tones; bias toward blue/purple/magenta)
 const colors = [
@@ -311,7 +309,7 @@ geometry.setAttribute("kind", new THREE.BufferAttribute(kinds, 1));
 const starMaterial = new THREE.ShaderMaterial({
 	uniforms: {
 		time: { value: 0 },
-		density: { value: 0.9 },
+		density: { value: 0.75 },
 		opacityScale: { value: 1.0 },
 	},
 	vertexShader: `
@@ -327,6 +325,7 @@ const starMaterial = new THREE.ShaderMaterial({
 		varying float vTwinkleOffset;
 		varying float vSeed;
 		varying float vKind;
+		varying float vPointSize;
 		uniform float time;
 
 		void main() {
@@ -340,6 +339,7 @@ const starMaterial = new THREE.ShaderMaterial({
 			vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
 			float distance = length(mvPosition.xyz);
 			gl_PointSize = size * (50.0 / max(distance, 1.0));
+			vPointSize = gl_PointSize;
 			gl_Position = projectionMatrix * mvPosition;
 		}
 	`,
@@ -353,6 +353,7 @@ const starMaterial = new THREE.ShaderMaterial({
 		varying float vTwinkleOffset;
 		varying float vSeed;
 		varying float vKind;
+		varying float vPointSize;
 
 		float hash11(float p) {
 			p = fract(p * 0.1031);
@@ -415,6 +416,11 @@ const starMaterial = new THREE.ShaderMaterial({
 			// Density control without rebuilding geometry.
 			if (vSeed > density) discard;
 
+			// The UI brightness slider is 0..1, but the pixel-cluster stars discard many fragments.
+			// Only boost brightness for *large/close* stars to avoid distant "confetti" flicker.
+			float boostT = smoothstep(4.0, 10.0, vPointSize);
+			float bright = mix(opacityScale, opacityScale * 1.75, boostT);
+
 			// Base twinkle (smooth), per-star speed/phase.
 			float baseTwinkle = sin(time * vTwinkleSpeed * 100.0 + vTwinkleOffset) * 0.35 + 0.65;
 
@@ -428,11 +434,28 @@ const starMaterial = new THREE.ShaderMaterial({
 
 			float twinkle = baseTwinkle * breathe * flickerAmp;
 
-			// Normal star (kind==0): make it feel less "confetti" by rounding corners.
+			// Normal star (kind==0): keep it pixel/blocky (even when large).
 			if (vKind < 0.5) {
-				float r = length(coord) / 0.5; // 0 center -> 1 edge
-				float roundMask = 1.0 - smoothstep(0.78, 1.02, r);
-				float alpha = vOpacity * twinkle * opacityScale * roundMask;
+				// For small/far points, draw a stable single square pixel (no extra discard),
+				// otherwise quantization can read as noisy "confetti".
+				if (vPointSize <= 3.2) {
+					float alpha = vOpacity * twinkle * opacityScale;
+					gl_FragColor = vec4(vColor, alpha);
+					return;
+				}
+
+				// Render a small square "pixel cluster" in a quantized grid so it doesn't read like a circle.
+				float grid = clamp(floor(vPointSize / 2.0), 3.0, 9.0);
+				vec2 g = floor(gl_PointCoord * grid); // 0..grid-1
+				vec2 c = vec2(floor(grid * 0.5), floor(grid * 0.5));
+				float block = max(1.0, floor(grid * 0.42)); // how many cells across
+				float halfBlock = floor(block * 0.5);
+				if (abs(g.x - c.x) > halfBlock || abs(g.y - c.y) > halfBlock) discard;
+
+				// Boost alpha based on how many fragments we culled, so close stars don't go dim.
+				float blockSize = (halfBlock * 2.0 + 1.0);
+				float boost = clamp(grid / max(blockSize, 1.0), 1.0, 2.6);
+				float alpha = vOpacity * twinkle * bright * boost;
 				gl_FragColor = vec4(vColor, alpha);
 				return;
 			}
@@ -463,7 +486,7 @@ const starMaterial = new THREE.ShaderMaterial({
 			float edgeSpark = mix(1.0, 1.35, edgeGate * (0.35 + 0.65 * hash11(vSeed * 47.3)));
 			float edgeOnlySpark = mix(1.0, edgeSpark, edge);
 
-			float alpha = vOpacity * shapeTwinkle * opacityScale * mask * edgeFade * pulse * edgeOnlySpark;
+			float alpha = vOpacity * shapeTwinkle * bright * mask * edgeFade * pulse * edgeOnlySpark;
 
 			// Let edges brighten/dim slightly without blowing out the center.
 			vec3 col = vColor * (1.0 + 0.08 * pulseEdge * edge) * edgeOnlySpark;
@@ -479,7 +502,7 @@ const starMaterial = new THREE.ShaderMaterial({
 const stars = new THREE.Points(geometry, starMaterial);
 scene.add(stars);
 
-const DEFAULTS = { density: 0.9, brightness: 1.0, direction: "rtl" };
+const DEFAULTS = { density: 0.7, brightness: 0.8, direction: "rtl" };
 const STORAGE_KEY = "starfield:debug";
 
 function loadSettings() {
@@ -631,11 +654,6 @@ function onSliderChange() {
 if (densityInput) densityInput.addEventListener("input", onSliderChange);
 if (brightnessInput) brightnessInput.addEventListener("input", onSliderChange);
 if (directionInput) directionInput.addEventListener("change", onSliderChange);
-if (spawnUfoButton) spawnUfoButton.addEventListener("click", () => spawnUfo({ force: true }));
-if (ufoDebugInput) ufoDebugInput.addEventListener("change", () => {
-	if (!activeUfo?.material?.uniforms?.debug) return;
-	activeUfo.material.uniforms.debug.value = ufoDebugInput.checked ? 1.0 : 0.0;
-});
 
 // Shooting stars (kept, but disabled under reduced-motion)
 const shootingStars = [];
@@ -1373,10 +1391,6 @@ function spawnUfo({ force = false } = {}) {
 	}
 
 	activeUfo = ufo;
-	// Sync debug checkbox to new UFO instance.
-	if (ufoDebugInput && activeUfo?.material?.uniforms?.debug) {
-		activeUfo.material.uniforms.debug.value = ufoDebugInput.checked ? 1.0 : 0.0;
-	}
 
 	// If force-spawned, push the next natural spawn into the future.
 	if (force) scheduleNextUfoSpawn();
