@@ -1099,7 +1099,8 @@ function createUfo() {
 
 			void main() {
 				// Pixel-ish sampling so the UFO reads as sprite-art.
-				const float N = 32.0;
+				// Slightly higher than 32 to reduce aliasing in the rim lights.
+				const float N = 48.0;
 				vec2 uv = (floor(gl_PointCoord * N) + 0.5) / N; // 0..1
 				vec2 p = uv * 2.0 - 1.0; // -1..1 (static UFO space)
 
@@ -1129,26 +1130,30 @@ function createUfo() {
 
 				// Rim lights: small dots around the edge that spin with the dish.
 				float rimLights = 0.0;
-				// Position the rim light band around the *midline* of the dish rim.
-				vec2 ringOffset = vec2(0.0, 0.24);
-				vec2 ringR = vec2(0.86, 0.30);
+				// Position the rim light band around the midline of the dish rim.
+				vec2 ringOffset = vec2(0.0, 0.16);
+				vec2 ringR = vec2(0.86, 0.28);
 				// Keep the ring geometry fixed in UFO space.
 				float ring = ellipse(p + ringOffset, ringR); // near rim
 				// Place lights *outside* the rim (not inside the saucer).
-				float onRing = step(0.96, ring) * step(ring, 1.18);
+				float onRing = step(1.02, ring) * step(ring, 1.22);
 
 				// Compute angle in the same squashed/offset space as the rim ellipse,
 				// then advance phase with time (spin) instead of rotating the ellipse itself.
 				vec2 rimUv = (p + ringOffset) / ringR;
 				float ang0 = atan(rimUv.y, rimUv.x);
 				float ang = ang0 + spin;
-				float n = 12.0;
+				// More lights so they read as a dotted rim, not a few blinking blocks.
+				float n = 18.0;
 				float seg = (ang + 3.14159265) / (6.2831853) * n; // 0..n
 				float segFrac = fract(seg);
-				float dotMask = 1.0 - step(0.16, abs(segFrac - 0.5)); // narrow in each segment
+				// Smooth dot profile to avoid hard aliasing at small point sizes.
+				float d = abs(segFrac - 0.5);
+				float w = max(0.10, fwidth(segFrac) * 2.5);
+				float dotMask = smoothstep(0.20 + w, 0.20 - w, d);
 				// Occlude the far side: only show the "front" arc (simple 2.5D cheat).
-				// Here, negative rimUv.y corresponds to the near edge of the dish.
-				float frontMask = smoothstep(0.25, -0.20, rimUv.y);
+				// Light the near/bottom arc (toward camera) rather than the far/top.
+				float frontMask = smoothstep(0.35, -0.10, -rimUv.y);
 				rimLights = onRing * dotMask * frontMask * 1.0;
 
 				// Campy sci-fi alien bubble (allow it to extend beyond the dish silhouette)
