@@ -12,6 +12,150 @@ body {
 	background-color: #1a1a1a;
 	color: #e0e0e0;
 }
+
+/* Starfield background experiment (page-scoped via `templateClass: has-starfield-bg`) */
+html.has-starfield-bg body {
+	background-color: #000;
+}
+#starfield-bg {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+	overflow: hidden;
+}
+#starfield-bg > canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* Starfield debug panel (ported from experiment CSS; page-scoped) */
+html.has-starfield-bg .debug {
+	position: fixed;
+	right: 16px;
+	top: 16px;
+	z-index: 3;
+	width: min(360px, calc(100vw - 32px));
+	padding: 12px 12px 10px;
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.72);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	color: rgba(255, 255, 255, 0.9);
+	box-shadow:
+		0 0 22px rgba(255, 90, 230, 0.08),
+		0 0 46px rgba(90, 170, 255, 0.08);
+}
+html.has-starfield-bg .debug__header {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 8px;
+}
+html.has-starfield-bg .debug__title {
+	font-size: 12px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	opacity: 0.85;
+}
+html.has-starfield-bg .debug__hint {
+	font-size: 12px;
+	opacity: 0.6;
+	white-space: nowrap;
+}
+html.has-starfield-bg kbd {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+	font-size: 11px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-bottom-color: rgba(255, 255, 255, 0.28);
+	padding: 1px 6px;
+	border-radius: 6px;
+	background: rgba(255, 255, 255, 0.06);
+}
+html.has-starfield-bg .debug__row {
+	display: grid;
+	grid-template-columns: 86px 1fr 44px;
+	align-items: center;
+	gap: 10px;
+	padding: 8px 0;
+}
+html.has-starfield-bg .debug__label {
+	font-size: 12px;
+	opacity: 0.82;
+}
+html.has-starfield-bg .debug__range {
+	width: 100%;
+	accent-color: #ff4fd8;
+}
+html.has-starfield-bg .debug__range::-webkit-slider-runnable-track {
+	height: 6px;
+	border-radius: 999px;
+	background: linear-gradient(90deg, #00c2ff, #7a2cff, #ff4fd8);
+	box-shadow: 0 0 18px rgba(255, 80, 220, 0.12), 0 0 22px rgba(60, 140, 255, 0.12);
+}
+html.has-starfield-bg .debug__range::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	height: 16px;
+	width: 16px;
+	margin-top: -5px;
+	border-radius: 999px;
+	background: radial-gradient(circle at 30% 30%, #ffffff, #ffd1f3 45%, #ff4fd8 70%, #7a2cff);
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	box-shadow: 0 0 16px rgba(255, 80, 220, 0.25), 0 0 18px rgba(60, 140, 255, 0.18);
+}
+html.has-starfield-bg .debug__range:focus-visible {
+	outline: 2px solid rgba(0, 194, 255, 0.55);
+	outline-offset: 4px;
+	border-radius: 12px;
+}
+html.has-starfield-bg .debug__range::-moz-range-track {
+	height: 6px;
+	border-radius: 999px;
+	background: linear-gradient(90deg, #00c2ff, #7a2cff, #ff4fd8);
+	box-shadow: 0 0 18px rgba(255, 80, 220, 0.12), 0 0 22px rgba(60, 140, 255, 0.12);
+}
+html.has-starfield-bg .debug__range::-moz-range-thumb {
+	height: 16px;
+	width: 16px;
+	border-radius: 999px;
+	background: radial-gradient(circle at 30% 30%, #ffffff, #ffd1f3 45%, #ff4fd8 70%, #7a2cff);
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	box-shadow: 0 0 16px rgba(255, 80, 220, 0.25), 0 0 18px rgba(60, 140, 255, 0.18);
+}
+html.has-starfield-bg .debug__select {
+	width: 100%;
+	height: 30px;
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.16);
+	background: linear-gradient(90deg, rgba(0, 194, 255, 0.14), rgba(122, 44, 255, 0.14), rgba(255, 79, 216, 0.14));
+	color: rgba(255, 255, 255, 0.9);
+	padding: 0 10px;
+	font-size: 12px;
+	letter-spacing: 0.02em;
+	box-shadow: 0 0 18px rgba(255, 80, 220, 0.08), 0 0 18px rgba(60, 140, 255, 0.08);
+	appearance: none;
+	-webkit-appearance: none;
+}
+html.has-starfield-bg .debug__select:focus-visible {
+	outline: 2px solid rgba(0, 194, 255, 0.55);
+	outline-offset: 3px;
+}
+html.has-starfield-bg .debug__value {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+	font-size: 12px;
+	text-align: right;
+	opacity: 0.75;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html.has-starfield-bg .debug {
+		display: none;
+	}
+}
 img {
 	border: 0;
 	width: 100%;

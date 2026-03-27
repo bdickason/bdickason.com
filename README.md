@@ -39,6 +39,23 @@ A single glowing pixel sweeps across a random horizontal band on a timer. Implem
 - **`npm run validate`** — Validates Nunjucks templates and frontmatter for `posts/` and `pages/`. Run after content or layout changes.
 - **`npm run build`** — Runs `validate`, then builds the site to `_site/`. Fix any failures before finishing a task.
 
+## Experiments Launch Checklist
+
+Use this checklist when shipping a new static experiment (for example under `static/experiments/`).
+
+- Add/update a project card in `pages/projects.md` with `title`, `url`, `thumbnail`, `alt`, and `description`.
+- Put the thumbnail image in `static/projects/` and optimize it for web delivery.
+- Ensure the experiment has a local README with controls, dependencies, accessibility behavior, and known limits.
+- Validate accessibility basics:
+  - `prefers-reduced-motion` behavior
+  - keyboard discoverability for non-mouse controls
+  - graceful fallback message if runtime requirements are missing
+- Run a manual browser matrix at minimum: Chrome, Safari, Firefox (desktop), plus one mobile browser/device.
+- Confirm there are no console errors on initial load.
+- Before merge, run:
+  - `npm run validate`
+  - `npm run build`
+
 ## Layout contract (posts)
 
 Required frontmatter depends on the layout. **Full schema: `scripts/layout-schema.mjs`.** When adding a new layout or changing required fields, update that file.
