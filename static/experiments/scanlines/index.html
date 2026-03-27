@@ -19,7 +19,7 @@
 			</p>
 		</header>
 
-		<section id="controls" class="controls" aria-label="Scanlines controls">
+		<section id="controls" class="controls" aria-label="Scanlines controls" hidden>
 			<div class="controls__row">
 				<label class="controls__toggle" for="toggleBg">
 					<input id="toggleBg" type="checkbox" checked />
@@ -44,10 +44,7 @@
 				</select>
 			</div>
 
-			<button id="hideControls" class="controls__hide" type="button">Hide controls</button>
 		</section>
-
-		<button id="showControls" class="showControls" type="button" hidden>Controls</button>
 
 		<noscript>
 			<div class="fallback" role="status">
@@ -63,8 +60,6 @@
 			(function () {
 				var body = document.body;
 				var controls = document.getElementById("controls");
-				var btnHide = document.getElementById("hideControls");
-				var btnShow = document.getElementById("showControls");
 
 				var toggleBg = document.getElementById("toggleBg");
 				var togglePhoton = document.getElementById("togglePhoton");
@@ -87,18 +82,6 @@
 					window.ScanlinePhotons.setConfig({ enabled: enabled, minGapMs: gap.min, maxGapMs: gap.max });
 				}
 
-				function hideControls() {
-					controls.hidden = true;
-					btnShow.hidden = false;
-					btnShow.focus();
-				}
-
-				function showControls() {
-					controls.hidden = false;
-					btnShow.hidden = true;
-					controls.focus({ preventScroll: true });
-				}
-
 				applyBg();
 				applyPhoton();
 
@@ -106,13 +89,9 @@
 				togglePhoton.addEventListener("change", applyPhoton);
 				frequency.addEventListener("change", applyPhoton);
 
-				btnHide.addEventListener("click", hideControls);
-				btnShow.addEventListener("click", showControls);
-
 				window.addEventListener("keydown", function (e) {
 					if (e.key !== "`") return;
-					if (controls.hidden) showControls();
-					else hideControls();
+					controls.hidden = !controls.hidden;
 				});
 			})();
 		</script>
