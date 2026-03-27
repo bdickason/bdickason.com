@@ -72,15 +72,36 @@
 			</div>
 		</section>
 
-		<script type="importmap">
-			{
-				"imports": {
-					"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-					"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+		<script type="text/javascript">
+			(function () {
+				try {
+					// Keep initial load fast: only fetch Three.js if we plan to run starfield.
+					var rm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+					if (rm) return;
+
+					var conn = navigator.connection;
+					if (conn && (conn.saveData || (typeof conn.effectiveType === "string" && /(^|-)2g$/.test(conn.effectiveType)))) return;
+
+					var importMap = document.createElement("script");
+					importMap.type = "importmap";
+					importMap.textContent = JSON.stringify({
+						imports: {
+							three: "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+							"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+						},
+					});
+					document.head.appendChild(importMap);
+
+					function load() {
+						import("/static/js/starfield-bg.js").catch(function () {});
+					}
+					if ("requestIdleCallback" in window) window.requestIdleCallback(load, { timeout: 2500 });
+					else setTimeout(load, 800);
+				} catch (e) {
+					// ignore
 				}
-			}
+			})();
 		</script>
-		<script type="module" src="/static/js/starfield-bg.js"></script>
 
 		{%- set js %}
 		{% include 'js/convertkit.js' %}
