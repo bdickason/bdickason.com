@@ -282,6 +282,13 @@ kbd {
 	mix-blend-mode: screen;
 }
 
+.hud__titleRow {
+	display: inline-flex;
+	align-items: baseline;
+	gap: 12px;
+	pointer-events: auto;
+}
+
 .hud__title {
 	font-size: 12px;
 	letter-spacing: 0.16em;
@@ -290,6 +297,54 @@ kbd {
 	text-shadow:
 		0 0 10px rgba(255, 120, 220, 0.18),
 		0 0 24px rgba(140, 120, 255, 0.12);
+}
+
+.hud__more {
+	font-size: 12px;
+	letter-spacing: 0.02em;
+	color: rgba(122, 44, 255, 0.55);
+	text-decoration: none;
+	opacity: 0;
+	transform: translateX(-4px);
+	transition: opacity 140ms ease, transform 140ms ease, color 140ms ease;
+}
+.hud__titleRow:hover .hud__more {
+	opacity: 1;
+	transform: translateX(0);
+}
+.hud__more:hover {
+	color: #7a2cff;
+}
+.hud__more:focus-visible {
+	opacity: 1;
+	outline: 2px solid rgba(122, 44, 255, 0.65);
+	outline-offset: 3px;
+	border-radius: 6px;
+}
+
+.creditLink {
+	position: fixed;
+	right: 16px;
+	bottom: 14px;
+	z-index: 2;
+	pointer-events: auto;
+	font-size: 12px;
+	letter-spacing: 0.02em;
+	color: rgba(168, 118, 255, 0.8);
+	text-decoration: none;
+	opacity: 0.35;
+	mix-blend-mode: screen;
+	transition: opacity 140ms ease, color 140ms ease;
+}
+.creditLink:hover {
+	opacity: 0.9;
+	color: #7a2cff;
+}
+.creditLink:focus-visible {
+	opacity: 1;
+	outline: 2px solid rgba(122, 44, 255, 0.65);
+	outline-offset: 3px;
+	border-radius: 6px;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,5 +1,11 @@
 <!doctype html>
-<html lang="en"{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+{% set pageClass = 'has-starfield-bg' %}
+{% if templateClass %}
+	{% set pageClass = pageClass + ' ' + templateClass %}
+{% endif %}
+{% set hasStarfieldBg = true %}
+<!doctype html>
+<html lang="en" class="{{ pageClass }}">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +22,65 @@
 	</head>
 
 	<body>
-		<div id="crt-scanline-photons" aria-hidden="true"></div>
+		<div id="starfield-bg" aria-hidden="true"></div>
 		{% include 'components/nav.njk' %}
 		<main class="elv-layout{% if layoutClass %} {{ layoutClass }}{% endif %}">
 			{{ content | safe }}
 			{% include 'components/footer.njk' %}
 		</main>
+
+		<section id="debug-panel" class="debug" hidden>
+			<header class="debug__header">
+				<div class="debug__title">Debug</div>
+				<div class="debug__hint"><kbd>`</kbd> to toggle</div>
+			</header>
+			<div class="debug__row">
+				<label class="debug__label" for="density">Density</label>
+				<input id="density" class="debug__range" type="range" min="0" max="1" step="0.01" value="0.70" />
+				<div class="debug__value" id="densityValue">0.70</div>
+			</div>
+			<div class="debug__row">
+				<label class="debug__label" for="brightness">Brightness</label>
+				<input
+					id="brightness"
+					class="debug__range"
+					type="range"
+					min="0"
+					max="1"
+					step="0.01"
+					value="0.80"
+				/>
+				<div class="debug__value" id="brightnessValue">0.80</div>
+			</div>
+			<div class="debug__row">
+				<label class="debug__label" for="direction">Direction</label>
+				<select id="direction" class="debug__select">
+					<option value="rtl">Right to left</option>
+					<option value="into">Into the starfield</option>
+				</select>
+				<div class="debug__value" id="directionValue">rtl</div>
+			</div>
+			<div class="debug__row">
+				<div class="debug__label">Perf</div>
+				<div class="debug__value" id="perfFps" style="text-align:left">—</div>
+				<div class="debug__value" id="perfLongTasks" title="Count of Long Tasks (when supported)">—</div>
+			</div>
+			<div class="debug__row">
+				<div class="debug__label">Frame</div>
+				<div class="debug__value" id="perfFrame" style="text-align:left">—</div>
+				<div class="debug__value" id="perfDropped" title="Frames over 50ms">—</div>
+			</div>
+		</section>
+
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+					"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+				}
+			}
+		</script>
+		<script type="module" src="/static/js/starfield-bg.js"></script>
 
 		{%- set js %}
 		{% include 'js/convertkit.js' %}

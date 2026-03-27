@@ -9,6 +9,17 @@ const COMET_BASE_COLORS = [
 	new THREE.Color(0xff4fd8), // pink
 ];
 
+function xorshift32(seed) {
+	let x = seed >>> 0;
+	return function rand01() {
+		x ^= x << 13;
+		x ^= x >>> 17;
+		x ^= x << 5;
+		// 2^32 -> [0, 1)
+		return (x >>> 0) / 4294967296;
+	};
+}
+
 function mixColor(cA, cB, t) {
 	return {
 		r: lerp(cA.r, cB.r, t),
@@ -56,6 +67,9 @@ function createCometTrail(scene, starColor, maxParticles = 110) {
 	const seeds = new Float32Array(maxParticles);
 	const holdMs = new Float32Array(maxParticles);
 
+	// Avoid per-frame Math.random() costs: use a tiny deterministic PRNG.
+	const rand = xorshift32((Math.random() * 0xffffffff) | 0);
+
 	for (let i = 0; i < maxParticles; i++) {
 		const i3 = i * 3;
 		positions[i3] = 9999;
@@ -69,7 +83,7 @@ function createCometTrail(scene, starColor, maxParticles = 110) {
 		baseColors[i3 + 2] = 0;
 		agesMs[i] = 1e9;
 		lifetimesMs[i] = 1;
-		seeds[i] = Math.random();
+		seeds[i] = rand();
 		holdMs[i] = 0;
 	}
 
@@ -130,6 +144,7 @@ function createCometTrail(scene, starColor, maxParticles = 110) {
 	scene.add(points);
 
 	let cursor = 0;
+	let timeSeconds = 0;
 
 	function setParticle(i, x, y, z, r, g, b) {
 		const i3 = i * 3;
@@ -147,34 +162,38 @@ function createCometTrail(scene, starColor, maxParticles = 110) {
 	return {
 		points,
 		setTime(t) {
+			timeSeconds = t;
 			material.uniforms.time.value = t;
 		},
 		emit({ x, y, z }, backDir, intensity = 1, spread = 1) {
 			// backDir should be normalized and point *backward* from the comet head.
 			// Emit more densely near the head so we get a bright core + taper.
 			const n = Math.max(1, Math.floor(3 + intensity * 5));
+			const bx = backDir.x;
+			const by = backDir.y;
 			for (let k = 0; k < n; k++) {
 				const i = cursor;
 				cursor = (cursor + 1) % maxParticles;
 
 				agesMs[i] = 0;
-				lifetimesMs[i] = 240 + Math.random() * 620; // short-lived flare
+				lifetimesMs[i] = 240 + rand() * 620; // short-lived flare
 				// Some pixels "hang" in space briefly (ember/fall effect).
-				holdMs[i] = Math.random() < 0.22 ? 40 + Math.random() * 120 : 0;
+				// Keep rare to avoid reading as "stutter" during perf dips.
+				holdMs[i] = rand() < 0.12 ? 35 + rand() * 95 : 0;
 
 				// Spawn a little bit behind the head so it "lights up" as the comet moves.
-				const dist = (0.12 + Math.random() * 0.55) * (1 + spread * 0.6);
-				const ox = -backDir.x * dist;
-				const oy = -backDir.y * dist;
+				const dist = (0.12 + rand() * 0.55) * (1 + spread * 0.6);
+				const ox = -bx * dist;
+				const oy = -by * dist;
 				const oz = 0;
 
 				// Side jitter so the tail looks like a hot flare, not a rigid line.
-				const jx = (Math.random() * 2 - 1) * 0.08 * spread;
-				const jy = (Math.random() * 2 - 1) * 0.08 * spread;
+				const jx = (rand() * 2 - 1) * 0.08 * spread;
+				const jy = (rand() * 2 - 1) * 0.08 * spread;
 
 				// Brightness: bias brighter near-head, rarer bright chunks.
-				const base = 0.55 + Math.random() * 0.55;
-				const chunk = Math.random() < 0.14 ? 1.7 + Math.random() * 0.7 : 1.0;
+				const base = 0.55 + rand() * 0.55;
+				const chunk = rand() < 0.14 ? 1.7 + rand() * 0.7 : 1.0;
 				const fade = base * chunk * (0.95 + 0.45 * intensity);
 
 				// dist is ~0.12..0.55. Map to 0..1 "heat" where 1 = closest to head.
@@ -189,7 +208,7 @@ function createCometTrail(scene, starColor, maxParticles = 110) {
 				else band = scheme.dark;
 
 				// A few "extra hot" pixels near the head for sparkle chunks (still same hue family).
-				const extraHot = heat > 0.65 && Math.random() < 0.14;
+				const extraHot = heat > 0.65 && rand() < 0.14;
 				const mixed = extraHot ? mixColor(scheme.hot, scheme.light, 0.35) : band;
 
 				// Quantize brightness so it looks dithered/pixel-stepped, not volumetric.
@@ -201,6 +220,9 @@ function createCometTrail(scene, starColor, maxParticles = 110) {
 		},
 		update(deltaTimeMs, headPos, backDir, headSpeed01, globalAlpha) {
 			const dt = Math.max(0, deltaTimeMs);
+			const bx = backDir.x;
+			const by = backDir.y;
+			const nowFrame = Math.floor(timeSeconds * 24);
 
 			for (let i = 0; i < maxParticles; i++) {
 				const age = agesMs[i];
@@ -218,8 +240,8 @@ function createCometTrail(scene, starColor, maxParticles = 110) {
 				const wobble = (hash11(seed * 19.7 + t * 3.1) * 2 - 1) * 0.02 * (1 + headSpeed01);
 				const held = agesMs[i] < holdMs[i];
 				const driftMul = held ? 0.0 : 1.0;
-				positions[i3] += (-backDir.x * (0.0011 * dt) * (1.0 + headSpeed01) + wobble) * driftMul;
-				positions[i3 + 1] += (-backDir.y * (0.0011 * dt) * (1.0 + headSpeed01) - wobble) * driftMul;
+				positions[i3] += (-bx * (0.0011 * dt) * (1.0 + headSpeed01) + wobble) * driftMul;
+				positions[i3 + 1] += (-by * (0.0011 * dt) * (1.0 + headSpeed01) - wobble) * driftMul;
 				// Tiny depth drift so tail feels 3D, but keep it subtle to avoid blur.
 				positions[i3 + 2] += (hash11(seed * 7.3) * 2 - 1) * 0.00018 * dt * driftMul;
 
@@ -232,7 +254,9 @@ function createCometTrail(scene, starColor, maxParticles = 110) {
 				// Occasionally "reignite" a pixel for sparkle, but only when it's still relatively hot.
 				let reignite = 1.0;
 				const reigniteChance = (0.012 + 0.02 * headSpeed01) * (0.35 + 0.65 * headBias);
-				if (Math.random() < reigniteChance) reignite = 1.25 + Math.random() * 0.75;
+				// Deterministic per-pixel/per-frame so it looks random without hitting Math.random().
+				const h = hash11(seed * 113.1 + nowFrame * 0.07);
+				if (h < reigniteChance) reignite = 1.25 + hash11(seed * 71.9 + nowFrame * 0.11) * 0.75;
 
 				colors[i3] = baseColors[i3] * fade * reignite;
 				colors[i3 + 1] = baseColors[i3 + 1] * fade * reignite;

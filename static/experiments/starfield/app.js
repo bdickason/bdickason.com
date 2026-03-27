@@ -61,6 +61,10 @@ export function initStarfield({ container }) {
 	const brightnessValue = document.getElementById("brightnessValue");
 	const directionInput = document.getElementById("direction");
 	const directionValue = document.getElementById("directionValue");
+	const perfFpsEl = document.getElementById("perfFps");
+	const perfFrameEl = document.getElementById("perfFrame");
+	const perfDroppedEl = document.getElementById("perfDropped");
+	const perfLongTasksEl = document.getElementById("perfLongTasks");
 
 	const baseline = {
 		density: 0.7,
@@ -128,7 +132,7 @@ export function initStarfield({ container }) {
 			toggleDebugPanel();
 		}
 	};
-	window.addEventListener("keydown", onKeyDown);
+	if (debugPanel) window.addEventListener("keydown", onKeyDown);
 
 	// Auto-switch modes every few minutes (randomized), unless reduced-motion.
 	const MODE_SHUFFLE = {
@@ -169,6 +173,82 @@ export function initStarfield({ container }) {
 	let rotationSpeed = 0.0001;
 	let lastFrameTime = 0;
 	let rafId = 0;
+
+	const perfHud =
+		debugPanel && (perfFpsEl || perfFrameEl || perfDroppedEl || perfLongTasksEl)
+			? (() => {
+					// Collect the last ~2s of frame deltas so we can show p95/max without heavy work.
+					const WINDOW_FRAMES = 120;
+					const deltas = new Float32Array(WINDOW_FRAMES);
+					let cursor = 0;
+					let filled = 0;
+					let dropped = 0;
+					let longTasks = 0;
+					let lastPublishAt = 0;
+
+					function percentile95(buf, n) {
+						// n <= 120: copy + sort is acceptable at ~2Hz publish rate.
+						const tmp = Array.from(buf.slice(0, n));
+						tmp.sort((a, b) => a - b);
+						const idx = Math.max(0, Math.min(n - 1, Math.floor(n * 0.95) - 1));
+						return tmp[idx] ?? 0;
+					}
+
+					let obs;
+					try {
+						if (typeof PerformanceObserver !== "undefined") {
+							obs = new PerformanceObserver((list) => {
+								for (const entry of list.getEntries()) {
+									// Long tasks are usually main-thread stalls (GC, layout, JS).
+									if (entry && entry.duration >= 50) longTasks++;
+								}
+							});
+							obs.observe({ entryTypes: ["longtask"] });
+						}
+					} catch {
+						// Not supported (Safari), or blocked. Ignore.
+					}
+
+					return {
+						onFrame(dtMs) {
+							// Ignore absurd first frame or tab-switch spikes; keep signal useful.
+							if (!Number.isFinite(dtMs) || dtMs <= 0 || dtMs > 250) return;
+							deltas[cursor] = dtMs;
+							cursor = (cursor + 1) % WINDOW_FRAMES;
+							filled = Math.min(WINDOW_FRAMES, filled + 1);
+							if (dtMs >= 50) dropped++;
+
+							const now = performance.now();
+							if (now - lastPublishAt < 500) return;
+							lastPublishAt = now;
+
+							if (filled === 0) return;
+							let sum = 0;
+							let max = 0;
+							for (let i = 0; i < filled; i++) {
+								const v = deltas[i];
+								sum += v;
+								if (v > max) max = v;
+							}
+							const avg = sum / filled;
+							const p95 = percentile95(deltas, filled);
+							const fps = avg > 0 ? Math.min(120, Math.max(0, 1000 / avg)) : 0;
+
+							if (perfFpsEl) perfFpsEl.textContent = `${fps.toFixed(0)} fps`;
+							if (perfFrameEl) perfFrameEl.textContent = `${avg.toFixed(1)}ms avg · ${p95.toFixed(0)}ms p95 · ${max.toFixed(0)}ms max`;
+							if (perfDroppedEl) perfDroppedEl.textContent = `${dropped} drop`;
+							if (perfLongTasksEl) perfLongTasksEl.textContent = `${longTasks} LT`;
+						},
+						dispose() {
+							try {
+								obs?.disconnect?.();
+							} catch {
+								// ignore
+							}
+						},
+					};
+				})()
+			: null;
 
 	let prefersReducedMotion = getPrefersReducedMotion();
 	const unsubscribeReducedMotion = onPrefersReducedMotionChange((next) => {
@@ -318,6 +398,7 @@ export function initStarfield({ container }) {
 		const frameTime = elapsedTime * 1000;
 		const deltaTime = frameTime - lastFrameTime;
 		lastFrameTime = frameTime;
+		perfHud?.onFrame(deltaTime);
 		updateAdaptiveQuality(deltaTime);
 		renderFrame(elapsedTime, deltaTime);
 	}
@@ -359,6 +440,7 @@ export function initStarfield({ container }) {
 		dispose() {
 			stop();
 			unsubscribeReducedMotion();
+			perfHud?.dispose?.();
 
 			window.removeEventListener("resize", handleResize);
 			window.removeEventListener("keydown", onKeyDown);
