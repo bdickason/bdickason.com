@@ -9,6 +9,11 @@ body {
 	height: 100%;
 }
 
+/* Ensure HTML `hidden` always wins over component display rules. */
+[hidden] {
+	display: none !important;
+}
+
 body {
 	overflow: hidden;
 	background: #000;
@@ -20,6 +25,33 @@ body {
 	position: fixed;
 	inset: 0;
 	z-index: 1;
+}
+
+.fallback {
+	position: fixed;
+	inset: 0;
+	z-index: 4;
+	display: grid;
+	place-content: center;
+	padding: 24px;
+	background: radial-gradient(circle at 30% 20%, rgba(122, 44, 255, 0.16), rgba(0, 0, 0, 0.92) 55%, rgba(0, 0, 0, 0.98));
+	color: rgba(255, 255, 255, 0.9);
+	text-align: left;
+}
+
+.fallback__title {
+	font-size: 14px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	opacity: 0.92;
+	margin-bottom: 10px;
+}
+
+.fallback__body {
+	max-width: 56ch;
+	line-height: 1.45;
+	font-size: 14px;
+	opacity: 0.78;
 }
 
 .debug {

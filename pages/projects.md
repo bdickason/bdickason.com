@@ -18,12 +18,7 @@ projects:
     thumbnail: /static/projects/screensavers.png
     alt: Screen Savers
     description: I want to bring back the magic of seeing your computer produce fun graphics ala After Dark.
-  - title: bdickason.com
-    url: https://github.com/bdickason/bdickason.com
-    thumbnail: /static/projects/bdickason.com.png
-    alt: bdickason.com
-    description: My website is my quiet, quirky corner of the internet. It's open source and posts are creative commons.
-      
+  
 ---
 
 # Projects

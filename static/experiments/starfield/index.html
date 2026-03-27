@@ -8,6 +8,13 @@
 	</head>
 	<body>
 		<div id="canvas-container" aria-hidden="true"></div>
+		<div id="fallback" class="fallback" role="status" hidden>
+			<div class="fallback__title">Starfield couldn’t start</div>
+			<p class="fallback__body">
+				This experiment needs WebGL and modern JavaScript module support. Try a different browser/device, or check
+				your network connection.
+			</p>
+		</div>
 		<div class="hud" aria-hidden="true">
 			<div class="hud__title">Starfield</div>
 		</div>
@@ -53,6 +60,12 @@
 			}
 		</script>
 		<script type="module" src="./main.js"></script>
+		<noscript>
+			<div class="fallback">
+				<div class="fallback__title">JavaScript is required</div>
+				<p class="fallback__body">This experiment needs JavaScript enabled to run.</p>
+			</div>
+		</noscript>
 	</body>
 </html>
 
