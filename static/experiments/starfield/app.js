@@ -27,7 +27,11 @@ export function initStarfield({ container }) {
 	// Renderer setup
 	let renderer;
 	try {
-		renderer = new THREE.WebGLRenderer({ antialias: false, alpha: false });
+		renderer = new THREE.WebGLRenderer({
+			antialias: false,
+			alpha: false,
+			powerPreference: "high-performance",
+		});
 	} catch (err) {
 		console.error("Starfield WebGL init failed:", err);
 		showFallback();

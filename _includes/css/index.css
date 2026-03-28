@@ -28,6 +28,8 @@ html.has-starfield-bg body {
 	display: block;
 	width: 100%;
 	height: 100%;
+	/* Own compositor layer: less coupling with foreground paint (neon, etc.) */
+	transform: translateZ(0);
 }
 
 /* Starfield debug panel (ported from experiment CSS; page-scoped) */
@@ -490,144 +492,81 @@ h5 code {
 
 /*
  * Tube lettering (ref: bright gas core, thick colored glass, soft halo) — pink variant.
- * White fill + wide shadow stack reads as a fat tube; stroke widens the glyph slightly.
+ * Flicker groups share steady text-shadow; dimming is opacity-only (compositor-friendly).
+ * Each single flick uses the same % width (down + up); bursts chain 2–4 flicks with a short
+ * bright gap. g1=3, g2=2, g3=4 per cycle, staggered so the line rarely syncs. Cycle lengths
+ * (--neon-flicker-g*-duration) set overall how often bursts repeat. Narrower % per flick =
+ * snappier blinks without changing those durations.
  */
 @keyframes neon-flicker-g1 {
+	/* Burst of 3; ~30% faster than 1.2%/flick → ~0.92%/flick (0.46% down + up), ~0.35% gap */
 	0%,
+	6.5%,
+	7%,
+	7.92%,
+	8.27%,
+	9.19%,
+	9.54%,
+	10.46%,
 	100% {
-		text-shadow:
-			0 0 1px #ffffff,
-			0 0 2px #ffffff,
-			0 0 3px #fff8fc,
-			0 0 5px #ffe0f0,
-			0 0 8px #ffb0dc,
-			0 0 12px #ff7ec8,
-			0 0 17px rgba(255, 55, 165, 0.98),
-			0 0 24px rgba(255, 42, 150, 0.94),
-			0 0 32px rgba(235, 28, 130, 0.85),
-			0 0 42px rgba(200, 22, 108, 0.68),
-			0 0 54px rgba(165, 18, 88, 0.48),
-			0 0 70px rgba(125, 12, 68, 0.28);
+		opacity: 1;
 	}
-	49%,
-	51% {
-		text-shadow:
-			0 0 1px #ffffff,
-			0 0 2px #ffffff,
-			0 0 3px #fff8fc,
-			0 0 5px #ffe0f0,
-			0 0 8px #ffb0dc,
-			0 0 12px #ff7ec8,
-			0 0 17px rgba(255, 55, 165, 0.98),
-			0 0 24px rgba(255, 42, 150, 0.94),
-			0 0 32px rgba(235, 28, 130, 0.85),
-			0 0 42px rgba(200, 22, 108, 0.68),
-			0 0 54px rgba(165, 18, 88, 0.48),
-			0 0 70px rgba(125, 12, 68, 0.28);
+	7.46% {
+		opacity: 0.52;
 	}
-	50% {
-		text-shadow:
-			0 0 1px rgba(255, 255, 255, 0.88),
-			0 0 2px rgba(255, 252, 254, 0.75),
-			0 0 3px rgba(255, 235, 248, 0.55),
-			0 0 5px rgba(255, 190, 225, 0.42),
-			0 0 8px rgba(255, 140, 200, 0.36),
-			0 0 12px rgba(255, 95, 175, 0.32),
-			0 0 17px rgba(255, 50, 155, 0.34),
-			0 0 24px rgba(220, 35, 125, 0.26),
-			0 0 32px rgba(185, 25, 100, 0.18);
+	8.73% {
+		opacity: 0.55;
+	}
+	10% {
+		opacity: 0.5;
 	}
 }
 
 @keyframes neon-flicker-g2 {
+	/* Burst of 2; same flick width / gap as g1/g3 */
 	0%,
+	43%,
+	44%,
+	44.92%,
+	45.27%,
+	46.19%,
 	100% {
-		text-shadow:
-			0 0 1px #ffffff,
-			0 0 2px #ffffff,
-			0 0 3px #fff8fc,
-			0 0 5px #ffe0f0,
-			0 0 8px #ffb0dc,
-			0 0 12px #ff7ec8,
-			0 0 17px rgba(255, 55, 165, 0.98),
-			0 0 24px rgba(255, 42, 150, 0.94),
-			0 0 32px rgba(235, 28, 130, 0.85),
-			0 0 42px rgba(200, 22, 108, 0.68),
-			0 0 54px rgba(165, 18, 88, 0.48),
-			0 0 70px rgba(125, 12, 68, 0.28);
+		opacity: 1;
 	}
-	71%,
-	73% {
-		text-shadow:
-			0 0 1px #ffffff,
-			0 0 2px #ffffff,
-			0 0 3px #fff8fc,
-			0 0 5px #ffe0f0,
-			0 0 8px #ffb0dc,
-			0 0 12px #ff7ec8,
-			0 0 17px rgba(255, 55, 165, 0.98),
-			0 0 24px rgba(255, 42, 150, 0.94),
-			0 0 32px rgba(235, 28, 130, 0.85),
-			0 0 42px rgba(200, 22, 108, 0.68),
-			0 0 54px rgba(165, 18, 88, 0.48),
-			0 0 70px rgba(125, 12, 68, 0.28);
+	44.46% {
+		opacity: 0.53;
 	}
-	72% {
-		text-shadow:
-			0 0 1px rgba(255, 255, 255, 0.65),
-			0 0 2px rgba(255, 250, 252, 0.5),
-			0 0 3px rgba(255, 220, 242, 0.38),
-			0 0 5px rgba(255, 165, 215, 0.28),
-			0 0 8px rgba(255, 110, 185, 0.24),
-			0 0 12px rgba(255, 70, 160, 0.2),
-			0 0 17px rgba(255, 45, 145, 0.2),
-			0 0 24px rgba(200, 30, 115, 0.14);
+	45.73% {
+		opacity: 0.5;
 	}
 }
 
 @keyframes neon-flicker-g3 {
+	/* Burst of 4 */
 	0%,
+	72%,
+	73%,
+	73.92%,
+	74.27%,
+	75.19%,
+	75.54%,
+	76.46%,
+	76.81%,
+	77.73%,
 	100% {
-		text-shadow:
-			0 0 1px #ffffff,
-			0 0 2px #ffffff,
-			0 0 3px #fff8fc,
-			0 0 5px #ffe0f0,
-			0 0 8px #ffb0dc,
-			0 0 12px #ff7ec8,
-			0 0 17px rgba(255, 55, 165, 0.98),
-			0 0 24px rgba(255, 42, 150, 0.94),
-			0 0 32px rgba(235, 28, 130, 0.85),
-			0 0 42px rgba(200, 22, 108, 0.68),
-			0 0 54px rgba(165, 18, 88, 0.48),
-			0 0 70px rgba(125, 12, 68, 0.28);
+		opacity: 1;
 	}
-	27%,
-	29% {
-		text-shadow:
-			0 0 1px #ffffff,
-			0 0 2px #ffffff,
-			0 0 3px #fff8fc,
-			0 0 5px #ffe0f0,
-			0 0 8px #ffb0dc,
-			0 0 12px #ff7ec8,
-			0 0 17px rgba(255, 55, 165, 0.98),
-			0 0 24px rgba(255, 42, 150, 0.94),
-			0 0 32px rgba(235, 28, 130, 0.85),
-			0 0 42px rgba(200, 22, 108, 0.68),
-			0 0 54px rgba(165, 18, 88, 0.48),
-			0 0 70px rgba(125, 12, 68, 0.28);
+	73.46% {
+		opacity: 0.54;
 	}
-	28% {
-		text-shadow:
-			0 0 1px rgba(255, 255, 255, 0.92),
-			0 0 2px rgba(255, 252, 254, 0.78),
-			0 0 3px rgba(255, 228, 244, 0.48),
-			0 0 5px rgba(255, 175, 220, 0.34),
-			0 0 8px rgba(255, 120, 195, 0.28),
-			0 0 12px rgba(255, 80, 170, 0.26),
-			0 0 17px rgba(255, 50, 155, 0.26),
-			0 0 24px rgba(210, 38, 125, 0.18);
+	74.73% {
+		opacity: 0.51;
+	}
+	76% {
+		opacity: 0.56;
+	}
+	77.27% {
+		opacity: 0.5;
 	}
 }
 
@@ -752,9 +691,10 @@ main h2 {
 	--neon-spark-y: 18%;
 	/* Tune durations here; `--neon-ember-duration` is read by neon-headings.js for spark resync */
 	--neon-frame-duration: 12.3s;
-	--neon-flicker-g1-duration: 11.5s;
-	--neon-flicker-g2-duration: 13.1s;
-	--neon-flicker-g3-duration: 10.8s;
+	/* +25% vs prior = ~25% less frequent bursts */
+	--neon-flicker-g1-duration: 14.375s;
+	--neon-flicker-g2-duration: 16.375s;
+	--neon-flicker-g3-duration: 13.5s;
 	--neon-flicker-g1-delay: 0.15s;
 	--neon-flicker-g2-delay: 1.85s;
 	--neon-flicker-g3-delay: 0.85s;
@@ -785,7 +725,13 @@ main h2 .neon-tube {
 }
 
 main h1 .neon-tube--steady,
-main h2 .neon-tube--steady {
+main h1 .neon-tube--g1,
+main h1 .neon-tube--g2,
+main h1 .neon-tube--g3,
+main h2 .neon-tube--steady,
+main h2 .neon-tube--g1,
+main h2 .neon-tube--g2,
+main h2 .neon-tube--g3 {
 	text-shadow:
 		0 0 1px #ffffff,
 		0 0 2px #ffffff,
@@ -801,23 +747,33 @@ main h2 .neon-tube--steady {
 		0 0 70px rgba(125, 12, 68, 0.28);
 }
 
+/* Flicker segments: layer + linear timing = fewer frames at partial opacity vs ease-in-out */
+main h1 .neon-tube--g1,
+main h1 .neon-tube--g2,
+main h1 .neon-tube--g3,
+main h2 .neon-tube--g1,
+main h2 .neon-tube--g2,
+main h2 .neon-tube--g3 {
+	will-change: opacity;
+}
+
 main h1 .neon-tube--g1,
 main h2 .neon-tube--g1 {
-	animation: neon-flicker-g1 var(--neon-flicker-g1-duration) ease-in-out infinite;
+	animation: neon-flicker-g1 var(--neon-flicker-g1-duration) linear infinite;
 	animation-delay: var(--neon-flicker-g1-delay);
 	animation-fill-mode: both;
 }
 
 main h1 .neon-tube--g2,
 main h2 .neon-tube--g2 {
-	animation: neon-flicker-g2 var(--neon-flicker-g2-duration) ease-in-out infinite;
+	animation: neon-flicker-g2 var(--neon-flicker-g2-duration) linear infinite;
 	animation-delay: var(--neon-flicker-g2-delay);
 	animation-fill-mode: both;
 }
 
 main h1 .neon-tube--g3,
 main h2 .neon-tube--g3 {
-	animation: neon-flicker-g3 var(--neon-flicker-g3-duration) ease-in-out infinite;
+	animation: neon-flicker-g3 var(--neon-flicker-g3-duration) linear infinite;
 	animation-delay: var(--neon-flicker-g3-delay);
 	animation-fill-mode: both;
 }
@@ -897,9 +853,9 @@ main h2::after {
 		transform: translateZ(0);
 		/* neon-headings.js reads --neon-ember-duration from computed style */
 		--neon-frame-duration: 8.5s;
-		--neon-flicker-g1-duration: 7.8s;
-		--neon-flicker-g2-duration: 8.9s;
-		--neon-flicker-g3-duration: 7.4s;
+		--neon-flicker-g1-duration: 9.75s;
+		--neon-flicker-g2-duration: 11.125s;
+		--neon-flicker-g3-duration: 9.25s;
 		--neon-flicker-g1-delay: 0.12s;
 		--neon-flicker-g2-delay: 1.2s;
 		--neon-flicker-g3-delay: 0.55s;
@@ -963,6 +919,7 @@ main h2::after {
 	main h2 .neon-tube--g2,
 	main h2 .neon-tube--g3 {
 		animation: none !important;
+		will-change: auto;
 		text-shadow:
 			0 0 1px #ffffff,
 			0 0 3px #fff8fc,
