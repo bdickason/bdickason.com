@@ -1,7 +1,7 @@
 ---
 title: Stop Thinking, Start Feeling
 date: 2026-02-22
-description: "A video on reconnecting with intuition and feeling instead of overthinking."
+description: "Video: why thinking isn’t the only way to decide, how overthinking traps us, and practices to listen to your body and intuition instead."
 layout: layouts/post-video.njk
 videoId: XZ1kpzB1WoY
 summary: |
@@ -52,7 +52,7 @@ Now that I've found more of a balance between thinking and feeling, I think I'm 
 
 Sometimes I can just relax, sometimes I can just feel, sometimes I can just be.
 
-I wish someone would have got a 25 year old Brad and said, 'dude, you don't have to think all the time. You don't have to overanalyze everything. What does your intuition tell you? What do you feel right now? What does your body say?'
+I wish someone would have got a 25 year old brad and said, 'dude, you don't have to think all the time. You don't have to overanalyze everything. What does your intuition tell you? What do you feel right now? What does your body say?'
 
 That one simple question, 'what do you feel right now?' has unlocked a host of realizations: Wow, this situation makes me uncomfortable. I didn't even realize it. Wow, I'm performing right now. Wow, I'm not even, I'm so stressed. I'm so up here. I'm constantly thinking. And it made me better at my job. It may be better for a mental health standpoint.
 

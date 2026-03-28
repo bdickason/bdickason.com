@@ -3,8 +3,7 @@ title: How to manage your manager
 date: 2021-02-19
 description: "A great relationship between a manager and their direct report is based on trust. Create a system of regular updates so you're always aligned with your manager. This will prevent surprises and help set you up for successful performance reviews and promotions."
 thumbnail: /static/posts/manage-your-manager/bobs.jpg
-hero: /static/posts/manage-your-manager/bobs.jpg
-heroAlt: Manage your manager
+thumbnailAlt: Manage your manager
 layout: layouts/post-blog.njk
 ---
 
@@ -13,7 +12,7 @@ Early in my career, I loved going on pitches with my CEO. We would meet with pow
 
 I loved surprising people with new ideas. Especially my CEO.
 
-One day he pulled me aside and said, "Brad, I'd appreciate it if you would share new mockups with me before presenting them to the clients."
+One day he pulled me aside and said, "brad, I'd appreciate it if you would share new mockups with me before presenting them to the clients."
 
 I thought he was being ridiculous. Why not show the best things we have to offer?! Why do I need to share anything?!
 
@@ -25,7 +24,7 @@ On my best days, I'm providing the right information at the right time. I'm shar
 
 On my worst days, I leave them completely in the dark and go into a cave, emerging from hibernation after days or weeks without any updates.
 
-<img src="{{ thumbnail }}" />
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 
 
 ## Building Trust

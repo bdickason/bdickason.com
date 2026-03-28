@@ -3,8 +3,7 @@ title: Stop wasting time on strategy decks
 date: 2020-12-21
 description: I’ve found that a crisp, clear document with a compelling narrative is the most effective way to land a pitch.  Writing in a document forces you to focus on the narrative and not the visual elements.
 thumbnail: /static/posts/stop-wasting-time-on-strategy-decks/no-more-slides.png
-hero: /static/posts/stop-wasting-time-on-strategy-decks/no-more-slides.png
-heroAlt: Strategy decks
+thumbnailAlt: Strategy decks
 layout: layouts/post-blog.njk
 ---
 
@@ -15,7 +14,7 @@ Early in my career, I thought that presentations were the ultimate way to pitch 
 
 Over the years, I’ve found that a crisp, clear document with a compelling narrative is the most effective way to land a pitch.  Writing in a document forces you to focus on the narrative and not the visual elements. Your tools are **Bold**, *Italic*, and •Bulleted list (vs. squares, rectangles, and every color under the rainbow).
 
-<img src="{{ thumbnail }}" class="small bio">
+<img src="{{ thumbnail }}" class="small bio" alt="{{ thumbnailAlt }}" />
 
 #### **My approach to pitches these days:**
 

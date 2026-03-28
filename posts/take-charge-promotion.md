@@ -1,10 +1,9 @@
 ---
 title: Take charge of your promotion
 date: 2021-03-05
-description: Don't sit back and wait for a promotion. High quality feedback at a faster rate will increase the likelihood you get promoted.
+description: "Don’t wait to be promoted. Seek faster, higher-quality feedback, align with your manager on expectations, and drive the career conversations yourself."
 thumbnail: /static/posts/take-charge-promotion/wyld-stallyns.jpg
-hero: /static/posts/take-charge-promotion/wyld-stallyns.jpg
-heroAlt: Take charge
+thumbnailAlt: Take charge
 layout: layouts/post-blog.njk
 ---
 
@@ -13,7 +12,7 @@ layout: layouts/post-blog.njk
 
 **That’s not how it works.**
 
-At my first startup, I had a manager who seemed to have a sixth sense to detect when I wanted to be promoted. I never mentioned it to him. I felt awkward bringing it up and didn’t want to come off as selfish or greedy. I would walk into his office one day and he’d say, *“Brad you’re doing great work. You deserve a raise.”* 
+At my first startup, I had a manager who seemed to have a sixth sense to detect when I wanted to be promoted. I never mentioned it to him. I felt awkward bringing it up and didn’t want to come off as selfish or greedy. I would walk into his office one day and he’d say, *“brad you’re doing great work. You deserve a raise.”* 
 
 From that point on, I assumed that promotions just happened and you would be rewarded on a reasonable timeframe if you do good work. I was baffled at other companies when I would go years without seeing a promotion. My bosses would tell me, *“You’re doing great!”* or *“Wow you are redefining what it means to be a PM here,”* but I wouldn’t get promoted.
 
@@ -35,7 +34,7 @@ If your promotion was a product, you’d want to know exactly what was missing. 
 
 These steps are not rocket science, but they work.
 
-<img src="{{ thumbnail }}" />
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 
 ## How to get high quality feedback
 

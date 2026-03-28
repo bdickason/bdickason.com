@@ -3,8 +3,7 @@ title: How to make time for strategic thinking
 date: 2021-01-28
 description: "I’ve found a formula to enter creative mode. Create time in your schedule, create an environment ripe for creative thinking, and make it frictionless to start."
 thumbnail: /static/posts/make-time-for-strategic-thinking/soul.jpg
-hero: /static/posts/make-time-for-strategic-thinking/soul.jpg
-heroAlt: Soul
+thumbnailAlt: Soul
 layout: layouts/post-blog.njk
 ---
 
@@ -30,7 +29,7 @@ Creative thinking takes time. You can’t just flip your brain into creative mod
 
 Instead, we want to optimize for large, uninterrupted focus blocks. Think of The Matrix. When Keanu is interrupted IRL, everything in his brain falls apart. Your brain works the same way. You have to boot the entire project up in your brain, hold it there, and manipulate it.
 
-<img src="{{ thumbnail }}" />
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 <p class="caption">The movie Soul depicts flow as an alternate plane of existence.</p>
 
 **Select days for creative thinking** - If you aren’t intentional, meetings will crowd your time and create sprawl all over your calendar. Select at least two days where you optimize your schedule for creative thinking. This will allow you to remember (and have a rationale) to defend those days. I like to setup my calendar as follows:
@@ -93,7 +92,7 @@ Throughout the week, jot down notes about your topic. These could be words that 
 
 I take notes using [Things](https://culturedcode.com/things/) on my phone or desktop. You might choose an app or pen and paper. The important part is that you write them down and remember them when the time comes. 
 
-<img src="/static/posts/make-time-for-strategic-thinking/post-outline.png" />
+<img src="/static/posts/make-time-for-strategic-thinking/post-outline.png" alt="Handwritten outline for a strategic document" />
 <p class="caption">Here’s an example of my starting point for this post.</p>
 
 **You don’t have to start at the beginning** - My best strategy work happens when I start in the middle. Creative thinking is unstructured by nature and you want to let your creative faucet flow. Trying to force yourself to follow a structure will only cause you to get stuck on a specific section. *“Start writing wherever you can start.* *Start writing wherever you feel comfortable”* ([Daily Writing Tips](https://www.dailywritingtips.com/break-writers-block-dont-begin-at-the-beginning/)).

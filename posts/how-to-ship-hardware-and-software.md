@@ -3,8 +3,7 @@ title: How to ship hardware and software
 date: 2021-01-21
 description: "Software teams want iteration speed and Hardware teams want predictability. Let each team run at their own cadence but create integration points (e.g. once per month) where they line up. This lets software run fast but forces it to have some predictability."
 thumbnail: /static/posts/how-to-ship-hardware-and-software/rob.jpg
-hero: /static/posts/how-to-ship-hardware-and-software/rob.jpg
-heroAlt: Hardware and software
+thumbnailAlt: Hardware and software
 layout: layouts/post-blog.njk
 ---
 
@@ -66,11 +65,11 @@ I am a strong advocate of the 3rd choice which is to find a compromise. I’ve s
 3. Identify dates where the train overlaps the hardware cadence. These are your integration milestones. For these releases, software must plan rigorously and ensure any hardware-centric releases land during this time. 
 
 
-<img src="/static/posts/how-to-ship-hardware-and-software/hardware-software-release-cycle.png">
+<img src="/static/posts/how-to-ship-hardware-and-software/hardware-software-release-cycle.png" alt="Diagram of hardware and software release cycles aligned on a monthly cadence" />
 
 This model decouples MOST software and hardware releases. 80-90% of the time, the software teams have freedom to move fast and break things (or whatever your preferred slogan is). Hardware teams can plan rigorously and have a predictable schedule. The joint releases act as a contract where the software teams flex a bit to meet the requirements of the hardware teams. Because it only happens every once in a while, the planning overhead for software isn’t too heavy and teams typically don’t mind dealing with it.
 
-<img src="{{ thumbnail }}" />
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 <p class="caption">Nintendo had to deal with hardware/software releases back in the day with ROB.</p>
 
 I’ve had alot of success running this model. Here are a few traps I see teams fall into when trying to implement it:

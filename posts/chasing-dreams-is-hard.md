@@ -1,7 +1,7 @@
 ---
 title: Chasing your dream is hard
 date: 2026-03-14
-description: "I knew moving across the world would be hard but I wasn't prepared for the unexpected challenges."
+description: "Moving our family to Bali for a slower life sounded dreamy; the lows were harder than expected. A honest take on big life changes and social media hype."
 layout: layouts/post-video.njk
 videoId: CyqZgjd5ZWE
 summary: |

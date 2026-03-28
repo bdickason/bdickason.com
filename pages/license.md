@@ -1,7 +1,7 @@
 ---
 title: License
 layout: layouts/page.njk
-description: "How bdickason.com content and code are licensed."
+description: "How original writing, media, and site code on bdickason.com are licensed (CC BY-NC-SA for content; GPL for code) and what you can do with them."
 permalink: /license/
 ---
 

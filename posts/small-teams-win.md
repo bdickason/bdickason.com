@@ -3,8 +3,7 @@ title: Small teams win
 date: 2021-04-02
 description: "Big teams are like slow ships: they are incredibly slow to turn. Small teams are like speedboats: They can turn on a dime. Keep your team as small as possible."
 thumbnail: /static/posts/small-teams-win/the-a-team.jpg
-hero: /static/posts/small-teams-win/the-a-team.jpg
-heroAlt: Small teams
+thumbnailAlt: Small teams
 layout: layouts/post-blog.njk
 ---
 
@@ -39,7 +38,7 @@ If these examples seem like ancient history, how about Clubhouse which [reached 
 
 There are more people to align, more people to convince, and more people to keep track of.
 
-<img src="{{ thumbnail }}" />
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 
 There's something magical about a small group of people working together every day. They start to develop a mind-meld and a level of trust that lets them quickly make calls and try things out. They learn together and grow together.
 

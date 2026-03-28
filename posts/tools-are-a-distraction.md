@@ -1,10 +1,9 @@
 ---
 title: Tools are a distraction
 date: 2021-04-16
-description: "People spend hours trying to learn new tools instead of doing the actual job at hand. It's easier to look for a new tool than do the work."
+description: "New tools feel productive, but they often delay the real work. Before you adopt another app or framework, ask whether you’re avoiding the hard part of the job."
 thumbnail: /static/posts/tools-are-a-distraction/airjordan.jpg
-hero: /static/posts/tools-are-a-distraction/airjordan.jpg
-heroAlt: Air Jordan
+thumbnailAlt: Air Jordan
 layout: layouts/post-blog.njk
 ---
 
@@ -19,7 +18,7 @@ I spent years trying to find the perfect surfboard, only to settle on the second
 
 You think that a new guitar will help you play like Eddie Van Halen or a new pair of shoes will make you jump as high as Michael Jordan. This is just clever marketing.
 
-<img src="{{ thumbnail }}" />
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 
 Reebok sold [the Pump](https://www.espn.com/nba/story/_/id/28149048/inside-rise-fall-iconic-reebok-pump-30th-birthday), Nike the [Air Jordan](https://www.youtube.com/watch?v=NrTHJeqZA2o#t=6s). Each of them came with a flashy marketing campaign and commercials featuring the best athletes in the world soaring towards the basket. When you first bring them home, you feel a rush. But that feeling quickly dissipates.
 

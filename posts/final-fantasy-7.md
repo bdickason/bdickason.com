@@ -15,7 +15,7 @@ The year was 1997. It was a Friday night. My parents were hosting our school's f
 
 Instead, my friends and I snuck inside and were huddled by the TV. On the way home, one of them had rented a Playstation (which was still a relatively unproven console at the time) and the latest Final Fantasy. Yes, you could rent entire game consoles for 2 days and they came in a giant plastic clam shell case.
 
-<img src="/static/posts/final-fantasy-7/hackers-around-laptop.webp" />
+<img src="/static/posts/final-fantasy-7/hackers-around-laptop.webp" alt="Friends playing Final Fantasy 7 on a CRT television" />
 
 We had played all of the North American console releases (Final Fantasy on NES, FF2 and FF3 on SNES) but hadn't read much about the new one. The previous titles had beautiful pixel art and stories and a ton of charm but were not widely known.  I'm sure it was covered in gaming magazines, but I don't remember hearing a huge fuss.
 
@@ -36,7 +36,7 @@ It was one of those games that just made your jaw drop over and over again.
 
 Final Fantasy has always pushed the boundaries on art. Its box art (typically hand painted by [Yoshitaka Amano](https://www.google.com/search?q=final+fantasy+amano+art&udm=2)) was top notch and stood out on shelves:
  
-<img src="/static/posts/final-fantasy-7/ff3-amano.webp" />
+<img src="/static/posts/final-fantasy-7/ff3-amano.webp" alt="Yoshitaka Amano style Final Fantasy cover art" />
 
 <p class="caption">This hand drawn style always drew my eye to Final Fantasy boxes.</p>
 
@@ -46,7 +46,7 @@ In earlier games, the town backgrounds and character designs were iconic. But th
 
 Final Fantasy 7 managed to nail an art style that felt modern, edgy, and much more mature. It was more cyberpunk than steampunk. It used hues of neon mixed with dark grungy colors. It was very on trend with late 90's movies like [Blade](https://www.youtube.com/watch?v=kaU2A7KyOu4) or [The Matrix](https://www.youtube.com/watch?v=vKQi3bBA1y8). 
 
-<img src="/static/posts/final-fantasy-7/ff7-sector7.webp">
+<img src="/static/posts/final-fantasy-7/ff7-sector7.webp" alt="Sector 7 slums in Midgar" />
 
 Final Fantasy 7 made it clear that video games were no longer just for kids, they firmly hit the 'angsty teenager' market (of which I was one without resorting to [pop punk soundtracks](https://open.spotify.com/playlist/7zBrUJ3XQLgdzKKkqw5Zws) or [kitschy characters](https://www.youtube.com/watch?v=nw7F4kNVcic).
 
@@ -58,13 +58,13 @@ The main characters in FF7 had some campy quirks (Cait Sith is a cat riding a gi
 
 Even the art style, which was blocky and chunky to play to the PSX's rendering tech, looked quirky and cool (see: Cloud's crazy spiky hairstyle), not cartoony and chibi like previous titles.
 
-<img src="/static/posts/final-fantasy-7/ff7-crt-photo.png" />
+<img src="/static/posts/final-fantasy-7/ff7-crt-photo.jpg" alt="Final Fantasy 7 blocky character models on detailed 3D backgrounds" />
 
 <p class="caption">The blocky characters popped against high-resolution 3d backgrounds</p>
 
 Individual characters held grudges. Characters would have side story arcs in their hometowns, or when visiting places they had mentioned in dialogue. And the typical Final Fantasy tropes (e.g. Edgar the playboy prince, Sabin the martial artist training to be the best) were ditched in favor of some more nuanced and complex motivations.
 
-<img src="/static/posts/final-fantasy-7/ff7-3d-printed-characters.webp" />
+<img src="/static/posts/final-fantasy-7/ff7-3d-printed-characters.webp" alt="3D-printed miniature Final Fantasy 7 characters" />
 
 <p class="caption">The art style was low poly but gave each character a distinct silhouette and alot of personality.</p>
 
@@ -103,7 +103,7 @@ But the plot was still pretty straightforward: bad guys try to take over the wor
 
 The plot of FF7 reads more like an Anime or a movie. Multiple twists, unreliable narration, and villains that manipulate the protagonists without our knowledge. 
 
-<img src="/static/posts/final-fantasy-7/ff7-cloud-subconscious.webp" />
+<img src="/static/posts/final-fantasy-7/ff7-cloud-subconscious.webp" alt="Cloud Strife in the subconscious mindscape" />
 
 In the book [500 Years Later: An Oral History of FF7](https://darrenwall.co/500-years-later), one of the Squaresoft FF7 team members mentions that a senior team member regularly met with a Manga critic to revise the plot and make it more compelling.
 
@@ -117,4 +117,4 @@ Final Fantasy 7, at the time, captivated me in a way no story-driven game had. I
 
 The bar for what was possible in a game had been raised.
 
-<img src="/static/posts/final-fantasy-7/ff7-cloud-tifa-young.gif" />
+<img src="/static/posts/final-fantasy-7/ff7-cloud-tifa-young.gif" alt="Young Cloud and Tifa in the Nibelheim flashback" />

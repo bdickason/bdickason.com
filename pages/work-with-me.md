@@ -1,7 +1,7 @@
 ---
 title: Work With Me
 layout: layouts/page.njk
-description: "1:1 coaching for tech people who want to stress less and enjoy their jobs more."
+description: "One-on-one coaching for people in tech who want less stress, clearer priorities, and more enjoyment at work — sessions tailored to your goals."
 permalink: /work-with-me/
 ---
 

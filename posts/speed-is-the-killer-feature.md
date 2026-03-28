@@ -3,8 +3,7 @@ title: Speed is the killer feature
 date: 2021-02-25
 description: Teams consistently overlook speed. Instead, they add more features (which ironically make things slower). Products bloat over time and performance goes downhill.
 thumbnail: /static/posts/speed-is-the-killer-feature/speed-keanu-sandra.png
-hero: /static/posts/speed-is-the-killer-feature/speed-keanu-sandra.png
-heroAlt: Speed
+thumbnailAlt: Speed
 layout: layouts/post-blog.njk
 ---
 
@@ -15,7 +14,7 @@ At that same time, The Motorola Razr ([video](https://www.youtube.com/watch?v=4_
 
 Phones in 2007 had the same features as the iPhone. The Palm Treo ([video](https://www.youtube.com/watch?v=nK7FvGz4Jkc)) even had a touch screen.
 
-<img src="/static/posts/speed-is-the-killer-feature/smartphones-2007.png">
+<img src="/static/posts/speed-is-the-killer-feature/smartphones-2007.png" alt="2007 smartphones and early mobile phones" />
 
 The difference was *speed*.
 
@@ -48,7 +47,7 @@ Every one of these is an opportunity. The great thing about speed (also called â
 Imagine what your product would feel like if everything happened in real time. 
 
 
-<img src="{{ thumbnail }}" /><p class="caption">Be like Keanu and fix every slowdown in your product. Your users will thank you.</p>
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" /><p class="caption">Be like Keanu and fix every slowdown in your product. Your users will thank you.</p>
 
 
 ## Places where speed matters
@@ -58,7 +57,7 @@ Imagine what your product would feel like if everything happened in real time.
 * Design Tools - Users are consistently frustrated when Sketch or Figma are slow. [Designers have high APM](https://quizlet.com/blog/everything-i-know-about-design) (actions per minute) and a small slowdown can occur 5-10 times per minute.
 * The core interaction of your product - Your product exists to save people time or help them solve a problem. Introducing friction or delay during the most important flow of your product will drive people crazy. Notion has developed a reputation for being a sluggish product:
 
-<img src="/static/posts/speed-is-the-killer-feature/reddit-notion.png">
+<img src="/static/posts/speed-is-the-killer-feature/reddit-notion.png" alt="Reddit comment thread about Notion performance" />
 
 ## Perception vs. Reality
 

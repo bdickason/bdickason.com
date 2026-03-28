@@ -19,10 +19,11 @@ Eleventy 3 + Nunjucks. Source of truth is Markdown under `posts/` and `pages/`, 
 | URL redirects | `vercel.json` |
 | Global site data | `_data/site.js` (`hostname`, copyright year, `licenseUrl` for `/license/`) |
 | Static assets (referenced as `/static/...`) | `static/` → copied to `_site/static/` |
+| Starfield site background | `_includes/layouts/base.njk`, `static/js/starfield-bg.js`; implementation `static/experiments/starfield/`; scoped CSS `html.has-starfield-bg` in `_includes/css/index.css` |
 
 ## Cursor rules
 
-Persistent guidance is in **`.cursor/rules/`** (e.g. YouTube handle, posts/layouts, neon headings, CRT scanline photon, scratch under `.cursor/scratch/`). Feature tuning is also summarized in **`README.md`**.
+Persistent guidance is in **`.cursor/rules/`** (e.g. YouTube handle, posts/layouts, neon headings, CRT scanline photon, starfield, scratch under `.cursor/scratch/`). Feature tuning is also summarized in **`README.md`**.
 
 ## Do not commit
 

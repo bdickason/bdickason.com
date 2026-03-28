@@ -3,6 +3,11 @@ layout: layouts/base.njk
 tags: post
 ---
 <article class="elv-layout post post-blog">
+	{% if hero %}
+	<div class="post-hero-wrap">
+		<img class="post-hero" src="{{ hero }}" alt="{{ heroAlt or title }}" loading="eager" decoding="async" />
+	</div>
+	{% endif %}
 	<h1>{{ title }}</h1>
 	{% if subtitle %}
 		<p class="post-subtitle">{{ subtitle }}</p>

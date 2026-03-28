@@ -3,8 +3,7 @@ title: Do one thing well
 date: 2021-03-12
 description: Teams add so many features that the product fails at the job we hired it for. People don't want more features. They want the product to get the job done and get out of their way.
 thumbnail: /static/posts/do-one-thing-well/swiss-army-knife.jpg
-hero: /static/posts/do-one-thing-well/swiss-army-knife.jpg
-heroAlt: Swiss army knife
+thumbnailAlt: Swiss army knife
 layout: layouts/post-blog.njk
 ---
 
@@ -12,7 +11,7 @@ Do you remember your first time using Dropbox? Files instantly sync across your 
 
 Before Dropbox, it was common to carry a usb drive or other storage device (remember [ZipDrives](https://en.wikipedia.org/wiki/Zip_drive)?) to sync files from one computer to another. Maybe you ditched the usb drive in favor of emailing yourself files or syncing to an ftp. There were some rudimentary cloud services but they all required multiple steps. Everything felt like a hack.
 
-<img src="/static/posts/do-one-thing-well/dont-copy-that-floppy.jpg">
+<img src="/static/posts/do-one-thing-well/dont-copy-that-floppy.jpg" alt="Don't Copy That Floppy anti-piracy campaign" />
 
 Dropbox changed all of that. All you had to do was drag a file into a folder and it was instantly available across all of your devices. No websites, no thumb drives. It just worked.
 
@@ -30,7 +29,7 @@ It doesn't try to help you edit your videos or images. It doesn't try to convinc
 
 We live in a world of complicated products. News websites pop up ads and autoplay videos, Google has [at least four messaging apps](https://www.androidauthority.com/google-messaging-apps-867843/), and [our refrigerators can play Doom](https://www.polygon.com/2020/10/13/21514933/doom-eternal-refrigerator-door-samsung-smart-refrigerator-xbox-game-pass-richard-mallard).
 
-<img src="{{ thumbnail }}" />
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 
 Complicated products have cluttered menus, lengthy FAQ's, and slow due to feature bloat. **Teams add so many features that the product fails at the job we hired it for**
 

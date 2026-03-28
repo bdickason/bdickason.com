@@ -3,8 +3,7 @@ title: Make it cheap to fail
 date: 2021-04-30
 description: "Humans learn by failing. But failure can be expensive. The best products let you fail fast without long wait times or increased costs. They make it cheap to fail."
 thumbnail: /static/posts/make-it-cheap-to-fail/groundhog-day.jpg
-hero: /static/posts/make-it-cheap-to-fail/groundhog-day.jpg
-heroAlt: Make it cheap to fail
+thumbnailAlt: Make it cheap to fail
 layout: layouts/post-blog.njk
 ---
 
@@ -25,7 +24,7 @@ Unfortunately, these products are the exception, not the norm. It's often incred
 
 Have you ever triggered a software update on your laptop (or had an IT administrator trigger it automatically)? The dialog looks innocent: "Click 'Update' to restart your computer" but fails to let you know that the installation can take between 30 minutes and two hours. There is no cancel, there is no undo. You're stuck.
 
-<img src="{{ thumbnail }}" />
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 <p class="caption">Bill Murray learned via failing repeatedly in Groundhog day.</p>
 
 Video sharing apps are just as bad. My wife loves recording videos with Instagram but sometimes the video upload fails. Her video ends up in a stuck state where she can't download it and can't re-upload it. The moment is lost and the memory only lives in her head.
@@ -72,7 +71,7 @@ A new network (BSC) keeps costs low so each transaction costs a fraction of cent
 
 As a result, [BSC has overtaken ETH in daily transactions](https://www.coindesk.com/pancakeswap-binance-smart-chain-flippening-ethereum-transactions) by an order of magnitude:
 
-<img src="/static/posts/make-it-cheap-to-fail/eth-vs-bsc.png" />
+<img src="/static/posts/make-it-cheap-to-fail/eth-vs-bsc.png" alt="Ethereum vs BSC network fee comparison" />
 
 Minimize the amount of pain in your product. Assume that people want to fail repeatedly. Bake in ways to fail fast, but make it painless. Make it part of your core user experience. Your users will iterate faster and produce much better outcomes.
 

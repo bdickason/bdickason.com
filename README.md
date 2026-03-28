@@ -17,7 +17,7 @@ Feel free to quote, share, and remix with attribution. Please don't republish fu
 - **`static/`** — Static assets; copied to `_site/static`. Post images often under `static/posts/<slug>/`. Reference in content as `/static/...`.
 - **`_data/site.js`** — Global data (e.g. `hostname`) for templates.
 - **`AGENTS.md`** — Short onboarding for AI agents (commands, paths, rules).
-- **`.cursor/rules/`** — Cursor rules (temp files, build-before-finish, YouTube handle, posts/layouts, neon headings, scanline photon).
+- **`.cursor/rules/`** — Cursor rules (temp files, build-before-finish, YouTube handle, posts/layouts, neon headings, scanline photon, starfield).
 
 ### Neon headings (`main h1` / `main h2`)
 
@@ -30,6 +30,16 @@ Pink neon frame, tube text, and sparks are implemented in **`_includes/css/index
 A single glowing pixel sweeps across a random horizontal band on a timer. Implemented in **`_includes/css/index.css`** (`#crt-scanline-photons`, `crt-photon-*` keyframes), **`_includes/js/scanline-photons.js`**, and the **`#crt-scanline-photons`** div in **`_includes/layouts/base.njk`**.
 
 **Tuning:** `--crt-photon-duration` and `.crt-photon` colors/shadows in CSS; `MIN_GAP_MS` / `MAX_GAP_MS` in JS. If you change the **`body::before`** scanline stripe height, update **`GRID_PX`** in the script to match the repeat period (see **`.cursor/rules/scanline-photons.mdc`**).
+
+### Starfield site background
+
+Full-screen Three.js starfield behind the main layout. **Scene logic** (stars, nebula, motion, perf guardrails) lives in **`static/experiments/starfield/`** and is shared with the standalone experiment at `/static/experiments/starfield/`. **Site-only bootstrap** is **`static/js/starfield-bg.js`** (idle-load, `prefers-reduced-motion`, save-data / slow-network gating).
+
+**Global wiring:** **`_includes/layouts/base.njk`** — `#starfield-bg` container, debug panel markup (same element IDs as the experiment page), inline script that injects the import map and loads `starfield-bg.js` only when the early gate passes. **Styles** for the background and debug UI are scoped under `html.has-starfield-bg` in **`_includes/css/index.css`**.
+
+**Debugging:** Backtick (<kbd>`</kbd>) toggles the debug panel. When initialization succeeds, **`data-starfield-ready="1"`** is set on `<html>`.
+
+**Detail:** Controls, Three.js version notes, accessibility, performance, and manual QA are documented in **`static/experiments/starfield/README.md`**. Keep the **Three.js CDN version** in sync between `base.njk` and **`static/experiments/starfield/index.html`** (see **`.cursor/rules/starfield.mdc`**).
 
 ## Scripts
 

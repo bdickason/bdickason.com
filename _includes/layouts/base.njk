@@ -4,13 +4,12 @@
 	{% set pageClass = pageClass + ' ' + templateClass %}
 {% endif %}
 {% set hasStarfieldBg = true %}
-<!doctype html>
 <html lang="en" class="{{ pageClass }}">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>{% if title and title != 'Home' %}{{ title }} | {% endif %}Brad Dickason - Exploring Creativity and Feeling.</title>
+		<title>{% if title and title != 'Home' %}{{ title }} | {{ site.siteName }}{% else %}{{ site.siteName }} — creativity, intuition & life{% endif %}</title>
 
 		{% include 'components/head/seo.njk' %}
 

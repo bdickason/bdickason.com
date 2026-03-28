@@ -1,5 +1,26 @@
+{# Absolute social preview image: thumbnail, else YouTube poster for video posts, else site default #}
+{% set ytThumb = false %}
+{% if videoId %}
+	{% set ytThumb = 'https://i.ytimg.com/vi/' + videoId + '/maxresdefault.jpg' %}
+{% endif %}
+{% if thumbnail %}
+	{% set ogImage = 'https://' + site.hostname + thumbnail %}
+{% elif ytThumb %}
+	{% set ogImage = ytThumb %}
+{% else %}
+	{% set ogImage = 'https://' + site.hostname + site.defaultOgImage %}
+{% endif %}
+{% set ogImageAlt = thumbnailAlt or heroAlt or description or title or site.siteName %}
+{% set isPost = tags and ('post' in tags) %}
+{% set ogType = 'article' if isPost else 'website' %}
+{% set pageTitle = title %}
+{% if title and title != 'Home' %}
+	{% set pageTitle = title + ' | ' + site.siteName %}
+{% else %}
+	{% set pageTitle = site.siteName + ' — creativity, intuition & life' %}
+{% endif %}
 <!-- SEO -->
-<meta name="description" content="{% if description %}{{ description }}{% else %}Become a great Product Manager.{% endif %}" />
+<meta name="description" content="{% if description %}{{ description }}{% else %}Essays and videos on creativity, intuition, and product — from brad dickason.{% endif %}" />
 <meta name="page" content="{{ page.url }}" />
 <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
 <meta name="theme-color" content="#1a1a1a" />
@@ -7,17 +28,56 @@
 {% if noindex %}<meta name="robots" content="noindex, follow" />{% endif %}   {# For internal-only pages #}
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@bdickason" />
-<meta name="twitter:title" content="{% if title and title != 'Home' %}{{ title }} | {% endif %}Brad Dickason - Exploring Creativity and Feeling." />
-<meta name="twitter:description" content="{% if description %}{{ description }}{% else %}Become a great Product Manager.{% endif %}" />
-{% if thumbnail %}<meta name="twitter:image" content="https://{{ site.hostname }}{{ thumbnail }}" />{% endif %}
+<meta name="twitter:title" content="{{ pageTitle }}" />
+<meta name="twitter:description" content="{% if description %}{{ description }}{% else %}Essays and videos on creativity, intuition, and product — from brad dickason.{% endif %}" />
+<meta name="twitter:image" content="{{ ogImage }}" />
 
 <!-- Open Graph (FB, LinkedIn) -->
-<meta property="og:title" content="{% if title and title != 'Home' %}{{ title }} | {% endif %}Brad Dickason - Exploring Creativity and Feeling." />
-<meta property="og:description" content="{% if description %}{{ description }}{% else %}Become a great Product Manager.{% endif %}" />
+<meta property="og:site_name" content="{{ site.siteName }}" />
+<meta property="og:title" content="{{ pageTitle }}" />
+<meta property="og:description" content="{% if description %}{{ description }}{% else %}Essays and videos on creativity, intuition, and product — from brad dickason.{% endif %}" />
 <meta property="og:url" content="https://{{ site.hostname }}{{ page.url }}" />
-<meta property="og:type" content="article" />
+<meta property="og:type" content="{{ ogType }}" />
 <meta property="og:locale" content="en_US" />
-{% if thumbnail %}<meta property='og:image' content="https://{{ site.hostname }}{{ thumbnail }}" />{% endif %}
+<meta property="og:image" content="{{ ogImage }}" />
+<meta property="og:image:alt" content="{{ ogImageAlt }}" />
 
+{% if isPost and page.date %}
+<meta property="article:published_time" content="{{ page.date | isoDate }}" />
+{% endif %}
+
+{% if isPost %}
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	"headline": {{ title | jsonld | safe }},
+	"description": {{ (description or '') | jsonld | safe }},
+	"url": {{ ('https://' + site.hostname + page.url) | jsonld | safe }},
+	"image": {{ ogImage | jsonld | safe }},
+	"datePublished": {{ (page.date | isoDate) | jsonld | safe }},
+	"author": {
+		"@type": "Person",
+		"name": {{ site.siteName | jsonld | safe }},
+		"url": {{ ('https://' + site.hostname + '/') | jsonld | safe }}
+	},
+	"publisher": {
+		"@type": "Organization",
+		"name": {{ site.siteName | jsonld | safe }},
+		"url": {{ ('https://' + site.hostname + '/') | jsonld | safe }}
+	}
+}
+</script>
+{% elif title == 'Home' or page.url == '/' %}
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": {{ site.siteName | jsonld | safe }},
+	"url": {{ ('https://' + site.hostname + '/') | jsonld | safe }},
+	"description": {{ (description or '') | jsonld | safe }}
+}
+</script>
+{% endif %}

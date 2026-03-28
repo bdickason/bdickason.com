@@ -4,8 +4,6 @@ date: 2021-01-28
 description: "Reference patterns for layouts/post-blog.njk — pull quotes, images, captions, and full-bleed figures."
 layout: layouts/post-blog.njk
 draft: true
-hero: /static/posts/make-time-for-strategic-thinking/soul.jpg
-heroAlt: Still from the movie Soul
 subtitle: You can't hold a gun to someone's head and say "Be Creative."
 tags: post
 ---
@@ -14,7 +12,7 @@ Use this post as a live preview while you edit. Jump back to the [template index
 
 ## Frontmatter (YAML)
 
-Minimum required fields are `title`, `date`, and `layout: layouts/post-blog.njk`. Optional fields used here include `description`, `draft`, `hero`, `heroAlt`, `subtitle`, `tags`, `thumbnail`, and `updated`. See `scripts/layout-schema.mjs` in the repo for the full contract.
+Minimum required fields are `title`, `date`, and `layout: layouts/post-blog.njk`. Optional fields include `description`, `draft`, `subtitle`, `tags`, `thumbnail`, `thumbnailAlt` (Open Graph), `updated`, and optionally `hero` + `heroAlt`. **Hero is optional:** if you omit `hero`, nothing is rendered above the title. If you set `hero`, the file must exist under `/static/` (validated on build). See `scripts/layout-schema.mjs` for the full contract.
 
 ```yaml
 ---
@@ -23,8 +21,10 @@ date: 2021-01-28
 description: "Short description for SEO / listings."
 layout: layouts/post-blog.njk
 draft: true
-hero: /static/posts/your-slug/hero.jpg
-heroAlt: Alt text for the hero image
+thumbnail: /static/posts/your-slug/preview.jpg
+thumbnailAlt: Short description of the preview image
+# hero: /static/posts/your-slug/hero.jpg   # optional; omit for no hero image
+# heroAlt: Description of hero for accessibility
 subtitle: Optional line under the title
 tags: post
 ---

@@ -1,0 +1,25 @@
+---
+description: Starfield site background — Three.js import map, base layout, experiment app.js, debug IDs
+globs:
+  - _includes/layouts/base.njk
+  - _includes/css/index.css
+  - static/js/starfield-bg.js
+  - static/experiments/starfield/*.js
+---
+
+# Starfield site background
+
+**Where it lives**
+
+- **Layout / import map / debug markup:** `_includes/layouts/base.njk` — `#starfield-bg`, inline script that injects the import map and idle-loads `static/js/starfield-bg.js`, `#debug-panel` and related control IDs (mirrors `static/experiments/starfield/index.html`).
+- **Bootstrap:** `static/js/starfield-bg.js` — gates on `prefers-reduced-motion` and connection hints, then dynamic-imports `../experiments/starfield/app.js`.
+- **Scene and UI wiring:** `static/experiments/starfield/app.js` (and `stars.js`, `nebula.js`, etc.) — shared with the standalone experiment under `/static/experiments/starfield/`.
+- **Styles:** `_includes/css/index.css` — rules under `html.has-starfield-bg` for `#starfield-bg`, canvas, and `.debug` panel.
+
+**Keep in sync**
+
+- **Three.js CDN version:** The `three` and `three/addons/` URLs in the import map in `base.njk` must match `static/experiments/starfield/index.html`. `npm run validate` checks alignment via `scripts/validate-starfield-smoke.mjs`.
+- **Motion / network gating:** The early inline script in `base.njk` (skip import map + load) and `shouldRunStarfield()` in `starfield-bg.js` are intentionally duplicated so nothing loads Three until the gate passes—change both if you change eligibility rules.
+- **Debug panel IDs:** `app.js` queries `#debug-panel`, `#density`, `#brightness`, `#direction`, perf elements, etc. Keep `base.njk` in sync with the experiment page when adding or renaming controls.
+
+**User-facing docs:** `README.md` section “Starfield site background”; experiment detail in `static/experiments/starfield/README.md`.

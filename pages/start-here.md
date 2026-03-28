@@ -1,7 +1,7 @@
 ---
 title: Start Here
 layout: layouts/page-with-newsletter.njk
-description: “I’m exploring intuition, emotion, and creativity after a career full of overthinking.”
+description: "Start here for a short guide to this site: intuition, emotion, and creativity after twenty years of tech — essays, videos, and ideas worth your time."
 permalink: /start-here/
 ---
 

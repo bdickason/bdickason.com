@@ -1,11 +1,10 @@
 ---
 title: "Example: video post layout"
 date: 2025-01-01
-description: "Reference for layouts/post-video.njk — hero, YouTube id, summary, key ideas, and transcript body."
+description: "Reference for layouts/post-video.njk — YouTube id, summary, key ideas, and transcript body."
 layout: layouts/post-video.njk
 draft: true
 videoId: YOUR_YOUTUBE_VIDEO_ID
-hero: /static/posts/make-time-for-strategic-thinking/soul.jpg
 summary: |
   Many people in tech believe thinking harder solves every problem. But some decisions require something different: intuition. This video explores how to get out of your head and reconnect with what you actually feel.
 keyIdeas:
@@ -22,7 +21,7 @@ tags: post
 
 Back to the [template index](/posts/examples/).
 
-The **frontmatter** drives the layout above the fold: `videoId` (YouTube), optional `hero` / `heroAlt`, `summary` (HTML allowed), `keyIdeas` (list), and `transcript` shown in the template. Everything **below** is the Markdown/HTML body; it is rendered inside the “Transcript” section.
+The **frontmatter** drives the layout above the fold: `videoId` (YouTube), optional `thumbnail` / `thumbnailAlt` for social previews, `summary` (HTML allowed), `keyIdeas` (list), and `transcript` shown in the template. Everything **below** is the Markdown/HTML body; it is rendered inside the “Transcript” section.
 
 ## Transcript body patterns
 

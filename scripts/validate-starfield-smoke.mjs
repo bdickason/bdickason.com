@@ -4,13 +4,26 @@ const files = {
 	index: "static/experiments/starfield/index.html",
 	main: "static/experiments/starfield/main.js",
 	app: "static/experiments/starfield/app.js",
+	base: "_includes/layouts/base.njk",
+	starfieldBg: "static/js/starfield-bg.js",
 };
 
-const [indexHtml, mainJs, appJs] = await Promise.all([
+const [indexHtml, mainJs, appJs, baseNjk, starfieldBgJs] = await Promise.all([
 	readFile(files.index, "utf8"),
 	readFile(files.main, "utf8"),
 	readFile(files.app, "utf8"),
+	readFile(files.base, "utf8"),
+	readFile(files.starfieldBg, "utf8"),
 ]);
+
+/** @param {string} html */
+function extractThreeCdnVersion(html) {
+	const m = html.match(/cdn\.jsdelivr\.net\/npm\/three@([0-9.]+)\//);
+	return m ? m[1] : null;
+}
+
+const indexThreeVersion = extractThreeCdnVersion(indexHtml);
+const baseThreeVersion = extractThreeCdnVersion(baseNjk);
 
 const checks = [
 	{
@@ -68,6 +81,26 @@ const checks = [
 	{
 		ok: appJs.includes('data-starfield-ready'),
 		message: "app.js must set a ready signal attribute for smoke checking",
+	},
+	{
+		ok: baseNjk.includes('id="starfield-bg"'),
+		message: "base.njk must include #starfield-bg container",
+	},
+	{
+		ok: baseNjk.includes('import("/static/js/starfield-bg.js")'),
+		message: "base.njk must idle-load /static/js/starfield-bg.js",
+	},
+	{
+		ok: baseNjk.includes('id="debug-panel"'),
+		message: "base.njk must include starfield debug panel markup",
+	},
+	{
+		ok: indexThreeVersion !== null && baseThreeVersion !== null && indexThreeVersion === baseThreeVersion,
+		message: `Three.js CDN version in base.njk must match index.html (index: ${indexThreeVersion ?? "missing"}, base: ${baseThreeVersion ?? "missing"})`,
+	},
+	{
+		ok: starfieldBgJs.includes('../experiments/starfield/app.js'),
+		message: "starfield-bg.js must dynamic-import ../experiments/starfield/app.js",
 	},
 ];
 

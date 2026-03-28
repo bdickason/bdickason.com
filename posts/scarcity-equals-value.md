@@ -3,8 +3,7 @@ title: Scarcity = Value
 date: 2021-04-23
 description: "Scarcity constrains access. Scarcity makes it harder to acquire something you want. As a result, you want it more and are willing to pay more or go to greater lengths to acquire it."
 thumbnail: /static/posts/scarcity-equals-value/golden-ticket.jpg
-hero: /static/posts/scarcity-equals-value/golden-ticket.jpg
-heroAlt: Golden ticket
+thumbnailAlt: Golden ticket
 layout: layouts/post-blog.njk
 ---
 
@@ -49,7 +48,7 @@ Scarcity constrains access. Scarcity makes it harder to acquire something you wa
 
 **Scarcity increases value.**
 
-<img src="{{ thumbnail }}" />
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 
 Today, companies use artificial scarcity to drive up demand:
 1. Quantity (e.g. There are only so many of these things)

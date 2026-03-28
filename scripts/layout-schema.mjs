@@ -7,19 +7,29 @@
 const layoutSchema = {
   'layouts/post-blog.njk': {
     required: ['title', 'date'],
-    optional: ['description', 'draft', 'hero', 'heroAlt', 'subtitle', 'tags', 'thumbnail', 'updated'],
+    optional: [
+      'description',
+      'draft',
+      'hero',
+      'heroAlt',
+      'subtitle',
+      'tags',
+      'thumbnail',
+      'thumbnailAlt',
+      'updated',
+    ],
   },
   'layouts/post-video.njk': {
     required: ['title', 'date', 'videoId'],
     optional: [
       'description',
       'draft',
-      'hero',
       'keyIdeas',
       'startAt',
       'summary',
       'tags',
       'thumbnail',
+      'thumbnailAlt',
       'transcript',
       'updated',
     ],

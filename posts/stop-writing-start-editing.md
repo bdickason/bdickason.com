@@ -3,8 +3,7 @@ title: Stop Writing and start Editing
 date: 2021-02-04
 description: Top silicon valley PM's don't work longer hours or 'hustle more.' They delegate work to others and review it regularly. They are editors, not writers.
 thumbnail: /static/posts/stop-writing-start-editing/stand-by-me.jpg
-hero: /static/posts/stop-writing-start-editing/stand-by-me.jpg
-heroAlt: Stand by Me
+thumbnailAlt: Stand by Me
 layout: layouts/post-blog.njk
 ---
 
@@ -33,7 +32,7 @@ You can do the same.
 
 **Editors stay high level.** They constantly remind writers of goals and problems. This allows writers to go deep into the details but ensures someone has the big picture in their head.
 
-<img src="{{ thumbnail }}" />
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 
 Bonus addition: There’s one additional mode that I employ from time to time. I’ll call it ‘the janitor.’ The janitor plugs every hole on a team, from taking notes to pulling SQL queries to QA’ing releases. This mode is useful when you have an understaffed team or want to deeply understand a problem space.
 

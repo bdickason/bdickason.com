@@ -3,8 +3,7 @@ title: The 5 best Product books and posts
 date: 2021-01-08
 description: I've curated videos, posts, and books that describe how to build great products. These resources that changed the way I look at Product Management over the past 15 years. 
 thumbnail: /static/posts/the-best-product-books-posts/hacker-books.jpg
-hero: /static/posts/the-best-product-books-posts/hacker-books.jpg
-heroAlt: Books and posts
+thumbnailAlt: Books and posts
 layout: layouts/post-blog.njk
 ---
 
@@ -126,7 +125,7 @@ Keep scrolling for the full list of books [and articles](#articles) 👇
 * **Albert Wenger** ([Blog](https://continuations.com/), [Twitter](https://twitter.com/albertwenger))
     * [Kaizen for Software Developers](https://continuations.com/post/37634462048/continuous-improvement-revisited-bonus) - A series (linked in first paragraph) on how to solve optimization problems by applying lean manufacturing theory.
 
-<img src="{{ thumbnail }}">
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 <div class="caption"><a href="https://www.youtube.com/watch?v=4U9MI0u2VIE" target="_new">Even l33t hax0rs read books on computers.</a></div>
 
 **What are the books, videos, or articles that changed the way you look at Product Management?**

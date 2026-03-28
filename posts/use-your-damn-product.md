@@ -3,8 +3,7 @@ title: Use your damn product
 date: 2021-01-15
 description: "People dream up a laundry list of features but don't know what their users want. Use your product as an actual customer. Spend time going through your onboarding flows repeatedly, actively use your platform as a creator. You'll uncover a host of usability issues and things that don't make sense."
 thumbnail: /static/posts/use-your-damn-product/eddie-arsenio.jpg
-hero: /static/posts/use-your-damn-product/eddie-arsenio.jpg
-heroAlt: Eddie and Arsenio
+thumbnailAlt: Eddie and Arsenio
 layout: layouts/post-blog.njk
 ---
 
@@ -14,7 +13,7 @@ When I first started at Shapeways (a 3D Printing Marketplace), I was enamored by
 
 Fast forward to a year later when I decided to open my own shop. I wanted to familiarize myself with our tools for sellers so I designed a custom dog tag and offered it for sale. My dog tag was simple, like dead simple. It was styled after the House Stark sigil from Game of Thrones and I offered it in Stainless steel or bronze. I purchased one for myself and thought it was so cool, I sent it to my friends and encouraged them to buy it.
 
-Five friends purchased, five friends waited a few days, and five friends received an email that said, “I’m sorry, Brad’s model has been rejected. We are refunding your money.”
+Five friends purchased, five friends waited a few days, and five friends received an email that said, “I’m sorry, brad’s model has been rejected. We are refunding your money.”
 
 I was mortified. I was embarassed. What the heck? I **WORKED** at this company and I couldn’t make a successful product?!
 
@@ -59,12 +58,12 @@ There is a TON of work that goes into using your product and by just casually br
 
 
 
-<img src="{{ thumbnail }}" />
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 <p class="caption">Eddie and Arsenio traveled to America to understand our exotic culture</p>
 
 **~~“To know your enemy, you must become your enemy.” -Sun Tzu~~**
 
-**“To know your customer, you must become your customer.“ -Brad**
+**“To know your customer, you must become your customer.“ -brad**
 
 ## How to become your customer
 

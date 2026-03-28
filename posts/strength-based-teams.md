@@ -3,8 +3,7 @@ title: Strength-Based Teams
 date: 2021-04-09
 description: "Focus on your strengths, find teammates to complement your weaknesses. Don't be afraid to openly discuss your strengths and weaknesses with your team. Build a strengths-based team by assembling people who have varied strengths and weaknesses."
 thumbnail: /static/posts/strength-based-teams/captain-planet.gif
-hero: /static/posts/strength-based-teams/captain-planet.gif
-heroAlt: Captain Planet
+thumbnailAlt: Captain Planet
 layout: layouts/post-blog.njk
 ---
 
@@ -14,7 +13,7 @@ The spreadsheets tracking tasks, following up on every little detail, making sur
 
 I don't just hate it, I suck at it. I expend way more energy than your average PM and my results are mediocre. I'm like a kid thrashing in a pool, flailing my arms trying to make progress.
 
-"But Brad, you're a PM at Facebook. Execution is literally your job."
+"But brad, you're a PM at Facebook. Execution is literally your job."
 
 Sure, I've shipped tons of products before. I can get them out the door. But I'm not the person you want helping you burn down issues at the last minute. I'm way more useful grabbing coffee or ordering pizza.
 
@@ -30,7 +29,7 @@ A strength is something you're good at and you enjoy doing.
 
 Your strengths give you energy. Your strengths make you happy. When you play to your strengths, people can't stop talking about how much value you add. It's like you have a superpower.
 
-My strengths are zero to one product strategy and deeply understanding people. I wield these to build great early stage products and coach PM’s to help reach the next level in their careers. I value ruthless prioritization, caring deeply about quality of life, and justice. When you combine all of these together, you get Brad.
+My strengths are zero to one product strategy and deeply understanding people. I wield these to build great early stage products and coach PM’s to help reach the next level in their careers. I value ruthless prioritization, caring deeply about quality of life, and justice. When you combine all of these together, you get brad.
 
 I've made the mistake of focusing on execution-heavy projects, growth teams, or areas that don't need strategy work. I struggle on these types of projects and burn out quickly.
 
@@ -67,7 +66,7 @@ This creates an opportunity to find solutions together.
 
 Surround yourself with teammates who complement your weaknesses. 
 
-<img src="{{ thumbnail }}" />
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 
 Imagine a soccer team taking their star striker and telling them "we need you to work on your weaknesses. Play Goalie this season instead." That coach would be fired immediately. Your star striker should do what they do best, striking. Pair them with a great defensive team and a great goalie to complement the striker's weakness.
 

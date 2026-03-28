@@ -91,6 +91,16 @@ module.exports = function (eleventyConfig) {
     const d = date instanceof Date ? date : new Date(date);
     return d.toISOString().split("T")[0];
   });
+  eleventyConfig.addFilter("isoDate", function (date) {
+    if (!date) return "";
+    const d = date instanceof Date ? date : new Date(date);
+    return d.toISOString();
+  });
+
+  /** JSON string for `<script type="application/ld+json">` (escapes quotes, newlines). */
+  eleventyConfig.addFilter("jsonld", function (value) {
+    return JSON.stringify(value ?? "");
+  });
 
   // copy static files to /static so images render locally
   eleventyConfig.addPassthroughCopy("static");

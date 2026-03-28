@@ -1,10 +1,9 @@
 ---
 title: How to spend more time doing work you love
 date: 2020-12-27
-description: Setting an intention for the year and communicating it broadly helped me spend more time doing work that I love.
+description: "Setting a clear annual intention — and telling managers and peers what you want — helped me steer toward work I love instead of only what was urgent."
 thumbnail: /static/posts/spend-time-doing-work-you-love/point-break.jpg
-hero: /static/posts/spend-time-doing-work-you-love/point-break.jpg
-heroAlt: Work you love
+thumbnailAlt: Work you love
 layout: layouts/post-blog.njk
 ---
 In 2019, I spent a ton of time doing work that I wasn’t passionate about (or great at). It seemed like each project I worked on would be coupled with hours of extra meetings, busywork, and other things that seemed to take time away from working on what drives me: vision and strategy. Here’s a detailed breakdown of a huge change I made to change that.
@@ -35,7 +34,7 @@ As I discussed this with more people and started to have a better idea of what I
 
 **By sharing my intention with my coworkers, I unknowingly started to make progress against it without even trying!**
 
-<img src="{{ thumbnail }}">
+<img src="{{ thumbnail }}" alt="{{ thumbnailAlt }}" />
 
 ## Step Three: Write down the problems
 

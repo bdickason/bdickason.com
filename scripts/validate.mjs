@@ -141,10 +141,31 @@ for (const dir of dirsToValidate) {
       }
     }
 
+    function assertStaticFileExists(fieldName, urlPath) {
+      if (!urlPath || typeof urlPath !== 'string') return;
+      const p = String(urlPath).trim();
+      if (!p.startsWith('/static/')) return;
+      const diskPath = path.join(root, 'static', p.replace(/^\/static\//, ''));
+      if (!fs.existsSync(diskPath)) {
+        errors.push(`${relativePath}: "${fieldName}" file missing on disk: ${p}`);
+      }
+    }
+
     if (data.hero !== undefined && data.hero !== null && String(data.hero).trim() !== '') {
       const heroPath = String(data.hero).trim();
       if (!heroPath.startsWith('/static/')) {
         errors.push(`${relativePath}: "hero" should start with /static/ (got "${heroPath}")`);
+      } else {
+        assertStaticFileExists('hero', heroPath);
+      }
+    }
+
+    if (data.thumbnail !== undefined && data.thumbnail !== null && String(data.thumbnail).trim() !== '') {
+      const thumbPath = String(data.thumbnail).trim();
+      if (!thumbPath.startsWith('/static/')) {
+        errors.push(`${relativePath}: "thumbnail" should start with /static/ (got "${thumbPath}")`);
+      } else {
+        assertStaticFileExists('thumbnail', thumbPath);
       }
     }
 
