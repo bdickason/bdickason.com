@@ -13,6 +13,11 @@ projects:
     thumbnail: /static/projects/stormsword.png
     alt: Stormsword
     description: A 3D browser-based RPG inspired by classics like Everquest and Ultima.
+  - title: Chasm
+    url: https://chasm-nine.vercel.app/
+    thumbnail: /static/projects/chasm.png
+    alt: Chasm
+    description: A simple browser-based RTS where futuristic races battle for control of rare minerals.
   - title: Screen Savers
     url: /static/experiments/starfield/
     thumbnail: /static/projects/screensavers.png
