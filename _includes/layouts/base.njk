@@ -22,6 +22,7 @@
 
 	<body>
 		<div id="starfield-bg" aria-hidden="true"></div>
+		<div id="cursor-trails" aria-hidden="true"><canvas id="cursor-trails-canvas"></canvas></div>
 		{% include 'components/nav.njk' %}
 		<main class="elv-layout{% if layoutClass %} {{ layoutClass }}{% endif %}">
 			{{ content | safe }}
@@ -106,6 +107,7 @@
 		{% include 'js/convertkit.js' %}
 		{% include 'js/neon-headings.js' %}
 		{% include 'js/scanline-photons.js' %}
+		{% include 'js/cursor-trails.js' %}
 		{% endset %}
 		<script type="text/javascript">{{ js | safe }}</script>
 	</body>

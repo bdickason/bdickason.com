@@ -32,6 +32,27 @@ html.has-starfield-bg body {
 	transform: translateZ(0);
 }
 
+/* Cursor trails (site-wide): fixed overlay canvas */
+#cursor-trails {
+	position: fixed;
+	inset: 0;
+	z-index: 2;
+	pointer-events: none;
+	overflow: hidden;
+}
+#cursor-trails > canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+	image-rendering: pixelated;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#cursor-trails {
+		display: none !important;
+	}
+}
+
 /* Starfield debug panel (ported from experiment CSS; page-scoped) */
 html.has-starfield-bg .debug {
 	position: fixed;

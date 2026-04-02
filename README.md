@@ -31,6 +31,14 @@ A single glowing pixel sweeps across a random horizontal band on a timer. Implem
 
 **Tuning:** `--crt-photon-duration` and `.crt-photon` colors/shadows in CSS; `MIN_GAP_MS` / `MAX_GAP_MS` in JS. If you change the **`body::before`** scanline stripe height, update **`GRID_PX`** in the script to match the repeat period (see **`.cursor/rules/scanline-photons.mdc`**).
 
+### Neon cursor trails
+
+Site-wide cursor trail rendered on a full-screen `<canvas>` overlay. Implemented in **`_includes/js/cursor-trails.js`** and the `#cursor-trails` styles in **`_includes/css/index.css`**, with markup in **`_includes/layouts/base.njk`**.
+
+- **Look**: segmented polyline snapped to a 5px grid (Win95/NT-ish), with cyan tube + pink glow.
+- **Accessibility**: disabled when `prefers-reduced-motion: reduce`; also skipped on coarse pointers (touch).
+- **Tuning**: edit `GRID_PX`, `LIFE_MS`, `FADE_ALPHA`, and stroke widths near the top of `cursor-trails.js`.
+
 ### Starfield site background
 
 Full-screen Three.js starfield behind the main layout. **Scene logic** (stars, nebula, motion, perf guardrails) lives in **`static/experiments/starfield/`** and is shared with the standalone experiment at `/static/experiments/starfield/`. **Site-only bootstrap** is **`static/js/starfield-bg.js`** (idle-load, `prefers-reduced-motion`, save-data / slow-network gating).
