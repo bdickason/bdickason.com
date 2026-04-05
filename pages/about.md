@@ -2,11 +2,11 @@
 title: About
 layout: layouts/page-with-newsletter.njk
 description: "About brad dickason: from Meta PM to Bali, exploring feeling, creativity, and a slower life — plus coaching, past work, and what this site is for."
-thumbnail: /static/me.jpg
+thumbnail: /static/me.png
 permalink: /about/
 ---
 
-<img class="bio" src="/static/me.jpg" alt="brad dickason" />
+<img class="bio" src="/static/me.png" alt="brad dickason" />
 
 # Hi, I'm brad!
 
