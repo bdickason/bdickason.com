@@ -13,6 +13,12 @@ projects:
     thumbnail: /static/projects/stormsword.png
     alt: Stormsword
     description: A 3D browser-based RPG inspired by classics like Everquest and Ultima.
+  - title: Pokedex
+    url: https://pokedex-iota-coral.vercel.app/
+    thumbnail: /static/projects/pokedex.png
+    alt: Pokedex
+    thumbFit: contain
+    description: A little mobile web app to learn about Pokemon and their abilities with my kids. Save to Homescreen on your phone :)
   - title: Chasm
     url: https://chasm-nine.vercel.app/
     thumbnail: /static/projects/chasm.png

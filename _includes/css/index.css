@@ -1810,6 +1810,18 @@ header a:hover, header a:visited:hover, header a[href]:hover {
 	object-fit: cover;
 	display: block;
 }
+.projects-page .project-card--contain .project-card__media {
+	padding: 0.75rem;
+	background:
+		radial-gradient(120% 120% at 18% 18%, rgba(163, 102, 255, 0.22), rgba(0, 0, 0, 0) 55%),
+		radial-gradient(140% 140% at 82% 32%, rgba(223, 240, 36, 0.12), rgba(0, 0, 0, 0) 60%),
+		linear-gradient(135deg, #1f1f1f, #2b2b2b);
+}
+.projects-page .project-card--contain .project-card__thumb {
+	object-fit: contain;
+	border-radius: 8px;
+	background: #111;
+}
 .projects-page .project-card__body {
 	padding: 1rem 1rem 1.125rem;
 	display: flex;
