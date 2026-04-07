@@ -1116,6 +1116,15 @@ footer.elv-layout {
     iframe {    /* Fix for youtube or spotify embeds on mobile */
         width: 100%;
     }
+
+	/* Prevent breakout embeds from exceeding the mobile viewport */
+	.elv-layout .video-embed,
+	.elv-layout .spotify-embed {
+		width: 100%;
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 @media (min-width: 37.5em) { /* 600px */
 	.bp-sm.bp-sm.bp-sm.bp-sm {
