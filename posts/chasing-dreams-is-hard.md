@@ -1,17 +1,17 @@
 ---
 title: Chasing your dream is hard
 date: 2026-03-14
-description: "Moving our family to Bali for a slower life sounded dreamy; the lows were harder than expected. A honest take on big life changes and social media hype."
+description: Moving our family to Bali for a slower life sounded dreamy; the lows were harder than expected. A honest take on big life changes and social media hype.
 layout: layouts/post-video.njk
 videoId: CyqZgjd5ZWE
 summary: |
   I knew moving across the world would be hard but I wasn't prepared for the unexpected challenges. Any major life change, even the 'dreamy' ones, will be filled with deep lows to accompany the highs.
-
 keyIdeas:
   - We moved to Bali to find a slower pace of life and bet on ourselves.
   - People romanticize following your dreams on social media and focus on the highs.
   - But there are deep, unexpected lows that come with any major life transition.
   - These lows are hard but they make the highs feel so much sweeter.
+categories: "[[posts]]"
 ---
 
 I used to mentor people at work, and I love that feeling of sharing something with them that made them feel like they could run through walls. Like they could accomplish all of their hopes and dreams. Or take a leap of faith and go do something crazy in their life. I could give them a little bit more courage, a little bit more confidence... and that's the thing that makes me the happiest.

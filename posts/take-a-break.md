@@ -2,10 +2,11 @@
 title: Take a break
 date: 2021-05-07
 updated: 2026-03-13
-description: "We run at full speed until we burn out. This post is a reminder that your brain and body need real downtime — not more hustle."
+description: We run at full speed until we burn out. This post is a reminder that your brain and body need real downtime — not more hustle.
 thumbnail: /static/posts/take-a-break/weekend-at-bernies.jpg
 thumbnailAlt: Take a break
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 

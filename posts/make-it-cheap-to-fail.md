@@ -1,10 +1,11 @@
 ---
 title: Make it cheap to fail
 date: 2021-04-30
-description: "Humans learn by failing. But failure can be expensive. The best products let you fail fast without long wait times or increased costs. They make it cheap to fail."
+description: Humans learn by failing. But failure can be expensive. The best products let you fail fast without long wait times or increased costs. They make it cheap to fail.
 thumbnail: /static/posts/make-it-cheap-to-fail/groundhog-day.jpg
 thumbnailAlt: Make it cheap to fail
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 

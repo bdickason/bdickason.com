@@ -1,10 +1,11 @@
 ---
 title: How to ship hardware and software
 date: 2021-01-21
-description: "Software teams want iteration speed and Hardware teams want predictability. Let each team run at their own cadence but create integration points (e.g. once per month) where they line up. This lets software run fast but forces it to have some predictability."
+description: Software teams want iteration speed and Hardware teams want predictability. Let each team run at their own cadence but create integration points (e.g. once per month) where they line up. This lets software run fast but forces it to have some predictability.
 thumbnail: /static/posts/how-to-ship-hardware-and-software/rob.jpg
 thumbnailAlt: Hardware and software
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 

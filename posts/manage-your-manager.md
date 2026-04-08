@@ -1,10 +1,11 @@
 ---
 title: How to manage your manager
 date: 2021-02-19
-description: "A great relationship between a manager and their direct report is based on trust. Create a system of regular updates so you're always aligned with your manager. This will prevent surprises and help set you up for successful performance reviews and promotions."
+description: A great relationship between a manager and their direct report is based on trust. Create a system of regular updates so you're always aligned with your manager. This will prevent surprises and help set you up for successful performance reviews and promotions.
 thumbnail: /static/posts/manage-your-manager/bobs.jpg
 thumbnailAlt: Manage your manager
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 

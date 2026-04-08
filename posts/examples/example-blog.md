@@ -1,7 +1,7 @@
 ---
 title: "Example: blog post layout"
 date: 2021-01-28
-description: "Reference patterns for layouts/post-blog.njk — pull quotes, images, captions, and full-bleed figures."
+description: Reference patterns for layouts/post-blog.njk — pull quotes, images, captions, and full-bleed figures.
 layout: layouts/post-blog.njk
 draft: true
 subtitle: You can't hold a gun to someone's head and say "Be Creative."

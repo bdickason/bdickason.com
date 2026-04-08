@@ -1,10 +1,11 @@
 ---
 title: How to make time for strategic thinking
 date: 2021-01-28
-description: "I’ve found a formula to enter creative mode. Create time in your schedule, create an environment ripe for creative thinking, and make it frictionless to start."
+description: I’ve found a formula to enter creative mode. Create time in your schedule, create an environment ripe for creative thinking, and make it frictionless to start.
 thumbnail: /static/posts/make-time-for-strategic-thinking/soul.jpg
 thumbnailAlt: Soul
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 

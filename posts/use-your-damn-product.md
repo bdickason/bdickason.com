@@ -1,10 +1,11 @@
 ---
 title: Use your damn product
 date: 2021-01-15
-description: "People dream up a laundry list of features but don't know what their users want. Use your product as an actual customer. Spend time going through your onboarding flows repeatedly, actively use your platform as a creator. You'll uncover a host of usability issues and things that don't make sense."
+description: People dream up a laundry list of features but don't know what their users want. Use your product as an actual customer. Spend time going through your onboarding flows repeatedly, actively use your platform as a creator. You'll uncover a host of usability issues and things that don't make sense.
 thumbnail: /static/posts/use-your-damn-product/eddie-arsenio.jpg
 thumbnailAlt: Eddie and Arsenio
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 Most people dream up improvements and a laundry list of features that they think their customers want. But most of them don’t actually use their product.

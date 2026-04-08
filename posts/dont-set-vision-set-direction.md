@@ -4,6 +4,7 @@ date: 2021-03-19
 description: "There are three things a team needs to be successful: 1. **Vision:** Where are we headed? 2. **Strategy:** How do we get there? 3. **Goal:** How do we know we've arrived? Great leaders answer these questions at a high level and let their teams fill in the details."
 thumbnail: /static/posts/dont-set-vision-set-direction/boat-spinning.gif
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 Bad leaders think that a catchy mission and vision statement are enough to guide their organization. They hire expensive branding agencies and prepare fancy presentations with lofty phrases like 'maximize our synergies.' Then they're puzzled when employees feel lost and ask questions like, "What is our strategy?" or "Who are we building for?"

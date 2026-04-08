@@ -5,6 +5,7 @@ description: I’ve found that a crisp, clear document with a compelling narrati
 thumbnail: /static/posts/stop-wasting-time-on-strategy-decks/no-more-slides.png
 thumbnailAlt: Strategy decks
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 

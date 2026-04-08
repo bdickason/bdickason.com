@@ -1,10 +1,11 @@
 ---
 title: Tools are a distraction
 date: 2021-04-16
-description: "New tools feel productive, but they often delay the real work. Before you adopt another app or framework, ask whether you’re avoiding the hard part of the job."
+description: New tools feel productive, but they often delay the real work. Before you adopt another app or framework, ask whether you’re avoiding the hard part of the job.
 thumbnail: /static/posts/tools-are-a-distraction/airjordan.jpg
 thumbnailAlt: Air Jordan
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 

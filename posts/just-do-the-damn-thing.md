@@ -1,18 +1,18 @@
 ---
-title: "Just do the damn thing."
+title: Just do the damn thing.
 date: 2026-04-07
 description: "TODO: One-line SEO description for this video."
 layout: layouts/post-video.njk
 tags: post
 draft: false
 videoId: m0A7ox65nuA
-summary:
-  I love learning. New skills. New tools.  I love it so much that I focus more on learning new tools than actually doing the thing I set out to do.
+summary: I love learning. New skills. New tools.  I love it so much that I focus more on learning new tools than actually doing the thing I set out to do.
 keyIdeas:
   - Going down YouTube research rabbit holes or buying new tools (synthesizers, surfboards, etc) is just a distraction from doing the actual thing.
   - Over-researching feels good in the moment as does trying a new tool. It creates an illusion that you're making progress.
   - Fight the urge. Limit research sessions to 15m. Pick one or two tools, no more. Focus on doing the thing, not doing the research.
 startAt: 0
+categories: "[[posts]]"
 ---
 
 I love that moment when the rain finishes. Everything's green, glistening with water—so peaceful, tranquil. It's like is starting up again.

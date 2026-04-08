@@ -1,9 +1,10 @@
 ---
 title: Less chat more writing
 date: 2020-12-02
-description: "Chat is great for quick and timely resolutions but terrible for institutional knowledge. Writing creates durable artifacts people can find, share, and update long after the thread goes cold."
+description: Chat is great for quick and timely resolutions but terrible for institutional knowledge. Writing creates durable artifacts people can find, share, and update long after the thread goes cold.
 thumbnail: /static/posts/less-chat-more-writing/hero.jpg
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 

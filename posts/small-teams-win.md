@@ -5,6 +5,7 @@ description: "Big teams are like slow ships: they are incredibly slow to turn. S
 thumbnail: /static/posts/small-teams-win/the-a-team.jpg
 thumbnailAlt: Small teams
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 

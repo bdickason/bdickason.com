@@ -1,9 +1,10 @@
 ---
 title: How to lead strategic discussions
 date: 2020-11-19
-description: "Have you ever walked into a room, confidently delivered your pitch and noticed a series of blank stares? You need to unpack and explain your assumptions so stakeholders can follow your logic and push back where it matters."
+description: Have you ever walked into a room, confidently delivered your pitch and noticed a series of blank stares? You need to unpack and explain your assumptions so stakeholders can follow your logic and push back where it matters.
 thumbnail: /static/posts/lead-strategic-discussions/hero.jpg
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 

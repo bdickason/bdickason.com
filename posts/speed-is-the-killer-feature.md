@@ -5,6 +5,7 @@ description: Teams consistently overlook speed. Instead, they add more features 
 thumbnail: /static/posts/speed-is-the-killer-feature/speed-keanu-sandra.png
 thumbnailAlt: Speed
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 

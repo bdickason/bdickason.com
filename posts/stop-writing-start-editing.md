@@ -5,6 +5,7 @@ description: Top silicon valley PM's don't work longer hours or 'hustle more.' T
 thumbnail: /static/posts/stop-writing-start-editing/stand-by-me.jpg
 thumbnailAlt: Stand by Me
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 How do top silicon valley PM's lead massive projects?

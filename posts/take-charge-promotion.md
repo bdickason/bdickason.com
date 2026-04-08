@@ -1,10 +1,11 @@
 ---
 title: Take charge of your promotion
 date: 2021-03-05
-description: "Don’t wait to be promoted. Seek faster, higher-quality feedback, align with your manager on expectations, and drive the career conversations yourself."
+description: Don’t wait to be promoted. Seek faster, higher-quality feedback, align with your manager on expectations, and drive the career conversations yourself.
 thumbnail: /static/posts/take-charge-promotion/wyld-stallyns.jpg
 thumbnailAlt: Take charge
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 

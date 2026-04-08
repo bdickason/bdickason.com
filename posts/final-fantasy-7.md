@@ -1,10 +1,13 @@
 ---
 title: Final Fantasy 7
 date: 2026-03-22
-description: "Final Fantasy 7 felt like the true next generation of console games. Its mix of mature, edgy art and story with a memorable soundtrack shocked me as a teenager."
+description: Final Fantasy 7 felt like the true next generation of console games. Its mix of mature, edgy art and story with a memorable soundtrack shocked me as a teenager.
 layout: layouts/post-blog.njk
 draft: false
-tags: [post, games-that-moved-me]
+tags:
+  - post
+  - games-that-moved-me
+categories: "[[posts]]"
 ---
 
 {% from 'components/youtube-embed.njk' import youtubeEmbed %}

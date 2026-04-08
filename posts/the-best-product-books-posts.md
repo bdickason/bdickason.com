@@ -1,10 +1,11 @@
 ---
 title: The 5 best Product books and posts
 date: 2021-01-08
-description: I've curated videos, posts, and books that describe how to build great products. These resources that changed the way I look at Product Management over the past 15 years. 
+description: I've curated videos, posts, and books that describe how to build great products. These resources that changed the way I look at Product Management over the past 15 years.
 thumbnail: /static/posts/the-best-product-books-posts/hacker-books.jpg
 thumbnailAlt: Books and posts
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 

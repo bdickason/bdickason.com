@@ -5,6 +5,7 @@ description: Teams add so many features that the product fails at the job we hir
 thumbnail: /static/posts/do-one-thing-well/swiss-army-knife.jpg
 thumbnailAlt: Swiss army knife
 layout: layouts/post-blog.njk
+categories: "[[posts]]"
 ---
 
 Do you remember your first time using Dropbox? Files instantly sync across your devices and to the cloud. You can move files around just like a normal folder. Dropbox is so simple that you often forget it's running.

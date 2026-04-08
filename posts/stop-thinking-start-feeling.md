@@ -6,12 +6,12 @@ layout: layouts/post-video.njk
 videoId: XZ1kpzB1WoY
 summary: |
   I was a constant overthinker. Tapping into my feelings made me better at work, in relatonships, and makes it easier to just be. I wish I could go back and tell my 25 year old self to learn to listen to his body.
-
 keyIdeas:
   - Thinking is not the only way to make decisions. Nor is it a better way.
   - Constant analysis can lead to worrying and paralysis.
   - Overthinkers need to spend time learning how to listen to their body and their intuition. It is a skill that requires practice.
   - Doing so will make you lighter and make decisions feel less heavy.
+categories: "[[posts]]"
 ---
 
 I've been thinking, what advice do I wish someone gave me when I was 25 years old?
