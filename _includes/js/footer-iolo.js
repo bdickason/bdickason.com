@@ -51,6 +51,9 @@
 		dirty = false;
 		var p = easeOutCubic(computeProgress());
 		root.style.setProperty("--iolo-p", String(p));
+
+		// Optional: increase particle intensity as you scroll
+		root.style.setProperty("--iolo-particle-strength", p.toFixed(3));
 	}
 
 	function requestRender() {
@@ -78,6 +81,54 @@
 		}
 	);
 	observer.observe(footer);
+
+	/* Particles */
+
+	/* Define zones for particle emitters */
+	var EMITTERS = [
+		{ x: -63, y: 90, spread: 10 },  // left lantern
+		{ x: 35, y: 72, spread: 5 }   // right lantern
+		];
+	var particleLayer = document.querySelector(".iolo-particles");
+
+	if (particleLayer) {
+		var PARTICLE_COUNT = 18;
+
+		function createParticle() {
+			var emitter = EMITTERS[Math.floor(Math.random() * EMITTERS.length)];
+
+			var x = emitter.x + (Math.random() - 0.5) * emitter.spread;
+			var y = emitter.y + (Math.random() - 0.5) * emitter.spread;
+
+			var el = document.createElement("div");
+			el.className = "iolo-particle";
+
+			el.style.left = x + "%";
+			el.style.bottom = `calc(${y}% + 60px)`;
+
+			// Random size
+			var size = 2 + Math.random() * 4;
+			el.style.width = size + "px";
+			el.style.height = size + "px";
+
+			// Motion variation
+			var wiggle = 0.4 + Math.random() * 0.6;
+			el.style.setProperty("--wiggle", wiggle);		
+
+			// Random timing
+			var duration = 3 + Math.random() * 4;
+			var delay = Math.random() * 4;
+
+			el.style.animationDuration = duration + "s, " + (duration * 2) + "s";
+			el.style.animationDelay = delay + "s";
+
+			particleLayer.appendChild(el);
+		}
+
+		for (var i = 0; i < PARTICLE_COUNT; i++) {
+			createParticle();
+		}
+	}
 
 	window.addEventListener("scroll", requestRender, { passive: true });
 	window.addEventListener("resize", requestRender, { passive: true });

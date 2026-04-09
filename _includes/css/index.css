@@ -2025,8 +2025,8 @@ body > main {
 	position: fixed;
 	right: -40px; /* slight off-screen bleed */
 	/* Small bleed only; “below viewport” hiding is done with translateY, not a huge negative bottom */
-	bottom: -28px;
-	width: clamp(750px,18vw,320px);
+	bottom: 0px;
+	width: clamp(320px,18vw,320px);
 	height: auto;
 
 	pointer-events: none;
@@ -2047,6 +2047,125 @@ body > main {
 		drop-shadow(0 0 8px rgba(120, 255, 220, var(--iolo-glow-a1)))
 		drop-shadow(0 0 24px rgba(120, 255, 220, var(--iolo-glow-a2)));
 }
+
+/* Shared image styles for both background and character */
+.footer-iolo img {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: auto;
+  
+	will-change: transform, opacity;
+}
+
+.iolo-character {
+	--fg-p: calc(max(0, (var(--iolo-p, 0) - 0.15) / 0.85)); /* delay start */
+
+	transform: translate3d(
+	  -60%,
+	  calc(var(--iolo-rise-px) * (1 - var(--fg-p)) * 1.0),
+	  0
+	) scale(1.1);
+  
+	opacity: calc((var(--fg-p, 0)) * var(--iolo-max-opacity) * var(--iolo-strength));
+}
+
+.iolo-bg {
+	--bg-p: calc(min(1, var(--iolo-p, 0) * 1.3)); /* speeds it up */
+
+	transform: translate3d(
+    -40%,
+    calc(var(--iolo-rise-px) * (1 - var(--bg-p)) * 0.6 + 12px),
+    0
+  ) scale(2.5); /* 👈 adjust scale of bg */
+  
+	opacity: calc((var(--iolo-p, 0)) * var(--iolo-max-opacity) * var(--iolo-strength));
+  
+	filter: blur(0.3px); /* subtle depth */
+	filter: brightness(calc(1 + var(--iolo-p) * 0.4));
+}
+
+/* Iolo particles */
+.iolo-particles {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 2;
+  
+	/* Fade in with Iolo */
+	opacity: calc(var(--iolo-p, 0) * 0.9);
+  
+	/* Mask so particles cluster near statues (bottom-right) */
+	mask-image: none;
+  }
+  
+  /* Individual particle */
+  .iolo-particle {
+	position: absolute;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+  
+	background: radial-gradient(circle, #6aff9c, #00ff88 40%, transparent 70%);
+	box-shadow:
+	  0 0 6px #00ff88,
+	  0 0 12px rgba(0,255,136,0.6);
+  
+	will-change: transform, opacity;
+
+	animation: iolo-float linear infinite,
+	iolo-pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes iolo-pulse {
+	0%, 100% { scale: 1; }
+	50% { scale: 1.15; }
+  }
+  
+  /* Float animation */
+  @keyframes iolo-float {
+	0% {
+	  transform: translate(0px, 0px) scale(0.85);
+	  opacity: 0;
+	}
+  
+	20% {
+	  transform: translate(calc(2px * var(--wiggle)), -25px);
+	  opacity: 0.9;
+	}
+  
+	40% {
+	  transform: translate(calc(-3px * var(--wiggle)), -50px);
+	}
+  
+	60% {
+	  transform: translate(calc(2px * var(--wiggle)), -75px);
+	}
+  
+	80% {
+	  transform: translate(calc(-2px * var(--wiggle)), -100px);
+	  opacity: 0.6;
+	}
+  
+	100% {
+	  transform: translate(0px, -120px) scale(1.1);
+	  opacity: 0;
+	}
+  }
+
+	/* ============================= */
+	/* SUBTLE SPIN */
+	/* ============================= */
+
+	@keyframes iolo-spin {
+		from {
+		rotate: 0deg;
+		}
+		to {
+		rotate: 360deg;
+		}
+	}
 
 @media (max-width: 37.4375em) { /* 599px */
 	.footer-iolo {

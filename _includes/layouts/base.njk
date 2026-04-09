@@ -29,15 +29,25 @@
 			{% include 'components/footer.njk' %}
 		</main>
 
-		<img
-			src="/static/iolo-footer.png"
-			alt="Iolo playing lute"
-			class="footer-iolo"
-			decoding="async"
-			loading="lazy"
-			aria-hidden="true"
-		/>
+		
+		<div class="footer-iolo">
+			<img src="/static/iolo-bg.png" 
+				alt="Ruins glowing with spectral energy"
+				class="iolo-bg" 
+				decoding="async"
+				loading="lazy"
+				aria-hidden="true"
+			/>
+			<img src="/static/iolo-character.png" 
+				alt="Iolo playing lute"
+				class="iolo-character" 
+				decoding="async"
+				loading="lazy"
+				aria-hidden="true"
+			/>
 
+			<div class="iolo-particles" aria-hidden="true"></div>
+		</div>
 		<section id="debug-panel" class="debug" hidden>
 			<header class="debug__header">
 				<div class="debug__title">Debug</div>
