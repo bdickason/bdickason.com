@@ -2048,6 +2048,7 @@ body > main {
 		drop-shadow(0 0 24px rgba(120, 255, 220, var(--iolo-glow-a2)));
 }
 
+
 /* Shared image styles for both background and character */
 .footer-iolo img {
 	position: absolute;
@@ -2167,11 +2168,16 @@ body > main {
 		}
 	}
 
+
+/* Mobile override */
 @media (max-width: 37.4375em) { /* 599px */
 	.footer-iolo {
-		right: -48px;
-		bottom: -32px;
-		--iolo-rise-px: 120px;
+		right: 0;              /* 👈 stop pushing offscreen */
+		bottom: 0;             /* 👈 ensure it's anchored cleanly */
+		width: 65vw;           /* 👈 slightly larger for mobile */
+		max-width: 320px;
+	
+		overflow: visible;     /* 👈 prevents clipping weirdness */
 	}
 }
 
