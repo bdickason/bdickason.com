@@ -1,5 +1,5 @@
 ---
-title: Just do the damn thing.
+title: Just do the damn thing
 date: 2026-04-07
 description: "TODO: One-line SEO description for this video."
 layout: layouts/post-video.njk

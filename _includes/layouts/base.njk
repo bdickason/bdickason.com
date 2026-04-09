@@ -29,6 +29,15 @@
 			{% include 'components/footer.njk' %}
 		</main>
 
+		<img
+			src="/static/iolo-footer.png"
+			alt="Iolo playing lute"
+			class="footer-iolo"
+			decoding="async"
+			loading="lazy"
+			aria-hidden="true"
+		/>
+
 		<section id="debug-panel" class="debug" hidden>
 			<header class="debug__header">
 				<div class="debug__title">Debug</div>
@@ -70,6 +79,11 @@
 				<div class="debug__value" id="perfFrame" style="text-align:left">—</div>
 				<div class="debug__value" id="perfDropped" title="Frames over 50ms">—</div>
 			</div>
+			<div class="debug__row">
+				<label class="debug__label" for="ioloStrength">Iolo</label>
+				<input id="ioloStrength" class="debug__range" type="range" min="0" max="1" step="0.01" value="0.65" />
+				<div class="debug__value" id="ioloStrengthValue">0.65</div>
+			</div>
 		</section>
 
 		<script type="text/javascript">
@@ -108,6 +122,7 @@
 		{% include 'js/neon-headings.js' %}
 		{% include 'js/scanline-photons.js' %}
 		{% include 'js/cursor-trails.js' %}
+		{% include 'js/footer-iolo.js' %}
 		{% endset %}
 		<script type="text/javascript">{{ js | safe }}</script>
 	</body>

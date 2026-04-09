@@ -1056,6 +1056,9 @@ footer.elv-layout {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+	position: relative;
+	z-index: 1;
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 .site-footer__row {
 	width: 100%;
@@ -2006,4 +2009,55 @@ body > main {
 	text-shadow:
 		0 0 1px rgba(0, 0, 0, 0.9),
 		0.05em 0.08em 0.18em rgba(0, 0, 0, 0.55);
+}
+
+/* Footer Iolo: fixed “world” character that rises as the footer enters view (scroll-driven in JS). */
+.footer-iolo {
+	/* JS writes these variables */
+	/* --iolo-p: 0; */
+	--iolo-strength: 0.65;
+	/* Scroll-driven rise: at p=0 translate down by this amount; at p=1 flush to anchor */
+	--iolo-rise-px: 132px;
+	--iolo-max-opacity: 0.85;
+	--iolo-glow-a1: 0.35;
+	--iolo-glow-a2: 0.15;
+
+	position: fixed;
+	right: -40px; /* slight off-screen bleed */
+	/* Small bleed only; “below viewport” hiding is done with translateY, not a huge negative bottom */
+	bottom: -28px;
+	width: clamp(750px,18vw,320px);
+	height: auto;
+
+	pointer-events: none;
+	user-select: none;
+
+	/* Behind content so it won’t cover footer text */
+	z-index: 0;
+
+	opacity: calc(var(--iolo-p) * var(--iolo-max-opacity) * var(--iolo-strength));
+	transform: translate3d(0, calc(var(--iolo-rise-px) * (1 - var(--iolo-p))), 0);
+	transform-origin: 100% 100%;
+	will-change: transform, opacity, filter;
+
+	mix-blend-mode: screen;
+	filter:
+		blur(0.2px)
+		saturate(calc(1 + (var(--iolo-strength) * 0.1)))
+		drop-shadow(0 0 8px rgba(120, 255, 220, var(--iolo-glow-a1)))
+		drop-shadow(0 0 24px rgba(120, 255, 220, var(--iolo-glow-a2)));
+}
+
+@media (max-width: 37.4375em) { /* 599px */
+	.footer-iolo {
+		right: -48px;
+		bottom: -32px;
+		--iolo-rise-px: 120px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.footer-iolo {
+		display: none !important;
+	}
 }

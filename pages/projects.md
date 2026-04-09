@@ -1,7 +1,7 @@
 ---
 title: Projects
 layout: layouts/projects.njk
-description: "Side projects and experiments brad is building — browser games, generative art, and other corners of the internet worth a click."
+description: "Side projects and experiments  — browser games, generative art, and other things built just for fun"
 thumbnail: /static/projects/stormsword.png
 permalink: /projects/
 tags: page
