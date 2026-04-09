@@ -1,0 +1,10 @@
+---
+description: Always leave the repo in a passing build state
+alwaysApply: true
+---
+
+Before finishing, run the build (e.g. `npm run build`) and fix any failures.
+
+- Never leave the repo with a broken build.
+- Fix errors even if unrelated or pre-existing.
+- If the build was already failing, resolve it before finishing unless explicitly told otherwise.

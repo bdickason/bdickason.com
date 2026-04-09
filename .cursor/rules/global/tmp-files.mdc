@@ -1,0 +1,11 @@
+description: Temp files go in .cursor/scratch
+alwaysApply: true
+---
+
+Do not create temporary or planning files in root or Eleventy build paths (`./`, `posts/`).
+
+Always use `.cursor/scratch/` (gitignored, not built).
+
+Includes: analysis docs, session notes, drafts.
+
+When created, store there and tell the user the path.

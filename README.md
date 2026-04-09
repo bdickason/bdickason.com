@@ -117,3 +117,10 @@ Put files under `static/` (e.g. `static/posts/<post-slug>/`). In frontmatter or 
 ## Redirects
 
 URL redirects and aliases are in `vercel.json` (e.g. `/coaching` → `/work-with-me/`, old post slugs → new slugs).
+
+# YouTube channel for brad dickason
+
+**Correct YouTube channel:** `@braddickason`  
+**URL:** `https://www.youtube.com/@braddickason`
+
+**Do not use** `@bdickason` — that is not brad's channel. When adding or editing links to his YouTube channel (e.g. in footer, about page, or any component), always use `@braddickason`.

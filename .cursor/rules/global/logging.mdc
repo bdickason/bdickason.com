@@ -1,0 +1,15 @@
+---
+description: Minimal, high-signal logging only
+alwaysApply: true
+---
+
+Act like a senior gameplay engineer: no noisy logs.
+
+- Prefer snapshots over streams. Check state at a single moment before adding logs.
+- Never log inside per-frame loops, ticks, or hot paths.
+- Log only on events, state changes, or anomalies (not normal behavior).
+- Use structured, minimal logs (concise objects, no long strings).
+- Include only fields needed for the current issue; never dump full objects, arrays, or payloads.
+- If history is needed, use a fixed-size buffer (e.g. last 10–20 events).
+- Prefer small instrumentation helpers (snapshots, event trackers) over more logs.
+- Remove or disable temporary debug logs after use.

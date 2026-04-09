@@ -1,6 +1,6 @@
 ---
 description: When editing posts or layouts, use layout-schema and run validation
-alwaysApply: true
+files: ["_includes/layouts/**", "posts/*.md", "pages/*.md"]
 ---
 
 # Posts and layouts
