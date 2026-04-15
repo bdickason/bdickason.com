@@ -16,7 +16,7 @@ import {
 } from "./catalog.js";
 import { clamp, prefersReducedMotion, onPrefersReducedMotionChange, readNumber, setTextFixed2 } from "./utils.js";
 
-const SETTINGS_KEY = "flyingStuff:v1";
+const SETTINGS_KEY = "flyingStuff:v2";
 
 function makePaletteMap(list, palettes = GLYPH_PALETTES) {
 	const out = {};
@@ -129,8 +129,8 @@ export function initFlyingStuff({ container }) {
 	const bbsPaletteValue = document.getElementById("bbsPaletteValue");
 
 	const defaults = {
-		count: 11,
-		speed: 50,
+		count: 100,
+		speed: 0.5,
 		size: 2.5,
 		emojiGroup: GROUP_CYCLE_KEY,
 		bbsPalette: CYCLE_BBS_PALETTE_KEY,
@@ -139,7 +139,7 @@ export function initFlyingStuff({ container }) {
 	const saved = loadSettings();
 	const initial = {
 		count: clamp(Number(saved?.count ?? defaults.count), 1, 600),
-		speed: clamp(Number(saved?.speed ?? defaults.speed), 0.05, 100),
+		speed: clamp(Number(saved?.speed ?? defaults.speed), 0.05, 7),
 		size: clamp(Number(saved?.size ?? defaults.size), 0.05, 6),
 		// Always start in Group Cycling on refresh (don't restore persisted selection).
 		emojiGroup: defaults.emojiGroup,
@@ -582,7 +582,7 @@ export function initFlyingStuff({ container }) {
 		const nextBbsPaletteKey = resolveBbsPaletteKey(bbsPaletteInput?.value ?? lastBbsPaletteKey);
 		const next = {
 			count: clamp(Math.round(readNumber(countInput, flyers.getConfig().count)), 1, 600),
-			speed: clamp(readNumber(speedInput, flyers.getConfig().speed), 0.05, 100),
+			speed: clamp(readNumber(speedInput, flyers.getConfig().speed), 0.05, 7),
 			size: clamp(readNumber(sizeInput, flyers.getConfig().size), 0.05, 6),
 			emojiGroup: nextGroupKey,
 			bbsPalette: nextBbsPaletteKey,

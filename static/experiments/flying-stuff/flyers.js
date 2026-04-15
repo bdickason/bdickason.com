@@ -530,8 +530,8 @@ export function createFlyers(scene, camera, opts = {}) {
 	const config = {
 		count: clamp(Number(opts.count ?? 140), 1, 600),
 		targetCount: clamp(Number(opts.count ?? 140), 1, 600),
-		speed: clamp(Number(opts.speed ?? 1.2), 0.05, 100),
-		targetSpeed: clamp(Number(opts.speed ?? 1.2), 0.05, 100),
+		speed: clamp(Number(opts.speed ?? 1.2), 0.05, 7),
+		targetSpeed: clamp(Number(opts.speed ?? 1.2), 0.05, 7),
 		size: clamp(Number(opts.size ?? 1.0), 0.05, 6),
 		targetSize: clamp(Number(opts.size ?? 1.0), 0.05, 6),
 		zNear: -1.0,
@@ -1031,7 +1031,7 @@ export function createFlyers(scene, camera, opts = {}) {
 	}
 
 	function setSpeedTarget(nextSpeed, { rampSeconds = 0 } = {}) {
-		config.targetSpeed = clamp(Number(nextSpeed ?? config.targetSpeed), 0.05, 100);
+		config.targetSpeed = clamp(Number(nextSpeed ?? config.targetSpeed), 0.05, 7);
 		speedRampSeconds = Math.max(0, Number(rampSeconds) || 0);
 		if (speedRampSeconds === 0) config.speed = config.targetSpeed;
 	}
