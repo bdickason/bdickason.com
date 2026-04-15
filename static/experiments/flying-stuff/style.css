@@ -50,6 +50,7 @@ body::before {
 	right: 14px;
 	z-index: 3;
 	pointer-events: none;
+	transition: opacity 650ms ease;
 }
 
 .hud__titleRow {
@@ -92,6 +93,7 @@ body::before {
 	text-align: right;
 	/* Let the emoji width define layout; the name expands leftwards */
 	white-space: nowrap;
+	transition: opacity 650ms ease;
 }
 .creditLink:hover {
 	color: rgba(255, 255, 255, 0.8);
@@ -131,6 +133,26 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
 	.creditLink__emoji,
 	.creditLink__name {
+		transition: none;
+	}
+}
+
+.flyingUiAutohide.flyingUiHidden .hud,
+.flyingUiAutohide.flyingUiHidden .creditLink {
+	opacity: 0;
+}
+
+/* Allow “wake up” on hover/focus of those regions. */
+.flyingUiAutohide.flyingUiHidden .hud:hover,
+.flyingUiAutohide.flyingUiHidden .hud:focus-within,
+.flyingUiAutohide.flyingUiHidden .creditLink:hover,
+.flyingUiAutohide.flyingUiHidden .creditLink:focus-within {
+	opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hud,
+	.creditLink {
 		transition: none;
 	}
 }
