@@ -147,7 +147,8 @@ function makeFramedEmojiTexture(emoji, { px = 160 } = {}) {
 
 	const pad = Math.floor(px * 0.07);
 	const border = Math.max(2, Math.floor(px * 0.045));
-	const r = Math.floor(px * 0.08);
+	// Match the built-in framed landscape emoji: closer to square corners.
+	const r = Math.floor(px * 0.02);
 	const frameX = pad;
 	const frameY = pad;
 	const frameW = px - pad * 2;
@@ -155,10 +156,11 @@ function makeFramedEmojiTexture(emoji, { px = 160 } = {}) {
 
 	// Shadowed frame
 	ctx.save();
-	ctx.shadowColor = "rgba(0,0,0,0.35)";
-	ctx.shadowBlur = Math.floor(px * 0.08);
-	ctx.shadowOffsetY = Math.floor(px * 0.02);
-	ctx.fillStyle = "rgba(255,255,255,0.78)";
+	ctx.shadowColor = "rgba(0,0,0,0.22)";
+	ctx.shadowBlur = Math.floor(px * 0.06);
+	ctx.shadowOffsetY = Math.floor(px * 0.015);
+	// Slightly lighter + more opaque than before (closer to emoji frame white).
+	ctx.fillStyle = "rgba(255,255,255,0.88)";
 	roundRectPath(ctx, frameX, frameY, frameW, frameH, r);
 	ctx.fill();
 	ctx.restore();
@@ -170,7 +172,7 @@ function makeFramedEmojiTexture(emoji, { px = 160 } = {}) {
 	const innerH = frameH - border * 2;
 
 	ctx.save();
-	roundRectPath(ctx, innerX, innerY, innerW, innerH, Math.max(2, r - border));
+	roundRectPath(ctx, innerX, innerY, innerW, innerH, Math.max(1, r - border));
 	ctx.clip();
 
 	// Gentle film tint so the set feels cohesive.
@@ -189,7 +191,7 @@ function makeFramedEmojiTexture(emoji, { px = 160 } = {}) {
 	ctx.restore();
 
 	ctx.save();
-	ctx.strokeStyle = "rgba(0,0,0,0.10)";
+	ctx.strokeStyle = "rgba(0,0,0,0.08)";
 	ctx.lineWidth = Math.max(1, Math.floor(px * 0.01));
 	roundRectPath(ctx, frameX, frameY, frameW, frameH, r);
 	ctx.stroke();
@@ -482,19 +484,20 @@ export function createFlyers(scene, camera, opts = {}) {
 	const emojiTexCache = new Map();
 	let emojiStyleByEmoji = opts.emojiStyleByEmoji ?? null; // { [emoji]: color }
 	let effects = opts.effects ?? { pulse: false, sparkle: false, additive: false };
+	let themeTransition = null; // { startMs:number, durationMs:number, next:{ emojiList:Array<string>, emojiStyleByEmoji:any, effects:any }, atlas:any }
 
-	function getOrCreateEmojiTexture(emoji) {
+	function getOrCreateEmojiTexture(emoji, { styleByEmoji = emojiStyleByEmoji, fx = effects } = {}) {
 		const key = String(emoji ?? "❓");
 		// Include styling params in the cache key when relevant.
-		const styleKey = emojiStyleByEmoji?.[key];
-		const framedEmojiExclude = Array.isArray(effects?.framedEmojiExclude) ? effects.framedEmojiExclude.map(String) : null;
-		const shouldFrame = Boolean(effects?.framedEmoji) && !(framedEmojiExclude && framedEmojiExclude.includes(key));
+		const styleKey = styleByEmoji?.[key];
+		const framedEmojiExclude = Array.isArray(fx?.framedEmojiExclude) ? fx.framedEmojiExclude.map(String) : null;
+		const shouldFrame = Boolean(fx?.framedEmoji) && !(framedEmojiExclude && framedEmojiExclude.includes(key));
 		const frameKey = shouldFrame ? "|frame:1" : "";
-		const cacheKey = styleKey ? `${key}|c:${styleKey}|fx:${effects?.sparkle ? 1 : 0}${frameKey}` : `${key}${frameKey}`;
+		const cacheKey = styleKey ? `${key}|c:${styleKey}|fx:${fx?.sparkle ? 1 : 0}${frameKey}` : `${key}${frameKey}`;
 		const existing = emojiTexCache.get(cacheKey);
 		if (existing) return existing;
 		const tex = styleKey
-			? makeGlyphTexture(key, { color: styleKey, glow: true, sparkle: Boolean(effects?.sparkle) })
+			? makeGlyphTexture(key, { color: styleKey, glow: true, sparkle: Boolean(fx?.sparkle) })
 			: shouldFrame
 				? makeFramedEmojiTexture(key, { px: 160 })
 				: makeEmojiTexture(key);
@@ -502,11 +505,11 @@ export function createFlyers(scene, camera, opts = {}) {
 		return tex;
 	}
 
-	function buildEmojiAtlasCached(emojiList) {
+	function buildEmojiAtlasCached(emojiList, { styleByEmoji = emojiStyleByEmoji, fx = effects } = {}) {
 		const unique = Array.from(new Set((emojiList ?? []).filter(Boolean)));
 		const list = unique.length > 0 ? unique : DEFAULT_EMOJI;
 		const byEmoji = new Map();
-		for (const e of list) byEmoji.set(e, getOrCreateEmojiTexture(e));
+		for (const e of list) byEmoji.set(e, getOrCreateEmojiTexture(e, { styleByEmoji, fx }));
 		return { list, byEmoji };
 	}
 
@@ -792,6 +795,12 @@ export function createFlyers(scene, camera, opts = {}) {
 
 	function disposeEntry(entry) {
 		if (!entry) return;
+		if (entry.__themeGhost) {
+			group.remove(entry.__themeGhost.obj);
+			entry.__themeGhost.obj.material?.dispose?.();
+			if (entry.__themeGhost.kind === "sprite") entry.__themeGhost.obj.geometry?.dispose?.();
+			entry.__themeGhost = null;
+		}
 		group.remove(entry.obj);
 		if (entry.fireflies?.length) {
 			for (const ff of entry.fireflies) {
@@ -804,6 +813,46 @@ export function createFlyers(scene, camera, opts = {}) {
 		}
 		entry.obj.material?.dispose?.();
 		if (entry.kind === "sprite") entry.obj.geometry?.dispose?.();
+	}
+
+	function clearThemeTransition() {
+		themeTransition = null;
+		for (const f of flyers) {
+			if (!f.__themeGhost) continue;
+			group.remove(f.__themeGhost.obj);
+			f.__themeGhost.obj.material?.dispose?.();
+			if (f.__themeGhost.kind === "sprite") f.__themeGhost.obj.geometry?.dispose?.();
+			f.__themeGhost = null;
+		}
+	}
+
+	function ensureThemeGhostForFlyer(f, nextAtlas, nextEffects, nextStyleByEmoji) {
+		// If we already have a ghost, keep it (transition restarts clear first).
+		if (f.__themeGhost) return;
+		const nextEmoji = pickEmoji(nextAtlas);
+		const nextTex = nextAtlas.byEmoji.get(nextEmoji);
+		if (!nextTex) return;
+		const ghost = createRenderable(nextEmoji, nextTex);
+		ghost.obj.userData.__flyingStuffEntry = null;
+
+		// Mirror transform/state.
+		ghost.obj.position.copy(f.obj.position);
+		ghost.obj.scale.copy(f.obj.scale);
+		// Rotation: for sprite, material.rotation. For depth, billboarded in update.
+		if (ghost.kind === "sprite") ghost.obj.material.rotation = f.rotationZ;
+		else applyBillboardQuaternion(ghost.obj, f.rotationZ);
+
+		// Apply current blend mode (we don't transition effects; palette cycling keeps effects stable).
+		const blending = nextEffects?.additive ? THREE.AdditiveBlending : THREE.NormalBlending;
+		ghost.obj.material.blending = blending;
+		ghost.obj.material.needsUpdate = true;
+
+		// Start invisible.
+		if (ghost.kind === "sprite") ghost.obj.material.opacity = 0;
+		else ghost.obj.material.uniforms.uOpacity.value = 0;
+
+		group.add(ghost.obj);
+		f.__themeGhost = { kind: ghost.kind, obj: ghost.obj, emoji: nextEmoji };
 	}
 
 	function activateAndSpawn(entry, nowMs, { forceFar = false } = {}) {
@@ -1000,6 +1049,8 @@ export function createFlyers(scene, camera, opts = {}) {
 	}
 
 	function setEmojiTheme({ emojiList, emojiStyleByEmoji: nextStyleByEmoji, effects: nextEffects } = {}) {
+		// Immediate theme set cancels any in-flight transition.
+		clearThemeTransition();
 		if (typeof nextStyleByEmoji === "object" || nextStyleByEmoji == null) emojiStyleByEmoji = nextStyleByEmoji ?? null;
 		if (typeof nextEffects === "object" && nextEffects) effects = nextEffects;
 
@@ -1020,6 +1071,38 @@ export function createFlyers(scene, camera, opts = {}) {
 			ensureFireflies(f);
 			setFireflyColorsForEmoji(f, f.emoji);
 		}
+	}
+
+	function setEmojiThemeForNewSpawns({ emojiList, emojiStyleByEmoji: nextStyleByEmoji, effects: nextEffects } = {}) {
+		// Spawn-only: update the atlas/styling used by activateAndSpawn without touching existing flyers.
+		// Also cancel any in-flight transition so we don't keep ghost geometry around.
+		clearThemeTransition();
+		if (typeof nextStyleByEmoji === "object" || nextStyleByEmoji == null) emojiStyleByEmoji = nextStyleByEmoji ?? null;
+		if (typeof nextEffects === "object" && nextEffects) effects = nextEffects;
+		atlas = buildEmojiAtlasCached(emojiList ?? DEFAULT_EMOJI);
+	}
+
+	function transitionEmojiTheme(
+		{ emojiList, emojiStyleByEmoji: nextStyleByEmoji, effects: nextEffects } = {},
+		{ durationMs = 1400 } = {},
+	) {
+		// Cancel any prior transition and start a new one.
+		clearThemeTransition();
+
+		const nextFx = (typeof nextEffects === "object" && nextEffects) ? nextEffects : effects;
+		const nextStyle = (typeof nextStyleByEmoji === "object" || nextStyleByEmoji == null) ? (nextStyleByEmoji ?? null) : emojiStyleByEmoji;
+		const nextList = emojiList ?? DEFAULT_EMOJI;
+		const nextAtlas = buildEmojiAtlasCached(nextList, { styleByEmoji: nextStyle, fx: nextFx });
+
+		themeTransition = {
+			startMs: performance.now(),
+			durationMs: clamp(Number(durationMs ?? 1400) || 1400, 0, 8000),
+			next: { emojiList: nextList, emojiStyleByEmoji: nextStyle, effects: nextFx },
+			atlas: nextAtlas,
+		};
+
+		// Pre-create ghosts for all flyers so the crossfade is immediate and coherent.
+		for (const f of flyers) ensureThemeGhostForFlyer(f, nextAtlas, nextFx, nextStyle);
 	}
 
 	function setEmojiList(nextEmojiList) {
@@ -1048,6 +1131,14 @@ export function createFlyers(scene, camera, opts = {}) {
 		if (dt === 0) return;
 
 		const nowMs = performance.now();
+		let themeEase = null;
+		if (themeTransition) {
+			const dur = Math.max(0, Number(themeTransition.durationMs) || 0);
+			if (dur <= 0) themeEase = 1;
+			else themeEase = clamp((nowMs - themeTransition.startMs) / dur, 0, 1);
+			// Smoothstep-ish
+			themeEase = themeEase * themeEase * (3 - 2 * themeEase);
+		}
 		// Ease speed toward target.
 		if (config.speed !== config.targetSpeed) {
 			const t = speedRampSeconds > 0 ? clamp(dt / speedRampSeconds, 0, 1) : 1;
@@ -1092,6 +1183,7 @@ export function createFlyers(scene, camera, opts = {}) {
 
 			const sp = f.obj;
 			if (f.kind === "depth") applyBillboardQuaternion(sp, f.rotationZ);
+			if (f.__themeGhost?.kind === "depth") applyBillboardQuaternion(f.__themeGhost.obj, f.rotationZ);
 
 			if (f.mode === "splat") {
 				const t = clamp((nowMs - f.splatStartMs) / config.splat.durationMs, 0, 1);
@@ -1100,10 +1192,19 @@ export function createFlyers(scene, camera, opts = {}) {
 				const s = f.baseScale * config.size * (1 + (config.splat.scaleMul - 1) * ease);
 				sp.scale.setScalar(s);
 				f.opacity = 1 - ease;
-				setRenderableOpacity(f, f.opacity);
+				if (f.__themeGhost && themeEase != null) {
+					setRenderableOpacity(f, f.opacity * (1 - themeEase));
+					setRenderableOpacity({ kind: f.__themeGhost.kind, obj: f.__themeGhost.obj }, f.opacity * themeEase);
+				} else {
+					setRenderableOpacity(f, f.opacity);
+				}
 				// Keep splat mostly in place; a tiny drift reads as messy paint.
 				sp.position.x += f.drift.x * config.driftPerSecond * dt * 0.18;
 				sp.position.y += f.drift.y * config.driftPerSecond * dt * 0.18;
+				if (f.__themeGhost) {
+					f.__themeGhost.obj.position.copy(sp.position);
+					f.__themeGhost.obj.scale.copy(sp.scale);
+				}
 
 				if (nowMs >= f.splatUntilMs) {
 					// Respawn back into the stream.
@@ -1142,10 +1243,20 @@ export function createFlyers(scene, camera, opts = {}) {
 				const sMul = 1 + f.pulseAmp * Math.sin(tSec * f.pulseSpeed + f.pulsePhase);
 				sBase *= sMul;
 				f.opacity = 0.82 + 0.18 * Math.sin(tSec * (f.pulseSpeed * 1.2) + f.pulsePhase);
-				setRenderableOpacity(f, f.opacity);
+				if (f.__themeGhost && themeEase != null) {
+					setRenderableOpacity(f, f.opacity * (1 - themeEase));
+					setRenderableOpacity({ kind: f.__themeGhost.kind, obj: f.__themeGhost.obj }, f.opacity * themeEase);
+				} else {
+					setRenderableOpacity(f, f.opacity);
+				}
 			} else {
 				f.opacity = 1;
-				setRenderableOpacity(f, f.opacity);
+				if (f.__themeGhost && themeEase != null) {
+					setRenderableOpacity(f, f.opacity * (1 - themeEase));
+					setRenderableOpacity({ kind: f.__themeGhost.kind, obj: f.__themeGhost.obj }, f.opacity * themeEase);
+				} else {
+					setRenderableOpacity(f, f.opacity);
+				}
 			}
 
 			let rot = f.rotationZ;
@@ -1160,12 +1271,20 @@ export function createFlyers(scene, camera, opts = {}) {
 			} else {
 				sp.scale.setScalar(sBase);
 			}
+			if (f.__themeGhost) {
+				f.__themeGhost.obj.scale.copy(sp.scale);
+			}
 
 			// Apply final rotation (after skew modulation).
 			if (f.kind === "sprite") {
 				sp.material.rotation = rot;
 			} else {
 				applyBillboardQuaternion(sp, rot);
+			}
+			if (f.__themeGhost) {
+				if (f.__themeGhost.kind === "sprite") f.__themeGhost.obj.material.rotation = rot;
+				else applyBillboardQuaternion(f.__themeGhost.obj, rot);
+				f.__themeGhost.obj.position.copy(sp.position);
 			}
 
 			if (effects?.sparkleOrbit && f.fireflies?.length) {
@@ -1301,6 +1420,32 @@ export function createFlyers(scene, camera, opts = {}) {
 			}
 		}
 
+		// Complete theme transition if needed.
+		if (themeTransition && themeEase != null && themeEase >= 1) {
+			const next = themeTransition.next;
+			emojiStyleByEmoji = next.emojiStyleByEmoji ?? null;
+			effects = next.effects ?? effects;
+			atlas = themeTransition.atlas;
+
+			for (const f of flyers) {
+				if (!f.__themeGhost) continue;
+				// Replace main renderable with ghost.
+				const prevObj = f.obj;
+				const prevMat = prevObj?.material;
+
+				group.remove(prevObj);
+				prevMat?.dispose?.();
+				if (f.kind === "sprite") prevObj?.geometry?.dispose?.();
+
+				f.obj = f.__themeGhost.obj;
+				f.kind = f.__themeGhost.kind;
+				f.obj.userData.__flyingStuffEntry = f;
+				f.emoji = f.__themeGhost.emoji;
+				f.__themeGhost = null;
+			}
+
+			themeTransition = null;
+		}
 	}
 
 	function dispose() {
@@ -1364,6 +1509,8 @@ export function createFlyers(scene, camera, opts = {}) {
 		setSizeTarget,
 		setEmojiList,
 		setEmojiTheme,
+		setEmojiThemeForNewSpawns,
+		transitionEmojiTheme,
 		trySplatAtNdc,
 		update,
 		dispose,

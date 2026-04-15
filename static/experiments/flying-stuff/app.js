@@ -33,16 +33,14 @@ const BBS_BLOCKS_PALETTES = {
 };
 
 const DEFAULT_BBS_PALETTE_KEY = "phosphor";
+const CYCLE_BBS_PALETTE_KEY = "cycle";
 
 const UNICODE_GROUP_KEYS = new Set([
-	"bbsBlocks",
-	"boxDrawing",
-	"brailleDust",
-	"geometry",
-	"chevronsArrows",
+	"bbs",
+	"angles",
+	"blocks",
 	"sparkles",
-	"wavesEnergy",
-	"sigilsRunes",
+	"energy",
 ]);
 
 // Keep the framed-landscapes renderer available, but gate it here.
@@ -75,7 +73,7 @@ function makeSinglePaletteMap(list, palette) {
 
 const EMOJI_GROUPS = {
 	fruitsVeg: ["🍓", "🍒", "🍉", "🍍", "🍌", "🍋", "🍊", "🍇", "🥝", "🍑", "🍐", "🍎", "🥕", "🌽", "🥦", "🍄"],
-	classicTech: ["💾", "☎️", "📟", "📠", "📼", "📺", "📻", "🕹️", "🖨️", "⌨️", "🖱️", "📞", "📀", "📸", "📹"],
+	classicTech: ["💾", "☎️", "📟", "📠", "📼", "📺", "🕹️", "🖨️", "⌨️", "🖲️", "📞", "📀", "📸", "📹"],
 	memes: ["🍑", "🍆", "💦", "🔥", "🗿", "🧠", "👀", "🤌", "💀", "🧢", "✨", "✅", "😤", "🤡", "🍞"],
 	seaAquatic: [
 		"🐙",
@@ -123,14 +121,100 @@ const EMOJI_GROUPS = {
 	astrology: ["♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "♐", "♑", "♒", "♓"],
 
 	// Glyph packs (unicode vibes)
-	bbsBlocks: ["░", "▒", "▓", "█", "▀", "▄", "▌", "▐", "▖", "▗", "▘", "▙", "▚", "▛"],
-	boxDrawing: ["┌", "─", "┬", "┐", "├", "┼", "┤", "└", "┴", "┘", "╔", "═", "╦", "╗", "╠", "╬", "╣", "╚", "╩", "╝"],
-	brailleDust: ["⠁", "⠃", "⠇", "⠟", "⠿", "⡿", "⣿", "⠂", "⠒", "⠖", "⠶", "⠷", "⠈", "⠘", "⠸", "⢸"],
-	geometry: ["▲", "△", "▼", "▽", "◆", "◇", "◈", "◉", "◐", "◑", "◒", "◓", "∎", "▣", "▦", "▧", "⌬", "⎔"],
-	chevronsArrows: ["»", "›", "‹", "«", "⟫", "⟪", "↠", "↞", "⟶", "⟵", "→", "←", "↟", "↡", "•", "∙"],
+	blocks: ["▲", "◆", "▣", "█", "▀", "▄", "▌", "▐", "▖", "▗", "▘", "▙", "▛", "∎", "▦", "▧"],
+	bbs: [
+		// BBS blocks (minus the light dithers)
+		"▓",
+		"█",
+		"▀",
+		"▄",
+		"▌",
+		"▐",
+		"▖",
+		"▗",
+		"▘",
+		"▙",
+		"▚",
+		"▛",
+		// Geometry tiles
+		"▲",
+		"△",
+		"▼",
+		"▽",
+		"◆",
+		"◇",
+		"◈",
+		"◉",
+		"◐",
+		"◑",
+		"◒",
+		"◓",
+		"∎",
+		"▣",
+		"▦",
+		"▧",
+		"⌬",
+		"⎔",
+		// Braille dust
+		"⠁",
+		"⠃",
+		"⠇",
+		"⠟",
+		"⠿",
+		"⡿",
+		"⣿",
+		"⠂",
+		"⠒",
+		"⠖",
+		"⠶",
+		"⠷",
+		"⠈",
+		"⠘",
+		"⠸",
+		"⢸",
+	],
+	angles: [
+		// Box drawing
+		"┌",
+		"─",
+		"┬",
+		"┐",
+		"├",
+		"┼",
+		"┤",
+		"└",
+		"┴",
+		"┘",
+		"╔",
+		"═",
+		"╦",
+		"╗",
+		"╠",
+		"╬",
+		"╣",
+		"╚",
+		"╩",
+		"╝",
+		// Chevrons / arrows
+		"»",
+		"›",
+		"‹",
+		"«",
+		"⟫",
+		"⟪",
+		"↠",
+		"↞",
+		"⟶",
+		"⟵",
+		"→",
+		"←",
+		"↟",
+		"↡",
+		"•",
+		"∙",
+	],
 	sparkles: ["✦", "✧", "⋆", "⁺", "₊", "⋄", "◇", "⟡"],
-	wavesEnergy: ["≈", "≋", "∿", "〰", "⌁"],
-	sigilsRunes: ["ᚠ", "ᚢ", "ᚦ", "ᚨ", "ᚱ", "⌇", "⌑", "⛤", "⛥"],
+	energy: ["≈", "≋", "∿", "〰", "⌁", "ᚠ", "ᚢ", "ᚦ", "ᚨ", "ᚱ", "⌇", "⌑", "⛤", "⛥"],
 };
 
 const EMOJI_GROUP_LABELS = {
@@ -141,14 +225,11 @@ const EMOJI_GROUP_LABELS = {
 	landscapes: "Landscapes",
 	astrology: "Astrology",
 
-	bbsBlocks: "BBS blocks",
-	boxDrawing: "Box drawing",
-	brailleDust: "Braille dust",
-	geometry: "Geometry tiles",
-	chevronsArrows: "Chevrons / arrows",
+	blocks: "Blocks",
+	bbs: "BBS",
+	angles: "Angles",
 	sparkles: "Sparkles",
-	wavesEnergy: "Waves / energy",
-	sigilsRunes: "Sigils / runes",
+	energy: "Energy",
 };
 
 const ASTROLOGY_COLORS = {
@@ -184,6 +265,15 @@ function loadSettings() {
 	} catch {
 		return null;
 	}
+}
+
+function normalizeGroupKey(key) {
+	const k = String(key ?? "");
+	// Back-compat: group mergers.
+	if (k === "wavesEnergy" || k === "sigilsRunes") return "energy";
+	if (k === "boxDrawing" || k === "chevronsArrows") return "angles";
+	if (k === "bbsBlocks" || k === "brailleDust" || k === "geometry") return "bbs";
+	return k;
 }
 
 function saveSettings(next) {
@@ -254,7 +344,7 @@ export function initFlyingStuff({ container }) {
 		speed: 0.84,
 		size: 1.0,
 		emojiGroup: "fruitsVeg",
-		bbsPalette: DEFAULT_BBS_PALETTE_KEY,
+		bbsPalette: CYCLE_BBS_PALETTE_KEY,
 	};
 
 	const saved = loadSettings();
@@ -262,7 +352,7 @@ export function initFlyingStuff({ container }) {
 		count: clamp(Number(saved?.count ?? defaults.count), 1, 600),
 		speed: clamp(Number(saved?.speed ?? defaults.speed), 0.05, 6),
 		size: clamp(Number(saved?.size ?? defaults.size), 0.05, 6),
-		emojiGroup: String(saved?.emojiGroup ?? defaults.emojiGroup),
+		emojiGroup: normalizeGroupKey(saved?.emojiGroup ?? defaults.emojiGroup),
 		bbsPalette: String(saved?.bbsPalette ?? defaults.bbsPalette),
 	};
 
@@ -270,6 +360,7 @@ export function initFlyingStuff({ container }) {
 
 	function resolveBbsPaletteKey(maybeKey) {
 		const key = String(maybeKey ?? DEFAULT_BBS_PALETTE_KEY);
+		if (key === CYCLE_BBS_PALETTE_KEY) return CYCLE_BBS_PALETTE_KEY;
 		return Object.prototype.hasOwnProperty.call(BBS_BLOCKS_PALETTES, key) ? key : DEFAULT_BBS_PALETTE_KEY;
 	}
 
@@ -370,8 +461,116 @@ export function initFlyingStuff({ container }) {
 	let lastEmojiGroup = initialGroupKey;
 	let lastBbsPaletteKey = initialPaletteKey;
 
+	// Palette cycler state (unicode groups only).
+	const paletteCycler = {
+		enabled: false,
+		// When cycling begins, start at iolo.
+		currentKey: "iolo",
+		nextSwitchAtMs: 0,
+		transitionMs: 1400,
+	};
+
+	function randomInRange(min, max) {
+		return min + Math.random() * (max - min);
+	}
+
+	function pickNextPaletteKey(excludeKey) {
+		const keys = Object.keys(BBS_BLOCKS_PALETTES).filter((k) => k !== excludeKey);
+		if (!keys.length) return excludeKey;
+		return keys[Math.floor(Math.random() * keys.length)];
+	}
+
+	function currentCyclerPaletteLabel() {
+		return BBS_BLOCKS_PALETTES[paletteCycler.currentKey]?.label ?? paletteCycler.currentKey;
+	}
+
+	function syncBbsPaletteValueText({ groupKey, paletteKey }) {
+		if (!bbsPaletteValue) return;
+		const isUnicode = UNICODE_GROUP_KEYS.has(groupKey);
+		if (!isUnicode) return;
+		if (paletteKey === CYCLE_BBS_PALETTE_KEY) {
+			bbsPaletteValue.textContent = currentCyclerPaletteLabel();
+			return;
+		}
+		const k = resolveBbsPaletteKey(paletteKey);
+		bbsPaletteValue.textContent = BBS_BLOCKS_PALETTES[k]?.label ?? k;
+	}
+
+	function applyUnicodePaletteThemeForGroup(groupKey, paletteKey, { transitionMs = 0 } = {}) {
+		const k = resolveBbsPaletteKey(paletteKey);
+		if (!UNICODE_GROUP_KEYS.has(groupKey)) return;
+		if (k === CYCLE_BBS_PALETTE_KEY) return;
+		const pal = BBS_BLOCKS_PALETTES[k]?.colors ?? BBS_BLOCKS_PALETTES[DEFAULT_BBS_PALETTE_KEY].colors;
+		const t = themeForGroup(groupKey, { paletteKey: k });
+		const emojiList = EMOJI_GROUPS[groupKey];
+		const emojiStyleByEmoji = makeSinglePaletteMap(emojiList, pal);
+		if (transitionMs > 0 && typeof flyers.transitionEmojiTheme === "function") {
+			flyers.transitionEmojiTheme({ emojiList, emojiStyleByEmoji, effects: t.effects }, { durationMs: transitionMs });
+		} else {
+			flyers.setEmojiTheme({ emojiList, emojiStyleByEmoji, effects: t.effects });
+		}
+	}
+
+	function applyUnicodePaletteThemeForNewSpawnsOnly(groupKey, paletteKey) {
+		const k = resolveBbsPaletteKey(paletteKey);
+		if (!UNICODE_GROUP_KEYS.has(groupKey)) return;
+		if (k === CYCLE_BBS_PALETTE_KEY) return;
+		const pal = BBS_BLOCKS_PALETTES[k]?.colors ?? BBS_BLOCKS_PALETTES[DEFAULT_BBS_PALETTE_KEY].colors;
+		const t = themeForGroup(groupKey, { paletteKey: k });
+		const emojiList = EMOJI_GROUPS[groupKey];
+		const emojiStyleByEmoji = makeSinglePaletteMap(emojiList, pal);
+		// Spawn-only so existing geometry doesn't change mid-flight.
+		if (typeof flyers.setEmojiThemeForNewSpawns === "function") {
+			flyers.setEmojiThemeForNewSpawns({ emojiList, emojiStyleByEmoji, effects: t.effects });
+		} else {
+			// Fallback to immediate retheme if older build.
+			flyers.setEmojiTheme({ emojiList, emojiStyleByEmoji, effects: t.effects });
+		}
+	}
+
+	function updateCyclerEnabled({ groupKey, paletteKey, reducedMotion }) {
+		const isUnicode = UNICODE_GROUP_KEYS.has(groupKey);
+		const wantsCycle = resolveBbsPaletteKey(paletteKey) === CYCLE_BBS_PALETTE_KEY;
+		paletteCycler.enabled = Boolean(isUnicode && wantsCycle && !reducedMotion);
+		if (!paletteCycler.enabled) return;
+
+		// Start on a random palette when cycling becomes active.
+		paletteCycler.currentKey = pickNextPaletteKey("__none__");
+		paletteCycler.transitionMs = Math.round(randomInRange(1000, 2000));
+		paletteCycler.nextSwitchAtMs = performance.now() + Math.round(randomInRange(5000, 10000));
+		// When enabling cycling (typically via Group change), retheme everything immediately so the switch feels responsive.
+		// Subsequent palette changes remain spawn-only to avoid mid-flight churn.
+		const dur = reducedMotion ? 0 : 900;
+		applyUnicodePaletteThemeForGroup(groupKey, paletteCycler.currentKey, { transitionMs: dur });
+		syncBbsPaletteValueText({ groupKey, paletteKey: CYCLE_BBS_PALETTE_KEY });
+	}
+
+	function cyclerTick({ nowMs, groupKey, paletteKey, reducedMotion }) {
+		const isUnicode = UNICODE_GROUP_KEYS.has(groupKey);
+		const wantsCycle = resolveBbsPaletteKey(paletteKey) === CYCLE_BBS_PALETTE_KEY;
+		const enabled = Boolean(isUnicode && wantsCycle && !reducedMotion);
+		if (!enabled) {
+			paletteCycler.enabled = false;
+			return;
+		}
+		if (!paletteCycler.enabled) {
+			updateCyclerEnabled({ groupKey, paletteKey, reducedMotion });
+			return;
+		}
+		if (nowMs < paletteCycler.nextSwitchAtMs) return;
+
+		const nextKey = pickNextPaletteKey(paletteCycler.currentKey);
+		paletteCycler.currentKey = nextKey;
+		paletteCycler.transitionMs = Math.round(randomInRange(1000, 2000));
+		paletteCycler.nextSwitchAtMs = nowMs + Math.round(randomInRange(5000, 10000));
+
+		applyUnicodePaletteThemeForNewSpawnsOnly(groupKey, paletteCycler.currentKey);
+		syncBbsPaletteValueText({ groupKey, paletteKey: CYCLE_BBS_PALETTE_KEY });
+	}
+
 	function applyUiSettings({ source } = {}) {
-		const nextGroupKey = Object.prototype.hasOwnProperty.call(EMOJI_GROUPS, emojiGroupInput?.value) ? emojiGroupInput.value : initialGroupKey;
+		const rawGroupKey = normalizeGroupKey(emojiGroupInput?.value);
+		const nextGroupKey = Object.prototype.hasOwnProperty.call(EMOJI_GROUPS, rawGroupKey) ? rawGroupKey : initialGroupKey;
 		const nextBbsPaletteKey = resolveBbsPaletteKey(bbsPaletteInput?.value ?? lastBbsPaletteKey);
 		const next = {
 			count: clamp(Math.round(readNumber(countInput, flyers.getConfig().count)), 1, 600),
@@ -400,17 +599,46 @@ export function initFlyingStuff({ container }) {
 		if (shouldRetheme) {
 			lastEmojiGroup = next.emojiGroup;
 			lastBbsPaletteKey = nextBbsPaletteKey;
-			const t = themeForGroup(next.emojiGroup, { paletteKey: nextBbsPaletteKey });
-			flyers.setEmojiTheme({
-				emojiList: EMOJI_GROUPS[next.emojiGroup],
-				emojiStyleByEmoji: t.emojiStyleByEmoji,
-				effects: t.effects,
-			});
+			// If user selected a specific palette (not cycling), apply immediately and disable cycler.
+			if (UNICODE_GROUP_KEYS.has(next.emojiGroup) && nextBbsPaletteKey !== CYCLE_BBS_PALETTE_KEY) {
+				paletteCycler.enabled = false;
+				const t = themeForGroup(next.emojiGroup, { paletteKey: nextBbsPaletteKey });
+				flyers.setEmojiTheme({
+					emojiList: EMOJI_GROUPS[next.emojiGroup],
+					emojiStyleByEmoji: t.emojiStyleByEmoji,
+					effects: t.effects,
+				});
+			} else if (UNICODE_GROUP_KEYS.has(next.emojiGroup) && nextBbsPaletteKey === CYCLE_BBS_PALETTE_KEY) {
+				// Enable cycling for unicode groups. (Actual cycling is driven in tick; this seeds immediately.)
+				updateCyclerEnabled({ groupKey: next.emojiGroup, paletteKey: nextBbsPaletteKey, reducedMotion: rm });
+			} else {
+				const t = themeForGroup(next.emojiGroup, { paletteKey: nextBbsPaletteKey });
+				// For group changes, prefer a quick fade so the switch feels intentional.
+				const isGroupChange = source === "emojiGroup";
+				const dur = !rm && isGroupChange && typeof flyers.transitionEmojiTheme === "function" ? 900 : 0;
+				if (dur > 0) {
+					flyers.transitionEmojiTheme(
+						{
+							emojiList: EMOJI_GROUPS[next.emojiGroup],
+							emojiStyleByEmoji: t.emojiStyleByEmoji,
+							effects: t.effects,
+						},
+						{ durationMs: dur },
+					);
+				} else {
+					flyers.setEmojiTheme({
+						emojiList: EMOJI_GROUPS[next.emojiGroup],
+						emojiStyleByEmoji: t.emojiStyleByEmoji,
+						effects: t.effects,
+					});
+				}
+			}
 		}
 
 		syncUiFromValues(next);
 		if (emojiGroupValue) emojiGroupValue.textContent = EMOJI_GROUP_LABELS[next.emojiGroup] ?? next.emojiGroup;
 		syncBbsPaletteUi(next.emojiGroup, nextBbsPaletteKey);
+		syncBbsPaletteValueText({ groupKey: next.emojiGroup, paletteKey: nextBbsPaletteKey });
 		saveSettings(next);
 	}
 	if (countInput) countInput.addEventListener("input", () => applyUiSettings({ source: "count" }));
@@ -460,6 +688,7 @@ export function initFlyingStuff({ container }) {
 		const now = performance.now();
 		const dt = now - lastMs;
 		lastMs = now;
+		cyclerTick({ nowMs: now, groupKey: lastEmojiGroup, paletteKey: lastBbsPaletteKey, reducedMotion: rm });
 		renderFrame(dt);
 	}
 
@@ -488,8 +717,11 @@ export function initFlyingStuff({ container }) {
 		if (rm) {
 			stop();
 			renderFrame(0);
+			paletteCycler.enabled = false;
 		} else {
 			start();
+			// If cycling is selected, resume cycling immediately.
+			updateCyclerEnabled({ groupKey: lastEmojiGroup, paletteKey: lastBbsPaletteKey, reducedMotion: rm });
 		}
 	});
 
