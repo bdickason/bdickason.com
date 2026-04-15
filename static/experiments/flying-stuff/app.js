@@ -36,7 +36,6 @@ const DEFAULT_BBS_PALETTE_KEY = "phosphor";
 const CYCLE_BBS_PALETTE_KEY = "cycle";
 
 const UNICODE_GROUP_KEYS = new Set([
-	"bbs",
 	"angles",
 	"blocks",
 	"sparkles",
@@ -122,57 +121,6 @@ const EMOJI_GROUPS = {
 
 	// Glyph packs (unicode vibes)
 	blocks: ["▲", "◆", "▣", "█", "▀", "▄", "▌", "▐", "▖", "▗", "▘", "▙", "▛", "∎", "▦", "▧"],
-	bbs: [
-		// BBS blocks (minus the light dithers)
-		"▓",
-		"█",
-		"▀",
-		"▄",
-		"▌",
-		"▐",
-		"▖",
-		"▗",
-		"▘",
-		"▙",
-		"▚",
-		"▛",
-		// Geometry tiles
-		"▲",
-		"△",
-		"▼",
-		"▽",
-		"◆",
-		"◇",
-		"◈",
-		"◉",
-		"◐",
-		"◑",
-		"◒",
-		"◓",
-		"∎",
-		"▣",
-		"▦",
-		"▧",
-		"⌬",
-		"⎔",
-		// Braille dust
-		"⠁",
-		"⠃",
-		"⠇",
-		"⠟",
-		"⠿",
-		"⡿",
-		"⣿",
-		"⠂",
-		"⠒",
-		"⠖",
-		"⠶",
-		"⠷",
-		"⠈",
-		"⠘",
-		"⠸",
-		"⢸",
-	],
 	angles: [
 		// Box drawing
 		"┌",
@@ -226,7 +174,6 @@ const EMOJI_GROUP_LABELS = {
 	astrology: "Astrology",
 
 	blocks: "Blocks",
-	bbs: "BBS",
 	angles: "Angles",
 	sparkles: "Sparkles",
 	energy: "Energy",
@@ -272,7 +219,8 @@ function normalizeGroupKey(key) {
 	// Back-compat: group mergers.
 	if (k === "wavesEnergy" || k === "sigilsRunes") return "energy";
 	if (k === "boxDrawing" || k === "chevronsArrows") return "angles";
-	if (k === "bbsBlocks" || k === "brailleDust" || k === "geometry") return "bbs";
+	// Legacy keys from earlier iterations; map into current group keys.
+	if (k === "bbsBlocks" || k === "brailleDust" || k === "geometry") return "blocks";
 	return k;
 }
 
@@ -467,7 +415,7 @@ export function initFlyingStuff({ container }) {
 		// When cycling begins, start at iolo.
 		currentKey: "iolo",
 		nextSwitchAtMs: 0,
-		transitionMs: 1400,
+		transitionMs: 2000,
 	};
 
 	function randomInRange(min, max) {
@@ -536,12 +484,10 @@ export function initFlyingStuff({ container }) {
 
 		// Start on a random palette when cycling becomes active.
 		paletteCycler.currentKey = pickNextPaletteKey("__none__");
-		paletteCycler.transitionMs = Math.round(randomInRange(1000, 2000));
-		paletteCycler.nextSwitchAtMs = performance.now() + Math.round(randomInRange(5000, 10000));
-		// When enabling cycling (typically via Group change), retheme everything immediately so the switch feels responsive.
-		// Subsequent palette changes remain spawn-only to avoid mid-flight churn.
-		const dur = reducedMotion ? 0 : 900;
-		applyUnicodePaletteThemeForGroup(groupKey, paletteCycler.currentKey, { transitionMs: dur });
+		// Tune: hold 12–30s per color; transition is always 2s and applies to all shapes.
+		paletteCycler.transitionMs = 2000;
+		paletteCycler.nextSwitchAtMs = performance.now() + Math.round(randomInRange(12_000, 30_000));
+		applyUnicodePaletteThemeForGroup(groupKey, paletteCycler.currentKey, { transitionMs: reducedMotion ? 0 : paletteCycler.transitionMs });
 		syncBbsPaletteValueText({ groupKey, paletteKey: CYCLE_BBS_PALETTE_KEY });
 	}
 
@@ -561,10 +507,10 @@ export function initFlyingStuff({ container }) {
 
 		const nextKey = pickNextPaletteKey(paletteCycler.currentKey);
 		paletteCycler.currentKey = nextKey;
-		paletteCycler.transitionMs = Math.round(randomInRange(1000, 2000));
-		paletteCycler.nextSwitchAtMs = nowMs + Math.round(randomInRange(5000, 10000));
+		paletteCycler.transitionMs = 2000;
+		paletteCycler.nextSwitchAtMs = nowMs + Math.round(randomInRange(12_000, 30_000));
 
-		applyUnicodePaletteThemeForNewSpawnsOnly(groupKey, paletteCycler.currentKey);
+		applyUnicodePaletteThemeForGroup(groupKey, paletteCycler.currentKey, { transitionMs: paletteCycler.transitionMs });
 		syncBbsPaletteValueText({ groupKey, paletteKey: CYCLE_BBS_PALETTE_KEY });
 	}
 
