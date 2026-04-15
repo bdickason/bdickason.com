@@ -23,11 +23,16 @@ projects:
     thumbnail: /static/projects/chasm.png
     alt: Chasm
     description: A simple browser-based RTS where futuristic races battle for control of rare minerals.
-  - title: Screen Savers
+  - title: Starfield
     url: /static/experiments/starfield/
-    thumbnail: /static/projects/screensavers.png
-    alt: Screen Savers
-    description: I want to bring back the magic of seeing your computer produce fun graphics ala After Dark.
+    thumbnail: /static/projects/starfield.png
+    alt: Starfield
+    description: A dreamy view of the night sky in an 80's screen saver. I want to bring back the magic of seeing your computer produce fun graphics ala After Dark.
+  - title: Flying Stuff
+    url: /static/experiments/flying-stuff/
+    thumbnail: /static/projects/flying-stuff.png
+    alt: Flying Stuff
+    description: Emoji and shapes fly across your screen in a relaxing technicolor screen saver.
   
 ---
 
