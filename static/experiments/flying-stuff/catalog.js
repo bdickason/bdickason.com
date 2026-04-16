@@ -1,6 +1,10 @@
 // Central catalog of emoji groups, labels, palettes, and theme-related constants.
 // Kept in a separate module so `app.js` stays focused on lifecycle + wiring.
 
+// U+FE0E: text presentation selector — zodiac signs (U+2648..U+2653) otherwise render as
+// Apple Color Emoji on Safari; this forces monochrome “symbol” glyphs to match other groups.
+const textStyle = (ch) => ch + "\uFE0E";
+
 export const GROUP_CYCLE_KEY = "cycle";
 
 export const DEFAULT_BBS_PALETTE_KEY = "phosphor";
@@ -94,7 +98,7 @@ export const EMOJI_GROUPS = {
 		"⛰️",
 		"🏔️",
 	],
-	astrology: ["♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "♐", "♑", "♒", "♓"],
+	astrology: ["♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "♐", "♑", "♒", "♓"].map(textStyle),
 
 	// Glyph packs (unicode vibes)
 	blocks: ["▲", "◆", "▣", "█", "▀", "▄", "▌", "▐", "▖", "▗", "▘", "▙", "▛", "∎", "▦", "▧"],
@@ -116,18 +120,18 @@ export const EMOJI_GROUP_LABELS = {
 };
 
 export const ASTROLOGY_COLORS = {
-	"♈": "#ff4d4d", // Aries - fire
-	"♉": "#38d26a", // Taurus - earth
-	"♊": "#ffd24a", // Gemini - air
-	"♋": "#6bbcff", // Cancer - water
-	"♌": "#ff9a2f", // Leo - fire
-	"♍": "#8bd650", // Virgo - earth
-	"♎": "#ff6fd8", // Libra - air
-	"♏": "#9a4dff", // Scorpio - water (mystic)
-	"♐": "#ff6a2a", // Sagittarius - fire
-	"♑": "#89a1b8", // Capricorn - earth (stone/steel)
-	"♒": "#00d0ff", // Aquarius - air/water bearer
-	"♓": "#2fe0c6", // Pisces - water
+	[textStyle("♈")]: "#ff4d4d", // Aries - fire
+	[textStyle("♉")]: "#38d26a", // Taurus - earth
+	[textStyle("♊")]: "#ffd24a", // Gemini - air
+	[textStyle("♋")]: "#6bbcff", // Cancer - water
+	[textStyle("♌")]: "#ff9a2f", // Leo - fire
+	[textStyle("♍")]: "#8bd650", // Virgo - earth
+	[textStyle("♎")]: "#ff6fd8", // Libra - air
+	[textStyle("♏")]: "#9a4dff", // Scorpio - water (mystic)
+	[textStyle("♐")]: "#ff6a2a", // Sagittarius - fire
+	[textStyle("♑")]: "#89a1b8", // Capricorn - earth (stone/steel)
+	[textStyle("♒")]: "#00d0ff", // Aquarius - air/water bearer
+	[textStyle("♓")]: "#2fe0c6", // Pisces - water
 };
 
 export const EMOJI_THEMES = {

@@ -170,9 +170,26 @@ function makeFramedEmojiTexture(emoji, { px = 160 } = {}) {
 	const innerY = frameY + border;
 	const innerW = frameW - border * 2;
 	const innerH = frameH - border * 2;
+	const innerR = Math.max(1, r - border);
+
+	// Safari/WebKit: color emoji + ctx.clip() + fillText often paints nothing. Rasterize the
+	// glyph on an offscreen canvas first, then drawImage into the clipped “matte” region.
+	const iw = Math.max(1, Math.floor(innerW));
+	const ih = Math.max(1, Math.floor(innerH));
+	const emojiScratch = document.createElement("canvas");
+	emojiScratch.width = iw;
+	emojiScratch.height = ih;
+	const sctx = emojiScratch.getContext("2d", { alpha: true });
+	if (!sctx) throw new Error("2D canvas not available");
+	sctx.clearRect(0, 0, iw, ih);
+	const fontSize = Math.floor(Math.min(iw, ih) * 0.78);
+	sctx.font = `${fontSize}px system-ui, Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif`;
+	sctx.textAlign = "center";
+	sctx.textBaseline = "middle";
+	sctx.fillText(String(emoji ?? "❓"), iw * 0.5, ih * 0.54);
 
 	ctx.save();
-	roundRectPath(ctx, innerX, innerY, innerW, innerH, Math.max(1, r - border));
+	roundRectPath(ctx, innerX, innerY, innerW, innerH, innerR);
 	ctx.clip();
 
 	// Gentle film tint so the set feels cohesive.
@@ -183,11 +200,7 @@ function makeFramedEmojiTexture(emoji, { px = 160 } = {}) {
 	ctx.fillStyle = g;
 	ctx.fillRect(innerX, innerY, innerW, innerH);
 
-	const fontSize = Math.floor(px * 0.70);
-	ctx.font = `${fontSize}px system-ui, Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif`;
-	ctx.textAlign = "center";
-	ctx.textBaseline = "middle";
-	ctx.fillText(String(emoji ?? "❓"), px * 0.5, px * 0.54);
+	ctx.drawImage(emojiScratch, innerX, innerY, innerW, innerH);
 	ctx.restore();
 
 	ctx.save();

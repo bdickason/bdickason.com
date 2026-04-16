@@ -30,16 +30,22 @@
 			<span class="creditLink__name">by brad dickason</span>
 		</div>
 
+		<button
+			type="button"
+			id="debug-strawberry"
+			class="debugStrawberry"
+			aria-controls="debug-panel"
+			aria-expanded="false"
+			aria-label="Open settings"
+		>
+			🍓
+		</button>
+
 		<section id="debug-panel" class="debug" hidden>
 			<div class="debug__bg" aria-hidden="true">
-				<div class="debug__bgEmoji debug__bgEmoji--a">🍓</div>
 				<div class="debug__bgEmoji debug__bgEmoji--b">💾</div>
 				<div class="debug__bgEmoji debug__bgEmoji--c">🍆</div>
 			</div>
-			<header class="debug__header">
-				<div class="debug__title" aria-label="Debug">🐞</div>
-				<div class="debug__hint"><kbd>~</kbd> to toggle</div>
-			</header>
 			<div class="debug__row">
 				<label class="debug__label" for="emojiGroup">Group</label>
 				<select id="emojiGroup" class="debug__select">
@@ -55,10 +61,11 @@
 					<option value="seaAquatic">Sea / aquatic</option>
 					<option value="sparkles">Sparkles</option>
 				</select>
-				<div class="debug__value" id="emojiGroupValue">Fruits / veg</div>
+				<span class="debug__value debug__value--spacer" aria-hidden="true"></span>
 			</div>
-			<div class="debug__row" id="bbsPaletteRow" hidden>
+			<div class="debug__row" id="bbsPaletteRow">
 				<label class="debug__label" for="bbsPalette">Palette</label>
+				<div class="debug__paletteField" id="bbsPaletteField">
 				<select id="bbsPalette" class="debug__select">
 					<option value="cycle">Random Color</option>
 					<option value="fire">brotherhood of nod</option>
@@ -71,7 +78,8 @@
 					<option value="deepPurple">the gibson</option>
 					<option value="amber">vt220</option>
 				</select>
-				<div class="debug__value" id="bbsPaletteValue">Phosphor green</div>
+				</div>
+				<span class="debug__value debug__value--spacer" aria-hidden="true"></span>
 			</div>
 			<div class="debug__row">
 				<label class="debug__label" for="count">Density</label>
@@ -88,6 +96,9 @@
 				<input id="size" class="debug__range" type="range" min="0.4" max="2.5" step="0.01" value="2.5" />
 				<div class="debug__value" id="sizeValue">2.50</div>
 			</div>
+			<footer class="debug__footer">
+				<div class="debug__hint"><kbd>~</kbd> to toggle settings</div>
+			</footer>
 		</section>
 
 		<script type="importmap">

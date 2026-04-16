@@ -116,6 +116,7 @@ export function initFlyingStuff({ container }) {
 
 	// Debug UI
 	const debugPanel = document.getElementById("debug-panel");
+	const debugStrawberryBtn = document.getElementById("debug-strawberry");
 	const countInput = document.getElementById("count");
 	const countValue = document.getElementById("countValue");
 	const speedInput = document.getElementById("speed");
@@ -123,10 +124,10 @@ export function initFlyingStuff({ container }) {
 	const sizeInput = document.getElementById("size");
 	const sizeValue = document.getElementById("sizeValue");
 	const emojiGroupInput = document.getElementById("emojiGroup");
-	const emojiGroupValue = document.getElementById("emojiGroupValue");
 	const bbsPaletteRow = document.getElementById("bbsPaletteRow");
+	const bbsPaletteField = document.getElementById("bbsPaletteField");
 	const bbsPaletteInput = document.getElementById("bbsPalette");
-	const bbsPaletteValue = document.getElementById("bbsPaletteValue");
+	const PALETTE_LOCKED_TIP = "Can't choose a palette for emojis";
 
 	const defaults = {
 		count: 100,
@@ -151,10 +152,6 @@ export function initFlyingStuff({ container }) {
 		const k = normalizeGroupKey(maybeKey);
 		if (k === GROUP_CYCLE_KEY) return GROUP_CYCLE_KEY;
 		return Object.prototype.hasOwnProperty.call(EMOJI_GROUPS, k) ? k : "fruitsVeg";
-	}
-
-	function emojiGroupLabel(groupKey) {
-		return EMOJI_GROUP_LABELS[groupKey] ?? groupKey;
 	}
 
 	function pickNextGroupKey(excludeKey) {
@@ -192,16 +189,13 @@ export function initFlyingStuff({ container }) {
 	function syncBbsPaletteUi(groupKey, paletteKey) {
 		const isUnicode = UNICODE_GROUP_KEYS.has(groupKey);
 		if (bbsPaletteRow) {
-			if (isUnicode) bbsPaletteRow.removeAttribute("hidden");
-			else bbsPaletteRow.setAttribute("hidden", "");
+			bbsPaletteRow.classList.toggle("debug__row--paletteLocked", !isUnicode);
+			bbsPaletteRow.title = isUnicode ? "" : PALETTE_LOCKED_TIP;
 		}
+		if (bbsPaletteField) bbsPaletteField.classList.toggle("debug__paletteField--locked", !isUnicode);
 		if (!bbsPaletteInput) return;
 		bbsPaletteInput.disabled = !isUnicode;
 		if (isUnicode) bbsPaletteInput.value = resolveBbsPaletteKey(paletteKey);
-		if (bbsPaletteValue) {
-			const k = resolveBbsPaletteKey(paletteKey);
-			bbsPaletteValue.textContent = BBS_BLOCKS_PALETTES[k]?.label ?? k;
-		}
 	}
 
 	function themeForGroup(groupKey, { paletteKey } = {}) {
@@ -305,17 +299,33 @@ export function initFlyingStuff({ container }) {
 
 	syncUiFromValues(initial);
 	if (emojiGroupInput) emojiGroupInput.value = initialGroupSelectKey;
-	if (emojiGroupValue) emojiGroupValue.textContent = emojiGroupLabel(initialActiveGroupKey);
 	if (bbsPaletteInput) bbsPaletteInput.value = initialPaletteKey;
 	syncBbsPaletteUi(initialActiveGroupKey, initialPaletteKey);
-	syncBbsPaletteValueText({ groupKey: initialActiveGroupKey, paletteKey: initialPaletteKey });
+
+	function isDebugPanelOpen() {
+		return !!(debugPanel && !debugPanel.hasAttribute("hidden"));
+	}
+
+	function syncDebugStrawberryAria() {
+		if (!debugStrawberryBtn) return;
+		const open = isDebugPanelOpen();
+		debugStrawberryBtn.setAttribute("aria-expanded", open ? "true" : "false");
+		debugStrawberryBtn.setAttribute("aria-label", open ? "Close settings" : "Open settings");
+	}
 
 	function toggleDebugPanel() {
 		if (!debugPanel) return;
 		const nextHidden = !debugPanel.hasAttribute("hidden") ? true : false;
 		if (nextHidden) debugPanel.setAttribute("hidden", "");
 		else debugPanel.removeAttribute("hidden");
+		syncDebugStrawberryAria();
 	}
+
+	function onDebugStrawberryClick(e) {
+		e.preventDefault();
+		toggleDebugPanel();
+	}
+	if (debugStrawberryBtn) debugStrawberryBtn.addEventListener("click", onDebugStrawberryClick);
 
 	function isEditableTarget(target) {
 		const el = target instanceof Element ? target : null;
@@ -382,9 +392,7 @@ export function initFlyingStuff({ container }) {
 			flyers.setEmojiTheme({ emojiList: EMOJI_GROUPS[g], emojiStyleByEmoji: t.emojiStyleByEmoji, effects: t.effects });
 		}
 
-		if (emojiGroupValue) emojiGroupValue.textContent = emojiGroupLabel(g);
 		syncBbsPaletteUi(g, nextBbsPaletteKey);
-		syncBbsPaletteValueText({ groupKey: g, paletteKey: nextBbsPaletteKey });
 
 		// Persist: keep "cycle" if selected, otherwise persist the concrete group.
 		const selected = normalizeGroupKey(emojiGroupInput?.value);
@@ -470,23 +478,6 @@ export function initFlyingStuff({ container }) {
 	let lastEmojiGroup = initialActiveGroupKey;
 	let lastBbsPaletteKey = initialPaletteKey;
 
-	function currentCyclerPaletteLabel() {
-		const k = paletteCycler.visibleKey ?? paletteCycler.currentKey;
-		return BBS_BLOCKS_PALETTES[k]?.label ?? k;
-	}
-
-	function syncBbsPaletteValueText({ groupKey, paletteKey }) {
-		if (!bbsPaletteValue) return;
-		const isUnicode = UNICODE_GROUP_KEYS.has(groupKey);
-		if (!isUnicode) return;
-		if (paletteKey === CYCLE_BBS_PALETTE_KEY) {
-			bbsPaletteValue.textContent = currentCyclerPaletteLabel();
-			return;
-		}
-		const k = resolveBbsPaletteKey(paletteKey);
-		bbsPaletteValue.textContent = BBS_BLOCKS_PALETTES[k]?.label ?? k;
-	}
-
 	function applyUnicodePaletteThemeForGroup(groupKey, paletteKey, { transitionMs = 0 } = {}) {
 		const k = resolveBbsPaletteKey(paletteKey);
 		if (!UNICODE_GROUP_KEYS.has(groupKey)) return;
@@ -538,7 +529,6 @@ export function initFlyingStuff({ container }) {
 		paletteCycler.transitionMs = 2000;
 		paletteCycler.nextSwitchAtMs = performance.now() + Math.round(randomInRange(12_000, 30_000));
 		applyUnicodePaletteThemeForGroup(groupKey, paletteCycler.currentKey, { transitionMs: reducedMotion ? 0 : paletteCycler.transitionMs });
-		syncBbsPaletteValueText({ groupKey, paletteKey: CYCLE_BBS_PALETTE_KEY });
 	}
 
 	function cyclerTick({ nowMs, groupKey, paletteKey, reducedMotion }) {
@@ -561,14 +551,12 @@ export function initFlyingStuff({ container }) {
 		paletteCycler.nextSwitchAtMs = nowMs + Math.round(randomInRange(12_000, 30_000));
 
 		applyUnicodePaletteThemeForGroup(groupKey, paletteCycler.currentKey, { transitionMs: paletteCycler.transitionMs });
-		// Keep the UI label matched to what’s visually dominant: don’t flip it until the crossfade completes.
+		// Keep visibleKey aligned to the dominant palette after the crossfade completes.
 		if (paletteCycler.visibleKeyTimer) window.clearTimeout(paletteCycler.visibleKeyTimer);
 		paletteCycler.visibleKeyTimer = window.setTimeout(() => {
 			paletteCycler.visibleKey = paletteCycler.currentKey;
 			paletteCycler.visibleKeyTimer = 0;
-			syncBbsPaletteValueText({ groupKey, paletteKey: CYCLE_BBS_PALETTE_KEY });
 		}, paletteCycler.transitionMs);
-		syncBbsPaletteValueText({ groupKey, paletteKey: CYCLE_BBS_PALETTE_KEY });
 	}
 
 	function applyUiSettings({ source } = {}) {
@@ -654,9 +642,7 @@ export function initFlyingStuff({ container }) {
 		}
 
 		syncUiFromValues(next);
-		if (emojiGroupValue) emojiGroupValue.textContent = emojiGroupLabel(next.emojiGroup);
 		syncBbsPaletteUi(next.emojiGroup, nextBbsPaletteKey);
-		syncBbsPaletteValueText({ groupKey: next.emojiGroup, paletteKey: nextBbsPaletteKey });
 		saveSettings({
 			...next,
 			// Don't persist group selection; refresh should always return to cycling.
@@ -765,6 +751,7 @@ export function initFlyingStuff({ container }) {
 			unsubscribeReducedMotion();
 			window.removeEventListener("resize", handleResize);
 			window.removeEventListener("keydown", onKeyDown);
+			if (debugStrawberryBtn) debugStrawberryBtn.removeEventListener("click", onDebugStrawberryClick);
 			renderer.domElement.removeEventListener("pointerdown", onPointerDown);
 			// (Listeners are anonymous closures; safe to leave on page unload,
 			// but dispose is only called on error paths so we can skip cleanup.)
