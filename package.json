@@ -38,6 +38,6 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "gray-matter": "^4.0.3",
-    "vercel": "^50.32.5"
+    "vercel": "^52.2.0"
   }
 }
