@@ -18,6 +18,11 @@ projects:
     thumbnail: /static/projects/pokedex.png
     alt: Pokedex
     description: A little mobile web app to learn about Pokemon and their abilities with my kids. Save to Homescreen on your phone :)
+  - title: Superstar
+    url: https://www.dropbox.com/scl/fi/7uzhhe23i9zv8xbbk9dp6/superstar_v1.0.6.zip?rlkey=pznn9rious68y3xsohoxnql54&st=bqdvm0gg&e=2&dl=1
+    thumbnail: /static/projects/superstar.jpg
+    alt: Superstar
+    description: A simple synthesizer (VST) that plays Supersaws. Modeled after the Roland JP-8000, you get a few knobs to turn to generate beautiful supersaws. Free download ^__^
   - title: Chasm
     url: https://chasm-nine.vercel.app/
     thumbnail: /static/projects/chasm.png
