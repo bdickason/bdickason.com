@@ -1,0 +1,303 @@
+# Rufus Rules
+
+> Translated from .cursorrules
+
+# OPERATING MODE
+
+DEFAULT MODE: PATCH
+
+PATCH MODE:
+- Modify the existing system
+- Reuse existing tools and patterns
+- Make the smallest possible change
+
+BUILD MODE:
+- Only when explicitly specified
+- May introduce new infrastructure
+
+---
+
+# SYSTEM DESIGN RULES
+
+- Detect and respect existing frameworks and architecture
+- Assume current structure is intentional
+- Prefer extending existing systems over creating new ones
+
+- Do NOT introduce:
+  - new servers
+  - new ports
+  - new abstraction layers (APIs, middleware, services)
+  unless explicitly required
+
+- Prefer direct data access over abstraction layers
+- If data is static, access it directly (e.g. fetch('/file.json'))
+
+---
+
+# FILE STRATEGY
+
+- Only edit files in the defined EDIT SCOPE
+- You may update documentation if required for accuracy
+- Prefer editing over creating new files
+- Do not restructure directories unless instructed
+- Preserve existing conventions
+
+---
+
+# DECISION MAKING
+
+If multiple valid approaches exist, choose the one with:
+1. Fewer new concepts
+2. Fewer moving parts
+3. Less infrastructure
+
+---
+
+# VALIDATION & DEBUGGING
+
+- Validate against how the app actually runs
+- Prefer real outputs (UI, network, behavior) over assumptions
+
+- Add logging when needed to diagnose issues
+- Debug in stages:
+  - isolate components
+  - then test integrations
+
+- If debugging exceeds ~20 minutes:
+  - update CHANGELOG.md with:
+    - root cause
+    - fix
+    - key learnings
+
+---
+
+# Execution Completion
+
+When all tests pass, you must stop execution immediately.
+
+Completion conditions:
+- The most recent test run returned all passing tests
+- No changes have been made since that test run
+
+When these conditions are met:
+- Emit a final summary
+- End the task
+
+Do NOT:
+- Call RUN_TESTS again
+- Make additional changes
+- Continue execution for validation purposes
+
+Green tests are a terminal state, not a checkpoint.
+
+--- 
+
+# TESTING & FEEDBACK LOOP
+
+- You do NOT have the ability to run shell commands
+- Any attempt to run npm, bash, or system commands will fail
+
+- The ONLY way to run tests is:
+    RUN_TESTS
+
+- You should run tests ONLY:
+    - After implementing a change
+    - After fixing failing tests
+
+- Do NOT run tests:
+    - If tests have already passed
+    - If no changes have been made since the last test run
+
+- Always run tests after changes (if available)
+- Fix failures before proceeding
+- Update tests if behavior intentionally changes
+
+---
+
+# TEST EXECUTION (STRICT)
+
+- You do NOT have the ability to run shell commands
+
+- NEVER attempt:
+    npm run test
+    npm run test:run
+    vitest
+    any shell command
+
+- These will always fail
+
+- The ONLY way to run tests is:
+    RUN_TESTS
+
+- When asked to run tests:
+    → output RUN_TESTS immediately
+    → do NOT explain or attempt alternatives
+
+- When emitting RUN_TESTS:
+  - do NOT include explanations
+  - output ONLY:
+    RUN_TESTS
+
+- RUN_TESTS is ONLY valid if:
+    - Code has changed since the last test run
+    OR
+    - Tests previously failed and a fix was applied
+
+- RUN_TESTS is NOT valid if:
+    - The last test result was passing
+    - No changes have been made since the last run
+
+---
+
+## TEST BEHAVIOR
+
+- If status === "pass":
+  - emit final summary
+  - STOP execution
+
+- If status === "fail":
+  - analyze failures carefully
+  - identify root cause
+  - apply minimal fix
+  - then emit RUN_TESTS again
+
+Do NOT:
+- assume tests pass
+- fabricate results
+- skip test execution
+- re-run tests after a passing result
+
+---
+
+## ITERATION AWARENESS
+
+- Avoid repeated retries without meaningful changes
+
+- If failures persist:
+  - reconsider approach
+  - avoid repeating the same fix
+
+- Never re-run tests without making a change
+
+- If tests pass:
+  - do NOT continue iterating
+  - do NOT "double-check" by running tests again
+
+- Use metadata when available:
+  - meta.attempt
+  - meta.max_attempts
+  - meta.iteration_limit_reached
+
+- If iteration_limit_reached:
+  - stop retrying
+  - reassess solution
+
+---
+
+# TASK ORIENTATION
+
+Your role is to complete the user's request, not to explore or validate the system.
+
+- Focus on finishing the task as efficiently as possible
+- Do not perform extra validation beyond what is required
+- Do not test the system itself unless explicitly instructed
+
+Once the task is complete and tests pass:
+- Stop immediately
+- Do not continue working
+
+---
+
+# DOCUMENTATION
+
+- Keep README / DEVELOPMENT / CHANGELOG accurate
+- Only update what is affected
+- Keep updates minimal and precise
+
+---
+
+# DOCUMENTATION ALIGNMENT
+
+- After any non-trivial change, you MUST evaluate whether documentation is affected
+
+This includes:
+- README.md
+- DEVELOPMENT.md
+- CHANGELOG.md
+
+---
+
+## REQUIRED CHECK
+
+Before completing a task, ask:
+
+- Does this change affect:
+  - how the system works?
+  - how tests are run?
+  - how the app is used?
+  - developer workflow?
+
+If YES:
+- update the relevant documentation
+
+If NO:
+- explicitly confirm that no documentation update is needed
+
+---
+
+## UPDATE GUIDELINES
+
+- Only update the specific sections impacted
+- Do NOT rewrite entire documents
+- Keep changes minimal and precise
+- Do NOT add speculative or unnecessary content
+
+---
+
+## FAILURE CONDITION
+
+A task is NOT complete if:
+- behavior has changed
+- AND documentation is outdated
+
+---
+
+# WORKFLOW
+
+- Plan before implementing non-trivial changes
+- Confirm plan before coding
+- Ask questions if unclear
+
+---
+
+# OPERATIONS
+
+- Do NOT run long-lived servers
+- Assume user manages runtime
+- Suggest only safe, minimal commands
+
+---
+
+# GIT
+
+- You may read history for context
+- Do NOT revert or restore files unless instructed
+
+---
+
+# FAILSAFE
+
+If unsure:
+- choose the least invasive solution
+- avoid new infrastructure
+- or ask for clarification
+
+---
+
+# SUCCESS CRITERIA
+
+A solution is correct when:
+- it works within the existing system
+- it introduces minimal new concepts
+- it passes tests
+- it aligns with current architecture
